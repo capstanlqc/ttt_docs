@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://capps.capstan.be/doc/ttt_docs/hidden/</loc>
+         <lastmod>2022-07-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://capps.capstan.be/doc/ttt_docs/omegat/</loc>
          <lastmod>2022-07-04</lastmod>
          <changefreq>daily</changefreq>
