@@ -1,6 +1,12 @@
-site_name: TecDoc
+site_name: TTT Docs
 site_url: https://capps.capstan.be/doc/ttt_docs
 nav:
-    - Home: index.md
-    - About: about.md
+        - Home: README.md
+        - OmegaT: omegat.md
+        - About: about.md
 theme: readthedocs
+markdown_extensions:
+    - toc:
+        baselevel: 2
+        permalink: True
+        separator: "_"
