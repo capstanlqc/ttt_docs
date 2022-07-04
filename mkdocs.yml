@@ -1,0 +1,6 @@
+site_name: TecDoc
+site_url: https://capps.capstan.be/doc/ttt_docs
+nav:
+    - Home: index.md
+    - About: about.md
+theme: readthedocs
