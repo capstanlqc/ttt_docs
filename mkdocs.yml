@@ -4,9 +4,14 @@ nav:
         - Home: README.md
         - OmegaT: omegat.md
         - About: about.md
-theme: readthedocs
+theme:
+  name: material
 markdown_extensions:
     - toc:
         baselevel: 2
         permalink: True
         separator: "_"
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
