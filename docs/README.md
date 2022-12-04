@@ -1,6 +1,6 @@
 # cApStAn's Tech Team docs
 
-Welcome to the technical documentation of the Tech Team. This documentation is maintained by and meant to be used internally by the tech team, although some documents might be of interest of other people (whenver that's the case, it'll be shared).
+Welcome to the technical documentation of the Tech Team. This documentation is maintained by and meant to be used internally by cApStAn' tech team, although some documents might be of interest of other people (whenver that's the case, it'll be shared).
 
 For general documentation about the company, see [KnowSystem](#) in Odoo.
 
