@@ -8,7 +8,7 @@ AutoHotKey can be used to create global autotext macros. In particular, if you n
 
 2. Press `Win+R` on your keyboard and type `shell:startup` to open the Startup folder. Copy the path to that folder (e.g. `C:\Users\USER\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`, where `USER` is your Windows user name).
 
-3. Right click on [this link](files/insert_unicode_char.ahk), choose “Save link as” and paste the path to the Startup folder, to download the script file in that folder.
+3. Right click on [this link](files/ahk/insert_unicode_char.ahk), choose “Save link as” and paste the path to the Startup folder, to download the script file in that folder.
 
 4. Right click the script file (`insert_unicode_char.ahk`) in the Startup folder and choose **Run script**.
 
