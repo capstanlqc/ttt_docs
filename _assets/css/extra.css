@@ -1,0 +1,29 @@
+.md-grid {
+  max-width: 1440px; 
+}
+
+table colgroup col {
+    width: auto !important;
+}
+
+.md-sidebar--primary {
+  display: block;
+}
+
+.md-tabs,
+.md-copyright,
+a.md-footer__link--next[aria-label="Next: Introduction"], 
+a.md-footer__link--prev[aria-label="Previous: Tags"],
+.md-nav__icon
+{
+  display: none !important;
+}
+
+.md-nav__link--index {
+  font-size: x-large;
+}
+
+.md-content {
+  max-width: 800px !important;
+}
+
