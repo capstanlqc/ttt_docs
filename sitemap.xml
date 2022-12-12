@@ -6,12 +6,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/autotext/</loc>
+         <lastmod>2022-12-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://capstanlqc.github.com/ttt_docs/aux-tools/</loc>
          <lastmod>2022-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://capstanlqc.github.com/ttt_docs/hidden/</loc>
+         <lastmod>2022-12-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/nbsp/</loc>
          <lastmod>2022-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
