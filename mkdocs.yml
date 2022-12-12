@@ -1,17 +1,55 @@
 site_name: TTT Docs
-site_url: https://capps.capstan.be/doc/ttt_docs
+site_url: https://capstanlqc.github.com/ttt_docs
 nav:
-        - Home: README.md
-        - OmegaT: omegat.md
-        - About: about.md
+  - Home: README.md
+  - OmegaT tips and tricks: omegat.md
+  - Auxiliary tools: aux-tools.md
 theme:
   name: material
+  logo: _assets/img/cApStAn_symbolesensemble_blanc.png
+  favicon: _assets/favicon.ico
+  features:
+    #- toc.integrate
+    #- navigation.instant
+    #- navigation.prune
+    - navigation.top
+    #- navigation.sections
+    #- navigation.tabs
+    - toc.follow
+    #- navigation.indexes
 markdown_extensions:
-    - toc:
-        baselevel: 2
-        permalink: True
-        separator: "_"
+  - toc:
+       #baselevel: 2
+       permalink: True
+       separator: "-"
+  - attr_list
+  - md_in_html
+  - tables
+  - admonition
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.betterem
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 extra_css:
-  - stylesheets/extra.css
+  - _assets/css/extra.css
 extra_javascript:
-  - javascripts/extra.js
+  - _assets/js/extra.js
+plugins:
+  - tags:
+      tags_file: profiles.md
+      tags_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      tags_allowed:
+        - Tech
+        - Users
+  - macros:
+      verbose: true
+      include_dir: docs/_includes

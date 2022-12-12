@@ -1,15 +1,13 @@
-# OmegaT
+# OmegaT tips and tricks
 
-blabal bloody bloody bla
+## How to insert a non-breaking space in OmegaT
 
-## Installation
+Check the [Autotext](autotext.md) for general information about inserting special characters.
 
-foo
+## Autotext
 
-## Customization
+You may insert any special character using autotext.
 
-bar
+To see the list of special characters and their shortcuts in OmegaT, go to **Options** > **Preferences** > **Auto-completion** > **Autotext** (or check them out online [here](https://github.com/capstanlqc/omegat-customization/blob/master/docs/omegat-autotext.md)).
 
-### Windows
-
-ñalbkj
+If there is a special character that would like to have added to the list (for all users), please create a ticket in the OmegaT helpdesk to let us know.
