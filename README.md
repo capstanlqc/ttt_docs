@@ -1,5 +1,10 @@
 # cApStAn's Tech Team docs
 
-Welcome to the Tech Team's technical documentation, whose main focus is on translation technology.
+This is cApStAn's Translation Tehcnology Team's documentation site, the main focus of which is on translation technology.
 
-This documentation is maintained by and meant to be used internally by cApStAn's tech team. Some documents might be of interest of other people, but whenever that's the case, the document will be shared in the appropriate location (e.g. [KnowSystem](#) in Odoo).
+This documentation is maintained by and meant to be used internally by cApStAn's TTT. Some documents might be of interest to other people, but whenever that's the case, the document will be shared in the appropriate location (e.g. [KnowSystem](#) in Odoo).
+
+## todo: 
+
+- basic authentication? 
+https://github.com/otsuarez/mkdocs_auth
