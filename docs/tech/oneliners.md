@@ -39,6 +39,27 @@ The following oneliner extracts filename, key and text:
 pcregrep -Mo --color '(?<=key=")[^"]+?(?=")(?:[\s\S\n]+?<text>)[\s\S]+?(?=</text>)' *.xml | perl -0777 -pe 's/">[\s\n]+<text>/:/gm' | xsel -ib
 ```
 
+----
+
+ttt docs
+oneliners 
+
+find $work_path -name "diffte*t.html" -type f -exec grep -L '<meta charset="utf-8"/>' {} \; -exec xmlstarlet ed --inplace --subnode "/html/head" --type elem -n meta -i /html/head/meta -t attr -n charset -v "utf-8" {} \;
+
+
+
+how to restore deleted translations 
+
+git checkout [previous-commit-before-the-commit-that-deleted-translations]
+cp omegat/project_save.tmx ../03d9f5e.tmx # where 03d9f5e is the commit hash
+git checkout main
+mkdir tm/auto/restored
+mv ../03d9f5e.tmx tm/auto/restored 
+git pull && git add . && git commit -m "Restored translations from day Nov 3, accidentally removed" && git push 
+
+resources
+
+https://linuxcommandlibrary.com/basic/oneliners
 
 
 
