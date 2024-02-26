@@ -2,47 +2,172 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://capstanlqc.github.com/ttt_docs/</loc>
-         <lastmod>2022-12-12</lastmod>
+         <lastmod>2024-02-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://capstanlqc.github.com/ttt_docs/autotext/</loc>
-         <lastmod>2022-12-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://capstanlqc.github.com/ttt_docs/aux-tools/</loc>
-         <lastmod>2022-12-12</lastmod>
+         <loc>https://capstanlqc.github.com/ttt_docs/about/</loc>
+         <lastmod>2024-02-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://capstanlqc.github.com/ttt_docs/hidden/</loc>
-         <lastmod>2022-12-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://capstanlqc.github.com/ttt_docs/nbsp/</loc>
-         <lastmod>2022-12-12</lastmod>
+         <lastmod>2024-02-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://capstanlqc.github.com/ttt_docs/omegat/</loc>
-         <lastmod>2022-12-12</lastmod>
+         <lastmod>2024-02-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://capstanlqc.github.com/ttt_docs/profiles/</loc>
-         <lastmod>2022-12-12</lastmod>
+         <lastmod>2024-02-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://capstanlqc.github.com/ttt_docs/tools/</loc>
-         <lastmod>2022-12-12</lastmod>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/projects/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/projects/flash/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/projects/pisa/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/projects/pisa/errors/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/projects/pisa/trainings/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tech/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tech/misc/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tech/odooks/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tech/omt2xliff/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tech/oneliners/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tech/regex/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tech/support/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tech/utils/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/aux-tools/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/okapi/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/okapi/building/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/okapi/filters/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/omegat/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/omegat/autotext/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/omegat/building/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/omegat/errors/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/omegat/nbsp/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/omegat/scripts/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/omegat/team_projects/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/omegat/tickets/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/omegat/wordcount/</loc>
+         <lastmod>2024-02-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://capstanlqc.github.com/ttt_docs/profiles/</loc>
-         <lastmod>2022-12-12</lastmod>
+         <lastmod>2024-02-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

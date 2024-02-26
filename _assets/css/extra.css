@@ -1,29 +1,39 @@
+:root {
+  --md-primary-fg-color:        #004c78;
+  --md-primary-fg-color--light: #4C81A0;
+  --md-primary-fg-color--dark:  #003C60;
+}
+
 .md-grid {
-  max-width: 1440px; 
+  max-width: 1440px;
 }
 
 table colgroup col {
     width: auto !important;
 }
 
+.md-tabs,
 .md-sidebar--primary {
   display: block;
 }
 
-.md-tabs,
-.md-copyright,
-a.md-footer__link--next[aria-label="Next: Introduction"], 
-a.md-footer__link--prev[aria-label="Previous: Tags"],
-.md-nav__icon
-{
-  display: none !important;
-}
 
+/*
 .md-nav__link--index {
   font-size: x-large;
 }
+*/
 
 .md-content {
   max-width: 800px !important;
 }
 
+h3 {
+    border-bottom:1px solid #CCC; /* #f9dd94; */
+    padding-bottom:3px;
+}
+
+h2 {
+    border-bottom:2px solid #CCC; /* #f9dd94; */
+    padding-bottom:3px;
+}
