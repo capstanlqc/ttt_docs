@@ -1,3 +1,8 @@
+---
+tags:
+  - Audience꞉User
+---
+
 # AUTOMATION: CREATE FOLDER STRUCTURE
 
 Script name: `mk_dir_skrukt.sh`

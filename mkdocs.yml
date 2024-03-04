@@ -66,8 +66,6 @@ nav:
     - Convert multilingual Excel to TMX: tech/xls2tmx.md
     - How to update these docs: tech/update-docs.md
     - How to share a doc in KS: tech/share-in-ks.md
-  - Docs for users (symlink to KS):
-    - 👤 Wordcount analysis in Ur: tools/omegat/omt_wc.md
   - cApps:
     - cApps: capps/index.md
     - ☆ Langtags: capps/langtags.md
@@ -87,6 +85,8 @@ nav:
     - Block formatting: i18n/formatting.md
     - CG example in markdown: i18n/trend_math_cg_6b.md
     - TODO -- MERGE WITH XLIFF: i18n/xliff-prepp-best-practices.md    
+  - Docs for users (symlink to KS):
+    - 👤 Wordcount analysis in Ur: tools/omegat/omt_wc.md    
 theme:
   name: material
   logo: _assets/img/cApStAn_symbolesensemble_blanc.png
