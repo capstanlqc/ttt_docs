@@ -1,0 +1,2298 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="cApStAn TTT">
+      
+      
+        <link rel="canonical" href="https://capstanlqc.github.com/ttt_docs/projects/ipsos/workflow_automation/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../../tools/">
+      
+      <link rel="icon" href="../../../_assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+    
+    
+      
+        <title>👤 Workflow automation - 🇹 🇹 🇹 · 🇩 🇴 🇨 🇸</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../_assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ipsos-workflow-automation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" class="md-header__button md-logo" aria-label="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" data-md-component="logo">
+      
+  <img src="../../../_assets/img/cApStAn_symbolesensemble_blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            🇹 🇹 🇹 · 🇩 🇴 🇨 🇸
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              👤 Workflow automation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" class="md-nav__button md-logo" aria-label="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" data-md-component="logo">
+      
+  <img src="../../../_assets/img/cApStAn_symbolesensemble_blanc.png" alt="logo">
+
+    </a>
+    🇹 🇹 🇹 · 🇩 🇴 🇨 🇸
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">Projects</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          ★ Flash
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          ★ Flash
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flash/flash_automation/" class="md-nav__link">
+        👤 Automated workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flash/flowchart/" class="md-nav__link">
+        ☆ Automation diagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flash/FLASH_style-guide_pol-POL/" class="md-nav__link">
+        ☆ Style guide [pl-PL]
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../pisa/">★ PISA 2025</a>
+          
+            <label for="__nav_1_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          ★ PISA 2025
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pisa/errors/" class="md-nav__link">
+        Errors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pisa/trainings/" class="md-nav__link">
+        OmegaT support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pisa/pisa2025_trend-transfer_guide/" class="md-nav__link">
+        👤 Trend transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">★ IPSOS</a>
+          
+            <label for="__nav_1_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          ★ IPSOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          👤 Workflow automation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        👤 Workflow automation
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-how-to-use-the-automation-quick-steps" class="md-nav__link">
+    1. How to use the automation: quick steps
+  </a>
+  
+    <nav class="md-nav" aria-label="1. How to use the automation: quick steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-configuration" class="md-nav__link">
+    1.1. Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-adding-new-root-folders-to-the-automation" class="md-nav__link">
+    1.2 Adding new root folders to the automation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-workflow-initiation" class="md-nav__link">
+    1.3. Workflow initiation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-files" class="md-nav__link">
+    1.4. Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-workflow-and-package-creation-in-detail" class="md-nav__link">
+    2. Workflow and package creation in detail
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Workflow and package creation in detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-configuration-file" class="md-nav__link">
+    2.1. Configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-initiation-bundle" class="md-nav__link">
+    2.2. Initiation bundle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-automated-actions" class="md-nav__link">
+    2.3. Automated actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-achtung" class="md-nav__link">
+    2.4 Achtung
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-faq" class="md-nav__link">
+    3. FAQ
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tools/">L10n tools</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          L10n tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tools/okapi/">★ Okapi</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          ★ Okapi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/okapi/filters/" class="md-nav__link">
+        Filters
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          ★ OmegaT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          ★ OmegaT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/building/" class="md-nav__link">
+        Building
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/mk-win64-jre-signed-omegat-installer/" class="md-nav__link">
+        Creating a signed OmegaT installer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+          Extensions / add-ons
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Extensions / add-ons
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/scripts/" class="md-nav__link">
+        Scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/omt_custom_tech/" class="md-nav__link">
+        Customization script (5x)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/mk_translatability_report_omt/" class="md-nav__link">
+        Obtain TA report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/plugins/" class="md-nav__link">
+        OMT Package Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/LQE/" class="md-nav__link">
+        LQE backend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/mk_ta_notes_omt/" class="md-nav__link">
+        👤 !T&A notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/ta_notes/" class="md-nav__link">
+        👤 !T&A notes [Comments]
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/errors/" class="md-nav__link">
+        Errors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/fonts/" class="md-nav__link">
+        Recommended fonts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/tickets/" class="md-nav__link">
+        Tickets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
+          Project administration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Project administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/omt2xliff/" class="md-nav__link">
+        Outsource project as XLIFF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/99_automation/" class="md-nav__link">
+        ☆ Reconciliation packages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/team_projects/" class="md-nav__link">
+        Team projects with Github
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/team_projects_trblsht/" class="md-nav__link">
+        ☆ Team project troubleshoot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_6" id="__nav_2_3_6_label" tabindex="0">
+          Testing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Testing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/pisa25_omegat_test01/" class="md-nav__link">
+        PISA 2025 OmegaT testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/omegat5_testing/" class="md-nav__link">
+        OmegaT 5 - installation and testing guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/omegat5_testing_adhoc/" class="md-nav__link">
+        OmegaT 5 - installation and testing guide
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_7" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_7" id="__nav_2_3_7_label" tabindex="0">
+          Tips and tricks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Tips and tricks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/autotext/" class="md-nav__link">
+        Autotext
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/nbsp/" class="md-nav__link">
+        No-break spaces
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_8" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_8" id="__nav_2_3_8_label" tabindex="0">
+          TO SORT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          TO SORT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/pisa25_omegat_teamproj_steps/" class="md-nav__link">
+        Instructions for PISA 25 translators (testing in `fr`)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/omt_custom_user/" class="md-nav__link">
+        Customization ADD 2 GUIDES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/omt_team_steps4xlat/" class="md-nav__link">
+        Download git ADD 2 GUIDES
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aux-tools.md" class="md-nav__link">
+        ★ Auxiliary tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../i18n/">i18n guides</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          i18n guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../i18n/xliff/" class="md-nav__link">
+        ☆ XLIFF preparation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../i18n/authoring-tips/" class="md-nav__link">
+        ☆ Authoring tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../i18n/wrapping/" class="md-nav__link">
+        Text wrapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../i18n/hyphenation/" class="md-nav__link">
+        Hyphenation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../i18n/sorting.md" class="md-nav__link">
+        List sorting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../i18n/formatting.md" class="md-nav__link">
+        Block formatting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../i18n/trend_math_cg_6b/" class="md-nav__link">
+        CG example in markdown
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../i18n/xliff-prepp-best-practices/" class="md-nav__link">
+        TODO -- MERGE WITH XLIFF
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tech/">Tech</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/mk_dir_strukt.md" class="md-nav__link">
+        Create folder structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech/oneliners/" class="md-nav__link">
+        Terminal oneliners
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech/support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech/utils/" class="md-nav__link">
+        Utils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech/xls2tmx/" class="md-nav__link">
+        Convert multilingual Excel to TMX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Docs for users (symlink to KS)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Docs for users (symlink to KS)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/omegat/omt_wc/" class="md-nav__link">
+        👤 Wordcount analysis in Ur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../capps/">cApps</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          cApps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../capps/langtags/" class="md-nav__link">
+        ☆ Langtags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../capps/veryfire/" class="md-nav__link">
+        ☆ VeryFire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../capps/vf4ta/" class="md-nav__link">
+        ☆ VF4TA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../capps/memoryln/" class="md-nav__link">
+        ☆ MemoryLn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../capps/memoryln_tm_mngmt/" class="md-nav__link">
+        ☆ MemoryLn TM management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../capps/xdiff/" class="md-nav__link">
+        ☆ xDiff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../capps/xdiff_automation/" class="md-nav__link">
+        ☆ xDiff automation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-how-to-use-the-automation-quick-steps" class="md-nav__link">
+    1. How to use the automation: quick steps
+  </a>
+  
+    <nav class="md-nav" aria-label="1. How to use the automation: quick steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-configuration" class="md-nav__link">
+    1.1. Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-adding-new-root-folders-to-the-automation" class="md-nav__link">
+    1.2 Adding new root folders to the automation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-workflow-initiation" class="md-nav__link">
+    1.3. Workflow initiation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-files" class="md-nav__link">
+    1.4. Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-workflow-and-package-creation-in-detail" class="md-nav__link">
+    2. Workflow and package creation in detail
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Workflow and package creation in detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-configuration-file" class="md-nav__link">
+    2.1. Configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-initiation-bundle" class="md-nav__link">
+    2.2. Initiation bundle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-automated-actions" class="md-nav__link">
+    2.3. Automated actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-achtung" class="md-nav__link">
+    2.4 Achtung
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-faq" class="md-nav__link">
+    3. FAQ
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="ipsos-workflow-automation">IPSOS – workflow automation<a class="headerlink" href="#ipsos-workflow-automation" title="Permanent link">&para;</a></h1>
+<p>This document outlines the process to automate the creation of the workflow folders and packages for an IPSOS project (other than FLASH).</p>
+<p>If you're a PM in a rush to create the workflow (or if you have already read this document once), you can go straight to section <a href="#1-how-to-use-the-automation:-quick-steps">1 How to use the automation: quick steps</a> below. However, reading the whole document is recommended to understand what you're doing.</p>
+<p>The latest version of this document: <a href="https://capps.capstan.be/doc/workflow_automation.php">https://capps.capstan.be/doc/workflow_automation.php</a>. This document must be edited in <a href="https://github.com/msoutopico/cli_automation/blob/master/workflow_creation/docs/workflow_automation.md">github</a>.</p>
+<h4 id="01-changes-history">0.1 Changes history<a class="headerlink" href="#01-changes-history" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Person</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12.05.2021</td>
+<td>Manuel</td>
+<td>Creation of first version of the document</td>
+</tr>
+<tr>
+<td>25.05.2021</td>
+<td>Manuel</td>
+<td>Replacing <code>lll-CCC.txt</code> with task sheets in the config file</td>
+</tr>
+<tr>
+<td>06.09.2021</td>
+<td>Manuel</td>
+<td>Simplified and restructured the document to better separate quick steps and detailed info.</td>
+</tr>
+<tr>
+<td>15.09.2021</td>
+<td>Manuel</td>
+<td>Added information about creating the root folder of the project and scheduling the automation for a new root.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="02-recommended-tools">0.2 Recommended tools:<a class="headerlink" href="#02-recommended-tools" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://www.7-zip.org/">7-zip</a> for zipping, unzipping and opening packages (without unpacking).</li>
+<li><a href="https://www.ghisler.com/">Total Commander</a> for transferring files from one folder to another (especially from server to local and vice versa).</li>
+<li>Notepad (or any other text editor such as <a href="https://www.sublimetext.com/">Sublime Text</a> or <a href="https://atom.io/">Atom</a>) to edit text files. DO NOT use Microsoft Word or Wordpad and the like instead of a text editor to edit text files!</li>
+</ul>
+<h4 id="03-terminology">0.3 Terminology<a class="headerlink" href="#03-terminology" title="Permanent link">&para;</a></h4>
+<p>You are expected to understand the following concepts: workflow, workflow folder, workflow initiation, configuration file (or config file), initiation bundle (or init bundle), (source) files, (OMT) packages, language tasks, versions, version folders.</p>
+<p>In this document, curly braces are used for <code>{placeholders}</code>. </p>
+<h4 id="04-preconditions">04. Preconditions<a class="headerlink" href="#04-preconditions" title="Permanent link">&para;</a></h4>
+<p>This document presumes that the root folder of the project already exists. If the root folder of the project doesn't exist yet, it must be created before you can follow the steps below, and it must contain a <code>02_AUTOMATION</code> folder. Ask TT to add it or copy it from  <code>u:\IPSOS\_tech\02_AUTOMATION</code>.</p>
+<blockquote>
+<p>The FLASH project (see <code>u:\IPSOS\EUROBAROMETER_FLASH_2.0</code>) is a good source of inspiration to create a root folder for your project with a neat structure. </p>
+</blockquote>
+<h2 id="1-how-to-use-the-automation-quick-steps">1. How to use the automation: quick steps<a class="headerlink" href="#1-how-to-use-the-automation-quick-steps" title="Permanent link">&para;</a></h2>
+<p>The PM must prepare the initiation bundle and maintain the configuration file. </p>
+<p>This document presumes that the root folder of the project already exists. If that's not the case (e.g. because it's a new project), please see <strong>0.4 Preconditions</strong> above. </p>
+<h3 id="11-configuration">1.1. Configuration<a class="headerlink" href="#11-configuration" title="Permanent link">&para;</a></h3>
+<p>Unless there are changes throughout the project, this configuration should be a once-off step. In the config file (located at <code>{root}/02_AUTOMATION/Config/config.xlsx</code>), do:</p>
+<ol>
+<li>Review and update the list of languages per task.<ul>
+<li>You may use the <a href="https://capps.capstan.be/locale_checker.php"><strong>Locale checker</strong></a> app in cApps to make sure the language codes are correct.</li>
+</ul>
+</li>
+<li>Review and update options and parameters.</li>
+</ol>
+<h3 id="12-adding-new-root-folders-to-the-automation">1.2 Adding new root folders to the automation<a class="headerlink" href="#12-adding-new-root-folders-to-the-automation" title="Permanent link">&para;</a></h3>
+<p>Please send the path to the root folder of the project to <a href="manuel.souto@capstan.be">manuel.souto@capstan.be</a> to request scheduling the automation (which by default will run every minute unless you have a different preference). This path is the value of the "root" parameter in the config file.</p>
+<blockquote>
+<p>Handover tip for TT: root paths (absolute paths, unix form) must be added to the file <code>/media/data/data/company/cApStAn_Tech/20_Automation/Scripts/cli_automation/workflow_creation/paths/roots.txt</code>.</p>
+</blockquote>
+<h3 id="13-workflow-initiation">1.3. Workflow initiation<a class="headerlink" href="#13-workflow-initiation" title="Permanent link">&para;</a></h3>
+<p>To initiate the workflow (i.e. to create a new workflow folder containing all the necessary subfolders and files), create a new initiation bundle:</p>
+<ol>
+<li>Copy the initiation bundle template (i.e. <code>{root}/02_AUTOMATION/Initiation/Templates/init_bundle_template.zip</code>) or the initiation bundle used for a previous workflow, to a local folder in your machine, and unzip it there (or simply open it in 7-zip, if you prefer).</li>
+<li>If necessary, update the list of subfolders in the version folder template (i.e. <code>lll-CCC.zip</code>) under each language task. </li>
+<li>Zip again the contents of the initiation bundle (or just close it if you are using 7-zip).</li>
+<li>Rename the initiation bundle as what you want to call the new workflow (use only letters, numbers and dash, avoid underscore). The name of workflow folder is taken from the init bundle.</li>
+<li>Copy your new initiation bundle to the <code>{root}/02_AUTOMATION/Initiation/</code> folder in the server.</li>
+</ol>
+<h3 id="14-files">1.4. Files<a class="headerlink" href="#14-files" title="Permanent link">&para;</a></h3>
+<p>To create the OMT packages for dispatch:</p>
+<ol>
+<li>Export the XLIFF files from memoQ or Trados</li>
+<li>Copy them to folder <code>{root}/05_WORKFLOWS/{workflow}/00_source/files</code></li>
+</ol>
+<p>It's also possible to add the XLIFF files to the <code>00_source</code> folder of the initiation bundle (steps above) before initiating the workflow to have the packages created at the same time as the workflow folders.</p>
+<h2 id="2-workflow-and-package-creation-in-detail">2. Workflow and package creation in detail<a class="headerlink" href="#2-workflow-and-package-creation-in-detail" title="Permanent link">&para;</a></h2>
+<p>The root folder of the project (referred here as <code>{root}</code> or as the leftmost <code>/</code>, full path specified in the config file) contains a folder called <code>02_AUTOMATION</code>, which in turn contains folders <code>Initiation</code> and <code>Config</code>, where the initiation bundle and the config file are expected, respectively.</p>
+<pre><code>/path/to/project/root
+├── 02_AUTOMATION
+│   ├── Config
+│   │   └── config.xlsx
+│   └── Initiation
+│       └── {init-bundle}.zip
+...
+</code></pre>
+<p>The name and location under <code>{root}</code> of the <code>02_AUTOMATION</code> folder are not customizable. </p>
+<h3 id="21-configuration-file">2.1. Configuration file<a class="headerlink" href="#21-configuration-file" title="Permanent link">&para;</a></h3>
+<p>The configuration file (or <strong>config file</strong> for short) is available at <code>{root}/02_AUTOMATION/Config/config.xlsx</code> and it contains some information that the automation needs to know about the project, e.g. to either find or generate certain files in a certain location with a certain name. </p>
+<p>The configuration file is common for all workflows of the project.</p>
+<p>The PM (in consultation with TT) should update the config file whenever there are any changes throughout the project, but it might be left as it is throughout the project if there are no such changes.</p>
+<p>The config file contains several worksheets:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Sheet</th>
+<th align="left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">options</td>
+<td align="left">You can indicate whether an action must be carried out or not. Please do not rename.</td>
+</tr>
+<tr>
+<td align="left">params</td>
+<td align="left">A number of parameters (like folder names, package name template, etc.) that might change across projects. Please do not rename.</td>
+</tr>
+<tr>
+<td align="left">01_TRA</td>
+<td align="left">The list of versions (cApStAn language codes) for language task <code>01_TRA</code> (the sheet name must match the folder name for this task in the init bundle).</td>
+</tr>
+<tr>
+<td align="left">02_ADA</td>
+<td align="left">The list of versions (cApStAn language codes) for language task <code>02_ADA</code> (the sheet name must match the folder name for this task in the init bundle).</td>
+</tr>
+</tbody>
+</table>
+<p>There must be one worksheet for each language task. Each task folder (and the corresponding worksheet in the config file) must match pattern <code>\d\d_[A-Z]{3}</code>(i.e. two digits - underscore - three upper-case letters), e.g. <code>01_TRA</code>, <code>02_ADA</code>.</p>
+<p>The PM can edit this file any time, e.g. to add new rows for new versions to the language task sheets or to change the values of options or parameters.</p>
+<p>The lists of language codes in the config file determines what version folders will be created inside the language task folders. Version folders will be created only for language versions included in the config file.</p>
+<h3 id="22-initiation-bundle">2.2. Initiation bundle<a class="headerlink" href="#22-initiation-bundle" title="Permanent link">&para;</a></h3>
+<p>The initiation bundle (or <strong>init bundle</strong> for short) is a zipped template of the hierarchy of folders that the workflow folder must contain. It must contain folders <code>00_source</code> for the source files and a folder for each language ask (e.g. <code>01_TRA</code>, <code>02_ADA</code>, etc.).</p>
+<p>The <code>00_source</code> folder contains an OmegaT package template and a <code>files</code> folder, which might contain source files or not.</p>
+<p>Each language task folder (e.g. <code>01_TRA</code>, <code>02_ADA</code>, etc.) in the init bundle must contain one file <code>lll-CCC.zip</code> that is a zipped template of the version folder structure to be replicated for each version.</p>
+<pre><code>workflow:
+├── 00_source
+│   ├── omtpkg_template_ipsos.omt
+│   └── files
+│       ├── project_blabla.xlsm_ar.mqxliff
+│       └── project_blabla.xlsm_de-AT.mqxliff (etc.)
+├── 01_TRA
+│   └── lll-CCC.zip
+└── 02_ADA
+    └── lll-CCC.zip
+</code></pre>
+<p>If the <code>00_source/files</code> folder of the init bundle contains any source files (e.g. memoQ XLIFF files), packages for the corresponding versions will be created at the time of workflow initiation. However, the <code>00_source/files</code> folder in the init bundle may be left empty and the PM can add source files to <code>00_source/files</code> any time. Packages will only be created if a version folder exists for that language.</p>
+<p>An example of <code>lll-CCC.zip</code> file would be:</p>
+<pre><code>Archive:  lll-CCC.zip
+Name
+----
+01_To_Translator
+02_From_Translator
+03_From_Verifier
+04_Verif_Review
+05_Machine_Translation
+-------
+5 folders
+</code></pre>
+<p>To create the initiation bundle for a new workflow, the PM can use a template or reuse the init bundle used to create a previous workflow. The template is at <code>{root}/02_AUTOMATION/Initiation/Templates/init_bundle_template.zip</code>. Deployed workflows' init bundles are under <code>{root}/02_AUTOMATION/Initiation/</code> (or <code>{root}/02_AUTOMATION/Initiation/_done</code>, if they are archived).</p>
+<p>To initiate the workflow, the init bundle must be put in the folder <code>{root}/02_AUTOMATION/Initiation/</code>.</p>
+<h3 id="23-automated-actions">2.3. Automated actions<a class="headerlink" href="#23-automated-actions" title="Permanent link">&para;</a></h3>
+<p>When the initiation bundle is put in the folder <code>{root}/02_AUTOMATION/Initiation/</code>,  several things happen: all version folders are created for the specified versions and the OmegaT project packages are created inside them for any source files found in the <code>00_source</code> folder.</p>
+<p>More in detail:</p>
+<ol>
+<li>The workflow folder structure is generated:</li>
+<li>The initiation bundle is deployed in <code>{root}/08_WORKFLOWS</code> thereby creating the  workflow folder.<ul>
+<li>It is also archived under <code>{root}/02_AUTOMATION/Initiation/_done</code> (in case it needs to be reused).</li>
+</ul>
+</li>
+<li>
+<p>Inside each task folder under the workflow folder, one version folder will be generated for each version in the list of languages specified in the config file, including the contents of the version project template (i.e. <code>lll-CCC.zip</code>).</p>
+<ul>
+<li>The version folder template is archived (for further reference, if needed) under the <code>_tech</code> folder inside the task folder.</li>
+</ul>
+</li>
+<li>
+<p>The OMT packages are generated for each version in the folders specified in the config file, including the file(s) for that version found in the <code>00_source</code> folder. Packages will be named according to the pattern specified in the config file and should not be renamed.</p>
+</li>
+<li>The source files can be added to the <code>00_source</code> folder before or after initiating the workflow.</li>
+</ol>
+<h3 id="24-achtung">2.4 Achtung<a class="headerlink" href="#24-achtung" title="Permanent link">&para;</a></h3>
+<p>Unlike in FLASH, the list of languages for each task is fetched from the config file, not from a <code>lll-CCC.txt</code> file.</p>
+<p>Unlike in other workflow automations, packages for adaptation are created using source files exported from memoQ, not tweaking packages for a base version.</p>
+<p>The list of languages and the source files can be updated at any point. New version folders and new packages will be created accordingly if they don't exist.</p>
+<h2 id="3-faq">3. FAQ<a class="headerlink" href="#3-faq" title="Permanent link">&para;</a></h2>
+<h5 id="31-are-packages-automatically-created-when-i-drop-the-source-files-in-the-00_source-folder">3.1. Are packages automatically created when I drop the source files in the <code>00_source</code> folder?<a class="headerlink" href="#31-are-packages-automatically-created-when-i-drop-the-source-files-in-the-00_source-folder" title="Permanent link">&para;</a></h5>
+<p>Yes, as long as they are named correctly (including the language code that memoQ adds to the file) and as long as the version folder exists for that language version.</p>
+<h5 id="32-is-the-list-of-language-versions-updated-automatically-in-the-config-file-when-i-drop-the-source-files-in-the-00_source-folder">3.2. Is the list of language versions updated automatically in the config file when I drop the source files in the <code>00_source</code> folder?<a class="headerlink" href="#32-is-the-list-of-language-versions-updated-automatically-in-the-config-file-when-i-drop-the-source-files-in-the-00_source-folder" title="Permanent link">&para;</a></h5>
+<p>No, the list must be updated manually in the config file.</p>
+<h5 id="33-will-the-omt-package-be-updated-automatically-if-a-source-file-in-folder-00_source-is-replaced-with-a-newer-version">3.3. Will the OMT package be updated automatically if a source file in folder <code>00_source</code> is replaced with a newer version?<a class="headerlink" href="#33-will-the-omt-package-be-updated-automatically-if-a-source-file-in-folder-00_source-is-replaced-with-a-newer-version" title="Permanent link">&para;</a></h5>
+<p>No, the package needs to be deleted manually, so that it can be created again with the new source file(s).</p>
+<h5 id="34-where-does-the-name-of-the-workflow-folder-come-from">3.4. Where does the name of the workflow folder come from?<a class="headerlink" href="#34-where-does-the-name-of-the-workflow-folder-come-from" title="Permanent link">&para;</a></h5>
+<p>The workflow folder takes its name from the initiation bundle used to initiate that workflow.</p>
+<h5 id="35-i-cant-find-the-init-bundle-template-where-is-it">3.5. I can't find the init bundle template. Where is it?<a class="headerlink" href="#35-i-cant-find-the-init-bundle-template-where-is-it" title="Permanent link">&para;</a></h5>
+<p>If the root folder of the project already exists, it can be found at <code>{root}/02_AUTOMATION/Initiation/Templates/</code>. If the root folder of the project hasn't been created or has just been created but it's not complete, see <strong>0.4 Preconditions</strong> above.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 cApStAn
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.prune", "navigation.top", "navigation.sections", "navigation.path", "toc.follow", "navigation.indexes", {"hidden": "tech"}], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a51614de.min.js"></script>
+      
+        
+          <script src="../../../_assets/js/extra.js"></script>
+        
+      
+    
+  </body>
+</html>
