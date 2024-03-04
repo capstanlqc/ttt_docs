@@ -1,4 +1,4 @@
-# Team projects
+# Team project troubleshooting
 
 ## Restoring translations
 

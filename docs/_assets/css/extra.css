@@ -17,14 +17,79 @@ table colgroup col {
   display: block;
 }
 
-.md-copyright {
-  display: none !important;
-}
 
+/*
 .md-nav__link--index {
   font-size: x-large;
 }
+*/
 
 .md-content {
   max-width: 800px !important;
+}
+
+h3 {
+    border-bottom:1px solid #CCC; /* #f9dd94; */
+    padding-bottom:3px;
+}
+
+h2 {
+    border-bottom:2px solid #CCC; /* #f9dd94; */
+    padding-bottom:3px;
+}
+
+/* wrapping */
+
+div.test {
+  font-family: monospace;
+  word-wrap: break-word;
+}
+div.width30 {
+  font-family: monospace;
+  width: 25em;
+}
+div.width18 {
+  font-family: monospace;
+  width: 18em;
+}
+
+/* hyphenation */
+
+p.text {
+  text-align: justify;
+  margin-left: 50px;
+  border: 1px solid black;
+  padding: 5px;
+  font-family: monospace;  
+}
+
+img.hyph {
+  margin-left: 50px;
+}
+
+blockquote.hyph {
+  font-size: 80%;
+  background-color: #E0E0E0;
+  padding: 10px;
+}
+
+p.textbox_short {
+    width: 29em; 
+    word-wrap: break-word;
+}
+
+p.textbox_long {
+    width: 33em; 
+    word-wrap: break-word;
+}
+
+p.manual {
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
+}
+p.auto {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }

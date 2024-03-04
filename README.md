@@ -8,3 +8,5 @@ This documentation is maintained by and meant to be used internally by cApStAn's
 
 - basic authentication? 
 https://github.com/otsuarez/mkdocs_auth
+
+document: password_helper.sh (Adrien's script) or ask Adrien to do it

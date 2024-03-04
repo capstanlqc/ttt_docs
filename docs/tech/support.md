@@ -1,6 +1,6 @@
-## QuickSupport
+## TeamViewer -- QuickSupport
 
-When the support agent sends the QuickSupport link to the user, the user must simply click on it to download the utility, then double click the utility to run it, then authorize the support agent's access.
+When the support agent sends the QuickSupport utility link to the user, the user must simply click on it to download the utility, then double click the utility to run it, then authorize the support agent's access.
 
 If the user is an employee or member of the team, they might already have TeamViewer installed by Harras. In that case, they will not be able to run the QuickSupport utility. They might not be able to provide a password together with their ID.
 

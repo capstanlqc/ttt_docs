@@ -1,4 +1,4 @@
-# OmegaT support in PISA Connect
+# OmegaT support
 
 
 
