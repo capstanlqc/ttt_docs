@@ -59,10 +59,10 @@ nav:
     - ★ Auxiliary tools: aux-tools.md
   - Tech:
     - Tech: tech/index.md
-    - Create folder structure: tools/omegat/mk_dir_strukt.md
+    - 👤 Create folder structure: tech/mk_dir_strukt.md
     - tech/oneliners.md
     - tech/support.md
-    - tech/utils.md
+    - Utilities: tech/utils.md
     - Convert multilingual Excel to TMX: tech/xls2tmx.md
     - How to update these docs: tech/update-docs.md
     - How to share a doc in KS: tech/share-in-ks.md
