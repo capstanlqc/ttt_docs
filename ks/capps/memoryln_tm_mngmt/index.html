@@ -1,0 +1,2395 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="cApStAn TTT">
+      
+      
+        <link rel="canonical" href="https://capstanlqc.github.com/ttt_docs/capps/memoryln_tm_mngmt/">
+      
+      
+        <link rel="prev" href="../memoryln/">
+      
+      
+        <link rel="next" href="../xdiff/">
+      
+      <link rel="icon" href="../../_assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.1.16">
+    
+    
+      
+        <title>☆ MemoryLn TM management - 🇹 🇹 🇹 · 🇩 🇴 🇨 🇸</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="capstan" data-md-color-primary="midnight-blue" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#memoryln-tm-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" class="md-header__button md-logo" aria-label="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" data-md-component="logo">
+      
+  <img src="../../_assets/img/cApStAn_symbolesensemble_blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            🇹 🇹 🇹 · 🇩 🇴 🇨 🇸
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ☆ MemoryLn TM management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="capstan" data-md-color-primary="midnight-blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_3" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="capstan" data-md-color-primary="midnight-blue" data-md-color-accent="indigo"  aria-label="Switch to dark-mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark-mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="midnight-blue" data-md-color-accent="indigo"  aria-label="Switch to light-mode"  type="radio" name="__palette" id="__palette_3">
+            
+              <label class="md-header__button md-icon" title="Switch to light-mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" class="md-nav__button md-logo" aria-label="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" data-md-component="logo">
+      
+  <img src="../../_assets/img/cApStAn_symbolesensemble_blanc.png" alt="logo">
+
+    </a>
+    🇹 🇹 🇹 · 🇩 🇴 🇨 🇸
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../projects/">Projects</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          ★ Flash
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          ★ Flash
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/flash/flash_automation/" class="md-nav__link">
+        👤 Automated workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/flash/flowchart/" class="md-nav__link">
+        ☆ Automation diagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/flash/FLASH_style-guide_pol-POL/" class="md-nav__link">
+        ☆ Style guide [pl-PL]
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../projects/pisa/">★ PISA 2025</a>
+          
+            <label for="__nav_1_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          ★ PISA 2025
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/pisa/errors/" class="md-nav__link">
+        Errors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../☆ projects/pisa/trainings.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/pisa/pisa2025_trend-transfer_guide/" class="md-nav__link">
+        👤 Trend transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../projects/ipsos/">★ IPSOS</a>
+          
+            <label for="__nav_1_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          ★ IPSOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/ipsos/workflow_automation/" class="md-nav__link">
+        👤 Workflow automation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/">L10n tools</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          L10n tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/okapi/">★ Okapi</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          ★ Okapi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/okapi/filters/" class="md-nav__link">
+        Filters
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          ★ OmegaT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          ★ OmegaT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/building/" class="md-nav__link">
+        Building
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+          Custom configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Custom configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_custom_roadmap/" class="md-nav__link">
+        Customization roadmap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_custom_tech/" class="md-nav__link">
+        Customation howto
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/mk-win64-jre-signed-omegat-installer/" class="md-nav__link">
+        Creating a signed OmegaT installer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
+          Extensions / add-ons
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Extensions / add-ons
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/scripts/" class="md-nav__link">
+        Scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_custom_tech/" class="md-nav__link">
+        Customization script (5x)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/mk_translatability_report_omt/" class="md-nav__link">
+        Obtain TA report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/plugins/" class="md-nav__link">
+        OMT Package Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/LQE/" class="md-nav__link">
+        LQE backend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/mk_ta_notes_omt/" class="md-nav__link">
+        👤 !T&A notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/ta_notes/" class="md-nav__link">
+        👤 !T&A notes [Comments]
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/errors/" class="md-nav__link">
+        Errors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/fonts/" class="md-nav__link">
+        Recommended fonts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/tickets/" class="md-nav__link">
+        Tickets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_6" id="__nav_2_3_6_label" tabindex="0">
+          Project administration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Project administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt2xliff/" class="md-nav__link">
+        Outsource project as XLIFF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/99_automation/" class="md-nav__link">
+        ☆ Reconciliation packages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/team_projects/" class="md-nav__link">
+        Team projects with Github
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/team_projects_trblsht/" class="md-nav__link">
+        ☆ Team project troubleshoot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_7" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_7" id="__nav_2_3_7_label" tabindex="0">
+          Testing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Testing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/pisa25_omegat_test01/" class="md-nav__link">
+        PISA 2025 OmegaT testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omegat5_testing/" class="md-nav__link">
+        OmegaT 5 - installation and testing guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omegat5_testing_adhoc/" class="md-nav__link">
+        OmegaT 5 - installation and testing guide
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_8" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_8" id="__nav_2_3_8_label" tabindex="0">
+          Tips and tricks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Tips and tricks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/autotext/" class="md-nav__link">
+        Autotext
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/nbsp/" class="md-nav__link">
+        No-break spaces
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_9" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_9" id="__nav_2_3_9_label" tabindex="0">
+          TO SORT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          TO SORT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/pisa25_omegat_teamproj_steps/" class="md-nav__link">
+        Instructions for PISA 25 translators (testing in fr)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_custom_user/" class="md-nav__link">
+        Customization ADD 2 GUIDES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_team_steps4xlat/" class="md-nav__link">
+        Download git ADD 2 GUIDES
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aux-tools.md" class="md-nav__link">
+        ★ Auxiliary tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tech/">Tech</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/mk_dir_strukt/" class="md-nav__link">
+        👤 Create folder structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/oneliners/" class="md-nav__link">
+        Terminal oneliners
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/utils/" class="md-nav__link">
+        Utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/xls2tmx/" class="md-nav__link">
+        Convert multilingual Excel to TMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/update-docs.md" class="md-nav__link">
+        How to update these docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/share-in-ks.md" class="md-nav__link">
+        How to share a doc in KS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">cApps</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          cApps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../langtags/" class="md-nav__link">
+        ☆ Langtags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../veryfire/" class="md-nav__link">
+        ☆ VeryFire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vf4ta/" class="md-nav__link">
+        ☆ VF4TA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memoryln/" class="md-nav__link">
+        ☆ MemoryLn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ☆ MemoryLn TM management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ☆ MemoryLn TM management
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roles-and-responsibilities" class="md-nav__link">
+    Roles and responsibilities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-tms" class="md-nav__link">
+    Creating TMs
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating TMs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tmx-filename" class="md-nav__link">
+    TMX filename
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-language-tags" class="md-nav__link">
+    Internal language tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-tms-to-memoryln" class="md-nav__link">
+    Adding TMs to MemoryLn
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding TMs to MemoryLn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#location-in-the-server" class="md-nav__link">
+    Location in the server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tm-maintenance" class="md-nav__link">
+    TM maintenance
+  </a>
+  
+    <nav class="md-nav" aria-label="TM maintenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#penalties" class="md-nav__link">
+    Penalties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanity-checks" class="md-nav__link">
+    Sanity checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-clean-up" class="md-nav__link">
+    Metadata clean up
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdiff/" class="md-nav__link">
+        ☆ xDiff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdiff_automation/" class="md-nav__link">
+        ☆ xDiff automation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../i18n/">i18n guides</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          i18n guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../i18n/xliff-prepp-best-practices/" class="md-nav__link">
+        ☆ XLIFF preparation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../i18n/authoring-tips/" class="md-nav__link">
+        ☆ Authoring tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../i18n/wrapping/" class="md-nav__link">
+        Text wrapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../i18n/hyphenation/" class="md-nav__link">
+        Hyphenation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../i18n/sorting.md" class="md-nav__link">
+        List sorting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../i18n/formatting.md" class="md-nav__link">
+        Block formatting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../i18n/trend_math_cg_6b/" class="md-nav__link">
+        CG example in markdown
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Docs for users (symlink to KS)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Docs for users (symlink to KS)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_wc/" class="md-nav__link">
+        👤 Wordcount analysis in Ur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roles-and-responsibilities" class="md-nav__link">
+    Roles and responsibilities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-tms" class="md-nav__link">
+    Creating TMs
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating TMs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tmx-filename" class="md-nav__link">
+    TMX filename
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-language-tags" class="md-nav__link">
+    Internal language tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-tms-to-memoryln" class="md-nav__link">
+    Adding TMs to MemoryLn
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding TMs to MemoryLn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#location-in-the-server" class="md-nav__link">
+    Location in the server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tm-maintenance" class="md-nav__link">
+    TM maintenance
+  </a>
+  
+    <nav class="md-nav" aria-label="TM maintenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#penalties" class="md-nav__link">
+    Penalties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanity-checks" class="md-nav__link">
+    Sanity checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-clean-up" class="md-nav__link">
+    Metadata clean up
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="memoryln-tm-management">MemoryLn -- TM management ☆<a class="headerlink" href="#memoryln-tm-management" title="Permanent link">&para;</a></h1>
+<!-- published at
+https://odoo.capstan.be/web#id=197&action=871&model=knowsystem.article&view_type=form&menu_id=592 -->
+
+<p>Putting content in MemoryLn serves two purposes: one is that linguists or any stakeholder can look up translations and terminology, another one is to gradually build a corpus that we can use for other tasks in the long run, such as doing language research or NLP tasks (e.g. MT training), etc. </p>
+<blockquote>
+<p>If our data is scattered we might be wasting potential for data-powered tasks, and that's the reason why archiving the final TMs of each project should be one of the mandatory steps in the PM's checklist, without which the project cannot be considered closed.</p>
+</blockquote>
+<p>This guide describes the life cycle of translation memories (TM), from their creation up to how they can be used, using MemoryLn both as repository and lookup tool.</p>
+<h3 id="roles-and-responsibilities">Roles and responsibilities<a class="headerlink" href="#roles-and-responsibilities" title="Permanent link">&para;</a></h3>
+<p>Several roles are involved in TM management: </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Role</th>
+<th style="text-align: left;">Person</th>
+<th style="text-align: left;">Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Project manager</td>
+<td style="text-align: left;">(per-project)</td>
+<td style="text-align: left;">owner of the project and its language assets, and therefore responsible for managing them appropriately, with the support of the tech team (TT).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Container manager</td>
+<td style="text-align: left;">Laura#?/Valentina</td>
+<td style="text-align: left;">responsible for creating glossaries and TMs upon PM's request or upon their own initiative whenever appropriate. The PM is encourage to as a member of the TT to play this role but might designate someone else if they feel confident.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Language asset manager</td>
+<td style="text-align: left;">? /Valentina?</td>
+<td style="text-align: left;">responsible for creating containers in cApps' <a href="https://capps.capstan.be/containers_edit.php"><strong>Containers Manager</strong></a> whenever appropriate and adding details (description, tages, etc.)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Language code manager</td>
+<td style="text-align: left;">Steve/Manuel</td>
+<td style="text-align: left;">responsible for creating and maintaining <a href="http://capps.capstan.be/langtags.php">language codes</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
+<p>The next steps must be followed:</p>
+<ol>
+<li>Check that the container exists in the <a href="https://capps.capstan.be/containers_edit.php"><strong>Containers Manager</strong></a> and check with the container manager if you can't find it there.</li>
+<li>Check that the language version exists in the <a href="https://capps.capstan.be/langtags.php"><strong>Language code finder</strong></a> and check with the language codes manager if you can't find it there.</li>
+<li>Ask the language asset manager of the project (preferably, a TT member) to create the TMX files.</li>
+<li>Put TMX files in the container folder in Ur.</li>
+</ol>
+<h2 id="creating-tms">Creating TMs<a class="headerlink" href="#creating-tms" title="Permanent link">&para;</a></h2>
+<p>TMs can be created in different ways, depending on the starting point: 
+- OmegaT: press <strong>Ctrl+D</strong> from the project in question (or <code>console-translate</code> the project)
+- memoQ or Trados: use the relevant export options
+- Excel/CSV: use <a href="https://www.maxprograms.com/products/tmxeditor.html">TMX Editor</a> or the <a href="https://github.com/msoutopico/cli_automation/tree/master/conv_multilingual_wb_to_tmxs"><code>conv_xls2tmx.py</code></a> script
+- alignment: use <a href="https://sourceforge.net/projects/aligner/">LF Aligner</a>, <a href="https://paralela.logrusglobal.com/home">Paralela</a> or any other CAT tool's alignment module.</p>
+<p>If you must convert one spreadsheet (for one language pair) to one TMX file, <a href="https://www.maxprograms.com/products/tmxeditor.html">TMX Editor</a> is a very useful tool. If you have a multilingual spreadsheet, however, the <a href="https://github.com/msoutopico/cli_automation/tree/master/conv_multilingual_wb_to_tmxs"><code>conv_xls2tmx.py</code></a> script, however, is going to be more efficient (all TMX files are generated in one go if the spreadsheet has the expected format).</p>
+<blockquote>
+<p>It goes without saying that the TMX file must be well-formed and valid according to XML syntax and type definition.</p>
+</blockquote>
+<p>The activity of creating TMs to be uploaded to MemoryLn must observe some constraints: 
++ TMX filename patterns
++ Language tags</p>
+<h3 id="tmx-filename">TMX filename<a class="headerlink" href="#tmx-filename" title="Permanent link">&para;</a></h3>
+<p>The file name of the TMX file is meaningful, in the sense that information is obtained from it and the file is handled diferently depending on its name. Elements can be many (e.g. organization/client, container, project or project  cycle, unit identifier, unit name, target language code, source language, etc.) depending on each particular case, of which only two are mandatory:</p>
+<ul>
+<li>the name of the <strong>container</strong>, e.g. <code>PISA</code> (not the project cycle, e.g. <code>PISA2018</code>, though)</li>
+<li>the <strong>target language code</strong> as per <a href="http://capps.capstan.be/langtags.php">cApStAn’s convention</a>.</li>
+</ul>
+<blockquote>
+<p>Before you can use an XML language tag or a language code, an entry for that language version needs to exist in the <a href="http://capps.capstan.be/langtags.php">Language code finder</a>. If you can find your language version there, please ask the language code manager to create it. </p>
+</blockquote>
+<p>The source language could optionally be indicated if deemed necessary (e.g. if different from English). Only the language tag is necessary.</p>
+<p>The different elements in the file name must always be separated by <strong>underscore</strong>. For example: <code>PISA_eng-USA_MAT_M033-AViewRoom_eng_MS2015.tmx</code>.</p>
+<h4 id="other-language-code-conventions">Other language code conventions<a class="headerlink" href="#other-language-code-conventions" title="Permanent link">&para;</a></h4>
+<p>Other organizations or tools normally have different language codes. If you produce TMX files that inherit a filename with language codes in other conventions, the language code must be converted to <a href="http://capps.capstan.be/langtags.php">cApStAn’s convention</a>.</p>
+<blockquote>
+<p>For TMX files converted from PISA XLIFF files, or for PISA files in general, many language codes match cApStAn's  convention, but some differ, so <strong>those must be converted</strong>. For example, files with  <code>cym-QUK</code> in their name need to be renamed to use <code>cym-GBR</code> instead. </p>
+</blockquote>
+<h3 id="internal-language-tags">Internal language tags<a class="headerlink" href="#internal-language-tags" title="Permanent link">&para;</a></h3>
+<p>The TMX file's internal language code must follow <a href="http://capps.capstan.be/langtags.php">our convention for OmegaT projects</a>. For example, for Dubai's Arabic, use <code>ar-DU</code>, rather than <code>ar-AE-dubai</code> (BCP-47) or <code>ara-UAE</code> (cApStAn/PISA).<!-- to be updated when migrating to BCP-47 --></p>
+<p>For the target language, the full language tag must be used. However, for the source language only the language subtag is needed, since MemoryLn ignores anything else after the language subtag (there’s only <code>en</code> and <code>fr</code> in the list above) -- although the full language tag (e.g. <code>en-US</code>, <code>en-GB</code>, <code>en-ZZ</code>) should work just fine too.</p>
+<!-- You may edit a TMX file in any text editor (such as Atom, Sublime, etc.) or an XML editor. You can open all the TMX you need to edit, then open the Search  functionality, search for the current code and if needed type the  corrected code and then click on select “Search and replace in all open documents”. You may also used a command line utility (e.g. `perl -pi -e 's/xx/yy/g' file.tmx`) or ask someone in the tech team to do that for you. -->
+
+<h4 id="language-tag-checklist">Language tag checklist<a class="headerlink" href="#language-tag-checklist" title="Permanent link">&para;</a></h4>
+<p>To minimize the number of issues that need to be fixed later, please remember the following guidelines with regards to language codes when you create TMX files:</p>
+<ol>
+<li>The expected order is language subtag, then region subtag: <code>fr-BE</code>is okay, but <code>be-FR</code> or <code>BE-fr</code> are not. <!-- to be updated when migrating to BCP-47 --></li>
+<li>The character that separates the two or more subtags in a language tag is a hyphen: <code>fr-BE</code> is OK, but <code>fr_BE</code> is not.</li>
+<li>Please use the same case as you see in the <a href="http://capps.capstan.be/langtags.php">Language code finder</a>: language subtag in lower case, region subtag in upper case, etc.</li>
+<li>Indicate the source-language code in the <code>srclang</code> attribute of the <code>header</code> node of the TMX file.</li>
+<li>The value of the <code>header/@srclang</code> attribute must match the value of the <code>@lang</code>  attribute of the source-language <code>tuv/seg</code> nodes.</li>
+</ol>
+<!-- srclang = en (with or without a region subtag, US, GB, ZZ, ) same as the tu lang? -->
+
+<blockquote>
+<p>For MemoryLn, case (point 3 above) doesn't actually really matter, since to avoid mismatches due to different case all language codes are lower-cased before running searches. However other applications might rely on case to match language codes, and it's also better to be visually consistent with the language code used in the filename (especially considering we used to have the opposite order, i.e. <code>CCC-lll</code>).</p>
+</blockquote>
+<h2 id="adding-tms-to-memoryln">Adding TMs to MemoryLn<a class="headerlink" href="#adding-tms-to-memoryln" title="Permanent link">&para;</a></h2>
+<p>The PM has full access to how TMX files and can decide how TMs are organized.</p>
+<h3 id="location-in-the-server">Location in the server<a class="headerlink" href="#location-in-the-server" title="Permanent link">&para;</a></h3>
+<p>Once they are created, TMX files must be put in their corresponding <strong>container</strong> folder in Ur. The path to the container folder in Ur would be <code>/media/data/data/company/R&amp;D/05_LangAssets/01_TMs/MemoryLn/[CONTAINER]</code> (which is probably accessible as <code>U:\R&amp;D\05_LangAssets\01_TMs/MemoryLn\[CONTAINER]</code> on your Windows machine).</p>
+<blockquote>
+<p>Before you can put TMX file in its container folder in Ur, the container must have been created in the <a href="https://capps.capstan.be/containers_edit.php"><strong>Containers Manager</strong></a>. If you can't find your container there, please check with the container manager.</p>
+</blockquote>
+<h2 id="tm-maintenance">TM maintenance<a class="headerlink" href="#tm-maintenance" title="Permanent link">&para;</a></h2>
+<p>Attention points for the language asset manager:</p>
+<h3 id="penalties">Penalties<a class="headerlink" href="#penalties" title="Permanent link">&para;</a></h3>
+<p>It is possible to apply a penalty to a TM, which will reduce the matching score in MemoryLn as in OmegaT. Reducing the matching score in MemoryLn means that results from that TM will appear below results that have a higher score. The penalty in MemoryLn is applied to the TMX file, not the match.</p>
+<p>This can be useful when TMs for a new cycle are released and should be given priority over older TMs for previous cycles, or it can be useful to distinguish between high-quality TMs and those that are less reliable for whatever reason -- the way to give priority to new assets is to penalize old assets. </p>
+<p>The procedure to apply penalties is <a href="https://omegat.sourceforge.io/manual-latest/en/project.folder.html">the same as in OmegaT</a>. For TMs in folders with a name <code>penalty-xxx</code> (<code>xxx</code> being a number between 0 and 100), matches will be degraded according to the name of the folder: a 100% match residing in a folder called, say, <code>penalty-30</code> will be lowered to a 70% match. </p>
+<h3 id="sanity-checks">Sanity checks<a class="headerlink" href="#sanity-checks" title="Permanent link">&para;</a></h3>
+<p>When TMX files are added to the container folder, the <a href="https://gist.github.com/msoutopico/7cdb6b0397f4a8d51eabb93890102ea1">overhaul_langtags_in_tmx.sh</a> script will run on them to detect any possible problems in the constraints described above. </p>
+<p>If any issues are found, they will be reported in a issues file with the date of that day (e.g. <code>issues_2021-09-22.txt</code>), and a monthly issues file is compiled with all issues found that month and in previous months that haven't been solved yet.</p>
+<p>The actions required are
+- check for any issues file for that day or that month
+- read each line in the issues file and see what is wrong
+- fix every issue (or ask TT to do it, if you are not 100% sure)
+- delete the issues file of that day
+- verify one hour or one day later that the issue is not flagged again</p>
+<h3 id="metadata-clean-up">Metadata clean up<a class="headerlink" href="#metadata-clean-up" title="Permanent link">&para;</a></h3>
+<p>To avoid making TMX files unnecessarily heavier, empty properties can be removed. <!-- , e.g. <code>&lt;prop type="domain"/&gt;</code>.-->For example:</p>
+<pre><code>&lt;prop type=&quot;client&quot;/&gt;
+&lt;prop type=&quot;domain&quot;/&gt;
+&lt;prop type=&quot;project&quot;/&gt;
+&lt;prop type=&quot;subject&quot;/&gt;
+</code></pre>
+<p>You might also want to remove some non-empty properties if they are irrelevant: </p>
+<pre><code>&lt;prop type=&quot;corrected&quot;&gt;no&lt;/prop&gt;
+&lt;prop type=&quot;aligned&quot;&gt;no&lt;/prop&gt;
+&lt;prop type=&quot;x-document&quot;&gt;en.json&lt;/prop&gt;
+&lt;prop type=&quot;x-context&quot;&gt;examSessionModal.okButton&lt;/prop&gt;
+</code></pre>
+<p>The same applies to proprietary metadata (added by some commercial CAT tool) that both MemoryLn and OmegaT ignore, such as namespaced tags, e.g. <code>&lt;mq:foo&gt;</code>.</p>
+<!-- .gitignore : *.tmx ? -->
+
+<!-- PISA25:
+create one TMX per file.
+- take files out of the project 
+- for each file, put it in the project
+- rename the project as the file
+- run console-translate
+- fetch leve1 tm
+-->
+
+<!-- containers/scopes: 
+- type: project, client, domain
+-->
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 cApStAn
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.prune", "navigation.top", "navigation.sections", "navigation.path", "toc.follow", "navigation.indexes", {"hidden": "tech"}], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
+      
+        
+          <script src="../../_assets/js/extra.js"></script>
+        
+      
+    
+  </body>
+</html>

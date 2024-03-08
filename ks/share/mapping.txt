@@ -1,0 +1,1 @@
+https://odoo.capstan.be/web#id=332&action=871&model=knowsystem.article&view_type=form&cids=1&menu_id=592: word-count-analysis-discrepancies.html
