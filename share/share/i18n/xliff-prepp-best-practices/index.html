@@ -1,0 +1,3097 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="cApStAn TTT">
+      
+      
+        <link rel="canonical" href="https://capstanlqc.github.com/ttt_docs/i18n/xliff-prepp-best-practices/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../authoring-tips/">
+      
+      <link rel="icon" href="../../_assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.1.16">
+    
+    
+      
+        <title>☆ XLIFF preparation - 🇹 🇹 🇹 · 🇩 🇴 🇨 🇸</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="capstan" data-md-color-primary="midnight-blue" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#best-practices-for-preparing-xliff-files" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" class="md-header__button md-logo" aria-label="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" data-md-component="logo">
+      
+  <img src="../../_assets/img/cApStAn_symbolesensemble_blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            🇹 🇹 🇹 · 🇩 🇴 🇨 🇸
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ☆ XLIFF preparation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="capstan" data-md-color-primary="midnight-blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_3" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="capstan" data-md-color-primary="midnight-blue" data-md-color-accent="indigo"  aria-label="Switch to dark-mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark-mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="midnight-blue" data-md-color-accent="indigo"  aria-label="Switch to light-mode"  type="radio" name="__palette" id="__palette_3">
+            
+              <label class="md-header__button md-icon" title="Switch to light-mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" class="md-nav__button md-logo" aria-label="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" data-md-component="logo">
+      
+  <img src="../../_assets/img/cApStAn_symbolesensemble_blanc.png" alt="logo">
+
+    </a>
+    🇹 🇹 🇹 · 🇩 🇴 🇨 🇸
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../projects/">Projects</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          ★ Flash
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          ★ Flash
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/flash/flash_automation/" class="md-nav__link">
+        👤 Automated workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/flash/flowchart/" class="md-nav__link">
+        ☆ Automation diagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/flash/FLASH_style-guide_pol-POL/" class="md-nav__link">
+        ☆ Style guide [pl-PL]
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../projects/pisa/">★ PISA 2025</a>
+          
+            <label for="__nav_1_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          ★ PISA 2025
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/pisa/errors/" class="md-nav__link">
+        Errors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../☆ projects/pisa/trainings.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/pisa/pisa2025_trend-transfer_guide/" class="md-nav__link">
+        👤 Trend transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../projects/ipsos/">★ IPSOS</a>
+          
+            <label for="__nav_1_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          ★ IPSOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/ipsos/workflow_automation/" class="md-nav__link">
+        👤 Workflow automation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/">L10n tools</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          L10n tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/okapi/">★ Okapi</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          ★ Okapi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/okapi/filters/" class="md-nav__link">
+        Filters
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          ★ OmegaT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          ★ OmegaT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/building/" class="md-nav__link">
+        Building
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+          Custom configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Custom configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_custom_roadmap/" class="md-nav__link">
+        Customization roadmap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_custom_tech/" class="md-nav__link">
+        Customation howto
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/mk-win64-jre-signed-omegat-installer/" class="md-nav__link">
+        Creating a signed OmegaT installer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
+          Extensions / add-ons
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Extensions / add-ons
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/scripts/" class="md-nav__link">
+        Scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_custom_tech/" class="md-nav__link">
+        Customization script (5x)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/mk_translatability_report_omt/" class="md-nav__link">
+        Obtain TA report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/plugins/" class="md-nav__link">
+        OMT Package Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/LQE/" class="md-nav__link">
+        LQE backend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/mk_ta_notes_omt/" class="md-nav__link">
+        👤 !T&A notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/ta_notes/" class="md-nav__link">
+        👤 !T&A notes [Comments]
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/errors/" class="md-nav__link">
+        Errors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/fonts/" class="md-nav__link">
+        Recommended fonts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/tickets/" class="md-nav__link">
+        Tickets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_6" id="__nav_2_3_6_label" tabindex="0">
+          Project administration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Project administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt2xliff/" class="md-nav__link">
+        Outsource project as XLIFF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/99_automation/" class="md-nav__link">
+        ☆ Reconciliation packages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/team_projects/" class="md-nav__link">
+        Team projects with Github
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/team_projects_trblsht/" class="md-nav__link">
+        ☆ Team project troubleshoot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_7" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_7" id="__nav_2_3_7_label" tabindex="0">
+          Testing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Testing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/pisa25_omegat_test01/" class="md-nav__link">
+        PISA 2025 OmegaT testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omegat5_testing/" class="md-nav__link">
+        OmegaT 5 - installation and testing guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omegat5_testing_adhoc/" class="md-nav__link">
+        OmegaT 5 - installation and testing guide
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_8" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_8" id="__nav_2_3_8_label" tabindex="0">
+          Tips and tricks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Tips and tricks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/autotext/" class="md-nav__link">
+        Autotext
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/nbsp/" class="md-nav__link">
+        No-break spaces
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_9" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_9" id="__nav_2_3_9_label" tabindex="0">
+          TO SORT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          TO SORT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/pisa25_omegat_teamproj_steps/" class="md-nav__link">
+        Instructions for PISA 25 translators (testing in fr)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_custom_user/" class="md-nav__link">
+        Customization ADD 2 GUIDES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_team_steps4xlat/" class="md-nav__link">
+        Download git ADD 2 GUIDES
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aux-tools.md" class="md-nav__link">
+        ★ Auxiliary tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tech/">Tech</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/mk_dir_strukt/" class="md-nav__link">
+        👤 Create folder structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/oneliners/" class="md-nav__link">
+        Terminal oneliners
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/utils/" class="md-nav__link">
+        Utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/xls2tmx/" class="md-nav__link">
+        Convert multilingual Excel to TMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/update-docs.md" class="md-nav__link">
+        How to update these docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/share-in-ks.md" class="md-nav__link">
+        How to share a doc in KS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../capps/">cApps</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          cApps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../capps/langtags/" class="md-nav__link">
+        ☆ Langtags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../capps/veryfire/" class="md-nav__link">
+        ☆ VeryFire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../capps/vf4ta/" class="md-nav__link">
+        ☆ VF4TA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../capps/memoryln/" class="md-nav__link">
+        ☆ MemoryLn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../capps/memoryln_tm_mngmt/" class="md-nav__link">
+        ☆ MemoryLn TM management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../capps/xdiff/" class="md-nav__link">
+        ☆ xDiff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../capps/xdiff_automation/" class="md-nav__link">
+        ☆ xDiff automation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">i18n guides</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          i18n guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ☆ XLIFF preparation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ☆ XLIFF preparation
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-history" class="md-nav__link">
+    Document history
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notation" class="md-nav__link">
+    Notation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-project" class="md-nav__link">
+    Sample project
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-requirements" class="md-nav__link">
+    1. Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-recommendations" class="md-nav__link">
+    2. Recommendations
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-segmentation" class="md-nav__link">
+    2.1. Segmentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-inline-codes" class="md-nav__link">
+    2.2. Inline codes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-encoding-entities" class="md-nav__link">
+    2.3. Encoding entities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-common-issues" class="md-nav__link">
+    3. Common issues
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Common issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-split-sentences" class="md-nav__link">
+    3.1. Split sentences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-markup-nimiety" class="md-nav__link">
+    3.2. Markup nimiety
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ending-segments-at-line-breaks" class="md-nav__link">
+    3.3. Ending segments at line breaks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annexes" class="md-nav__link">
+    Annexes
+  </a>
+  
+    <nav class="md-nav" aria-label="Annexes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidelines-for-creating-xliff-12-files-for-omegat" class="md-nav__link">
+    Guidelines for creating XLIFF 1.2 files for OmegaT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authoring-tips/" class="md-nav__link">
+        ☆ Authoring tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wrapping/" class="md-nav__link">
+        Text wrapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hyphenation/" class="md-nav__link">
+        Hyphenation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sorting.md" class="md-nav__link">
+        List sorting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formatting.md" class="md-nav__link">
+        Block formatting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trend_math_cg_6b/" class="md-nav__link">
+        CG example in markdown
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Docs for users (symlink to KS)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Docs for users (symlink to KS)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/omt_wc/" class="md-nav__link">
+        👤 Wordcount analysis in Ur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-history" class="md-nav__link">
+    Document history
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notation" class="md-nav__link">
+    Notation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-project" class="md-nav__link">
+    Sample project
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-requirements" class="md-nav__link">
+    1. Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-recommendations" class="md-nav__link">
+    2. Recommendations
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-segmentation" class="md-nav__link">
+    2.1. Segmentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-inline-codes" class="md-nav__link">
+    2.2. Inline codes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-encoding-entities" class="md-nav__link">
+    2.3. Encoding entities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-common-issues" class="md-nav__link">
+    3. Common issues
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Common issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-split-sentences" class="md-nav__link">
+    3.1. Split sentences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-markup-nimiety" class="md-nav__link">
+    3.2. Markup nimiety
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ending-segments-at-line-breaks" class="md-nav__link">
+    3.3. Ending segments at line breaks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annexes" class="md-nav__link">
+    Annexes
+  </a>
+  
+    <nav class="md-nav" aria-label="Annexes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidelines-for-creating-xliff-12-files-for-omegat" class="md-nav__link">
+    Guidelines for creating XLIFF 1.2 files for OmegaT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="best-practices-for-preparing-xliff-files">Best practices for preparing XLIFF files<a class="headerlink" href="#best-practices-for-preparing-xliff-files" title="Permanent link">&para;</a></h1>
+<h2 id="document-history">Document history<a class="headerlink" href="#document-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Date</th>
+<th style="text-align: left;">Author</th>
+<th style="text-align: left;">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2018-01-30</td>
+<td style="text-align: left;">Manuel Souto Pico</td>
+<td style="text-align: left;">Creation</td>
+</tr>
+<tr>
+<td style="text-align: left;">2018-02-02</td>
+<td style="text-align: left;">Manuel Souto Pico</td>
+<td style="text-align: left;">Encoding entities</td>
+</tr>
+<tr>
+<td style="text-align: left;">2018-05-25</td>
+<td style="text-align: left;">Manuel Souto Pico</td>
+<td style="text-align: left;">Segmentation</td>
+</tr>
+<tr>
+<td style="text-align: left;">2021-01-27</td>
+<td style="text-align: left;">Manuel Souto Pico</td>
+<td style="text-align: left;">Review and updates</td>
+</tr>
+<tr>
+<td style="text-align: left;">2022-03-21</td>
+<td style="text-align: left;">Manuel Souto Pico</td>
+<td style="text-align: left;">Updated OMT project (SVN to Github) and OmegaT version (4.2 to 5.7)</td>
+</tr>
+<tr>
+<td style="text-align: left;">2022-03-23</td>
+<td style="text-align: left;">Manuel Souto Pico</td>
+<td style="text-align: left;">Updated credentials of dummy user</td>
+</tr>
+</tbody>
+</table>
+<h2 id="table-of-contents">Table of contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<!-- - [Best practices for preparing XLIFF files](#best-practices-for-preparing-xliff-files) -->
+
+<ul>
+<li><a href="#document-history">Document history</a></li>
+<li><a href="#introduction">Introduction</a><ul>
+<li><a href="#notation">Notation</a></li>
+<li><a href="#sample-project">Sample project</a></li>
+</ul>
+</li>
+<li><a href="#1-requirements">1. Requirements</a></li>
+<li><a href="#2-recommendations">2. Recommendations</a><ul>
+<li><a href="#21-segmentation">2.1. Segmentation</a></li>
+<li><a href="#22-inline-codes">2.2. Inline codes</a></li>
+<li><a href="#221-suprasentential-codes">2.2.1. Suprasentential codes</a></li>
+<li><a href="#222-intrasentential-codes">2.2.2. Intrasentential codes</a></li>
+<li><a href="#23-encoding-entities">2.3. Encoding entities</a></li>
+<li><a href="#231-escaping-named-character-entities">2.3.1. Escaping named character entities</a></li>
+<li><a href="#232-unicode-characters-and-code-points">2.3.2. Unicode characters and code points</a></li>
+</ul>
+</li>
+<li><a href="#3-common-issues">3. Common issues</a><ul>
+<li><a href="#31-split-sentences">3.1. Split sentences</a></li>
+<li><a href="#32-markup-nimiety">3.2. Markup nimiety</a></li>
+<li><a href="#33-ending-segments-at-line-breaks">3.3. Ending segments at line breaks</a></li>
+</ul>
+</li>
+<li><a href="#annexes">Annexes</a><ul>
+<li><a href="#guidelines-for-creating-xliff-12-files-for-omegat">Guidelines for creating XLIFF 1.2 files for OmegaT</a><ul>
+<li><a href="#check-list-for-translation">Check list for translation</a></li>
+<li><a href="#check-list-for-bilingual-review">Check list for bilingual review</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+<!-- <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small> -->
+
+<!-- typora:
+[TOC]
+-->
+
+<!-- hand-made:
+0. [Introduction](#introduction)
+    * [Sample project](#sample-project)
+1. [Requirements](#1-requirements)
+2. [Recommendations](#2-recommendations)
+    * [Segmentation](#21-segmentation)
+    * [Inline codes](#22-inline-codes)
+    * [Encoding entities](#23-encoding-entities)
+3. [Frequent issues](#3-frequent-issues)
+    * [Split sentences](#31-split-sentences)
+    * [Markup nimiety](#32-markup-nimiety)
+    * [Ending segments at line breaks](#33-ending-segments-at-line-breaks)
+4. [Annexes](#Annexes)
+    * [Guidelines for creating XLIFF 1.2 files for OmegaT](#guidelines-for-creating-xliff-12-files-for-omegat)
+5. [References](#references)
+-->
+
+<!--- https://gist.github.com/rxaviers/7360908 -->
+
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>This report includes recommendations for preparing content for translation in the XLIFF format with a view to producing XLIFF files that optimize the different language tasks and language asset management both in the short and the long run. It also focuses on common issues that can be problematic for language experts and how those issues can be avoided.</p>
+<p>Often, there are no ultimate prescribed solutions, but following or not the recommendations in this document can make all the difference between hindering or crippling language tasks (the work of translators, reconcilers, reviewers, verifiers, etc.) and making their  work enjoyable and bound to good results.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>cApStAn can take care of file preparation regardless of the native format provided that the client provides the original source files, and often that yields better results than what third-party engineers often can do. If you are a third-party engineer or a client, beware that the contents of this guide apply to you only after the possibility of relying on cApStAn for file preparation has been considered and discareded (for a good reason).</p>
+</div>
+<h3 id="notation">Notation<a class="headerlink" href="#notation" title="Permanent link">&para;</a></h3>
+<p>In this document, segments as the linguist sees them in the translation editor are represented as follows (preceded by the segment number):</p>
+<blockquote>
+<p><kbd>31</kbd> This is a segment</p>
+</blockquote>
+<p>Also, the cross mark (❌) and check mark (✔️) emojis are used to indicate after each exale what is discouraged or problematic and expected or recommended, respectively. These icons are not part of the text!  <!-- ✔️ --></p>
+<h3 id="sample-project">Sample project<a class="headerlink" href="#sample-project" title="Permanent link">&para;</a></h3>
+<p>To illustrate the DO's and DON'T's, an OmegaT sample project is provided, containing:</p>
+<ul>
+<li>the original files (XML, HTML, SVG, etc.), in folder <code>original</code></li>
+<li>the problematic XLIFF files, in folder <code>source/01_haram</code></li>
+<li>the optimal XLIFF files, in folders <code>source/02_halal_xlf1</code> (for XLIFF version v.1.2)</li>
+<li>the optimal XLIFF files, in folders <code>source/02_halal_xlf2</code> (for XLIFF version v.2.0)</li>
+</ul>
+<p>The original files have been prepared as XLIFF in two different ways (so-called here "halal" and "haram"), to show the ideal preparation and its antithesis, respectively. <!-- The <code>original</code> folder contains the source content, the <code>source</code> folder contains the files prepared for translation: the <code>haram</code> folder contains the problma tic files, and the <code>halal</code> folder contains the files with the recommended preparation. --> This is the file structure in the project:</p>
+<!--
+    xliff_bestpractices_omtprj (project)
+        + original (source content)
+            + 02_halal
+                - entities.html
+                - markup_custom_xml
+                - markup_inline.svg
+                - markup_input.html
+                - markup_span.html
+                - segment_para.html
+        + source (prepared files for translation)
+            + 01_haram (problematic)
+                - entities.html.xlf
+                - markup_custom_xml.xlf
+                - markup_inline.svg.xlf
+                - markup_input.html.xlf
+                - markup_span.html.xlf
+                - segment_para.html.xlf
+            + 02_halal (recommended)
+                - entities.html.xlf
+                - markup_custom_xml.xlf
+                - markup_inline.svg.xlf
+                - markup_input.html.xlf
+                - markup_span.html.xlf
+                - segment_para.html.xlf
+-->
+
+<pre><code>xliff_bestpractices_omtprj (project)
+.
+├── dictionary
+├── glossary
+├── manifest.rkm
+├── omegat
+│   └── ...
+├── omegat.project
+├── original
+│   ├── entities.html
+│   ├── markup_custom.xml
+│   ├── markup_inline.svg
+│   ├── markup_input.html
+│   ├── markup_span.html
+│   └── segmen_para.html
+├── source
+│   ├── 01_haram
+│   │   ├── entities.html.xlf
+│   │   ├── markup_custom.xml.xlf
+│   │   ├── markup_inline.svg.xlf
+│   │   ├── markup_input.html.xlf
+│   │   ├── markup_span.html.xlf
+│   │   └── segmen_para.html.xlf
+│   └── 02_halal_xlf#
+│       ├── entities.html.xlf
+│       ├── markup_custom.xml.xlf
+│       ├── markup_inline.svg.xlf
+│       ├── markup_input.html.xlf
+│       ├── markup_span.html.xlf
+│       └── segmen_para.html.xlf
+├── target
+└── tm
+</code></pre>
+<p>You can open the XLIFF files and look at them in a text editor, but probably the best way to see the impact of the different preparation is to open the project in OmegaT and compare each <em>haram</em> file with its corresponding <em>halal</em> equivalent(s). The project can be downloaded twice with different names and two instances of OmegaT can be run simultaneously for a handier comparison.</p>
+<p>To open the project in OmegaT:</p>
+<ul>
+<li>Install and customize OmegaT 5.7 as per our <a href="https://slides.com/capstan/omegat5-installation-and-customization-guide/fullscreen">installation and customization guide</a> <span id="a1"><a href="#1">[1]</a></span></li>
+<li>In OmegaT, go to     <strong>Project</strong> &gt;     <strong>Download team project</strong> and enter the following details:<ul>
+<li>Repository URL: <a href="https://github.com/capstanlqc/XLIFF_bestpractices_OMT"><code>https://github.com/capstanlqc/XLIFF_bestpractices_OMT</code></a></li>
+<li>New local project folder: your preferred path to your local copy of the project.</li>
+</ul>
+</li>
+</ul>
+<p>That will create a local version of the project for you and open it. To open files in the translation editor, you may press <strong>Ctrl+L</strong> and then either type part of the file name or just click on a file to select it and open it. Typing also helps to filter the list of files.</p>
+<p>Credentials are available <a href="https://rentry.co/i18n-dummy">here</a>.</p>
+<p>The sample XLIFF files in the project above or the project itself can be re-created using Okapi Rainbow.<span id="a2"><a href="#2">[2]</a></span> The Rainbow project, including the settings files, filters, segmentation rules etc., can also be downloaded from this link <a href="https://github.com/capstanlqc/i18n_guide/raw/main/okapi_rainbow_project.tar.gz"><code>okapi_rainbow_project.tar.gz</code></a>, although this is not necessary unless you want to recreate or customize the extraction process. Instructions to use the Rainbow project can be found in the README.md file.</p>
+<h2 id="1-requirements">1. Requirements<a class="headerlink" href="#1-requirements" title="Permanent link">&para;</a></h2>
+<p>When creating XLIFF files, the only strict technical requirement is to create <em>well-formed</em> and <em>valid</em> XLIFF files, according to the XML syntax and the XLIFF specification <span id="a3"><a href="#3">[3]</a></span>. Created XLIFF files can be validated with the strict XML schema <span id="a4"><a href="#4">[4]</a></span> or using the XLIFF Checker <span id="a5"><a href="#5">[5]</a></span>.</p>
+<p>Well-formedness and validity are the bare minimum, but of course it is perfectly possible to produce XLIFF files that are valid and compliant with the XLIFF standard but that are not translation-friendly. The main purpose of this report is to promote some best practices, upon which the following recommendations are based.</p>
+<h2 id="2-recommendations">2. Recommendations<a class="headerlink" href="#2-recommendations" title="Permanent link">&para;</a></h2>
+<p>Based on the localization industry's best practices for preparing files for translation and on cApStAn's experience in localization of international large-scale assessments and questionnaires, we can define a number of important recommendations or expectations.</p>
+<p>First and foremost, one generic recommendation:</p>
+<ul>
+<li>Use the existing technology. There's a rich array of tools and libraries in the localization industry, both commercial and open source, that embody the know-how accumulated over the last decades. If you try to reinvent the wheel, it'll take you much longer and you'll achieve worse results. Use what exists, and improve it if you can, and only then develop your own technology if you see that what </li>
+</ul>
+<p>Some of the tools you could use to manage the XLIFF roundtrip (extraction and merge):</p>
+<ul>
+<li><a href="https://www.maxprograms.com/products/openxliff.html">Maxprograms' OpenXLIFF filters / XLIFF Manager</a> (open source)</li>
+<li><a href="https://okapiframework.org/wiki/index.php?title=Rainbow">Okapi Rainbow</a> (open source)</li>
+<li><a href="https://www.memoq.com/">memoQ</a> (commercial)</li>
+<li><a href="https://www.sdltrados.com/">SDL Trados Studio</a> (commercial)</li>
+</ul>
+<p>Let's now be a bit more specific, about segmentation and inline codes:</p>
+<ul>
+<li>Text must be segmented by sentence. Each segment should contain one single sentence, not a full paragraph or several sentences.</li>
+<li>All translatable content must be extracted and all untranslatable content must be excluded during the extraction.</li>
+<li>Inline codes should not be interpreted as end of paragraph or as boundaries between text units/blocks, to avoid breaking down sentences in fragments.</li>
+<li>Inline codes and markup should ideally be represented using the notation specified by the XLIFF standard so that the translation editor can recognize, lock and display them as placeable tags.</li>
+<li>If markup is not represented as tags and is escaped instead, then each markup block should be as short as possible, and custom tags might need to be created to protect escaped markup.</li>
+<li>The number of tags should be as low as possible.</li>
+<li>Some clean-up of the source files or some back and forth between localization engineers and source content authors is sometimes necessary).</li>
+</ul>
+<p>Failure to follow those recommendations hampers language tasks or/and could affect translation quality.</p>
+<p>There are other, recommendations about characters and whitespace might have a lesser impact on their own, but recurrent and concurrent failure to follow them may also contribute to making the translation process more difficult:</p>
+<ul>
+<li>Unicode characters should be used instead escaped HTML entities.</li>
+<li>Excessive whitespace and inline line breaks should be avoided.</li>
+<li>To avoid truncations and overflowing text, text should be wrapped dynamically in the publication medium instead of using line break codes in the source text.</li>
+<li>Comments should not be extracted as translatable text.</li>
+</ul>
+<h3 id="21-segmentation">2.1. Segmentation<a class="headerlink" href="#21-segmentation" title="Permanent link">&para;</a></h3>
+<p>Translating or reviewing long paragraphs containing several sentences is inconvenient for several reasons.</p>
+<p>On the one hand, it requires a higher cognitive effort from the linguist, which reduces productivity and increases the chances of errors, and on the other hand, it reduces the likelihood of propagation and internal reuse of translations within the project, which leads to rework (reducing turnaround time and savings) and to a higher number of inconsistencies, that are difficult to catch or fix afterwards.</p>
+<p>Sentence-based segmentation boosts the reuse of translations, through the propagation of the translation of a repeated segment to all its repetitions, or through the higher availability of matches to translate similar segments, thus increasing consistency, and reduces the need for the linguist to run concordance searches in search of the different parts that need to be assembled in the final translation. Segmentation contributes both to final quality and satisfaction of the team.</p>
+<p>Segmentation should occur after each sentence, so that each sentence is included in one segment and each segment contains only one sentence. For example, a paragraph typically contains several sentences, like the following:</p>
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit… Aliquam ex nisi, mattis pulvinar nulla sed, commodo mattis ligula. Nulla sit amet leo lacinia, pellentesque mi non, aliquam augue? Pellentesque tempor dictum dui in imperdiet. Fusce ligula arcu, hendrerit eu dignissim eget, consequat quis sem! Maecenas eget ligula dapibus, dictum purus vitae, sodales neque.</p>
+</blockquote>
+<p>If the text is segmented, this long paragraph can be handled as independent sentences and therefore becomes much more manageable for the linguist. The expected result is:</p>
+<blockquote>
+<p><kbd>1</kbd> Lorem ipsum dolor sit amet, consectetur adipiscing elit…<br />
+<kbd>2</kbd> Aliquam ex nisi, mattis pulvinar nulla sed, commodo mattis ligula.<br />
+<kbd>3</kbd> Nulla sit amet leo lacinia, pellentesque mi non, aliquam augue?<br />
+<kbd>4</kbd> Pellentesque tempor dictum dui in imperdiet.<br />
+<kbd>5</kbd> Fusce ligula arcu, hendrerit eu dignissim eget, consequat quis sem!<br />
+<kbd>6</kbd> Maecenas eget ligula dapibus, dictum purus vitae, sodales neque.</p>
+</blockquote>
+<p>To implement segmentation, you must use segmentation rules. Different tools might have slightly different implementations, but they all use regular expressions to match the patterns that correspond to sentence boundaries. SRX <span id="a6"><a href="#1">[6]</a></span> is an XML-based standard of the localization industry used to define segmentation rules, and it can be used by Okapi Framework <span id="a7"><a href="#7">[7]</a></span>. Segmentation rulesets can be easily created and customized in Okapi Ratel <span id="a8"><a href="#8">[8]</a></span>.</p>
+<p>Existing libraries or tools used to prepare files as XLIFF normally include a basic set of default rules which often cover most of the needs, which can be varied. As you can see in the example above, segments do not only end in full stop, but might end in other punctuation marking the end of a sentence (i.e. in English: interrogation, ellipsis, etc.).</p>
+<!-- The XLIFF code to segment the paragraph above looks like this:-->
+
+<!--
+
+<pre><code class="language-xml">&lt;seg-source&gt;&lt;mrk mid=&quot;0&quot; mtype=&quot;seg&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing
+elit… &lt;/mrk&gt; &lt;mrk mid=&quot;1&quot; mtype=&quot;seg&quot;&gt;Aliquam ex nisi, mattis pulvinar nulla sed, commodo
+mattis ligula.&lt;/mrk&gt; &lt;mrk mid=&quot;2&quot; mtype=&quot;seg&quot;&gt;Nulla sit amet leo lacinia, pellentesque mi
+non, aliquam augue?&lt;/mrk&gt; &lt;mrk mid=&quot;3&quot; mtype=&quot;seg&quot;&gt;Pellentesque tempor dictum dui in
+imperdiet. &lt;/mrk&gt; &lt;mrk mid=&quot;4&quot; mtype=&quot;seg&quot;&gt;Fusce ligula arcu, hendrerit eu dignissim eget,
+consequat quis sem!&lt;/mrk&gt; &lt;mrk mid=&quot;5&quot; mtype=&quot;seg&quot;&gt;Maecenas eget ligula dapibus, dictum
+purus vitae, sodales neque.&lt;/mrk&gt;&lt;/seg-source&gt;
+</code></pre>
+
+-->
+
+<p>Sometimes it is necessary or convenient to create more specific rules to meet the specific needs of the source content, which is relatively easy in SRX. For example, if it's necessary to split the text in some context that the default rules do not cover. Or there are cases where punctuation symbols do not stand for the end of a sentence, such as in the case of abbreviations:</p>
+<blockquote>
+<p><kbd>1</kbd>  NBC canceled Mr. Robinson, the freshman comedy series.</p>
+</blockquote>
+<p>To avoid segmenting after abbreviations and in other similar cases, exceptions are necessary to prevent or mask the general rule. Without the appropriate exceptions for abbreviations, we would obtain incorrect segmentations such as:</p>
+<blockquote>
+<p><kbd>1</kbd> NBC canceled Mr.<br />
+<kbd>2</kbd> Robinson, the freshman comedy series.</p>
+</blockquote>
+<p>Luckily, there again, default rulesets used by available tools already include the most frequent abbreviations.</p>
+<!--
+| **☞** In the OmegaT project provided: |
+| --- |
+-->
+
+<p><strong>☞</strong> In the sample OmegaT project provided, file <code>01_haram/segment_para.html.xlf</code> shows a text that has been prepared without segmentation, whereas file <code>02_halal/segment_para.html.xlf</code> has been prepared with sentence-based segmentation.</p>
+<h3 id="22-inline-codes">2.2. Inline codes<a class="headerlink" href="#22-inline-codes" title="Permanent link">&para;</a></h3>
+<p>The source content might include inline codes, e.g. any HTML markup tags used to apply a certain behavior or property to part of the text. Often source content is HTML or some sort of similar markup language, where  markup is used to define layout, formatting and/or structure. The preparation of the source files as XLIFF entails dealing with those codes as appropriate.</p>
+<p>Codes can be of two kinds:</p>
+<ul>
+<li>Suprasentential or intersentential codes (i.e. codes that embed a sentence, or stand outside of a sentence, or between sentences, or operate at a higher level than the sentence) should not be included in segments.</li>
+<li>
+<p>Intrasentential codes (i.e. codes that are included inside a sentence, often as spanning codes or code pairs) must be represented as inline elements (also called "content markup") according to the guidelines of the XLIFF specification <span id="a9"><a href="#9">[9]</a></span>.</p>
+<p>The CAT tool will then correctly display inline elements as placeable tags, which translators can easily insert in the appropriate position in the translation of each segment. In the contrary, it is problematic for translators and reviewers to deal with inline codes that have not been protected as placeable tags, which also poses a risk to the integrity of the codes and the document.</p>
+</li>
+</ul>
+<h4 id="221-suprasentential-codes">2.2.1. Suprasentential codes<a class="headerlink" href="#221-suprasentential-codes" title="Permanent link">&para;</a></h4>
+<p>A leading opening tag appearing before the beginning of a sentence and its corresponding closing tag appearing after the end of the sentence are an example of suprasentential codes:</p>
+<pre><code class="language-html">&lt;p class=&quot;foo&quot;&gt;What is the total length of the sticks in the line?&lt;/p&gt;
+</code></pre>
+<p>Since they are expected to appear in exactly the same position in the target version of that segment, they don't need to appear in the translation editor and the translator does not need to see them:</p>
+<blockquote>
+<p><kbd>1</kbd> What is the total length of the sticks in the line? ✔</p>
+<p><kbd>1</kbd> <code>&lt;g0&gt;</code>What is the total length of the sticks in the line?<code>&lt;/g0&gt;</code> ❌</p>
+</blockquote>
+<h4 id="222-intrasentential-codes">2.2.2. Intrasentential codes<a class="headerlink" href="#222-intrasentential-codes" title="Permanent link">&para;</a></h4>
+<p><strong>☞</strong> The file <code>markup_span.html</code> in the sample project includes the following text:</p>
+<pre><code class="language-html">&lt;p&gt;&lt;span style='font-size:12pt;font-family:&quot;times new roman&quot;,&quot;serif&quot;'&gt;Code1:
+&lt;/span&gt;&lt;span style='font-size:12pt;font-family:&quot;times new roman&quot;,&quot;serif&quot;'&gt;3/2 or
+11/2 or 1.5&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+<p>which should be prepared as follows in the XLIFF file:</p>
+<pre><code class="language-xml">&lt;source xml:lang=&quot;en&quot;&gt;&lt;bpt id=&quot;1&quot; ctype=&quot;x-span&quot;&gt;&amp;lt;span style='font-size:12pt;
+font-family:&quot;times new roman&quot;,&quot;serif&quot;'&gt;&lt;/bpt&gt;Code1: &lt;ept id=&quot;1&quot;&gt;&amp;lt;/span&gt;&lt;/ept&gt;
+&lt;bpt id=&quot;2&quot; ctype=&quot;x-span&quot;&gt;&amp;lt;span style='font-size:12pt;font-family:&quot;times new
+roman&quot;,&quot;serif&quot;'&gt;&lt;/bpt&gt;3/2 or 11/2 or 1.5&lt;ept id=&quot;2&quot;&gt;&amp;lt;/span&gt;&lt;/ept&gt;&lt;/source&gt;
+</code></pre>
+<p>which the CAT tool will display as, e.g.:</p>
+<blockquote>
+<p><kbd>1</kbd> <code>&lt;g0&gt;</code>Code1: <code>&lt;g0&gt;&lt;g1&gt;</code>3/2 or 11/2 or 1.5<code>&lt;/g1&gt;</code> ✔</p>
+</blockquote>
+<p>Representing the HTML tags as inline codes as specified in the XLIFF standard  also reduces the length of each tag, thus better legibility is obtained and the segments are much easier to handle.</p>
+<p>Some CAT tools display a floating tooltip including the original inline codes when the linguist hovers over the placeable tag (e.g. <code>&lt;g0&gt;</code> below) in the segment, thus showing the translator what the tag stands for. For formats like HTML, this can be helpful for the savvy translator, whereas for other more obscure formats like Open XML it is less useful.</p>
+<!-- :warning:  -->
+<hr />
+<p>⚠️ <strong><em>WARNING:</em></strong><br />
+Escaping the HTML or XML markup by replacing <code>&lt;</code> and <code>&gt;</code> with <code>&amp;lt;</code> and <code>&amp;gt;</code> respectively, etc. is not a good approach, because the translation editor will consider the escaped markup as editable text rather than as locked codes and therefore the tags can be mishandled, let alone the fact that translation memories will be polluted. Furthermore, that approach does not reduce the length of inline codes, which means that the text is less readable and that can hamper the translation and bring about quality issues.</p>
+<hr />
+<p>For example, escaping the markup in the above segment would produce the following XLIFF file:</p>
+<pre><code class="language-xml">&lt;source xml:lang=&quot;en&quot;&gt;&amp;lt;span style=&amp;apos;font-size:12pt;font-family:&amp;quot;
+times new roman&amp;quot;,&amp;quot;serif&amp;quot;&amp;apos;&gt;Code1: &amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;apos;font-size:12pt;font-family:&amp;quot;times new roman&amp;amp;
+quot;,&amp;quot;serif&amp;quot;&amp;apos;&gt;3/2 or 11/2 or 1.5&amp;lt;/span&amp;gt;&lt;/source&gt;
+</code></pre>
+<p>which would produce the following view in the translation editor, which is not translation-friendly:</p>
+<blockquote>
+<p><kbd>1</kbd> <code>&lt;span style='font-size:12pt;font-family:"times new roman","serif"'&gt;</code>Code1: <code>&lt;/span&gt;&lt;span style='font-size:12pt;font-family:"times new roman","serif"'&gt;</code>3/2 or 11/2 or 1.5<code>&lt;/span&gt;</code> ❌</p>
+</blockquote>
+<p><strong>☞</strong> In the sample project provided, files <code>markup_custom_xml.xlf</code> and <code>markup_span.html.xlf</code> show what the text looks like when the inline codes have been simply escaped (the ones in the <code>01_haram</code> folder) and when they have been properly encapsulated as XLIFF content markup (the ones in folder <code>02_halal</code>). There are two files to exemplify both standard HTML tags (e.g. <code>&lt;span&gt;</code>) as well as custom-crafted XML tags.</p>
+<h3 id="23-encoding-entities">2.3. Encoding entities<a class="headerlink" href="#23-encoding-entities" title="Permanent link">&para;</a></h3>
+<p>HTML source content might contain named character entities (in the form of <code>&amp;char;</code>) which are not allowed in XML and therefore cannot be used in an XLIFF file as such unless they are declared (except for <code>amp</code>, <code>lt</code>, <code>gt</code>, <code>apos</code>, <code>quot</code>). There is more than one possibility to prepare source HTML content containing named character entities, and some ways are preferable to others. Let us consider the <code>&amp;divide;</code> entity as an example, found in the following HTML content:</p>
+<pre><code class="language-xml">&lt;p&gt;(40 &amp;divide; 10) + (8 &amp;divide; 2)&lt;/p&gt;
+</code></pre>
+<h4 id="231-escaping-named-character-entities">2.3.1. Escaping named character entities<a class="headerlink" href="#231-escaping-named-character-entities" title="Permanent link">&para;</a></h4>
+<p>One possibility to create a valid XLIFF file is to escape the entities, as follows:</p>
+<pre><code class="language-xml">&lt;source&gt;(40 &amp;amp;divide; 10) + (8 &amp;amp;divide; 2)&lt;/source&gt; ❌
+</code></pre>
+<p>The escaping approach is discouraged, though. Among other reasons, this approach will make the translation editor display the named character entity rather than the actual character itself (which reduces readability and could be misleading or even unintelligible for the linguist), as shown below:</p>
+<blockquote>
+<p><kbd>1</kbd> 40 [&divide; 10) + (8 &divide; 2)  ❌</p>
+</blockquote>
+<p>Linguists need to see the character, not the code. While <code>&amp;divide;</code> (÷) or <code>&amp;pi;</code> (π) might be more or less transparent in the appropriate context, other entities such as <code>&amp;le;</code> (≤) or <code>&amp;zwnj;</code> (zero-width non-joiner) will be obscure and puzzling. The linguist could think that the named character entity must be maintained and therefore necessarily be used in the translation, whereas it might be the case that the target language spelling rules call for another character in that context. For example, this would be an incorrect translation according to French punctuation rules:</p>
+<blockquote>
+<p><kbd>source:</kbd> Punctuation works <code>&amp;quot;</code>differently<code>&amp;quot;</code> in French.<br />
+<kbd>target:</kbd> La ponctuation est <code>&amp;quot;</code>différente<code>&amp;quot;</code> en français.  ❌ <!-- :x: --></p>
+</blockquote>
+<p>Compare with the correct translation:</p>
+<blockquote>
+<p><kbd>source:</kbd> Punctuation works <code>&amp;quot;</code>differently<code>&amp;quot;</code> in French.<br />
+<kbd>target:</kbd> La ponctuation est « différente » en français. ✔ <!-- :heavy_check_mark: --></p>
+</blockquote>
+<p>Escapes were used to represent (by means of ASCII text only) characters that were not available in the character encoding you are using. The W3C (group in charge of the HTML specification) advises to use an encoding that allows to represent characters in their normal form, rather than using escaped named character entities, because using escapes can make it difficult to read and maintain source code, and can also significantly increase file size.<span id="a10"><a href="#10">[10]</a></span> Nowadays, it should be possible to encode any text as UTF-8, which allows to use Unicode characters and removes the need for such escapes.</p>
+<p>Escapes can be a way of avoiding the use of a character for other reasons (e.g. if they conflict with other elements), in which case, you might want to escape some entities specifically. Escapes might also be useful to represent invisible or ambiguous characters, or characters that would otherwise be difficult to handle, such as whitespace or invisible Unicode control characters (e.g. using <code>&amp;rlm;</code> in HTML source content --and <code>&amp;#x200F;</code> in the prepared XLIFF file-- helps spot these characters).<span id="a11"><a href="#11">[11]</a></span> However, in all other cases, it is preferable to avoid the escape.</p>
+<h4 id="232-unicode-characters-and-code-points">2.3.2. Unicode characters and code points<a class="headerlink" href="#232-unicode-characters-and-code-points" title="Permanent link">&para;</a></h4>
+<p>A different approach is to represent the same character by means of the universal Unicode code point expressed as a numeric entity (e.g. the hexadecimal entity <code>&amp;#x00F7;</code>) or as the Unicode character itself (e.g. <code>÷</code>). The latter is preferable because it simplifies maintenance and running text searches directly in the raw XLIFF files with, say, grep or any other text-based tool.</p>
+<p>If it's unavoidable to have named character entities in the source content to represent special characters, a simple pre-processing of the source content can be used to convert them into Unicode code points or Unicode characters. However, the ideal scenario would be to configure the authoring tool where the source content is authored so that special characters or symbols can be inserted directly by means of the Unicode character or the numeric entity. How authors insert symbols or special characters that are not on their keyboard depends on their authoring tool and their platform, but normally they can either pick the character from a special character palette (e.g. the Character Map in Windows or Character Viewer in Mac) or insert it by using a key combination, e.g. <kbd>ALT+0176</kbd> on the keypad to insert the degree symbol (i.e. <code>°</code>).<span id="a12"><a href="#12">[12]</a></span></p>
+<p>Both the approaches mentioned in the previous paragraph will produce one of the two following XLIFF codes (depending on the encoding chosen):</p>
+<pre><code class="language-xml">&lt;source&gt;(40 &amp;#x00F7; 10) + (8 &amp;#x00F7; 2)&lt;/source&gt; ✔
+</code></pre>
+<pre><code class="language-xml">&lt;source&gt;(40 ÷ 10) + (8 ÷ 2)&lt;/source&gt; ✔
+</code></pre>
+<p>which will be displayed as the following in the translation editor:</p>
+<blockquote>
+<p><kbd>1</kbd> (40 ÷ 10) + (8 ÷ 2) ✔</p>
+</blockquote>
+<p>In a nutshell, then: using the Unicode characters in their normal form is preferable to representing them with their numeric --preferably hexadecimal-- reference, and any of those two options is preferable to escaping the named character references with <code>&amp;amp;</code>, or declaring them in the preamble of the document.</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Example</th>
+<th>Well-formed</th>
+<th>Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unicode character</td>
+<td><code>÷</code></td>
+<td>yes</td>
+<td>yes (more preferable)</td>
+</tr>
+<tr>
+<td>numeric (hex) character entity</td>
+<td><code>&amp;#x00F7;</code></td>
+<td>yes</td>
+<td>yes (less preferable)</td>
+</tr>
+<tr>
+<td>unescaped named character entity</td>
+<td><code>&amp;divide;</code></td>
+<td>no (unless declared)</td>
+<td>no (but feasible if declared in the document)</td>
+</tr>
+<tr>
+<td>escaped named character entity</td>
+<td><code>&amp;amp;divide;</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p>When preparing XLIFF files with a localization engineering tool, e.g. Okapi Rainbow, both named and numeric character entities in the source content will be encoded as the Unicode character in the XLIFF file. <strong>☞</strong> In the sample OmegaT project provided, you can see how the three possible inputs (in file <code>original/entities.html</code>) are encoded in the same way (as the Unicode character) using the recommended approach in file <code>02_halal/entities.html.xlf</code> as well as in the discouraged way in file <code>01_haram/entities.html.xlf</code>.</p>
+<p>With a few negligible exceptions<span id="a13"><a href="#13">[13]</a></span>, there should be no reason why a UTF-8 encoding and Unicode characters cannot be used any content to be localized.</p>
+<h2 id="3-common-issues">3. Common issues<a class="headerlink" href="#3-common-issues" title="Permanent link">&para;</a></h2>
+<p>Following the recommendations above is necessary but might not be enough to achieve an optimized process. The source content might present a number of pitfalls that require special attention when creating the XLIFF files. Let us see some of those frequent issues that may hamper language tasks.</p>
+<h3 id="31-split-sentences">3.1. Split sentences<a class="headerlink" href="#31-split-sentences" title="Permanent link">&para;</a></h3>
+<p>Sometimes sentences might be broken in two or more parts because the extraction filter is treating an embedded code as the end of the paragraph. <strong>☞</strong> In the OmegaT project provided, file <code>01_haram/markup_input.html.xlf</code> shows how the sentence is broken at the text input code:</p>
+<pre><code class="language-xml">&lt;source&gt;An emperor penguin is&lt;/source&gt;
+&lt;source&gt;cm taller than a little penguin.&lt;/source&gt;
+</code></pre>
+<p>displayed in the translation editor as:</p>
+<blockquote>
+<p><kbd>1</kbd> An emperor penguin is ❌<br />
+<kbd>2</kbd> cm taller than a little penguin.</p>
+</blockquote>
+<p>The original content (in file <code>original/markup_input.html</code>) looks like this:</p>
+<pre><code class="language-xml">&lt;p&gt;An emperor penguin is &lt;input type=&quot;text&quot; name=&quot;fname&quot; autocomplete=&quot;off&quot;
+size=&quot;4&quot; id=&quot;emperor-penguin-versus-little-penguin&quot; class=&quot;height-different&quot;
+pattern=&quot;[0-9]+&quot; title=&quot;How many centimeters.&quot; formmethod=&quot;post&quot; required
+autofocus /&gt; cm taller than a little penguin.&lt;/p&gt;
+</code></pre>
+<p>That code represents this display in the online questionnaire:</p>
+<p><img alt="" src="../../_assets/img/form.png" /></p>
+<!-- ![](https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png) -->
+
+<p>Here, the expected and recommended preparation is to represent the text input field as content markup, as follows (and file <code>02_halal/markup_input.html.xlf</code> exemplifies):</p>
+<pre><code class="language-xml">&lt;source xml:lang=&quot;en&quot;&gt;An emperor penguin is &lt;ph id=&quot;1&quot; ctype=&quot;x-input&quot;&gt;&amp;lt;input
+type=&quot;text&quot; name=&quot;fname&quot; autocomplete=&quot;off&quot; size=&quot;4&quot; id=&quot;emperor-penguin-versus-
+little-penguin&quot; class=&quot;height-different&quot; pattern=&quot;[0-9]+&quot;
+formmethod=&quot;post&quot; required autofocus /&gt;&lt;/ph&gt; cm taller than a little penguin.
+&lt;/source&gt;
+</code></pre>
+<p>which will appear as follows in the translation editor (see file <code>02_halal/markup_input.html.xlf</code>):</p>
+<blockquote>
+<p><kbd>1</kbd> An emperor penguin is <code>&lt;x0/&gt;</code> cm taller than a little penguin.  ✔ <!-- :heavy_check_mark: --></p>
+</blockquote>
+<p>That preparation makes it very easy for the translator to insert the placeable tag in the translation of that segment in the position where the input field should appear in the target version. For example, in Khmer:</p>
+<blockquote>
+<p><kbd>1</kbd><kbd>target:</kbd> ព្រះចៅអធិរាជភេនឃ្វីនមានកំពស់ខ្ពស់ជាងភេនឃ្វីនតូចជាង <code>&lt;x0/&gt;</code> ហ្វីត។   ✔</p>
+</blockquote>
+<p>File <code>markup_inline.svg.xlf</code> shows a similar case of text broken down at the two embedding SVG tags <code>&lt;tspan&gt;</code> and <code>&lt;/tspan&gt;</code>.</p>
+<p>Other similar examples:</p>
+<blockquote>
+<p><kbd>1</kbd> Click  ❌ <!-- :x: --><br />
+<kbd>2</kbd> to move on.</p>
+<p><kbd>1</kbd> See uses on  ❌ <!-- :x: --><br />
+<kbd>2</kbd> to show 2 children in her pictograph<br />
+<kbd>3</kbd> How many  ❌ <!-- :x: --><br />
+<kbd>4</kbd> will they need to draw?</p>
+<p><kbd>1</kbd> Feed 5 penguins for  ❌ <!-- :x: --><br />
+<kbd>2</kbd> zeds.</p>
+<p><kbd>1</kbd> Drag  ❌ <!-- :x: --><br />
+<kbd>2</kbd> onto the graph.</p>
+<p><kbd>1</kbd> When your drawing is done, click  ❌ <!-- :x: --><br />
+<kbd>2</kbd> to fill the garden with boxes of flowers.</p>
+</blockquote>
+<p>In all these cases the original content includes some element (e.g. "Click <code>[X](BUTTON)</code> to move on." or "Feed 5 penguins for <code>[QUANTITY]</code> zeds.") that has been interpreted as the end of a paragraph.</p>
+<p>Apart from the problem that the full sentence will not be stored in the translation memory as one unit, this is also problematic when the target language expresses things in a different order than English, e.g. say, "Tó móvê ón klïck <code>[X]</code>)". In that case the linguist is forced to break the expected one-to-one segment correspondence, in order to maintain the correct order.</p>
+<p>Maintaining the correspondence will produce the wrong order in the final content according to the syntax of the target language:</p>
+<blockquote>
+<p><kbd>1</kbd> klïck  ❌ <!-- :x: --><br />
+<kbd>2</kbd> Tó móvê ón  ❌ <!-- :x: --></p>
+</blockquote>
+<p>Breaking the natural correspondence will produce the right order in the final content but spoils the TM containing these translations, which will not be reusable when the same kind of content  needs to be translated in a subsequent cycle of the same project:</p>
+<!--
+> <kbd>1</kbd> <kbd>source:</kbd>  Click  
+>      <kbd>target:</kbd>  Tó móvê ón  ❌
+> <kbd>2</kbd> <kbd>source:</kbd>  to move on  
+>      <kbd>target:</kbd>   klïk.  ❌
+
+or
+
+> <kbd>1</kbd> <kbd>source:</kbd>  Click  
+>      <kbd>target:</kbd>  Tó móvê ón klïk  ❌
+> <kbd>2</kbd> <kbd>source:</kbd>  to move on  
+>      <kbd>target:</kbd>   
+-->
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">source</th>
+<th style="text-align: left;">target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><kbd>1</kbd></td>
+<td style="text-align: left;">Click</td>
+<td style="text-align: left;">Tó móvê ón ❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><kbd>2</kbd></td>
+<td style="text-align: left;">to move on</td>
+<td style="text-align: left;">klïk ❌</td>
+</tr>
+</tbody>
+</table>
+<p>or</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">source</th>
+<th style="text-align: left;">target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><kbd>1</kbd></td>
+<td style="text-align: left;">Click</td>
+<td style="text-align: left;">Tó móvê ón klïk ❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><kbd>2</kbd></td>
+<td style="text-align: left;">to move on</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Auto-propagation of broken translations can also become problematic if the translation of a repeated segment (corresponding to part of the sentence) must be different in different contexts, for example due to agreement with other parts of the sentence, e.g.</p>
+<blockquote>
+<p><kbd>1</kbd> Front  ❌ <!-- :x: --><br />
+<kbd>2</kbd> wheel<br />
+<kbd>3</kbd> Front  ❌ <!-- :x: --><br />
+<kbd>4</kbd> headlamp</p>
+</blockquote>
+<p>For example, in Spanish adjectives need to agree in gender and number with the nouns they modify, e.g. the translation of "front" is "delantera" (feminine) in seg1 to agree with the Spanish equivalent of "wheel" (i.e. "rueda"), which has feminine grammatical gender, whereas it is "delantero" (masculine) in seg3 to agree with the Spanish equivalent of "headlamp" (i.e. "faro"), which has masculine grammatical gender.</p>
+<p>Auto-propagation would produce the following translation:</p>
+<!--
+> <kbd>1</kbd> <kbd>source:</kbd>  Front  
+>      <kbd>target:</kbd>  Rueda [fem.]  
+> <kbd>2</kbd> <kbd>source:</kbd>  wheel  
+>      <kbd>target:</kbd> delanter**a** [fem.]  
+> <kbd>1</kbd> <kbd>source:</kbd>  Front  
+>      <kbd>target:</kbd>  Faro [masc.]  
+> <kbd>2</kbd> <kbd>source:</kbd>  headlamp  
+>      <kbd>target:</kbd> delanter**a** [fem.] ❌  
+-->
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">source</th>
+<th style="text-align: left;">target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><kbd>1</kbd></td>
+<td style="text-align: left;">Front</td>
+<td style="text-align: left;">Rueda (fem.)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><kbd>2</kbd></td>
+<td style="text-align: left;">wheel</td>
+<td style="text-align: left;">delanter<strong>a</strong> (fem.)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><kbd>3</kbd></td>
+<td style="text-align: left;">Front</td>
+<td style="text-align: left;">Faro (masc.)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><kbd>4</kbd></td>
+<td style="text-align: left;">headlamp</td>
+<td style="text-align: left;">delanter<strong>a</strong> (fem.) ❌</td>
+</tr>
+</tbody>
+</table>
+<p>In these cases, to achieve the correct translation the linguist might need to disable the default auto-propagation (to prevent the translation of the first occurrence being pulled automatically into the second occurrence), but that manual step could fail or be easily overlooked.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">source</th>
+<th style="text-align: left;">target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><kbd>1</kbd></td>
+<td style="text-align: left;">Front</td>
+<td style="text-align: left;">Rueda (fem.)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><kbd>2</kbd></td>
+<td style="text-align: left;">wheel</td>
+<td style="text-align: left;">delanter<strong>a</strong> (fem.)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><kbd>3</kbd></td>
+<td style="text-align: left;">Front</td>
+<td style="text-align: left;">Faro (masc.)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><kbd>4</kbd></td>
+<td style="text-align: left;">headlamp</td>
+<td style="text-align: left;">delanter<strong>o</strong> (masc.) ✔</td>
+</tr>
+</tbody>
+</table>
+<p>In a nutshell, split sentences can be a nuisance to translate into certain languages with different word order than English -- the linguist might have to work around the translation in difficult or impossible ways. Also, productivity and internal consistency can be compromised if the same text appears later in the same project, or in future cycles, with different or correct segmentation.</p>
+<h4 id="expected-preparation">Expected preparation<a class="headerlink" href="#expected-preparation" title="Permanent link">&para;</a></h4>
+<p>The expected result in the cases above would have been to use a tag or a placeholder to encode the inline code:</p>
+<blockquote>
+<p><kbd>1</kbd> See uses on <code>%s</code> to show 2 children in her pictograph   ✔ <!-- :heavy_check_mark: --><br />
+<kbd>2</kbd> How many <code>%s</code> will they need to draw?   ✔ <!-- :heavy_check_mark: --></p>
+<p><kbd>1</kbd> Click <code>&lt;BUTTON/&gt;</code> to move on.   ✔ <!-- :heavy_check_mark: --></p>
+<p><kbd>1</kbd> Front wheel   ✔ <!-- :heavy_check_mark: --><br />
+<kbd>2</kbd> Front headlamp   ✔ <!-- :heavy_check_mark: --></p>
+</blockquote>
+<p>In the examples above where the segment has been properly prepared with placeholders, it is very easy (and common practice) for the translator to insert the placeables tags in the position where the inline codes belong in the target version.</p>
+<h4 id="tip">Tip<a class="headerlink" href="#tip" title="Permanent link">&para;</a></h4>
+<p>To avoid this kind of issue, then, ask a translation technologist or a trained linguist to run a source review on your draft XLIFF files and then adjust the extraction filter accordingly, so that the filter knows which inline codes must be extracted along with the surrounding text and protected, and not interpreted as end of a paragraph.</p>
+<h3 id="32-markup-nimiety">3.2. Markup nimiety<a class="headerlink" href="#32-markup-nimiety" title="Permanent link">&para;</a></h3>
+<p>Segments overloaded with markup make translation and all related subsequent language tasks more difficult, therefore increasing the chance to introduce errors in the translation, especially in right-to-left languages such as Arabic or Hebrew.</p>
+<p>Some inline codes are unavoidable, e.g. to provide style:</p>
+<pre><code class="language-xml">Put the lengths in order from &lt;b&gt;shortest&lt;/b&gt; to &lt;i&gt;longest&lt;/i&gt;. ✔
+</code></pre>
+<p>However, other tags are unnecessary and should be avoided or cleaned up before preparing the files. For example, closing and opening tags of the same kind in the middle of a sentence or even in the middle of a word:</p>
+<pre><code class="language-xml">Vehicl&lt;/strong&gt;&lt;strong&gt;es in 2000  ❌
+</code></pre>
+<p>When this happens repeatedly, it results in segments that are (unnecessarily) very translation unfriendly. For example:</p>
+<pre><code class="language-xml">&lt;strong&gt;Star&lt;/strong&gt;&lt;strong&gt;t &lt;/strong&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;strong&gt;i&lt;/strong&gt;&lt;strong&gt;me&lt;/strong&gt;  ❌
+</code></pre>
+<p>In that example, there are a lot of <code>&lt;strong&gt;</code> tags there to do the same job that could be achieved with simply one tag pair. This tag multiplicity might arise from adding superfluous formatting in a word processor or a wysiwyg editor to create the source, or from converting with OCR or from PDF.</p>
+<h4 id="expected-preparation_1">Expected preparation<a class="headerlink" href="#expected-preparation_1" title="Permanent link">&para;</a></h4>
+<p>The expected design of the source content in the case above would have been to embed the formatted text with one single tag pair.</p>
+<pre><code class="language-xml">&lt;strong&gt;Start Time&lt;/strong&gt; ✔
+</code></pre>
+<p>This tag pair is actually suprasentential markup, which could be excluded from the prepared segment, thus producing the following simple display in the translation editor:</p>
+<blockquote>
+<p><kbd>1</kbd> Start Time   ✔ <!-- :heavy_check_mark: --></p>
+</blockquote>
+<p>The solution of this issue does not affect how the source content is prepared, but instead it relates to the pre-processing of the source content, before it is prepared. The actual preparation (parsing, extraction and segmentation) is the same regardless of whether the issue is present in the source files.</p>
+<h4 id="tip_1">Tip<a class="headerlink" href="#tip_1" title="Permanent link">&para;</a></h4>
+<p>Provide feedback and tips to content authors and item developers and run some tag clean-up before extracting the text that must be included in the XLIFF files (tools like CodeZapper or TransTools Document Cleaner can be used for that in Word)<span id="14"><a href="#14">[14]</a></span>.</p>
+<h3 id="33-ending-segments-at-line-breaks">3.3. Ending segments at line breaks<a class="headerlink" href="#33-ending-segments-at-line-breaks" title="Permanent link">&para;</a></h3>
+<p>In some cases, line breaks are used to limit the length of each line in the source text. During extraction, the text might be split down at these line break tags.</p>
+<p>For example:</p>
+<blockquote>
+<p><kbd>1</kbd> Since the 1970s, scientists have been<br />
+<kbd>2</kbd> <code>&lt;br/&gt;</code>  ❌ <!-- :x: --><br />
+<kbd>3</kbd> worried about the amount of Dioxin, a<br />
+<kbd>4</kbd> <code>&lt;br/&gt;</code> ❌ <!-- :x: --><br />
+<kbd>5</kbd> toxin in fish caught in Baltic Sea.</p>
+</blockquote>
+<h4 id="expected-preparation_2">Expected preparation<a class="headerlink" href="#expected-preparation_2" title="Permanent link">&para;</a></h4>
+<p>One potential approach would be to represent the line break tags are as placeholders:</p>
+<blockquote>
+<p><code>1</code> Since the 1970s, scientists have been <code>&lt;g0/&gt;</code> worried about the amount of Dioxin, a <code>&lt;g1/&gt;</code> toxin in fish caught in Baltic Sea.   ✔ <!-- :heavy_check_mark: --></p>
+</blockquote>
+<p>However, a much better approach would be to get rid of those line breaks, which were there probably to hard wrap the text at a certain width to adapt to some expected space, and soft wrap the translation by other more convenient and dynamic means (e.g. styles) in the actual final publication medium. In general it is recommended to separate content from layout.</p>
+<p>In any case it should not be assumed that the translator will keep the line break tags in the translation or that their location will need to be equivalent to the source</p>
+<p>Therefore, our recommendation, in the first place, would be to avoid using line break tags in the source text. Secondly (assuming we are dealing with HTML content), the width of the text can be defined by means of CSS styles. That approach  achieves the same exact results without introducing any noise in the source text and without affecting the work of the translator. See https://jsfiddle.net/msoutopico/3p7x8ryr/1/ or the screenshot below:</p>
+<p><img alt="" src="../../_assets/img/markup_fiddl_wrap.png" /></p>
+<h4 id="tip_2">Tip<a class="headerlink" href="#tip_2" title="Permanent link">&para;</a></h4>
+<p>To avoid this kind of issue, then, ask a translation technologist or a trained linguist to run a source review on your draft XLIFF files and/or your original source content and then clean up your source content (prefereably) to avoid hard-coding text wrapping or (less preferably) adjust the extraction filter accordingly, so that the line break element is treated as an inline code (extracted along with the surrounding text and protected) and not as the end of the paragraph.</p>
+<h2 id="annexes">Annexes<a class="headerlink" href="#annexes" title="Permanent link">&para;</a></h2>
+<p>Preparing XLIFF files for translation in OmegaT entails some additional tweaks due to the special characteristics of this CAT tool.</p>
+<h3 id="guidelines-for-creating-xliff-12-files-for-omegat">Guidelines for creating XLIFF 1.2 files for OmegaT<a class="headerlink" href="#guidelines-for-creating-xliff-12-files-for-omegat" title="Permanent link">&para;</a></h3>
+<h4 id="check-list-for-translation">Check list for translation<a class="headerlink" href="#check-list-for-translation" title="Permanent link">&para;</a></h4>
+<p>There are two possibilities for creating new XILFF files for translation tasks.</p>
+<p>A. Using the Okapi XLIFF filter:</p>
+<ul>
+<li>The <code>target</code> element must be empty or missing, like so:</li>
+</ul>
+<pre><code class="language-xml">  &lt;trans-unit id=&quot;1086880&quot;&gt;
+    &lt;source&gt;This is the source text.&lt;/source&gt;
+    &lt;target/&gt;
+  &lt;/trans-unit&gt;
+</code></pre>
+<p>Also, the <code>trans-unit</code> must have property <code>xml:space="preserve"</code>.</p>
+<p>B. Using the default OmegaT XLIFF filter:</p>
+<ul>
+<li>The <code>target</code> element must exist and be populated with the source text.</li>
+</ul>
+<p>For example:</p>
+<pre><code class="language-xml">  &lt;trans-unit id=&quot;1086880&quot;&gt;
+    &lt;source&gt;This is the source text.&lt;/source&gt;
+    &lt;target&gt;This is the source text.&lt;/target&gt;
+  &lt;/trans-unit&gt;
+</code></pre>
+<h4 id="check-list-for-bilingual-review">Check list for bilingual review<a class="headerlink" href="#check-list-for-bilingual-review" title="Permanent link">&para;</a></h4>
+<p>Make sure your bilingual/translated XLIFF files meet the following criteria:</p>
+<ul>
+<li>The <code>trans-unit</code> must have attribute <code>xml:space</code> with value <code>preserve</code> if leading and trailing space included in the source text must be replicated in the translation.</li>
+<li>The <code>trans-unit</code> must have attribute-value pair <code>approved="yes"</code>.</li>
+</ul>
+<p>For example:</p>
+<pre><code class="language-xml">  &lt;trans-unit id=&quot;1086880&quot; xml:space=&quot;preserve&quot; approved=&quot;yes&quot;&gt;
+    &lt;source&gt;This is the source text.&lt;/source&gt;
+    &lt;target&gt;Esto es la traducción.&lt;/target&gt;
+  &lt;/trans-unit&gt;
+</code></pre>
+<p>In this case the OmegaT project must use the Okapi XLIFF filter.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><span id="1"></span> OmegaT is a free and open source computer-assisted translation tool (CAT-tool) that cApStAn uses to translate and review/edit XLIFF files in international large-scale translation projects. It offers many more technical possibilities than OLT. See our  OmegaT installation and customization guide: https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen <a href="#a1">⏎</a></p>
+</li>
+<li>
+<p><span id="2"></span> See <a href="https://okapiframework.org/wiki/index.php?title=Rainbow">https://okapiframework.org/wiki/index.php?title=Rainbow</a>  <a href="#a2">⏎</a></p>
+</li>
+<li>
+<p><span id="3"></span> See <a href="http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html">http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html</a> <a href="#a3">⏎</a></p>
+</li>
+<li>
+<p><span id="4"></span> XML schema: <a href="https://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">https://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd</a> <a href="#a4">⏎</a></p>
+</li>
+<li>
+<p><span id="5"></span> The XLIFF checker can be downloaded from https://www.maxprograms.com/products/xliffchecker.html <a href="#a5">⏎</a></p>
+</li>
+<li>
+<p><span id="6"></span> See https://okapiframework.org/wiki/index.php?title=SRX. <a href="#a6">⏎</a></p>
+</li>
+<li>
+<p><span id="7"></span> Okapi Framework is a set of libraries that can be used to prepare files for translation, among other things. <a href="#a7">⏎</a></p>
+</li>
+<li>
+<p><span id="8"></span> See http://okapiframework.org/wiki/index.php?title=Ratel <a href="#a8">⏎</a></p>
+</li>
+<li>
+<p><span id="9"></span> See http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#Struct_InLine and http://docs.oasis-open.org/xliff/v1.2/xliff-profile-html/xliff-profile-html-1.2-cd02.html. <a href="#a9">⏎</a></p>
+</li>
+<li>
+<p><span id="10"></span> See https://www.w3.org/International/questions/qa-escapes#not <a href="#a10">⏎</a></p>
+</li>
+<li>
+<p><span id="11"></span> See https://www.w3.org/International/questions/qa-escapes <a href="#a11">⏎</a></p>
+</li>
+<li>
+<p><span id="12"></span> See https://support.office.com/en-us/article/insert-ascii-or-unicode-latin-based-symbols-and-characters-d13f58d3-7bcb-44a7-a4d5-972ee12e50e0 and https://support.apple.com/en-us/HT201586 for Mac. <a href="#a12">⏎</a></p>
+</li>
+<li>
+<p><span id="13"></span> See https://www.w3.org/International/questions/qa-chars-vs-markup#not <a href="#a13">⏎</a></p>
+</li>
+<li>
+<p><span id="14"></span> See http://kb.memoq.com/article/AA-00485/0/Cleaning-unnecessary-tags-with-TransTools-Document-Cleaner.html <a href="#a14">⏎</a></p>
+</li>
+</ol>
+<!-- tools -->
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 cApStAn
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.prune", "navigation.top", "navigation.sections", "navigation.path", "toc.follow", "navigation.indexes", {"hidden": "tech"}], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
+      
+        
+          <script src="../../_assets/js/extra.js"></script>
+        
+      
+    
+  </body>
+</html>
