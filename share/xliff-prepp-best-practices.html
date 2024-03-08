@@ -130,6 +130,8 @@
 <h2>Introduction</h2>
 <p>This report includes recommendations for preparing content for translation in the XLIFF format with a view to producing XLIFF files that optimize the different language tasks and language asset management both in the short and the long run. It also focuses on common issues that can be problematic for language experts and how those issues can be avoided.</p>
 <p>Often, there are no ultimate prescribed solutions, but following or not the recommendations in this document can make all the difference between hindering or crippling language tasks (the work of translators, reconcilers, reviewers, verifiers, etc.) and making their  work enjoyable and bound to good results.</p>
+<p>!!! info
+    cApStAn take care of file preparation regardless of the native format provided that the client provides the original source files, and often that yields better results than what third-party engineers often can do. If you are a third-party engineer or a client, beware that the contents of this guide apply to you only after the possibility of relying on cApStAn for file preparation has been considered and discareded (for a good reason).</p>
 <h3>Notation</h3>
 <p>In this document, segments as the linguist sees them in the translation editor are represented as follows (preceded by the segment number):</p>
 <blockquote>
@@ -227,24 +229,22 @@
 <ul>
 <li>Use the existing technology. There's a rich array of tools and libraries in the localization industry, both commercial and open source, that embody the know-how accumulated over the last decades. If you try to reinvent the wheel, it'll take you much longer and you'll achieve worse results. Use what exists, and improve it if you can, and only then develop your own technology if you see that what </li>
 </ul>
-<p>Some of the tools you could use to manage the XLIFF roundtrip (extraction and merge):
-* <a href="https://www.maxprograms.com/products/openxliff.html">Maxprograms' OpenXLIFF filters / XLIFF Manager</a> (open source)
-* <a href="https://okapiframework.org/wiki/index.php?title=Rainbow">Okapi Rainbow</a> (open source)
-* <a href="https://www.memoq.com/">memoQ</a> (commercial)
-* <a href="https://www.sdltrados.com/">SDL Trados Studio</a> (commercial)</p>
+<p>Some of the tools you could use to manage the XLIFF roundtrip (extraction and merge):</p>
+<ul>
+<li><a href="https://www.maxprograms.com/products/openxliff.html">Maxprograms' OpenXLIFF filters / XLIFF Manager</a> (open source)</li>
+<li><a href="https://okapiframework.org/wiki/index.php?title=Rainbow">Okapi Rainbow</a> (open source)</li>
+<li><a href="https://www.memoq.com/">memoQ</a> (commercial)</li>
+<li><a href="https://www.sdltrados.com/">SDL Trados Studio</a> (commercial)</li>
+</ul>
 <p>Let's now be a bit more specific, about segmentation and inline codes:</p>
 <ul>
 <li>Text must be segmented by sentence. Each segment should contain one single sentence, not a full paragraph or several sentences.</li>
 <li>All translatable content must be extracted and all untranslatable content must be excluded during the extraction.</li>
 <li>Inline codes should not be interpreted as end of paragraph or as boundaries between text units/blocks, to avoid breaking down sentences in fragments.</li>
-<li>Inline codes and markup should ideally be represented using the notation specified by the XLIFF standard so that the translation editor can recognize, lock and display them as placeable tags.<ul>
+<li>Inline codes and markup should ideally be represented using the notation specified by the XLIFF standard so that the translation editor can recognize, lock and display them as placeable tags.</li>
 <li>If markup is not represented as tags and is escaped instead, then each markup block should be as short as possible, and custom tags might need to be created to protect escaped markup.</li>
-</ul>
-</li>
-<li>The number of tags should be as low as possible.<ul>
+<li>The number of tags should be as low as possible.</li>
 <li>Some clean-up of the source files or some back and forth between localization engineers and source content authors is sometimes necessary).</li>
-</ul>
-</li>
 </ul>
 <p>Failure to follow those recommendations hampers language tasks or/and could affect translation quality.</p>
 <p>There are other, recommendations about characters and whitespace might have a lesser impact on their own, but recurrent and concurrent failure to follow them may also contribute to making the translation process more difficult:</p>
