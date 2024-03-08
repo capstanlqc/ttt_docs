@@ -1,3 +1,8 @@
+---
+share: true
+where: https://odoo.capstan.be/web#action=871&cids=1&id=366&menu_id=592&model=knowsystem.article&view_type=form
+---
+
 # Best practices for preparing XLIFF files
 
 
@@ -5,10 +10,12 @@
 
 | Date       | Author            | Comment            |
 |:---------- |:----------------- |:------------------ |
-| 2021-01-27 | Manuel Souto Pico | Review and updates |
-| 2018-05-25 | Manuel Souto Pico | Segmentation       |
-| 2018-02-02 | Manuel Souto Pico | Encoding entities  |
 | 2018-01-30 | Manuel Souto Pico | Creation           |
+| 2018-02-02 | Manuel Souto Pico | Encoding entities  |
+| 2018-05-25 | Manuel Souto Pico | Segmentation       |
+| 2021-01-27 | Manuel Souto Pico | Review and updates |
+| 2022-03-21 | Manuel Souto Pico | Updated OMT project (SVN to Github) and OmegaT version (4.2 to 5.7) |
+| 2022-03-23 | Manuel Souto Pico | Updated credentials of dummy user |
 
 
 ## Table of contents
@@ -30,18 +37,12 @@
       - [2.3.2. Unicode characters and code points](#232-unicode-characters-and-code-points)
   * [3. Common issues](#3-common-issues)
     + [3.1. Split sentences](#31-split-sentences)
-      - [Expected preparation](#expected-preparation)
-      - [Tip](#tip)
     + [3.2. Markup nimiety](#32-markup-nimiety)
-      - [Expected preparation](#expected-preparation-1)
-      - [Tip](#tip-1)
     + [3.3. Ending segments at line breaks](#33-ending-segments-at-line-breaks)
-      - [Expected preparation](#expected-preparation-2)
-      - [Tip](#tip-2)
   * [Annexes](#annexes)
     + [Guidelines for creating XLIFF 1.2 files for OmegaT](#guidelines-for-creating-xliff-12-files-for-omegat)
-      - [Check list for translation](#check-list-for-translation)
-      - [Check list for bilingual review](#check-list-for-bilingual-review)
+        - [Check list for translation](#check-list-for-translation)
+        - [Check list for bilingual review](#check-list-for-bilingual-review)
   * [References](#references)
   
 <!-- <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small> -->
@@ -82,6 +83,9 @@ This report includes recommendations for preparing content for translation in th
 
 Often, there are no ultimate prescribed solutions, but following or not the recommendations in this document can make all the difference between hindering or crippling language tasks (the work of translators, reconcilers, reviewers, verifiers, etc.) and making their  work enjoyable and bound to good results.
 
+!!! info
+    cApStAn take care of file preparation regardless of the native format provided that the client provides the original source files, and often that yields better results than what third-party engineers often can do. If you are a third-party engineer or a client, beware that the contents of this guide apply to you only after the possibility of relying on cApStAn for file preparation has been considered and discareded (for a good reason).
+
 
 ### Notation
 
@@ -93,13 +97,14 @@ Also, the cross mark (❌) and check mark (✔️) emojis are used to indicate a
 
 ### Sample project
 
-To illustrate the DO's and DON'T's, an OmegaT sample project is provided, containing:
+To illustrate the DO's and DON'T's, an OmegaT sample project is provided, containing:
 
   * the original files (XML, HTML, SVG, etc.), in folder `original`
   * the problematic XLIFF files, in folder `source/01_haram`
-  * the optimal XLIFF files, in folder `source/02_halal`
+  * the optimal XLIFF files, in folders `source/02_halal_xlf1` (for XLIFF version v.1.2)
+  * the optimal XLIFF files, in folders `source/02_halal_xlf2` (for XLIFF version v.2.0)
 
-The original files have been prepared as XLIFF in two different ways, to show the ideal preparation and its antithesis. <!-- The `original` folder contains the source content, the `source` folder contains the files prepared for translation: the `haram` folder contains the problma tic files, and the `halal` folder contains the files with the recommended preparation. --> This is the file structure in the project:
+The original files have been prepared as XLIFF in two different ways (so-called here "halal" and "haram"), to show the ideal preparation and its antithesis, respectively. <!-- The `original` folder contains the source content, the `source` folder contains the files prepared for translation: the `haram` folder contains the problma tic files, and the `halal` folder contains the files with the recommended preparation. --> This is the file structure in the project:
 
 <!--
     xliff_bestpractices_omtprj (project)
@@ -134,54 +139,54 @@ The original files have been prepared as XLIFF in two different ways, to show th
     ├── glossary
     ├── manifest.rkm
     ├── omegat
-    │   ├── ...
+    │   └── ...
     ├── omegat.project
     ├── original
-    │   └── 02_halal
-    │       ├── entities.html
-    │       ├── markup_custom.xml
-    │       ├── markup_inline.svg
-    │       ├── markup_input.html
-    │       ├── markup_span.html
-    │       └── segmen_para.html
+    │   ├── entities.html
+    │   ├── markup_custom.xml
+    │   ├── markup_inline.svg
+    │   ├── markup_input.html
+    │   ├── markup_span.html
+    │   └── segmen_para.html
     ├── source
-    │   ├── 01_haram
-    │   │   ├── entities.html.xlf
-    │   │   ├── markup_custom.xml.xlf
-    │   │   ├── markup_inline.svg.xlf
-    │   │   ├── markup_input.html.xlf
-    │   │   ├── markup_span.html.xlf
-    │   │   └── segmen_para.html.xlf
-    │   └── 02_halal
-    │       ├── entities.html.xlf
-    │       ├── markup_custom.xml.xlf
-    │       ├── markup_inline.svg.xlf
-    │       ├── markup_input.html.xlf
-    │       ├── markup_span.html.xlf
-    │       └── segmen_para.html.xlf
+    │   ├── 01_haram
+    │   │   ├── entities.html.xlf
+    │   │   ├── markup_custom.xml.xlf
+    │   │   ├── markup_inline.svg.xlf
+    │   │   ├── markup_input.html.xlf
+    │   │   ├── markup_span.html.xlf
+    │   │   └── segmen_para.html.xlf
+    │   └── 02_halal_xlf#
+    │       ├── entities.html.xlf
+    │       ├── markup_custom.xml.xlf
+    │       ├── markup_inline.svg.xlf
+    │       ├── markup_input.html.xlf
+    │       ├── markup_span.html.xlf
+    │       └── segmen_para.html.xlf
     ├── target
     └── tm
 
-You can open the XLIFF files and look at them in an XML editor, but probably the best way to see the impact of the different preparation is to open the project in OmegaT and compare each _haram_ file with its corresponding _halal_ files. The project can be downloaded twice with different names and two instances of OmegaT can be run simultaneously for a handier comparison.
+You can open the XLIFF files and look at them in a text editor, but probably the best way to see the impact of the different preparation is to open the project in OmegaT and compare each _haram_ file with its corresponding _halal_ equivalent(s). The project can be downloaded twice with different names and two instances of OmegaT can be run simultaneously for a handier comparison.
 
 To open the project in OmegaT:
 
 [comment]: <> "Download and install our custom version of OmegaT: http://cat.capstan.be/OmegaTcp_installer.exe"
 
-  - Install and customize OmegaT as per our [installation and customization guide](https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen) <span id="a1">[[1]](#1)</span>
+  - Install and customize OmegaT 5.7 as per our [installation and customization guide](https://slides.com/capstan/omegat5-installation-and-customization-guide/fullscreen) <span id="a1">[[1]](#1)</span>
   - In OmegaT, go to     **Project** >     **Download team project** and enter the following details:
-    - url: `http://svn.capstan.be/testproject1/xliff_bestpractices_omtprj`
-	- credentials: `capstanview` (username) / `cApStAn2016` (password)
-	- your preferred path to your local copy of the project.
+    - Repository URL: [`https://github.com/capstanlqc/XLIFF_bestpractices_OMT`](https://github.com/capstanlqc/XLIFF_bestpractices_OMT)
+	- New local project folder: your preferred path to your local copy of the project.
 
-That will create a local version of the project for you and will open it. You can click on the different files in the project files window to display the different content in the translation editor.
+That will create a local version of the project for you and open it. To open files in the translation editor, you may press **Ctrl+L** and then either type part of the file name or just click on a file to select it and open it. Typing also helps to filter the list of files.
 
-That sample OmegaT project was created using Okapi Rainbow.<span id="a2">[[2]](#2)</span> The Rainbow project, including the settings files, can also be downloaded from [`http://cat.capstan.be/xliff_bestpractices_okpprj.zip`](http://cat.capstan.be/xliff_bestpractices_okpprj.zip), although this is not necessary unless you want to recreate or customize the extraction process. To (re)create the XLIFF files, the `rnb` file must be open from Okapi Rainbow.
+Credentials are available [here](https://rentry.co/i18n-dummy).
+
+The sample XLIFF files in the project above or the project itself can be re-created using Okapi Rainbow.<span id="a2">[[2]](#2)</span> The Rainbow project, including the settings files, filters, segmentation rules etc., can also be downloaded from this link [`okapi_rainbow_project.tar.gz`](https://github.com/capstanlqc/i18n_guide/raw/main/okapi_rainbow_project.tar.gz), although this is not necessary unless you want to recreate or customize the extraction process. Instructions to use the Rainbow project can be found in the README.md file.
 
 
 ## 1. Requirements
 
-When creating XLIFF files, the only strict technical requirement is to create _well-formed_ and _valid_ XLIFF files, according to the XML syntax and the XLIFF specification <span id="a3">[[3]](#3)</span>. Created XLIFF files can be validated with the strict XML schema <span id="a4">[[4]](#4)</span> or using the XLIFF Checker <span id="a5">[[5]](#5)</span>.
+When creating XLIFF files, the only strict technical requirement is to create _well-formed_ and _valid_ XLIFF files, according to the XML syntax and the XLIFF specification <span id="a3">[[3]](#3)</span>. Created XLIFF files can be validated with the strict XML schema <span id="a4">[[4]](#4)</span> or using the XLIFF Checker <span id="a5">[[5]](#5)</span>.
 
 Well-formedness and validity are the bare minimum, but of course it is perfectly possible to produce XLIFF files that are valid and compliant with the XLIFF standard but that are not translation-friendly. The main purpose of this report is to promote some best practices, upon which the following recommendations are based.
 
@@ -194,6 +199,7 @@ First and foremost, one generic recommendation:
 * Use the existing technology. There's a rich array of tools and libraries in the localization industry, both commercial and open source, that embody the know-how accumulated over the last decades. If you try to reinvent the wheel, it'll take you much longer and you'll achieve worse results. Use what exists, and improve it if you can, and only then develop your own technology if you see that what 
 
 Some of the tools you could use to manage the XLIFF roundtrip (extraction and merge):
+
 * [Maxprograms' OpenXLIFF filters / XLIFF Manager](https://www.maxprograms.com/products/openxliff.html) (open source)
 * [Okapi Rainbow](https://okapiframework.org/wiki/index.php?title=Rainbow) (open source)
 * [memoQ](https://www.memoq.com/) (commercial)
@@ -205,9 +211,9 @@ Let's now be a bit more specific, about segmentation and inline codes:
   * All translatable content must be extracted and all untranslatable content must be excluded during the extraction.
   * Inline codes should not be interpreted as end of paragraph or as boundaries between text units/blocks, to avoid breaking down sentences in fragments.
   * Inline codes and markup should ideally be represented using the notation specified by the XLIFF standard so that the translation editor can recognize, lock and display them as placeable tags.
-	* If markup is not represented as tags and is escaped instead, then each markup block should be as short as possible, and custom tags might need to be created to protect escaped markup.
+  * If markup is not represented as tags and is escaped instead, then each markup block should be as short as possible, and custom tags might need to be created to protect escaped markup.
   * The number of tags should be as low as possible.
-  	* Some clean-up of the source files or some back and forth between localization engineers and source content authors is sometimes necessary).
+  * Some clean-up of the source files or some back and forth between localization engineers and source content authors is sometimes necessary).
 
 Failure to follow those recommendations hampers language tasks or/and could affect translation quality.
 
@@ -239,7 +245,7 @@ If the text is segmented, this long paragraph can be handled as independent sent
 > <kbd>5</kbd> Fusce ligula arcu, hendrerit eu dignissim eget, consequat quis sem!  
 > <kbd>6</kbd> Maecenas eget ligula dapibus, dictum purus vitae, sodales neque.
 
-To implement segmentation, you must use segmentation rules. Different tools might have slightly different implementations, but they all use regular expressions to match the patterns that correspond to sentence boundaries. SRX <span id="a6">[[6]](#1)</span> is an XML-based standard of the localization industry used to define segmentation rules, and it can be used by Okapi Framework <span id="a7">[[7]](#7)</span>. Segmentation rulesets can be easily created and customized in Okapi Ratel <span id="a8">[[8]](#8)</span>.
+To implement segmentation, you must use segmentation rules. Different tools might have slightly different implementations, but they all use regular expressions to match the patterns that correspond to sentence boundaries. SRX <span id="a6">[[6]](#1)</span> is an XML-based standard of the localization industry used to define segmentation rules, and it can be used by Okapi Framework <span id="a7">[[7]](#7)</span>. Segmentation rulesets can be easily created and customized in Okapi Ratel <span id="a8">[[8]](#8)</span>.
 
 Existing libraries or tools used to prepare files as XLIFF normally include a basic set of default rules which often cover most of the needs, which can be varied. As you can see in the example above, segments do not only end in full stop, but might end in other punctuation marking the end of a sentence (i.e. in English: interrogation, ellipsis, etc.).
 
@@ -282,7 +288,7 @@ The source content might include inline codes, e.g. any HTML markup tags used to
 Codes can be of two kinds:
 
   * Suprasentential or intersentential codes (i.e. codes that embed a sentence, or stand outside of a sentence, or between sentences, or operate at a higher level than the sentence) should not be included in segments.
-  * Intrasentential codes (i.e. codes that are included inside a sentence, often as spanning codes or code pairs) must be represented as inline elements (also called "content markup") according to the guidelines of the XLIFF specification <span id="a9">[[9]](#9)</span>.
+  * Intrasentential codes (i.e. codes that are included inside a sentence, often as spanning codes or code pairs) must be represented as inline elements (also called "content markup") according to the guidelines of the XLIFF specification <span id="a9">[[9]](#9)</span>.
 
 	The CAT tool will then correctly display inline elements as placeable tags, which translators can easily insert in the appropriate position in the translation of each segment. In the contrary, it is problematic for translators and reviewers to deal with inline codes that have not been protected as placeable tags, which also poses a risk to the integrity of the codes and the document.
 
@@ -446,7 +452,7 @@ autofocus /> cm taller than a little penguin.</p>
 
 That code represents this display in the online questionnaire:
 
-![](images/form.png)
+![](../_assets/img/form.png)
 
 <!-- ![](https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png) -->
 
@@ -502,16 +508,16 @@ Breaking the natural correspondence will produce the right order in the final co
 
 <!--
 > <kbd>1</kbd> <kbd>source:</kbd>  Click  
->      <kbd>target:</kbd>  Tó móvê ón  ❌
+>      <kbd>target:</kbd>  Tó móvê ón  ❌
 > <kbd>2</kbd> <kbd>source:</kbd>  to move on  
->      <kbd>target:</kbd>   klïk.  ❌
+>      <kbd>target:</kbd>   klïk.  ❌
 
 or
 
 > <kbd>1</kbd> <kbd>source:</kbd>  Click  
->      <kbd>target:</kbd>  Tó móvê ón klïk  ❌
+>      <kbd>target:</kbd>  Tó móvê ón klïk  ❌
 > <kbd>2</kbd> <kbd>source:</kbd>  to move on  
->      <kbd>target:</kbd>   
+>      <kbd>target:</kbd>   
 -->
 
 | #            | source           | target             |
@@ -539,13 +545,13 @@ Auto-propagation would produce the following translation:
 
 <!--
 > <kbd>1</kbd> <kbd>source:</kbd>  Front  
->      <kbd>target:</kbd>  Rueda [fem.]  
+>      <kbd>target:</kbd>  Rueda [fem.]  
 > <kbd>2</kbd> <kbd>source:</kbd>  wheel  
->      <kbd>target:</kbd> delanter**a** [fem.]  
+>      <kbd>target:</kbd> delanter**a** [fem.]  
 > <kbd>1</kbd> <kbd>source:</kbd>  Front  
->      <kbd>target:</kbd>  Faro [masc.]  
+>      <kbd>target:</kbd>  Faro [masc.]  
 > <kbd>2</kbd> <kbd>source:</kbd>  headlamp  
->      <kbd>target:</kbd> delanter**a** [fem.] ❌  
+>      <kbd>target:</kbd> delanter**a** [fem.] ❌  
 -->
 
 | #            | source           | target             |
@@ -655,8 +661,7 @@ In any case it should not be assumed that the translator will keep the line brea
 
 Therefore, our recommendation, in the first place, would be to avoid using line break tags in the source text. Secondly (assuming we are dealing with HTML content), the width of the text can be defined by means of CSS styles. That approach  achieves the same exact results without introducing any noise in the source text and without affecting the work of the translator. See https://jsfiddle.net/msoutopico/3p7x8ryr/1/ or the screenshot below:
 
-<!-- ![](images/markup_fiddl_wrap.png =700x) -->
-<img src="images/markup_fiddl_wrap.png" width="700" />
+![](../_assets/img/markup_fiddl_wrap.png)
 
 [comment]: <> "/** more issues. mixture of encodings **/"
 
@@ -722,32 +727,32 @@ In this case the OmegaT project must use the Okapi XLIFF filter.
 
 ## References
 
-1. <span id="1"></span> OmegaT is a free and open source computer-assisted translation tool (CAT-tool) that cApStAn uses to translate and review/edit XLIFF files in international large-scale translation projects. It offers many more technical possibilities than OLT. See our  OmegaT installation and customization guide: https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen [⏎](#a1)
+1. <span id="1"></span> OmegaT is a free and open source computer-assisted translation tool (CAT-tool) that cApStAn uses to translate and review/edit XLIFF files in international large-scale translation projects. It offers many more technical possibilities than OLT. See our  OmegaT installation and customization guide: https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen [⏎](#a1)
 
-2. <span id="2"></span> See [https://okapiframework.org/wiki/index.php?title=Rainbow](https://okapiframework.org/wiki/index.php?title=Rainbow)  [⏎](#a2)
+2. <span id="2"></span> See [https://okapiframework.org/wiki/index.php?title=Rainbow](https://okapiframework.org/wiki/index.php?title=Rainbow)  [⏎](#a2)
 
-3. <span id="3"></span> See [http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html](http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html) [⏎](#a3)
+3. <span id="3"></span> See [http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html](http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html) [⏎](#a3)
 
-4. <span id="4"></span> XML schema: [https://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd](https://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd) [⏎](#a4)
+4. <span id="4"></span> XML schema: [https://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd](https://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd) [⏎](#a4)
 
-5. <span id="5"></span> The XLIFF checker can be downloaded from https://www.maxprograms.com/products/xliffchecker.html [⏎](#a5)
+5. <span id="5"></span> The XLIFF checker can be downloaded from https://www.maxprograms.com/products/xliffchecker.html [⏎](#a5)
 
-6. <span id="6"></span> See https://okapiframework.org/wiki/index.php?title=SRX. [⏎](#a6)
+6. <span id="6"></span> See https://okapiframework.org/wiki/index.php?title=SRX. [⏎](#a6)
 
-7. <span id="7"></span> Okapi Framework is a set of libraries that can be used to prepare files for translation, among other things. [⏎](#a7)
+7. <span id="7"></span> Okapi Framework is a set of libraries that can be used to prepare files for translation, among other things. [⏎](#a7)
 
-8. <span id="8"></span> See http://okapiframework.org/wiki/index.php?title=Ratel [⏎](#a8)
+8. <span id="8"></span> See http://okapiframework.org/wiki/index.php?title=Ratel [⏎](#a8)
 
-9. <span id="9"></span> See http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#Struct_InLine and http://docs.oasis-open.org/xliff/v1.2/xliff-profile-html/xliff-profile-html-1.2-cd02.html. [⏎](#a9)
+9. <span id="9"></span> See http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#Struct_InLine and http://docs.oasis-open.org/xliff/v1.2/xliff-profile-html/xliff-profile-html-1.2-cd02.html. [⏎](#a9)
 
-10. <span id="10"></span> See https://www.w3.org/International/questions/qa-escapes#not [⏎](#a10)
+10. <span id="10"></span> See https://www.w3.org/International/questions/qa-escapes#not [⏎](#a10)
 
-11. <span id="11"></span> See https://www.w3.org/International/questions/qa-escapes [⏎](#a11)
+11. <span id="11"></span> See https://www.w3.org/International/questions/qa-escapes [⏎](#a11)
 
-12. <span id="12"></span> See https://support.office.com/en-us/article/insert-ascii-or-unicode-latin-based-symbols-and-characters-d13f58d3-7bcb-44a7-a4d5-972ee12e50e0 and https://support.apple.com/en-us/HT201586 for Mac. [⏎](#a12)
+12. <span id="12"></span> See https://support.office.com/en-us/article/insert-ascii-or-unicode-latin-based-symbols-and-characters-d13f58d3-7bcb-44a7-a4d5-972ee12e50e0 and https://support.apple.com/en-us/HT201586 for Mac. [⏎](#a12)
 
-13. <span id="13"></span> See https://www.w3.org/International/questions/qa-chars-vs-markup#not [⏎](#a13)
+13. <span id="13"></span> See https://www.w3.org/International/questions/qa-chars-vs-markup#not [⏎](#a13)
 
-14. <span id="14"></span> See http://kb.memoq.com/article/AA-00485/0/Cleaning-unnecessary-tags-with-TransTools-Document-Cleaner.html [⏎](#a14)
+14. <span id="14"></span> See http://kb.memoq.com/article/AA-00485/0/Cleaning-unnecessary-tags-with-TransTools-Document-Cleaner.html [⏎](#a14)
 
 <!-- tools -->

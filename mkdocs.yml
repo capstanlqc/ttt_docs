@@ -27,6 +27,9 @@ nav:
       - tools/okapi/filters.md
     - ★ OmegaT:
       - tools/omegat/building.md
+      - Custom configuration: 
+        - Customization roadmap: tools/omegat/omt_custom_roadmap.md
+        - Customation howto: tools/omegat/omt_custom_tech.md
       - tools/omegat/mk-win64-jre-signed-omegat-installer.md
       - Extensions / add-ons:
         - tools/omegat/scripts.md
@@ -77,20 +80,34 @@ nav:
     - ☆ xDiff automation: capps/xdiff_automation.md
   - i18n guides:
     - i18n guides: i18n/index.md
-    - ☆ XLIFF preparation: i18n/xliff.md
+    - ☆ XLIFF preparation: i18n/xliff-prepp-best-practices.md
     - ☆ Authoring tips: i18n/authoring-tips.md
     - Text wrapping: i18n/wrapping.md
     - Hyphenation: i18n/hyphenation.md
     - List sorting: i18n/sorting.md
     - Block formatting: i18n/formatting.md
     - CG example in markdown: i18n/trend_math_cg_6b.md
-    - TODO -- MERGE WITH XLIFF: i18n/xliff-prepp-best-practices.md    
   - Docs for users (symlink to KS):
-    - 👤 Wordcount analysis in Ur: tools/omegat/omt_wc.md    
+    - 👤 Wordcount analysis in Ur: tools/omegat/omt_wc.md
 theme:
   name: material
   logo: _assets/img/cApStAn_symbolesensemble_blanc.png
   favicon: _assets/favicon.ico
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: capstan
+      primary: midnight-blue
+      accent: indigo
+      toggle:
+        icon: material/eye-outline
+        name: Switch to dark-mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: midnight-blue
+      accent: indigo
+      toggle:
+        icon: material/eye
+        name: Switch to light-mode
   features:
     ## - toc.integrate
     - navigation.instant
@@ -136,17 +153,24 @@ extra_javascript:
 plugins:
   #- with-pdf
   - search
+  - exclude-search:
+      exclude:
+        - page.md
+        - page.md#section
+        - share/*
+        - /*/page.md  
+  - awesome-pages
     # - search: {}
     # - encryptcontent: 
     #     global_password: 'your_password'
   - tags:
       tags_file: profiles.md
-      tags_slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
-      tags_allowed:
-        - Audience꞉Tech
-        - Audience꞉User
+      # tags_slugify: !!python/object/apply:pymdownx.slugs.slugify
+      #   kwds:
+      #     case: lower
+      # tags_allowed:
+      #   - Audience꞉Tech
+      #   - Audience꞉User
   - macros:
       verbose: true
       include_dir: docs/_includes
