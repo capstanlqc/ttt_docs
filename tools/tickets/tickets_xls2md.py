@@ -66,7 +66,7 @@ public_data = [
     for ticket_row in tickets_data
     ]
 
-md_tbl = "# OmegaT and Okapi tickets opened (or still open) since 2020\n\n" + Tomark.table(public_data)
+md_tbl = "# OmegaT and Okapi tickets since 2020\n\n" + Tomark.table(public_data)
 md_tbl = make_md_links(md_tbl)
 
 with open('omegat-tickets.md', 'w') as f:
