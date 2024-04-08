@@ -3,7 +3,7 @@
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
 | 2024-04-08 | [#271](https://bitbucket.org/okapiframework/omegat-plugin/issues/271/extraneous-tags-which-are-not-escaped-in) | Okapi plugin | Extraneous tags which are not escaped in XML target file | BUG | Open! |
-| 2024-03-14 | [#2](https://github.com/capstanlqc/omegat/issues/2) | OmegaT (cApStAn) | Tag issues check does not flag missing tags in NEXT repetitions | BUG | Open |
+| 2024-03-14 | [#2](https://github.com/capstanlqc/omegat/issues/2) | OmegaT 5.7.2 | Tag issues check does not flag missing tags in NEXT repetitions | BUG | Open |
 | 2024-03-12 | [#1349](https://bitbucket.org/okapiframework/okapi/issues/1349/openxml-equations-not-extracted) | Okapi | OpenXML: equations not extracted | RFE | Open |
 | 2023-11-08 | [#1725](https://sourceforge.net/p/omegat/feature-requests/1725/) | OmegaT | Trim authentication details in team projects | RFE | Open! |
 | 2023-10-31 | [#1724](https://sourceforge.net/p/omegat/feature-requests/1724/) | OmegaT | Block creation of target files only if the SELECTED issues are found | RFE | Open! |
@@ -16,11 +16,11 @@
 | 2023-08-31 | [#1712](https://sourceforge.net/p/omegat/feature-requests/1712/) | OmegaT | Remove old buggy "Resolve conflicts" dialog (and keep the new "Merge" one) | RFE | Open |
 | 2023-08-31 | [#1215](https://sourceforge.net/p/omegat/bugs/1215/) | OmegaT | Protected entries in XLIFF show translation as source text | BUG | Open |
 | 2023-08-07 | [#1214](https://sourceforge.net/p/omegat/bugs/1214/) | OmegaT | Extraneous tags which are not escaped in XML target file | BUG | Transfered |
-| 2023-08-07 | [#1213](https://sourceforge.net/p/omegat/bugs/1213/) | OmegaT | Selection of match for pre-translation varies through different OS's | BUG | Open!!! |
+| 2023-08-07 | [#1213](https://sourceforge.net/p/omegat/bugs/1213/) | OmegaT | Selection of match for pre-translation varies through different OS's | BUG | Resolved |
 | 2023-08-07 | [#1212](https://sourceforge.net/p/omegat/bugs/1212/) | OmegaT | Random selection of match for pre-translation depending on TMX file paths | BUG | Open!!! |
 | 2023-07-17 | [#1202](https://sourceforge.net/p/omegat/bugs/1202/) | OmegaT | Error 403 when accessing different repo with different creds in same domain | BUG | Open! |
-| 2023-07-12 | [#27](http://captsan.mantis.silvestris-lab.org/view.php?id=27) | TmxCommentsProvider | T&A notes: T&A note is "null" if the target language doesn't match | RFE | Open! |
-| 2023-07-12 | [#26](http://captsan.mantis.silvestris-lab.org/view.php?id=26) | TmxCommentsProvider | T&A notes: source text in notes/notes.tmx used as the note | RFE | Open! |
+| 2023-07-12 | [#27](http://captsan.mantis.silvestris-lab.org/view.php?id=27) | tmx comments provider | T&A notes: T&A note is "null" if the target language doesn't match | RFE | Open! |
+| 2023-07-12 | [#26](http://captsan.mantis.silvestris-lab.org/view.php?id=26) | tmx comments provider | T&A notes: source text in notes/notes.tmx used as the note | RFE | Open! |
 | 2023-07-11 | [#1201](https://sourceforge.net/p/omegat/bugs/1201/) | OmegaT | -1 instead of repo name in repository credentials | BUG | Open! |
 | 2023-07-11 | [#1200](https://sourceforge.net/p/omegat/bugs/1200/) | OmegaT | Closing a new project does not register pre-populated translations | BUG | Open! |
 | 2023-07-03 | [#1708](https://sourceforge.net/p/omegat/feature-requests/1708/) | OmegaT | Improve colors in the list of project files | RFE | Open |
@@ -29,24 +29,24 @@
 | 2023-05-23 | [#1309](https://bitbucket.org/okapiframework/okapi/issues/1309) | Okapi | XML filter does not extract resname if unit contains HTML block-level tags | BUG | Resolved? |
 | 2023-05-23 | [#1176](https://sourceforge.net/p/omegat/bugs/1176/) | OmegaT | The COMPILE event is fired *after* the target commit | BUG | Resolved |
 | 2023-05-18 | [#1171](https://sourceforge.net/p/omegat/bugs/1171) | OmegaT | Enforced translations lose background color | BUG | Open |
-| 2023-05-03 | [#1164](https://sourceforge.net/p/omegat/bugs/1164/) | OmegaT | Auto-populated translations disappear when a segment gets activated | BUG | Open!!! |
+| 2023-05-03 | [#1164](https://sourceforge.net/p/omegat/bugs/1164/) | OmegaT | Auto-populated translations disappear when a segment gets activated | BUG | Resolved |
 | 2023-05-03 | [#9](https://github.com/briacp/plugin-omt-package/issues/9) | plugin-omt-package | Add property in config to remove mappings (to pack as offline project) | RFE | Resolved |
 | 2023-04-28 | [#1163](https://sourceforge.net/p/omegat/bugs/1163/) | OmegaT | Project not loaded if it contains DTD internal entities | BUG | Resolved |
 | 2023-04-24 | [#1161](https://sourceforge.net/p/omegat/bugs/1161/) | OmegaT | "Set empty translation" does not work in XML file | BUG | Open |
-| 2023-04-12 | [#1690](https://sourceforge.net/p/omegat/feature-requests/1690/) | OmegaT | "Commit target files" also commits stats file to repo | RFE | Open!!! |
-| 2023-03-22 | [#1155](https://sourceforge.net/p/omegat/bugs/1155/) | OmegaT | Option "Insert the source text" enabled on its own | BUG | Open |
+| 2023-04-12 | [#1690](https://sourceforge.net/p/omegat/feature-requests/1690/) | OmegaT | "Commit target files" also commits stats file to repo | RFE | Resolved |
+| 2023-03-22 | [#1155](https://sourceforge.net/p/omegat/bugs/1155/) | OmegaT | Option "Insert the source text" enabled on its own | BUG | Resolved |
 | 2023-03-08 | [#1150](https://sourceforge.net/p/omegat/bugs/1150/) | OmegaT | Tags cannot be deleted in RTL languages | BUG | Open!! |
 | 2023-03-08 | [#1151](https://sourceforge.net/p/omegat/bugs/1151/) | OmegaT | Tag drag-and-drop duplicates tag in RTL text | BUG | Open!! |
 | 2023-03-06 | [#1200](https://bitbucket.org/okapiframework/okapi/issues/1200) | Okapi | XML filter adds tags arounb nnbsp by default | BUG | Open+ |
 | 2023-02-24 | [#1681](https://sourceforge.net/p/omegat/feature-requests/1681/) | OmegaT | Straight quotes match curly quotes | RFE | Open |
-| 2023-02-15 | [#1142](https://sourceforge.net/p/omegat/bugs/1142/) | OmegaT | Translation displayed as source text if state="final" with Okapi XLIFF filter | BUG | Open |
+| 2023-02-15 | [#1142](https://sourceforge.net/p/omegat/bugs/1142/) | OmegaT | Translation displayed as source text if state="final" with Okapi XLIFF filter | BUG | Invalid |
 | 2023-02-13 | [#8](https://github.com/briacp/plugin-omt-package/issues/8) | plugin-omt-package | Only __DEFAULT__ project folders are packed correctly | RFE | Open |
 | 2023-02-10 | [#1674](https://sourceforge.net/p/omegat/feature-requests/1674/) | OmegaT | Remove custom tags issues and flagged text from mandatory tag check | RFE | Open! |
 | 2023-02-07 | [#1672](https://sourceforge.net/p/omegat/feature-requests/1672/) | OmegaT | Hide tag-only segments | RFE | Open!! |
 | 2023-01-26 | [#1669](https://sourceforge.net/p/omegat/feature-requests/1669/) | OmegaT | Remove leadinga and trailing tags with Okapi filters | RFE | Open!! |
 | 2023-01-26 | [#1670](https://sourceforge.net/p/omegat/feature-requests/1670/) | OmegaT | Reuse credentials in team projects | RFE | Resolved |
 | 2023-01-23 | [#1184](https://bitbucket.org/okapiframework/okapi/issues/1184/fractions-in-word-file-are-not-extracted) | Okapi | Fractions in Word file are not extracted | BUG | Open! |
-| 2023-01-22 | [#49](https://bitbucket.org/okapiframework/omegat-plugin/issues/49/use-resname-as-segment-identifier-instead) | Okapi plugin | Use resname as segment identifier (instead of correlative number) | RFE | Resolved |
+| 2023-01-22 | [#49](https://bitbucket.org/okapiframework/omegat-plugin/issues/49/use-resname-as-segment-identifier-instead) | Okapi plugin | Use resname as segment identifier (instead of correlative number) | RFE | Resolved |
 | 2023-01-20 | [#1140](https://sourceforge.net/p/omegat/bugs/1140/) | OmegaT | Context-bound matches are ignored in /tm/auto | Bug | Resolved |
 | 2023-01-03 | [#1132](https://sourceforge.net/p/omegat/bugs/1132/) | OmegaT | OmegaT CLI gets stuck at missing empty folders when run on team project | Bug | Open! |
 | 2022-11-14 | [#1125](https://sourceforge.net/p/omegat/bugs/1125/) | OmegaT | OmegaT's main window is sent to unplugged monitor | Bug | Open |
@@ -71,7 +71,7 @@
 | 2022-01-19 | [#35](https://bitbucket.org/okapiframework/omegat-plugin/issues/35/improve-tags-conversion-to-match-omegat) | Okapi plugin | Improve tags conversion to match OmegaT tags better | RFE | Open? |
 | 2021-09-24 | [#1070](https://sourceforge.net/p/omegat/bugs/1070/) | OmegaT | Unexpected enforced translation (first match) in OmegaT 4.3 | Bug | Open |
 | 2021-09-21 | [#1592](https://sourceforge.net/p/omegat/feature-requests/1592/) | OmegaT | Option to choose how matches are sorted (asc or desc) | RFE | Open~ |
-| 2021-09-21 | [#1591](https://sourceforge.net/p/omegat/feature-requests/1591/) | OmegaT | Option to export project's master TMs when pressing Ctrl+D | RFF | Open |
+| 2021-09-21 | [#1591](https://sourceforge.net/p/omegat/feature-requests/1591/) | OmegaT | Option to export project's master TMs when pressing Ctrl+D | RFF | Resolved |
 | 2021-06-25 | [#1578](https://sourceforge.net/p/omegat/feature-requests/1578/) | OmegaT | Do not propose source text as match from other languages | RFF | Open |
 | 2021-05-10 | [#41](https://bitbucket.org/okapiframework/omegat-plugin/issues/41/unable-to-set-translation-in-omegat-with) | Okapi plugin | Unable to set `<EMPTY>` translation in OmegaT with Okapi filter OpenXML | Bug | Open? |
 | 2021-05-09 | [#42](https://bitbucket.org/okapiframework/omegat-plugin/issues/42/error-parsing-xml-content-with-openxml) | Okapi plugin | Error parsing XML content (with OpenXML filter in OmegaT) | Bug | Open! |
