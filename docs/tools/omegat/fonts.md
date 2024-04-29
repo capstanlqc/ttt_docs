@@ -9,9 +9,9 @@ High legibility and readability font: https://brailleinstitute.org/freefont
 |:----|:----|:----|:----|
 | Korean             | UnDotum, Malgun Gothic |               |             |
 | Chinese            | NSimSun  |               | Aalso: Source Han Sans or Source Han Serif -- untested! |
-| Amharic, Tigrinya  | Ebrima                 |               |             | 
-| Thai               | Leelawadee UI          |               |             | 
-| Japanese           | Meiryo, NSimSun                |               | Japan recomments font Meiryo for the PISA preview -- untested in Windows or OmegaT | 
+| Amharic, Tigrinya  | Ebrima                 |               |             |
+| Thai               | Leelawadee UI          |               |             |
+| Japanese           | Meiryo, NSimSun                |               | Japan recomments font Meiryo for the PISA preview -- untested in Windows or OmegaT |
 | Khmer              | Khmer UI               |               | Info sent by Adrien to Alex for PISA GCM |
 
 ## How to install suplemental fonts on Windows 10

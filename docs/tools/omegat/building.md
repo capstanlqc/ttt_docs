@@ -3,23 +3,7 @@ tags:
   - Audience꞉Tech
 ---
 
-I would like to mention that we now have the possibility to create our own (cApStAn's) installer of OmegaT 6.1.0, if we need to. Kudos to Adrien and Gergely for all their help! 
-
-
-
-That means that if needed we could (as a very exceptional case if case of emergency) add features to our own installer which for any reason are not being included (in time or at all) in the official installer. 
-
-Ideally we should avoid having an independent fork that is not aligned with the official codebase, that would lead to maintenance issues sooner or later. 
-
-well, and there are other inconvenients, like the installer not knowing what is the user's home folder, so custom config files will have to be included in the installation folder, which the problems that this entails if a 
-
-
-
-
-
-
-
-# Creating a signed OmegaT installer
+# ! Creating a signed OmegaT installer
 
 ## Getting started
 

@@ -1,12 +1,18 @@
-# Scripts
+# ! Scripts
 
-## Adapt standard tags
+## Triggered by launching OmegaT
+
+## Triggered by a project event
+
+## Run manually
+
+### Adapt standard tags
 
 This script does..
 
 To use it, do ...
 
-## etc.
+### etc.
 
 
 utils_report_auto.groovy (Kos)

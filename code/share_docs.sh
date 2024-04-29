@@ -8,6 +8,18 @@ do
     echo "Will convert file $fpath"
     fname="$(basename -- $fpath .md)"
     output_fpath="$(pwd)/docs/share/$fname.html"
-    python code/md2html.py -i $fpath -o $output_fpath
-    echo "HTML file created: $output_fpath"
+    # python code/md2html.py -i $fpath -o $output_fpath
+    # echo "HTML file created: $output_fpath"
+
+    echo "Publish the document by adding the following code in the target platform:"
+    echo "<iframe src="https://capstanlqc.github.io/ttt_docs/share/$fname.html" allowfullscreen="true" width="100%" height="100%" frameborder="0"></iframe>"
+
+    echo "---"
 done
+
+# todo:
+# script: look for files that say share: true
+# script: for the md file, find the html endpoint in site
+# script: copy that one to the equivalent location under docs/share
+# manually: copy the iframe code to the KS article
+# manually: copy the URL of the KS article to the md file for tracking purposes
