@@ -20,6 +20,14 @@ mkdocs-dracula-theme = "^1.0.5"
 mkdocs-windmill = "^1.0.5"
 mkdocs-ansible = "^0.1.6"
 mkdocs-encryptcontent-plugin = "^3.0.0"
+mkdocs-awesome-pages-plugin = "^2.9.2"
+mkdocs-exclude-search = "^0.6.6"
+markdown = "^3.5.2"
+rich = "^13.7.1"
+md-to-html = "^0.7.3"
+misaka = "^2.1.1"
+tomark = "^0.1.4"
+openpyxl = "^3.1.2"
 
 
 [build-system]

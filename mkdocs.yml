@@ -7,101 +7,119 @@ site_author: cApStAn TTT
 site_url: https://capstanlqc.github.com/ttt_docs
 nav:
   - Projects:
-    - Projects: projects/index.md
-    - ★ Flash:
-      - 👤 Automated workflow: projects/flash/flash_automation.md
-      - ☆ Automation diagram: projects/flash/flowchart.md
-      - ☆ Style guide [pl-PL]: projects/flash/FLASH_style-guide_pol-POL.md
-    - ★ PISA 2025:
-      - projects/pisa/index.md
-      - projects/pisa/errors.md
-      - ☆ projects/pisa/trainings.md
-      - 👤 Trend transfer: projects/pisa/pisa2025_trend-transfer_guide.md
-    - ★ IPSOS:
-      - projects/ipsos/index.md
-      - 👤 Workflow automation: projects/ipsos/workflow_automation.md
+      - Projects: projects/index.md
+      - ★ Flash:
+          - 👤 Automated workflow: projects/flash/flash_automation.md
+          - ☆ Automation diagram: projects/flash/flowchart.md
+          - ☆ Style guide [pl-PL]: projects/flash/FLASH_style-guide_pol-POL.md
+      - ★ PISA 2025:
+          - projects/pisa/index.md
+          - projects/pisa/errors.md
+          - ☆ projects/pisa/trainings.md
+          - 👤 Trend transfer: projects/pisa/pisa2025_trend-transfer_guide.md
+      - ★ IPSOS:
+          - projects/ipsos/index.md
+          - 👤 Workflow automation: projects/ipsos/workflow_automation.md
+      - ★ YSC:
+          - projects/ysc/index.md
+          - Project setup: projects/ysc/project-setup.md
+          - Gender adaptation: projects/ysc/gender-adaptation.md
+
   - L10n tools:
-    - L10n Tools: tools/index.md
-    - ★ Okapi:
-      - tools/okapi/index.md
-      - tools/okapi/filters.md
-    - ★ OmegaT:
-      - tools/omegat/building.md
-      - Custom configuration: 
-        - Customization roadmap: tools/omegat/omt_custom_roadmap.md
-        - Customation howto: tools/omegat/omt_custom_tech.md
-      - tools/omegat/mk-win64-jre-signed-omegat-installer.md
-      - Extensions / add-ons:
-        - tools/omegat/scripts.md
-        - Customization script (5x): tools/omegat/omt_custom_tech.md
-        - Obtain TA report: tools/omegat/mk_translatability_report_omt.md
-        - tools/omegat/plugins.md
-        - tools/omegat/LQE.md
-        - 👤 !T&A notes: tools/omegat/mk_ta_notes_omt.md
-        - 👤 !T&A notes [Comments]: tools/omegat/ta_notes.md
-      - Support:
-        - tools/omegat/errors.md
-        - Recommended fonts: tools/omegat/fonts.md
-        - Tickets: tools/omegat/tickets.md
-      - Project administration:
-        - tools/omegat/omt2xliff.md
-        - ☆ Reconciliation packages: tools/omegat/99_automation.md      
-        - tools/omegat/team_projects.md
-        - ☆ Team project troubleshoot: tools/omegat/team_projects_trblsht.md
-      - Testing:
-        - tools/omegat/pisa25_omegat_test01.md
-        - tools/omegat/omegat5_testing.md
-        - tools/omegat/omegat5_testing_adhoc.md
-      - Tips and tricks:
-        - tools/omegat/autotext.md
-        - No-break spaces: tools/omegat/nbsp.md
-      - TO SORT:
-        - tools/omegat/pisa25_omegat_teamproj_steps.md
-        - Customization ADD 2 GUIDES: tools/omegat/omt_custom_user.md
-        - Download git ADD 2 GUIDES: tools/omegat/omt_team_steps4xlat.md
-    - ★ Auxiliary tools: aux-tools.md
+      - L10n Tools: tools/index.md
+      - ★ Okapi:
+          - tools/okapi/index.md
+          - tools/okapi/filters.md
+      - ★ OmegaT:
+          - tools/omegat/building.md
+          - tools/omegat/mk-win64-jre-signed-omegat-installer.md
+          - Custom configuration:
+              - Customization roadmap: tools/omegat/omt_custom_roadmap.md
+              - Customation howto: tools/omegat/omt_custom_tech.md
+              - Spell checking: tools/omegat/hunspell.md
+          - Extensions / add-ons:
+              - tools/omegat/scripts.md
+              - Customization script (5x): tools/omegat/omt_custom_tech.md
+              - Obtain TA report: tools/omegat/mk_translatability_report_omt.md
+              - tools/omegat/plugins.md
+              - tools/omegat/LQE.md
+              - 👤 !T&A notes: tools/omegat/mk_ta_notes_omt.md
+              - 👤 !T&A notes [Comments]: tools/omegat/ta_notes.md
+          - Support:
+              - tools/omegat/errors.md
+              - Recommended fonts: tools/omegat/fonts.md
+          - Project administration:
+              - tools/omegat/omt2xliff.md
+              - ☆ Reconciliation packages: tools/omegat/99_automation.md
+              - tools/omegat/team_projects.md
+              - ☆ Team project troubleshoot: tools/omegat/team_projects_trblsht.md
+          - Testing:
+              - tools/omegat/pisa25_omegat_test01.md
+              - tools/omegat/omegat5_testing.md
+              - tools/omegat/omegat5_testing_adhoc.md
+          - Tips and tricks:
+              - tools/omegat/autotext.md
+              - No-break spaces: tools/omegat/nbsp.md
+          - TO SORT:
+              - tools/omegat/pisa25_omegat_teamproj_steps.md
+              - Customization ADD 2 GUIDES: tools/omegat/omt_custom_user.md
+              - Download git ADD 2 GUIDES: tools/omegat/omt_team_steps4xlat.md
+      - ★ Auxiliary tools: aux-tools.md
+      - ★ Tickets: tools/tickets/omegat-tickets.md
   - Tech:
-    - Tech: tech/index.md
-    - 👤 Create folder structure: tech/mk_dir_strukt.md
-    - tech/oneliners.md
-    - tech/support.md
-    - Utilities: tech/utils.md
-    - Convert multilingual Excel to TMX: tech/xls2tmx.md
-    - How to update these docs: tech/update-docs.md
-    - How to share a doc in KS: tech/share-in-ks.md
+      - Tech: tech/index.md
+      - 👤 Create folder structure: tech/mk_dir_strukt.md
+      - tech/oneliners.md
+      - tech/support.md
+      - Utilities: tech/utils.md
+      - Convert multilingual Excel to TMX: tech/xls2tmx.md
+      - How to update these docs: tech/update-docs.md
+      - How to share a doc in KS: tech/share-in-ks.md
   - cApps:
-    - cApps: capps/index.md
-    - ☆ Langtags: capps/langtags.md
-    - ☆ VeryFire: capps/veryfire.md
-    - ☆ VF4TA: capps/vf4ta.md
-    - ☆ MemoryLn: capps/memoryln.md
-    - ☆ MemoryLn TM management: capps/memoryln_tm_mngmt.md
-    - ☆ xDiff: capps/xdiff.md
-    - ☆ xDiff automation: capps/xdiff_automation.md
+      - cApps: capps/index.md
+      - ☆ Langtags: capps/langtags.md
+      - ☆ VeryFire: capps/veryfire.md
+      - ☆ VF4TA: capps/vf4ta.md
+      - ☆ MemoryLn: capps/memoryln.md
+      - ☆ MemoryLn TM management: capps/memoryln_tm_mngmt.md
+      - ☆ xDiff: capps/xdiff.md
+      - ☆ xDiff automation: capps/xdiff_automation.md
   - i18n guides:
-    - i18n guides: i18n/index.md
-    - ☆ XLIFF preparation: i18n/xliff-prepp-best-practices.md
-    - ☆ Authoring tips: i18n/authoring-tips.md
-    - Text wrapping: i18n/wrapping.md
-    - Hyphenation: i18n/hyphenation.md
-    - List sorting: i18n/sorting.md
-    - Block formatting: i18n/formatting.md
-    - CG example in markdown: i18n/trend_math_cg_6b.md
+      - i18n guides: i18n/index.md
+      - ☆ XLIFF preparation: i18n/xliff-prepp-best-practices.md
+      - ☆ Authoring tips: i18n/authoring-tips.md
+      - ☆ Markdown (CG example): i18n/trend_math_cg_6b.md
+      - Text wrapping: i18n/wrapping.md
+      - ☆ Hyphenation: i18n/hyphenation.md
+      - List sorting: i18n/sorting.md
+      - Block formatting: i18n/formatting.md
+      #      - ☆ Flip+: i18n/flip-plus.md
+      - ☆ Single-source multiple-channel: i18n/ssmc.md
   - Docs for users (symlink to KS):
-    - 👤 Wordcount analysis in Ur: tools/omegat/omt_wc.md
+      - 👤 Wordcount analysis in Ur: tools/omegat/omt_wc.md
 theme:
   name: material
   logo: _assets/img/cApStAn_symbolesensemble_blanc.png
   favicon: _assets/favicon.ico
   palette:
-    - media: '(prefers-color-scheme: light)'
+    # Palette: default
+    - media: "(prefers-color-scheme)"
+      scheme: capstan
+      primary: midnight-blue
+      accent: indigo
+      toggle:
+        icon: material/eye-outline
+        name: Switch to dark mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
       scheme: capstan
       primary: midnight-blue
       accent: indigo
       toggle:
         icon: material/eye-outline
         name: Switch to dark-mode
-    - media: '(prefers-color-scheme: dark)'
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: midnight-blue
       accent: indigo
@@ -109,6 +127,7 @@ theme:
         icon: material/eye
         name: Switch to light-mode
   features:
+    - navigation.path ## doesn't work!
     ## - toc.integrate
     - navigation.instant
     - navigation.tracking
@@ -118,10 +137,10 @@ theme:
     ## - navigation.tabs
     #- navigation.tabs.sticky
     ##- navigation.expand
-    - navigation.path
     - toc.follow
     - navigation.indexes
-    - 'hidden': 'tech'
+    - content.footnote.tooltips
+    - "hidden": "tech"
 markdown_extensions:
   - toc:
       #baselevel: 2
@@ -132,6 +151,7 @@ markdown_extensions:
   - md_in_html
   - tables
   - admonition
+  - footnotes
   - pymdownx.snippets
   - pymdownx.details
   - pymdownx.critic
@@ -158,10 +178,10 @@ plugins:
         - page.md
         - page.md#section
         - share/*
-        - /*/page.md  
+        - /*/page.md
   - awesome-pages
     # - search: {}
-    # - encryptcontent: 
+    # - encryptcontent:
     #     global_password: 'your_password'
   - tags:
       tags_file: profiles.md

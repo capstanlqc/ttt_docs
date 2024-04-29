@@ -1,4 +1,4 @@
-# OmegaT and Okapi tickets opened (or still open) since 2020
+# OmegaT and Okapi tickets opened since 2020
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
