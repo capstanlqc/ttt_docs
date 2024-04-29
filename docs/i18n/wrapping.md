@@ -1,5 +1,3 @@
-<body>
-
 <h1>Wrapping text with CSS</h1>
 
 <h2>General consideration</h2>
@@ -8,7 +6,7 @@
 
 <p>Of course, that excludes semantic formatting that applies to specific inline elements (e.g. bold, italics, etc.). </p>
 
-<p>In a nutshell, asking linguists to insert line breaks, hyphens, extra spacing, etc. to fake a certain visual effect (wrapping, indentation, etc.) in the layout is a bad idea. Instead, in a web publication as is our case, styles (CSS) should be used for that, and often that requires language-specific CSS rules. Let me know if you or your CSS crew need more details about this.</p>
+<p>In a nutshell, asking linguists to insert line breaks, hyphens, extra spacing, etc. to fake a certain visual effect (wrapping, indentation, etc.) in the layout is a bad idea. Instead, in a web publication, styles (CSS) should be used for that, and often that requires language-specific CSS rules. Let me know if you or your CSS crew need more details about this.</p>
 
 <h2>In action</h2>
 
@@ -53,8 +51,6 @@
 <br/>
 
 <div class="width18 test"> 1970年代以来、科学者たちはバルト海で捕獲された魚に含まれる毒素であるダイオキシンの量を懸念してきた。</div>
-
-</body>
 
 <!-- another way:
 https://www.html5canvastutorials.com/tutorials/html5-canvas-wrap-text-tutorial/

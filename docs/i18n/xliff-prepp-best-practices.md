@@ -3,7 +3,7 @@ share: true
 where: https://odoo.capstan.be/web#action=871&cids=1&id=366&menu_id=592&model=knowsystem.article&view_type=form
 ---
 
-# Best practices for preparing XLIFF files
+# ☆ Best practices for preparing XLIFF files
 
 
 ## Document history
@@ -84,7 +84,7 @@ This report includes recommendations for preparing content for translation in th
 Often, there are no ultimate prescribed solutions, but following or not the recommendations in this document can make all the difference between hindering or crippling language tasks (the work of translators, reconcilers, reviewers, verifiers, etc.) and making their  work enjoyable and bound to good results.
 
 !!! info
-    cApStAn take care of file preparation regardless of the native format provided that the client provides the original source files, and often that yields better results than what third-party engineers often can do. If you are a third-party engineer or a client, beware that the contents of this guide apply to you only after the possibility of relying on cApStAn for file preparation has been considered and discareded (for a good reason).
+    cApStAn can take care of file preparation regardless of the native format provided that the client provides the original source files, and often that yields better results than what third-party engineers often can do. If you are a third-party engineer or a client, beware that the contents of this guide apply to you only after the possibility of relying on cApStAn for file preparation has been considered and discareded (for a good reason).
 
 
 ### Notation
@@ -174,12 +174,14 @@ To open the project in OmegaT:
 
   - Install and customize OmegaT 5.7 as per our [installation and customization guide](https://slides.com/capstan/omegat5-installation-and-customization-guide/fullscreen) <span id="a1">[[1]](#1)</span>
   - In OmegaT, go to     **Project** >     **Download team project** and enter the following details:
-    - Repository URL: [`https://github.com/capstanlqc/XLIFF_bestpractices_OMT`](https://github.com/capstanlqc/XLIFF_bestpractices_OMT)
+    - Repository URL: [`https://github.com/capstanlqc/xliff_bestpractices_omt`](https://github.com/capstanlqc/xliff_bestpractices_omt)
 	- New local project folder: your preferred path to your local copy of the project.
 
 That will create a local version of the project for you and open it. To open files in the translation editor, you may press **Ctrl+L** and then either type part of the file name or just click on a file to select it and open it. Typing also helps to filter the list of files.
 
-Credentials are available [here](https://rentry.co/i18n-dummy).
+<!-- Credentials are available [here](https://rentry.co/i18n-dummy). -->
+!!! info
+    Credentials are available [here](https://rentry.co/i18n-dummy-creds).
 
 The sample XLIFF files in the project above or the project itself can be re-created using Okapi Rainbow.<span id="a2">[[2]](#2)</span> The Rainbow project, including the settings files, filters, segmentation rules etc., can also be downloaded from this link [`okapi_rainbow_project.tar.gz`](https://github.com/capstanlqc/i18n_guide/raw/main/okapi_rainbow_project.tar.gz), although this is not necessary unless you want to recreate or customize the extraction process. Instructions to use the Rainbow project can be found in the README.md file.
 
@@ -754,5 +756,7 @@ In this case the OmegaT project must use the Okapi XLIFF filter.
 13. <span id="13"></span> See https://www.w3.org/International/questions/qa-chars-vs-markup#not [⏎](#a13)
 
 14. <span id="14"></span> See http://kb.memoq.com/article/AA-00485/0/Cleaning-unnecessary-tags-with-TransTools-Document-Cleaner.html [⏎](#a14)
+
+15. <span id="15"></span> [Microsoft's Best Practices for Developing World-Ready Applications](https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/w7x1y988(v=vs.90)?redirectedfrom=MSDN#localization-best-practices)
 
 <!-- tools -->

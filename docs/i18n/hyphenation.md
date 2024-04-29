@@ -1,5 +1,5 @@
 <!-- <h1>Hyphenation internationalization</h1> -->
-# Hyphenation internationalization
+# ☆ Hyphenation internationalization
 
 <!-- <h2>Breaking text manually</h2> -->
 ## Breaking text manually

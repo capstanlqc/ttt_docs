@@ -17,7 +17,7 @@ This loop can be used to delay the execution of a new OmegaT.jar while there's a
 while [[ $(expr $(ps aux | grep OmegaT.jar | wc -l)) -gt 1 ]]; do sleep 1; done
 ```
 
-### Perl replace 
+### Perl replace
 
 Replaces in text file.
 ```bash
@@ -53,7 +53,7 @@ Gets the number fo translation units in TMs that are not PISA for French:
 do if [[ "$f" == *"PISA"* ]]; then :; else grep '</tu>' $f; fi; done | wc -l
 ```
 
-### Send request to xDiff 
+### Send request to xDiff
 
 Posts two OMT packages to xDiff to produce a diff report:
 ```bash
@@ -69,6 +69,14 @@ curl -L -X POST 'https://capps.capstan.be/xdiff_cg_api.php' \
 Removes the extended permissions from the Windows domain:
 ```bash
 setfacl -bR /your/file
+```
+
+### Finding stuff
+
+Finds subfolders which are not empty
+
+```bash
+find /path/to/dir ! -empty -maxdepth 1 -type d
 ```
 
 ### List files in project package
