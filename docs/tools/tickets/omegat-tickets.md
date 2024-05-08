@@ -2,6 +2,9 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2025-05-07 | [#1745](https://sourceforge.net/p/omegat/feature-requests/1745/) | OmegaT | Enforced translations are read-only | RFE | Open! |
+| 2024-04-29 | [#1743](https://sourceforge.net/p/omegat/feature-requests/1743/) | OmegaT | Commit specified files on SAVE or COMPILE | RFE | Open! |
+| 2024-04-12 | [#1258](https://sourceforge.net/p/omegat/bugs/1258/) | OmegaT | "This is a Subversion repository" if wrong password on AWS repo | BUG | Open |
 | 2024-04-08 | [#271](https://bitbucket.org/okapiframework/omegat-plugin/issues/271/extraneous-tags-which-are-not-escaped-in) | Okapi plugin | Extraneous tags which are not escaped in XML target file | BUG | Open! |
 | 2024-03-14 | [#2](https://github.com/capstanlqc/omegat/issues/2) | OmegaT 5.7.2 | Tag issues check does not flag missing tags in NEXT repetitions | BUG | Open |
 | 2024-03-12 | [#1349](https://bitbucket.org/okapiframework/okapi/issues/1349/openxml-equations-not-extracted) | Okapi | OpenXML: equations not extracted | RFE | Open |
@@ -17,7 +20,7 @@
 | 2023-08-31 | [#1215](https://sourceforge.net/p/omegat/bugs/1215/) | OmegaT | Protected entries in XLIFF show translation as source text | BUG | Open |
 | 2023-08-07 | [#1214](https://sourceforge.net/p/omegat/bugs/1214/) | OmegaT | Extraneous tags which are not escaped in XML target file | BUG | Transfered |
 | 2023-08-07 | [#1213](https://sourceforge.net/p/omegat/bugs/1213/) | OmegaT | Selection of match for pre-translation varies through different OS's | BUG | Resolved |
-| 2023-08-07 | [#1212](https://sourceforge.net/p/omegat/bugs/1212/) | OmegaT | Random selection of match for pre-translation depending on TMX file paths | BUG | Open!!! |
+| 2023-08-07 | [#1212](https://sourceforge.net/p/omegat/bugs/1212/) | OmegaT | Random selection of match for pre-translation depending on TMX file paths | BUG | Resolved |
 | 2023-07-17 | [#1202](https://sourceforge.net/p/omegat/bugs/1202/) | OmegaT | Error 403 when accessing different repo with different creds in same domain | BUG | Open! |
 | 2023-07-12 | [#27](http://captsan.mantis.silvestris-lab.org/view.php?id=27) | tmx comments provider | T&A notes: T&A note is "null" if the target language doesn't match | RFE | Open! |
 | 2023-07-12 | [#26](http://captsan.mantis.silvestris-lab.org/view.php?id=26) | tmx comments provider | T&A notes: source text in notes/notes.tmx used as the note | RFE | Open! |
