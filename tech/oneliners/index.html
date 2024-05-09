@@ -2428,120 +2428,120 @@
 <p>Shared in KS <a href="https://odoo.capstan.be/web#id=422&amp;action=871&amp;model=knowsystem.article&amp;view_type=form&amp;cids=1&amp;menu_id=592">here</a>.</p>
 </blockquote>
 <h3 id="check-completion-of-project">Check completion of project<a class="headerlink" href="#check-completion-of-project" title="Permanent link">&para;</a></h3>
-<p>Gives you the number of remaining segments in an OmegaT project, if it’s not 0 that means that not all segments are translated. It’s not advisable to match literally the word “Remaining:” in that line because when the user has changed the UI language, this word might be localized.</p>
-<pre><code class="language-bash">head -6 project_stats.txt | tail -1 | sed -E 's/[[:space:]]+/#/g' | cut -d# -f2
-</code></pre>
+<p>Gives you the number of remaining segments in an OmegaT project, if it’s not 0 that means that not all segments are translated. It’s not advisable to match literally the word “Remaining:” in that line because when the user has changed the UI language, this word might be localized.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>head<span class="w"> </span>-6<span class="w"> </span>project_stats.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;s/[[:space:]]+/#/g&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d#<span class="w"> </span>-f2
+</span></code></pre></div></p>
 <h3 id="avoid-concurrent-omegat-execution">Avoid concurrent OmegaT execution<a class="headerlink" href="#avoid-concurrent-omegat-execution" title="Permanent link">&para;</a></h3>
-<p>This loop can be used to delay the execution of a new OmegaT.jar while there's already one running:</p>
-<pre><code class="language-bash">while [[ $(expr $(ps aux | grep OmegaT.jar | wc -l)) -gt 1 ]]; do sleep 1; done
-</code></pre>
+<p>This loop can be used to delay the execution of a new OmegaT.jar while there's already one running:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">while</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="k">$(</span>expr<span class="w"> </span><span class="k">$(</span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>OmegaT.jar<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="k">))</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div></p>
 <h3 id="perl-replace">Perl replace<a class="headerlink" href="#perl-replace" title="Permanent link">&para;</a></h3>
-<p>Replaces in text file.</p>
-<pre><code class="language-bash">perl -pi -e 's/foo/bar/g' file
-</code></pre>
+<p>Replaces in text file.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>perl<span class="w"> </span>-pi<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/foo/bar/g&#39;</span><span class="w"> </span>file
+</span></code></pre></div></p>
 <h3 id="watch-for-event">Watch for event<a class="headerlink" href="#watch-for-event" title="Permanent link">&para;</a></h3>
-<p>Watches folder for events:</p>
-<pre><code class="language-bash">inotifywait -r -m . [-e create] [-e delete] [-e etc]
-</code></pre>
+<p>Watches folder for events:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>inotifywait<span class="w"> </span>-r<span class="w"> </span>-m<span class="w"> </span>.<span class="w"> </span><span class="o">[</span>-e<span class="w"> </span>create<span class="o">]</span><span class="w"> </span><span class="o">[</span>-e<span class="w"> </span>delete<span class="o">]</span><span class="w"> </span><span class="o">[</span>-e<span class="w"> </span>etc<span class="o">]</span>
+</span></code></pre></div></p>
 <h3 id="update-zip-bundle">Update zip bundle<a class="headerlink" href="#update-zip-bundle" title="Permanent link">&para;</a></h3>
-<p>Updates a zip with files from a number of directories:</p>
-<pre><code class="language-bash">here=&quot;$(pwd)&quot;; for d in $(find $here -name dir_name*); do cd $d; \
-zip -ur /media/data/data/company/path/to/zipfile.zip file*; done; cd $here
-</code></pre>
+<p>Updates a zip with files from a number of directories:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">here</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>d<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>find<span class="w"> </span><span class="nv">$here</span><span class="w"> </span>-name<span class="w"> </span>dir_name*<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$d</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>zip<span class="w"> </span>-ur<span class="w"> </span>/media/data/data/company/path/to/zipfile.zip<span class="w"> </span>file*<span class="p">;</span><span class="w"> </span><span class="k">done</span><span class="p">;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$here</span>
+</span></code></pre></div></p>
 <h3 id="count-elements">Count elements<a class="headerlink" href="#count-elements" title="Permanent link">&para;</a></h3>
-<p>Gets the number of translation units in PISA TMs for French:</p>
-<pre><code class="language-bash">/var/www/capps/TM_by_container$ for f in $(find . -name &quot;*PISA*fra-FRA*.tmx&quot;); \
-do grep '&lt;/tu&gt;' $f; done | wc -l
-</code></pre>
-<p>Gets the number fo translation units in TMs that are not PISA for French:</p>
-<pre><code class="language-bash">/var/www/capps/TM_by_container$ for f in $(find . -name &quot;*fra-FRA*.tmx&quot;); \
-do if [[ &quot;$f&quot; == *&quot;PISA&quot;* ]]; then :; else grep '&lt;/tu&gt;' $f; fi; done | wc -l
-</code></pre>
+<p>Gets the number of translation units in PISA TMs for French:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/var/www/capps/TM_by_container$<span class="w"> </span><span class="k">for</span><span class="w"> </span>f<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*PISA*fra-FRA*.tmx&quot;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">do</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;&lt;/tu&gt;&#39;</span><span class="w"> </span><span class="nv">$f</span><span class="p">;</span><span class="w"> </span><span class="k">done</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</span></code></pre></div></p>
+<p>Gets the number fo translation units in TMs that are not PISA for French:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/var/www/capps/TM_by_container$<span class="w"> </span><span class="k">for</span><span class="w"> </span>f<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*fra-FRA*.tmx&quot;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">do</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$f</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;PISA&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>:<span class="p">;</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;&lt;/tu&gt;&#39;</span><span class="w"> </span><span class="nv">$f</span><span class="p">;</span><span class="w"> </span><span class="k">fi</span><span class="p">;</span><span class="w"> </span><span class="k">done</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</span></code></pre></div></p>
 <h3 id="send-request-to-xdiff">Send request to xDiff<a class="headerlink" href="#send-request-to-xdiff" title="Permanent link">&para;</a></h3>
-<p>Posts two OMT packages to xDiff to produce a diff report:</p>
-<pre><code class="language-bash">curl -L -X POST 'https://capps.capstan.be/xdiff_cg_api.php' \
--H 'Content-Type: application/x-www-form-urlencoded' \
--F 'omt_pkg_1=@&quot;file1.omt&quot;' \
--F 'omt_pkg_2=@&quot;file2.omt&quot;' \
--F '{&quot;token&quot;: &quot;202020&quot;, &quot;app&quot;: &quot;xdiff&quot;, &quot;rows&quot;: &quot;different&quot;}'
-</code></pre>
+<p>Posts two OMT packages to xDiff to produce a diff report:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;https://capps.capstan.be/xdiff_cg_api.php&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>-F<span class="w"> </span><span class="s1">&#39;omt_pkg_1=@&quot;file1.omt&quot;&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>-F<span class="w"> </span><span class="s1">&#39;omt_pkg_2=@&quot;file2.omt&quot;&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>-F<span class="w"> </span><span class="s1">&#39;{&quot;token&quot;: &quot;202020&quot;, &quot;app&quot;: &quot;xdiff&quot;, &quot;rows&quot;: &quot;different&quot;}&#39;</span>
+</span></code></pre></div></p>
 <h3 id="set-file-access-control-lists">Set file access control lists<a class="headerlink" href="#set-file-access-control-lists" title="Permanent link">&para;</a></h3>
-<p>Removes the extended permissions from the Windows domain:</p>
-<pre><code class="language-bash">setfacl -bR /your/file
-</code></pre>
+<p>Removes the extended permissions from the Windows domain:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>setfacl<span class="w"> </span>-bR<span class="w"> </span>/your/file
+</span></code></pre></div></p>
 <h3 id="finding-stuff">Finding stuff<a class="headerlink" href="#finding-stuff" title="Permanent link">&para;</a></h3>
 <p>Finds subfolders which are not empty</p>
-<pre><code class="language-bash">find /path/to/dir ! -empty -maxdepth 1 -type d
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>find<span class="w"> </span>/path/to/dir<span class="w"> </span>!<span class="w"> </span>-empty<span class="w"> </span>-maxdepth<span class="w"> </span><span class="m">1</span><span class="w"> </span>-type<span class="w"> </span>d
+</span></code></pre></div>
 <h3 id="list-files-in-project-package">List files in project package<a class="headerlink" href="#list-files-in-project-package" title="Permanent link">&para;</a></h3>
-<p>Lists external TMs added to a series of OMT packages:</p>
-<pre><code class="language-bash">for o in $(ls *.omt); do echo &quot;#&quot; $o; unzip -l $o | grep '\.tmx' | \
-tr -s ' ' | cut -d ' ' -f5; echo &quot;---------------------------&quot;; done
-</code></pre>
+<p>Lists external TMs added to a series of OMT packages:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">for</span><span class="w"> </span>o<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>ls<span class="w"> </span>*.omt<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;#&quot;</span><span class="w"> </span><span class="nv">$o</span><span class="p">;</span><span class="w"> </span>unzip<span class="w"> </span>-l<span class="w"> </span><span class="nv">$o</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;\.tmx&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>tr<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span>-f5<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;---------------------------&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div></p>
 <h3 id="copy-and-transforms">Copy and transforms<a class="headerlink" href="#copy-and-transforms" title="Permanent link">&para;</a></h3>
-<p>Reads what is in your clipboard, modifies it, and puts it back in your clipboard (can be put in a function in ~/.bashrc), after doing some replacements:</p>
-<pre><code class="language-bash">xsel -o -b | sed -r 's#\\+#/#g' | sed 's#192.168.67.50#media/data#' | \
-sed 's#U:#/media/data/data/company#' | xsel -i -b
-</code></pre>
+<p>Reads what is in your clipboard, modifies it, and puts it back in your clipboard (can be put in a function in ~/.bashrc), after doing some replacements:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>xsel<span class="w"> </span>-o<span class="w"> </span>-b<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;s#\\+#/#g&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s#192.168.67.50#media/data#&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>sed<span class="w"> </span><span class="s1">&#39;s#U:#/media/data/data/company#&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xsel<span class="w"> </span>-i<span class="w"> </span>-b
+</span></code></pre></div></p>
 <h3 id="from-and-to-server">From and to server<a class="headerlink" href="#from-and-to-server" title="Permanent link">&para;</a></h3>
-<p>Downloads files from Ur:</p>
-<pre><code class="language-bash">scp user@192.168.67.50:dir_or_ln_in_home/foo/bar/files*.ext .
-</code></pre>
-<p>Source: <a href="https://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh/106482#106482">here</a></p>
-<p>Uploads files to Ur:</p>
-<pre><code class="language-bash">scp file(s) user@192.168.67.50:dir_or_ln_in_home/foo/bar
-</code></pre>
+<p>Downloads files from Ur:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>scp<span class="w"> </span>user@192.168.67.50:dir_or_ln_in_home/foo/bar/files*.ext<span class="w"> </span>.
+</span></code></pre></div>
+Source: <a href="https://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh/106482#106482">here</a></p>
+<p>Uploads files to Ur:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>scp<span class="w"> </span>file<span class="o">(</span>s<span class="o">)</span><span class="w"> </span>user@192.168.67.50:dir_or_ln_in_home/foo/bar
+</span></code></pre></div></p>
 <h3 id="replaces-in-text-files">Replaces in text files<a class="headerlink" href="#replaces-in-text-files" title="Permanent link">&para;</a></h3>
-<p>Removes line breaks in markdown files, only in the middle of sentences but not anywhere else:</p>
-<pre><code class="language-bash">perl -i -00pe 's/^(?!```)(.+[a-z),])\p{Zs}*[\r\n](?=[a-z{])/$1 /gm' *
-</code></pre>
+<p>Removes line breaks in markdown files, only in the middle of sentences but not anywhere else:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>perl<span class="w"> </span>-i<span class="w"> </span>-00pe<span class="w"> </span><span class="s1">&#39;s/^(?!```)(.+[a-z),])\p{Zs}*[\r\n](?=[a-z{])/$1 /gm&#39;</span><span class="w"> </span>*
+</span></code></pre></div></p>
 <h3 id="matches-in-files">Matches in files<a class="headerlink" href="#matches-in-files" title="Permanent link">&para;</a></h3>
-<p>Find files that contain a certain pattern:</p>
-<pre><code class="language-bash">grep -rnw '/path/to/somewhere/' -e 'pattern'
-</code></pre>
+<p>Find files that contain a certain pattern:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>grep<span class="w"> </span>-rnw<span class="w"> </span><span class="s1">&#39;/path/to/somewhere/&#39;</span><span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;pattern&#39;</span>
+</span></code></pre></div></p>
 <h3 id="move-files-to-their-batch-folder">Move files to their batch folder<a class="headerlink" href="#move-files-to-their-batch-folder" title="Permanent link">&para;</a></h3>
 <p>The following loop gets the batch (key) including each file in the YAML config and copies the file from <code>new-keys/03_lint</code> to the batch folder that corresponds under <code>RELEASE_A</code>:</p>
-<pre><code class="language-bash">for f in $(cat pisa25_files.yaml | shyaml get-value releaseA | sed 's/^- //' | \
-cut -d':' -f1); do b=$(grep -Poh &quot;(?&lt;=${f}: ).+&quot; pisa25_files.yaml) &amp;&amp; echo $b \
-&amp;&amp; find new-keys/03_lint -name $f &amp;&amp; cp new-keys/03_lint/$f RELEASE_A/$b; done
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">for</span><span class="w"> </span>f<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>cat<span class="w"> </span>pisa25_files.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>shyaml<span class="w"> </span>get-value<span class="w"> </span>releaseA<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/^- //&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>cut<span class="w"> </span>-d<span class="s1">&#39;:&#39;</span><span class="w"> </span>-f1<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">b</span><span class="o">=</span><span class="k">$(</span>grep<span class="w"> </span>-Poh<span class="w"> </span><span class="s2">&quot;(?&lt;=</span><span class="si">${</span><span class="nv">f</span><span class="si">}</span><span class="s2">: ).+&quot;</span><span class="w"> </span>pisa25_files.yaml<span class="k">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$b</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="o">&amp;&amp;</span><span class="w"> </span>find<span class="w"> </span>new-keys/03_lint<span class="w"> </span>-name<span class="w"> </span><span class="nv">$f</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>cp<span class="w"> </span>new-keys/03_lint/<span class="nv">$f</span><span class="w"> </span>RELEASE_A/<span class="nv">$b</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>File and folder names can be probably simplified.</p>
 </div>
 <h3 id="edit-subnodes-in-xhtml-files">Edit subnodes in XHTML files<a class="headerlink" href="#edit-subnodes-in-xhtml-files" title="Permanent link">&para;</a></h3>
 <p>The following command finds HTML files that do not (<code>-L</code>) contain <code>&lt;meta charset="utf-8"/&gt;</code> and adds that node to them at the bottom of the head section:</p>
-<pre><code class="language-bash">find $work_path -name &quot;*.html&quot; -type f -exec grep -L '&lt;meta charset=&quot;utf-8&quot;/&gt;' \
-{} \; -exec xmlstarlet ed --inplace --subnode &quot;/html/head&quot; --type elem -n meta \
--i /html/head/meta -t attr -n charset -v &quot;utf-8&quot; {} \;
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>find<span class="w"> </span><span class="nv">$work_path</span><span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.html&quot;</span><span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-L<span class="w"> </span><span class="s1">&#39;&lt;meta charset=&quot;utf-8&quot;/&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span>-exec<span class="w"> </span>xmlstarlet<span class="w"> </span>ed<span class="w"> </span>--inplace<span class="w"> </span>--subnode<span class="w"> </span><span class="s2">&quot;/html/head&quot;</span><span class="w"> </span>--type<span class="w"> </span>elem<span class="w"> </span>-n<span class="w"> </span>meta<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>-i<span class="w"> </span>/html/head/meta<span class="w"> </span>-t<span class="w"> </span>attr<span class="w"> </span>-n<span class="w"> </span>charset<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;utf-8&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</span></code></pre></div>
 <h3 id="extract-key-and-text">Extract key and text<a class="headerlink" href="#extract-key-and-text" title="Permanent link">&para;</a></h3>
 <p>Given a number of XML files containing labels such as:</p>
-<pre><code class="language-xml">&lt;label key=&quot;item1_93cba07454f06a4a960172bbd6e2a435_25&quot;&gt;
-&lt;text&gt;Yes&lt;/text&gt;
-&lt;/label&gt;
-</code></pre>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nt">&lt;label</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;item1_93cba07454f06a4a960172bbd6e2a435_25&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nt">&lt;text&gt;</span>Yes<span class="nt">&lt;/text&gt;</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="nt">&lt;/label&gt;</span>
+</span></code></pre></div>
 <p>The following oneliner extracts filename, key and text:</p>
-<pre><code class="language-bash">pcregrep -Mo --color \
-'(?&lt;=key=&quot;)[^&quot;]+?(?=&quot;)(?:[\s\S\n]+?&lt;text&gt;)[\s\S]+?(?=&lt;/text&gt;)' *.xml | \
-perl -0777 -pe 's/&quot;&gt;[\s\n]+&lt;text&gt;/:/gm' | xsel -ib
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>pcregrep<span class="w"> </span>-Mo<span class="w"> </span>--color<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="s1">&#39;(?&lt;=key=&quot;)[^&quot;]+?(?=&quot;)(?:[\s\S\n]+?&lt;text&gt;)[\s\S]+?(?=&lt;/text&gt;)&#39;</span><span class="w"> </span>*.xml<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>perl<span class="w"> </span>-0777<span class="w"> </span>-pe<span class="w"> </span><span class="s1">&#39;s/&quot;&gt;[\s\n]+&lt;text&gt;/:/gm&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xsel<span class="w"> </span>-ib
+</span></code></pre></div>
 <h3 id="adds-node-in-htmlxml">Adds node in HTML/XML<a class="headerlink" href="#adds-node-in-htmlxml" title="Permanent link">&para;</a></h3>
-<p>Adds <code>&lt;meta charset="utf-8"/&gt;</code> when missing in HTML files:</p>
-<pre><code class="language-bash">find $work_path -name &quot;diffte*t.html&quot; -type f \
--exec grep -L '&lt;meta charset=&quot;utf-8&quot;/&gt;' {} \; \
--exec xmlstarlet ed --inplace --subnode &quot;/html/head&quot; --type elem -n meta \
--i /html/head/meta -t attr -n charset -v &quot;utf-8&quot; {} \;
-</code></pre>
+<p>Adds <code>&lt;meta charset="utf-8"/&gt;</code> when missing in HTML files:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>find<span class="w"> </span><span class="nv">$work_path</span><span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;diffte*t.html&quot;</span><span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>-exec<span class="w"> </span>grep<span class="w"> </span>-L<span class="w"> </span><span class="s1">&#39;&lt;meta charset=&quot;utf-8&quot;/&gt;&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>-exec<span class="w"> </span>xmlstarlet<span class="w"> </span>ed<span class="w"> </span>--inplace<span class="w"> </span>--subnode<span class="w"> </span><span class="s2">&quot;/html/head&quot;</span><span class="w"> </span>--type<span class="w"> </span>elem<span class="w"> </span>-n<span class="w"> </span>meta<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>-i<span class="w"> </span>/html/head/meta<span class="w"> </span>-t<span class="w"> </span>attr<span class="w"> </span>-n<span class="w"> </span>charset<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;utf-8&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</span></code></pre></div></p>
 <h3 id="git-restore-tms">Git / restore TMs<a class="headerlink" href="#git-restore-tms" title="Permanent link">&para;</a></h3>
 <p>Steps to restore translations deleted in the previous commit:</p>
-<pre><code class="language-bash">git checkout [previous-commit-before-the-commit-that-deleted-translations]
-cp omegat/project_save.tmx ../03d9f5e.tmx # where 03d9f5e is the commit hash
-git checkout main
-mkdir tm/auto/restored
-mv ../03d9f5e.tmx tm/auto/restored 
-git pull &amp;&amp; git add . &amp;&amp; git commit -m &quot;Restored translations from day Nov 3, accidentally removed&quot; &amp;&amp; git push 
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>checkout<span class="w"> </span><span class="o">[</span>previous-commit-before-the-commit-that-deleted-translations<span class="o">]</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>cp<span class="w"> </span>omegat/project_save.tmx<span class="w"> </span>../03d9f5e.tmx<span class="w"> </span><span class="c1"># where 03d9f5e is the commit hash</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>mkdir<span class="w"> </span>tm/auto/restored
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>mv<span class="w"> </span>../03d9f5e.tmx<span class="w"> </span>tm/auto/restored<span class="w"> </span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>git<span class="w"> </span>pull<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Restored translations from day Nov 3, accidentally removed&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>
+</span></code></pre></div>
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <p><a href="https://linuxcommandlibrary.com/basic/oneliners">https://linuxcommandlibrary.com/basic/oneliners</a></p>
 

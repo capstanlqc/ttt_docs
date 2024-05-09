@@ -2164,18 +2164,18 @@
 <p>A future version will provide more endpoints to allow consuming exactly the piece of data needed in a single request.</p>
 </blockquote>
 <p>Each langtag record (a Javascript object or a Python dictionary) is a simple tabular data structure that contains all properties of a specific language variant, e.g. for Valencian:</p>
-<pre><code>{'BCP47': 'ca-ES-valencia',
- 'Country': 'Spain',
- 'Language': 'Valencian',
- 'Notes': None,
- 'OmegaT': 'ca-VL',
- 'PIAAC_2letter_region': 'ES',
- 'PISA': 'val-ESP',
- 'cApStAn': 'val-ESP',
- 'created_by': None,
- 'id': 265,
- 'last_modif_by': None}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{&#39;BCP47&#39;: &#39;ca-ES-valencia&#39;,
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> &#39;Country&#39;: &#39;Spain&#39;,
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> &#39;Language&#39;: &#39;Valencian&#39;,
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> &#39;Notes&#39;: None,
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> &#39;OmegaT&#39;: &#39;ca-VL&#39;,
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a> &#39;PIAAC_2letter_region&#39;: &#39;ES&#39;,
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a> &#39;PISA&#39;: &#39;val-ESP&#39;,
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a> &#39;cApStAn&#39;: &#39;val-ESP&#39;,
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a> &#39;created_by&#39;: None,
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a> &#39;id&#39;: 265,
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a> &#39;last_modif_by&#39;: None}
+</span></code></pre></div>
 <p>You might not need the whole list, but for the time being there are no other endpoints that you can use, which means you need to fetch the whole resource first and then filter it and manipulate it on your end for your specific purposes.</p>
 <p>See below two demos with examples of some typical operations, such as:</p>
 <ul>
@@ -2189,30 +2189,30 @@
 <p>To run the REPL demos online, you probably need to have a repl.it account and fork the demo first. In any case, you will have to paste the URL above, which is not hardcoded. If you fork the REPL, you may hardcode the URL in the code, but then do not publish the REPL.</p>
 <h2 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
 <p>From Python3 applicationS (e.g. Odoo?) or applications that can run Python3 code (e.g. Excel), you can obtain the langtags data with the code below:</p>
-<pre><code>import requests
-url = 'https://capps.capstan.be/langtags_json.php'
-response = requests.get(url)
-langtags = response.json()
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import requests
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>url = &#39;https://capps.capstan.be/langtags_json.php&#39;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>response = requests.get(url)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>langtags = response.json()
+</span></code></pre></div>
 <p>The data obtained above will contain a Python dictionary. You can then query and manipulate the data as you need. </p>
 <p>In this <a href="https://replit.com/@msoutopico/langtagspyclient#readme.md">REPL</a> you cansee a few practical examples of what you can do with the data.</p>
 <h2 id="nodejs">Node.js<a class="headerlink" href="#nodejs" title="Permanent link">&para;</a></h2>
 <p>From Node.js applications (or applications that can run Javascript code), e.g. Inky, you can obtain the langtags data with the code below:</p>
-<pre><code>import fetch from 'sync-fetch'
-const url = 'https://capps.capstan.be/langtags_json.php'
-const json = fetch(url, {}).json()
-const langtags = Object.values(json) // object type
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>import fetch from &#39;sync-fetch&#39;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>const url = &#39;https://capps.capstan.be/langtags_json.php&#39;
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>const json = fetch(url, {}).json()
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>const langtags = Object.values(json) // object type
+</span></code></pre></div>
 <p>The data obtained above will contain a Javascript object. You can also use module <code>node-fetch</code> if you prefer to do this asynchronously.</p>
 <p>In this <a href="https://replit.com/@msoutopico/langtagsjsclient#readme.md">REPL</a> you can see a few practical examples of what you can do with the data.</p>
 <h2 id="other-implementations">Other implementations<a class="headerlink" href="#other-implementations" title="Permanent link">&para;</a></h2>
 <p>Other implementations (e.g. curl) are feasible, feel free to experiment on your end. </p>
-<p>Here come just a couple of examples (courtesy of Mr. Mathot -) You can get the whole resource with the following command:</p>
-<pre><code>curl -X GET https://capps.capstan.be/langtags_json.php | jq
-</code></pre>
+<p>Here come just a couple of examples (courtesy of Mr. Mathot -) You can get the whole resource with the following command:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl -X GET https://capps.capstan.be/langtags_json.php | jq
+</span></code></pre></div></p>
 <p>Or you can get a specific langtag record with:</p>
-<pre><code>curl -X GET https://capps.capstan.be/langtags_json.php | jq 'map(select(.cApStAn | contains(&quot;fra-BEL&quot;)))'
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>curl -X GET https://capps.capstan.be/langtags_json.php | jq &#39;map(select(.cApStAn | contains(&quot;fra-BEL&quot;)))&#39;
+</span></code></pre></div>
 
 
 

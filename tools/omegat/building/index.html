@@ -2270,12 +2270,15 @@
 <li>A Linux machine (recommended Debian-based) that runs <code>systemctl</code>.
     &gt; A virtual machine or WSL could be a valid substitute. This guide is based on building on MX Linux (Linux 5.10.0-22-amd64) and <code>apt</code> is used for package installation commands.</li>
 <li>Install dependencies:
-    <code>$ sudo apt install libxrender1 libxtst6 libxi6 libfreetype6 fontconfig gnutls-bin p11tool software-properties-common softhsm2 libengine-pkcs11-openssl osslsigncode icedtea-netx pcsclite pcsc-tools pcscd procertum-cardreader gh</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ sudo apt install libxrender1 libxtst6 libxi6 libfreetype6 fontconfig gnutls-bin p11tool software-properties-common softhsm2 libengine-pkcs11-openssl osslsigncode icedtea-netx pcsclite pcsc-tools pcscd procertum-cardreader gh
+</span></code></pre></div></li>
 <li>Install docker:
-    <code>$ sudo apt install docker</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ sudo apt install docker
+</span></code></pre></div></li>
 <li>Adjust the group membership of your user, so that you can run docker images:
-    <code>$ sudo groupadd docker
-    $ sudo usermod -aG docker $USER # or: sudo groupadd docker</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ sudo groupadd docker
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$ sudo usermod -aG docker $USER # or: sudo groupadd docker
+</span></code></pre></div></li>
 <li>Restart or log out.</li>
 </ol>
 <h2 id="before-building">Before building<a class="headerlink" href="#before-building" title="Permanent link">&para;</a></h2>
@@ -2283,14 +2286,18 @@
 <p>Follow these steps: </p>
 <ol>
 <li>Make sure that <code>docker</code> is in your groups:
-    <code>$ groups
-    sys wheel rfkill autologin souto foo bar docker</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ groups
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sys wheel rfkill autologin souto foo bar docker
+</span></code></pre></div></li>
 <li>Start docker:
-    <code>$ systemctl start docker</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ systemctl start docker
+</span></code></pre></div></li>
 <li>Check if <code>docker</code> works:
-    <code>$ docker run hello-world</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ docker run hello-world
+</span></code></pre></div></li>
 <li>Create a folder for the building process:
-    <code>$ mkdir -p /path/to/omegat-installer</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ mkdir -p /path/to/omegat-installer
+</span></code></pre></div></li>
 </ol>
 <h3 id="setting-up-java">Setting up Java<a class="headerlink" href="#setting-up-java" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -2298,15 +2305,18 @@
 </blockquote>
 <ol>
 <li>Install sdkman (as explained <a href="https://sdkman.io/install">here</a>):
-    <code>$ curl -s "https://get.sdkman.io" | bash
-    $ source "$HOME/.sdkman/bin/sdkman-init.sh"</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ curl -s &quot;https://get.sdkman.io&quot; | bash
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$ source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;
+</span></code></pre></div></li>
 <li>Select the Java version that you need, i.e. <code>17.0.4-tem</code> (recommended: make it your default version)
-    <code>$ sdk use java 17.0.4-tem</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ sdk use java 17.0.4-tem
+</span></code></pre></div></li>
 <li>Confirm that you have the expected java version:
-    <code>$ java -version
-    openjdk version "11.0.19" 2023-04-18
-    OpenJDK Runtime Environment Temurin-11.0.19+7 (build 11.0.19+7)
-    OpenJDK 64-Bit Server VM Temurin-11.0.19+7 (build 11.0.19+7, mixed mode)</code> </li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$ java -version
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>openjdk version &quot;11.0.19&quot; 2023-04-18
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>OpenJDK Runtime Environment Temurin-11.0.19+7 (build 11.0.19+7)
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>OpenJDK 64-Bit Server VM Temurin-11.0.19+7 (build 11.0.19+7, mixed mode)
+</span></code></pre></div></li>
 <li>Download the zipped JRE bundle for the same version (file called <code>OpenJDK11U-jre_x64_windows_hotspot_11.0.19_7.zip</code>) from https://adoptium.net/ for the following criteria:<ul>
 <li>Operating system: Windows</li>
 <li>Architecture: x64</li>
@@ -2315,7 +2325,8 @@
 </ul>
 </li>
 <li>Move the zipped JRE bundle to your building folder:
-    <code>$ mv ~/Downloads/OpenJDK11U-jre_x64_windows_hotspot_11.0.19_7.zip /path/to/omegat-installer/</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ mv ~/Downloads/OpenJDK11U-jre_x64_windows_hotspot_11.0.19_7.zip /path/to/omegat-installer/
+</span></code></pre></div></li>
 </ol>
 <h3 id="activate-the-certificate">Activate the certificate<a class="headerlink" href="#activate-the-certificate" title="Permanent link">&para;</a></h3>
 <p>The steps in this section only need to be done once. If that has already been done and you already have a valid binary file of the certificate (the file with <code>.cer</code> extension) which hasn't expired, you can skip to the next section.</p>
@@ -2323,46 +2334,56 @@
 <p>You'll have to run two tools for that: </p>
 <ul>
 <li>the SmartCard Reader (which you have already installed as a dependency)
-    <code>$ cd /opt/proCertumCardManager
-    $ proCertumCardManager</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$ cd /opt/proCertumCardManager
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>$ proCertumCardManager
+</span></code></pre></div></li>
 <li>and a Crypto tool (which the Certum page will ask you download):
-    <code>$ javaws CertumCryptoAgent_en.jnlp</code>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$ javaws CertumCryptoAgent_en.jnlp
+</span></code></pre></div>
 At the end of the process when the certificate is activated and available for download, download the binary certificate (with a <code>.cer</code> extension) from the Certum page. </li>
 </ul>
 <h2 id="getting-down-to-building">Getting down to building<a class="headerlink" href="#getting-down-to-building" title="Permanent link">&para;</a></h2>
 <p>Ok, let's build the installer.</p>
 <ol>
 <li>Move the certificate file to your building folder : 
-    <code>$ mkdir /path/to/omegat-installer/cert/
-    $ mv ~/Downloads/be737b17c8d3f3f0d7bbfae716b0ee1a.cer /path/to/omegat-installer/cert/</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$ mkdir /path/to/omegat-installer/cert/
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>$ mv ~/Downloads/be737b17c8d3f3f0d7bbfae716b0ee1a.cer /path/to/omegat-installer/cert/
+</span></code></pre></div></li>
 <li>Change directory to your building folder: 
-    <code>$ cd /path/to/omegat-installer/</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ cd /path/to/omegat-installer/
+</span></code></pre></div></li>
 <li>Clone the OmegaT source code repository:
-    <code>$ gh repo clone omegat-org/omegat</code></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ gh repo clone omegat-org/omegat
+</span></code></pre></div></li>
 <li>
 <p>Change directory to the <code>omegat</code> folder:</p>
-<p><code>$ cd omegat</code>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$ cd omegat
+</span></code></pre></div>
 Check out any specific branch if the main/master branch is not what you want to use.</p>
 </li>
 <li>
 <p>Create your <code>local.properties</code> file:</p>
-<p><code>$ cp local.properties.example local.properties</code>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$ cp local.properties.example local.properties
+</span></code></pre></div>
 6. Add your certificate details to the <code>local.properties</code> file:
-<code>pkcs11module=/usr/lib64/crypto3PKCS/sc30pkcs11-3.0.6.68-MS.so
-winCodesignPassword=**** # your PIN number
-winCodesignCert=/path/to/omegat-installer/cert/be737b17c8d3f3f0d7bbfae716b0ee1a.cer</code>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>pkcs11module=/usr/lib64/crypto3PKCS/sc30pkcs11-3.0.6.68-MS.so
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>winCodesignPassword=**** # your PIN number
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>winCodesignCert=/path/to/omegat-installer/cert/be737b17c8d3f3f0d7bbfae716b0ee1a.cer
+</span></code></pre></div>
 Defining <code>pkcs11cert</code> and <code>winCodesignTimestampUrl</code> is not necessary.</p>
 </li>
 <li>
 <p>Kindly ask Gradle to build OmegaT from source and bundle it with the JRE you downloaded into a Windows setup package:
-    <code>$ ./gradlew winJRE64Signed</code></p>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>$ ./gradlew winJRE64Signed
+</span></code></pre></div></p>
 </li>
 </ol>
 <h3 id="result">Result<a class="headerlink" href="#result" title="Permanent link">&para;</a></h3>
 <p>If the process works, the installer will be saved in folder <code>./build/distributions</code>:
-    <code>$ cd /path/to/omegat-installer/omegat
-    $ find . -name "*.exe"
-    ./build/distributions/OmegaT_6.1.0_Beta_Windows_64_Signed.exe</code></p>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$ cd /path/to/omegat-installer/omegat
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>$ find . -name &quot;*.exe&quot;
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>./build/distributions/OmegaT_6.1.0_Beta_Windows_64_Signed.exe
+</span></code></pre></div></p>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
 <ul>
 <li>https://omegat.sourceforge.io/manual-standard/en/chapter.installing.and.running.html#building.OmegaT.from.source</li>

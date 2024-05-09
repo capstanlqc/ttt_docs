@@ -2162,27 +2162,27 @@
 
 <h1 id="flash-automation-diagram">FLASH: automation diagram ☆<a class="headerlink" href="#flash-automation-diagram" title="Permanent link">&para;</a></h1>
 <h3 id="scripts">Scripts:<a class="headerlink" href="#scripts" title="Permanent link">&para;</a></h3>
-<pre><code>crontab -&gt; launcher.sh
-            ├──&gt; flash_init.sh
-            │    ├──&gt; flash_prepp_extract.py
-            │    ├──&gt; conv_mrt2tmx.py
-            │    └──&gt; flash_version.sh (loop)
-            │         └──&gt; flash_create_omtprj.py
-            ├──&gt; flash_post.sh
-            │    ├──&gt; flash_mk_ada_pkgs.py
-            │    ├──&gt; flash_mt_omtexp_to_mf.py
-            │    ├──&gt; flash_prepp_merge.py
-            │    └──&gt; checker.sh
-            ├──&gt; xdiff_poster.sh
-            └──&gt; update_docs.sh
-                 └──&gt; update_docs.py
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>crontab -&gt; launcher.sh
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>            ├──&gt; flash_init.sh
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>            │    ├──&gt; flash_prepp_extract.py
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>            │    ├──&gt; conv_mrt2tmx.py
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            │    └──&gt; flash_version.sh (loop)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            │         └──&gt; flash_create_omtprj.py
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            ├──&gt; flash_post.sh
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>            │    ├──&gt; flash_mk_ada_pkgs.py
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            │    ├──&gt; flash_mt_omtexp_to_mf.py
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            │    ├──&gt; flash_prepp_merge.py
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            │    └──&gt; checker.sh
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            ├──&gt; xdiff_poster.sh
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>            └──&gt; update_docs.sh
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                 └──&gt; update_docs.py
+</span></code></pre></div>
 <h3 id="docs">Docs:<a class="headerlink" href="#docs" title="Permanent link">&para;</a></h3>
-<pre><code>flash_prepp_help (original Ur)
-└──&gt; docs/
-     └──&gt; post to https://capps.capstan.be/doc/ (doc online)
-          └──&gt; save to U:\IPSOS\EUROBAROMETER_FLASH_2.0\02_AUTOMATION\Doc
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flash_prepp_help (original Ur)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>└──&gt; docs/
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>     └──&gt; post to https://capps.capstan.be/doc/ (doc online)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>          └──&gt; save to U:\IPSOS\EUROBAROMETER_FLASH_2.0\02_AUTOMATION\Doc
+</span></code></pre></div>
 <h2 id="explanation-of-each-script">Explanation of each script<a class="headerlink" href="#explanation-of-each-script" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

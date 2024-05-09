@@ -2125,6 +2125,9 @@
 
 
 <h1 id="omegat-match-sorting-specification">OmegaT: match sorting specification<a class="headerlink" href="#omegat-match-sorting-specification" title="Permanent link">&para;</a></h1>
+<!-- originally shared as https://rentry.org/omegat-match-ranking-specs -->
+<!-- originally shared as https://rentry.org/match-ranking-specs (not editable, edit code lost) -->
+
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>The goal of this document is to document match ranking (or sorting) criteria and make them explicit and clear. Documented criteria can help gear new developments, patches and fixes.</p>
 <p>To define each criteria, we'll consider two matches and how OmegaT should determine which one is ranked on top of which.</p>
@@ -2192,17 +2195,17 @@
 </ul>
 <p>The context of the segment can be either prev/next segments or some identifier, such as the segment ID or a resname. The filename is an optional part of the context. If both the source text and the context match when comparing the match with the segment, then the match is said to have context binding.</p>
 <p>Matches in a TMX file under <code>/tm</code> may have context added as properties (<code>&lt;prop&gt;</code> elements): </p>
-<pre><code>    &lt;tu tuid=&quot;xyz456_0&quot;&gt;
-      &lt;prop type=&quot;file&quot;&gt;filename.xlf&lt;/prop&gt;
-      &lt;prop type=&quot;id&quot;&gt;xyz456_0&lt;/prop&gt;
-      &lt;tuv xml:lang=&quot;en&quot;&gt;
-        &lt;seg&gt;foo&lt;/seg&gt;
-      &lt;/tuv&gt;
-      &lt;tuv xml:lang=&quot;ta&quot;&gt;
-        &lt;seg&gt;bar&lt;/seg&gt;
-      &lt;/tuv&gt;
-    &lt;/tu&gt;
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    &lt;tu tuid=&quot;xyz456_0&quot;&gt;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>      &lt;prop type=&quot;file&quot;&gt;filename.xlf&lt;/prop&gt;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>      &lt;prop type=&quot;id&quot;&gt;xyz456_0&lt;/prop&gt;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      &lt;tuv xml:lang=&quot;en&quot;&gt;
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        &lt;seg&gt;foo&lt;/seg&gt;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      &lt;/tuv&gt;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      &lt;tuv xml:lang=&quot;ta&quot;&gt;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        &lt;seg&gt;bar&lt;/seg&gt;
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>      &lt;/tuv&gt;
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    &lt;/tu&gt;
+</span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">ICE matches" vs "alternative translations</p>
 <p>Context-bound matches are generally called "in-context exact matches" (or ICE matches). In OmegaT jargon, they are called "alternative translations".</p>
@@ -2234,26 +2237,26 @@
 <p>When the two matches have the same score, come from the same auto-population tier, have no context binding (or the same binding properties) and come from the same TMX file, then other criteria must be used to discriminate between them. </p>
 <h4 id="5-position-of-the-match-in-the-file">5. Position of the match in the file<a class="headerlink" href="#5-position-of-the-match-in-the-file" title="Permanent link">&para;</a></h4>
 <p>Entries (<code>&lt;tu&gt;</code> elements) in a TMX file appear sequentially in different lines, insde the body. </p>
-<pre><code class="language-xml">  &lt;body&gt;
-&lt;!-- Default translations --&gt;
-    &lt;tu&gt;
-      &lt;tuv lang=&quot;en&quot;&gt;
-        &lt;seg&gt;Hello world&lt;/seg&gt;
-      &lt;/tuv&gt;
-      &lt;tuv lang=&quot;ta&quot;&gt;
-        &lt;seg&gt;NUMBERS top&lt;/seg&gt;
-      &lt;/tuv&gt;
-    &lt;/tu&gt;
-    &lt;tu&gt;
-      &lt;tuv lang=&quot;en&quot;&gt;
-        &lt;seg&gt;Hello world&lt;/seg&gt;
-      &lt;/tuv&gt;
-      &lt;tuv lang=&quot;ta&quot;&gt;
-        &lt;seg&gt;NUMBERS bottom&lt;/seg&gt;
-      &lt;/tuv&gt;
-    &lt;/tu&gt;    
-  &lt;/body&gt;
-</code></pre>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span><span class="nt">&lt;body&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cm">&lt;!-- Default translations --&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&lt;tu&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&lt;tuv</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&lt;seg&gt;</span>Hello<span class="w"> </span>world<span class="nt">&lt;/seg&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">&lt;/tuv&gt;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nt">&lt;tuv</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;ta&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="nt">&lt;seg&gt;</span>NUMBERS<span class="w"> </span>top<span class="nt">&lt;/seg&gt;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">&lt;/tuv&gt;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">&lt;/tu&gt;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">&lt;tu&gt;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">&lt;tuv</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="nt">&lt;seg&gt;</span>Hello<span class="w"> </span>world<span class="nt">&lt;/seg&gt;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nt">&lt;/tuv&gt;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="nt">&lt;tuv</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;ta&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="nt">&lt;seg&gt;</span>NUMBERS<span class="w"> </span>bottom<span class="nt">&lt;/seg&gt;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">      </span><span class="nt">&lt;/tuv&gt;</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="nt">&lt;/tu&gt;</span><span class="w">    </span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="nt">&lt;/body&gt;</span>
+</span></code></pre></div>
 <p>The TMX file is read top to bottom, and the corresponding matches are displayed in the Matches pane in the same order that they appear in the TMX file</p>
 <!-- ![](https://imgur.com/FkkxQhR.png) -->
 

@@ -2182,60 +2182,60 @@
 <h2 id="how-to-create-an-omt-package-on-the-command-line">How to create an OMT package on the command line<a class="headerlink" href="#how-to-create-an-omt-package-on-the-command-line" title="Permanent link">&para;</a></h2>
 <p>You can now create an OMT package without opening OmegaT.</p>
 <p>On a Linux terminal (in Windows): </p>
-<pre><code class="language-bash">java -cp /mnt/c/Program\ Files/OmegaT/OmegaT.jar:/mnt/c/Users/&lt;USER&gt;/AppData/Roaming/OmegaT/plugins/plugin-omt-package-&lt;version&gt;.jar net.briac.omegat.plugin.omt.ManageOMTPackage &lt;XXX_OmtPrj&gt; &lt;XXX_OmtPrj&gt;.omt
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>java<span class="w"> </span>-cp<span class="w"> </span>/mnt/c/Program<span class="se">\ </span>Files/OmegaT/OmegaT.jar:/mnt/c/Users/&lt;USER&gt;/AppData/Roaming/OmegaT/plugins/plugin-omt-package-&lt;version&gt;.jar<span class="w"> </span>net.briac.omegat.plugin.omt.ManageOMTPackage<span class="w"> </span>&lt;XXX_OmtPrj&gt;<span class="w"> </span>&lt;XXX_OmtPrj&gt;.omt
+</span></code></pre></div>
 <p>Update the user config path accordingly (i.e. replacing <code>&lt;USER&gt;</code> with your actual username). </p>
 <p>On Windows CMD (notice the different classpath separator <code>;</code>, not <code>:</code>): </p>
-<pre><code>java -cp &quot;C:\Program Files\OmegaT\OmegaT.jar;C:\Users\&lt;USER&gt;\AppData\Roaming\OmegaT\plugins\plugin-omt-package-&lt;version&gt;.jar&quot; net.briac.omegat.plugin.omt.ManageOMTPackage &lt;XXX_OmtPrj&gt; &lt;XXX_OmtPrj&gt;.omt
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>java -cp &quot;C:\Program Files\OmegaT\OmegaT.jar;C:\Users\&lt;USER&gt;\AppData\Roaming\OmegaT\plugins\plugin-omt-package-&lt;version&gt;.jar&quot; net.briac.omegat.plugin.omt.ManageOMTPackage &lt;XXX_OmtPrj&gt; &lt;XXX_OmtPrj&gt;.omt
+</span></code></pre></div>
 <p>This allows you to batch process a number of projects:</p>
-<pre><code>for proj in `ls -d *_OmtPrj`; do java -cp /mnt/c/Program\ Files/OmegaT/OmegaT.jar:/mnt/c/Users/&lt;USER&gt;/AppData/Roaming/OmegaT/plugins/plugin-omt-package-&lt;version&gt;.jar net.briac.omegat.plugin.omt.ManageOMTPackage $proj $proj.omt; done
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>for proj in `ls -d *_OmtPrj`; do java -cp /mnt/c/Program\ Files/OmegaT/OmegaT.jar:/mnt/c/Users/&lt;USER&gt;/AppData/Roaming/OmegaT/plugins/plugin-omt-package-&lt;version&gt;.jar net.briac.omegat.plugin.omt.ManageOMTPackage $proj $proj.omt; done
+</span></code></pre></div>
 <!--- for proj in `ls -d *_OmtPrj`; do java -cp /mnt/c/Program\ Files/OmegaT/OmegaT.jar:/mnt/c/Users/souto/AppData/Roaming/OmegaT/plugins/plugin-omt-package-1.1.0.jar net.briac.omegat.plugin.omt.ManageOMTPackage $proj _Packages/$proj.omt; done -->
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
 <p>Note: the plugin can be configured by means of file <code>&lt;config_dir&gt;/omt-package-config.properties</code>. Example below:</p>
-<pre><code class="language-java">#
-# OmegaT Plugin - OMT Package Manager
-#
-#    omt-package-config.properties
-#
-
-# List of regex pattern (separated by &quot;;&quot;) of files to exclude when
-# generating an OMT package. (default: &quot;\\.(zip|bak|omt)$&quot;)
-exclude-pattern=\.(zip|bak|omt|DOCX?|docx?)$;pseudoxlat;\.(utf8|tmx)\.2019;/?~
-
-# The &quot;\\&quot; is needed because JAva needs the &quot;\&quot; to be escaped.
-# The &quot;/?&quot; is to exclude files begining with ? (the /? is to make sure we catch the beginning of the filename)
-
-# If set to true, the folder containing the exported OMT will be
-# displayed. (default: false)
-open-directory-after-export=true
-# If set to true, the translated documents will be created before
-# creating the package. (default: false)
-generate-target-files=false
-# If set to true, a dialog asking the user if they want to delete the
-# imported OMT package will appear at the end of the importation.
-# (default: false)
-prompt-remove-omt-after-import=true
-
-# If this property is set, the script located in the OmegaT scripts
-# folder will be executed. The OMT package file is available in the
-# binding &quot;omtPackageFile&quot;. The console output is done in OmegaT
-# logfile, not in the scripting window.
-#post-package-script=processOmtPackage.groovy
-</code></pre>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="err">#</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="err">#</span><span class="w"> </span><span class="n">OmegaT</span><span class="w"> </span><span class="n">Plugin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">OMT</span><span class="w"> </span><span class="n">Package</span><span class="w"> </span><span class="n">Manager</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="err">#</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="err">#</span><span class="w">    </span><span class="n">omt</span><span class="o">-</span><span class="n">package</span><span class="o">-</span><span class="n">config</span><span class="p">.</span><span class="na">properties</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="err">#</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="err">#</span><span class="w"> </span><span class="n">List</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">regex</span><span class="w"> </span><span class="nf">pattern</span><span class="w"> </span><span class="p">(</span><span class="n">separated</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="s">&quot;;&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">exclude</span><span class="w"> </span><span class="n">when</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="err">#</span><span class="w"> </span><span class="n">generating</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">OMT</span><span class="w"> </span><span class="n">package</span><span class="p">.</span><span class="w"> </span><span class="p">(</span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;\\.(zip|bak|omt)$&quot;</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">exclude</span><span class="o">-</span><span class="n">pattern</span><span class="o">=</span><span class="err">\</span><span class="p">.(</span><span class="n">zip</span><span class="o">|</span><span class="n">bak</span><span class="o">|</span><span class="n">omt</span><span class="o">|</span><span class="n">DOCX</span><span class="o">?|</span><span class="n">docx</span><span class="o">?</span><span class="p">)</span><span class="n">$</span><span class="p">;</span><span class="n">pseudoxlat</span><span class="p">;</span><span class="err">\</span><span class="p">.(</span><span class="n">utf8</span><span class="o">|</span><span class="n">tmx</span><span class="p">)</span><span class="err">\</span><span class="mf">.2019</span><span class="p">;</span><span class="o">/?~</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="err">#</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="s">&quot;\\&quot;</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">needed</span><span class="w"> </span><span class="n">because</span><span class="w"> </span><span class="n">JAva</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="s">&quot;\&quot; to be escaped.</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="s"># The &quot;</span><span class="o">/?</span><span class="s">&quot; is to exclude files begining with ? (the /? is to make sure we catch the beginning of the filename)</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="s"># If set to true, the folder containing the exported OMT will be</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="s"># displayed. (default: false)</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="s">open-directory-after-export=true</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="s"># If set to true, the translated documents will be created before</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="s"># creating the package. (default: false)</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="s">generate-target-files=false</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="s"># If set to true, a dialog asking the user if they want to delete the</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="s"># imported OMT package will appear at the end of the importation.</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="s"># (default: false)</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="s">prompt-remove-omt-after-import=true</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="s"># If this property is set, the script located in the OmegaT scripts</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="s"># folder will be executed. The OMT package file is available in the</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="s"># binding &quot;</span><span class="n">omtPackageFile</span><span class="s">&quot;. The console output is done in OmegaT</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="s"># logfile, not in the scripting window.</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="s">#post-package-script=processOmtPackage.groovy</span>
+</span></code></pre></div>
 <h2 id="help">Help<a class="headerlink" href="#help" title="Permanent link">&para;</a></h2>
 <p>Run line: </p>
-<pre><code>java -cp /mnt/c/Program\ Files/OmegaT/OmegaT.jar:/mnt/c/Users/&lt;USER&gt;/AppData/Roaming/OmegaT/plugins/plugin-omt-package-&lt;version&gt;.jar net.briac.omegat.plugin.omt.ManageOMTPackage --help
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>java -cp /mnt/c/Program\ Files/OmegaT/OmegaT.jar:/mnt/c/Users/&lt;USER&gt;/AppData/Roaming/OmegaT/plugins/plugin-omt-package-&lt;version&gt;.jar net.briac.omegat.plugin.omt.ManageOMTPackage --help
+</span></code></pre></div>
 <p>to get the following message: </p>
-<pre><code>usage: ManageOMTPackage [options] omegat-project-directory [omt-package-file]
- -c,--config &lt;property-file&gt;   use given file for configuration (default: /home/&lt;USER&gt;/.omegat/omt-package-config.properties)
- -h,--help                     print this message
- -q,--quiet                    be extra quiet
- -v,--verbose                  be extra verbose
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>usage: ManageOMTPackage [options] omegat-project-directory [omt-package-file]
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a> -c,--config &lt;property-file&gt;   use given file for configuration (default: /home/&lt;USER&gt;/.omegat/omt-package-config.properties)
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a> -h,--help                     print this message
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a> -q,--quiet                    be extra quiet
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a> -v,--verbose                  be extra verbose
+</span></code></pre></div>
 
 
 

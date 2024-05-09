@@ -2427,18 +2427,18 @@ https://odoo.capstan.be/web#id=197&action=871&model=knowsystem.article&view_type
 - delete the issues file of that day
 - verify one hour or one day later that the issue is not flagged again</p>
 <h3 id="metadata-clean-up">Metadata clean up<a class="headerlink" href="#metadata-clean-up" title="Permanent link">&para;</a></h3>
-<p>To avoid making TMX files unnecessarily heavier, empty properties can be removed. <!-- , e.g. <code>&lt;prop type="domain"/&gt;</code>.-->For example:</p>
-<pre><code>&lt;prop type=&quot;client&quot;/&gt;
-&lt;prop type=&quot;domain&quot;/&gt;
-&lt;prop type=&quot;project&quot;/&gt;
-&lt;prop type=&quot;subject&quot;/&gt;
-</code></pre>
-<p>You might also want to remove some non-empty properties if they are irrelevant: </p>
-<pre><code>&lt;prop type=&quot;corrected&quot;&gt;no&lt;/prop&gt;
-&lt;prop type=&quot;aligned&quot;&gt;no&lt;/prop&gt;
-&lt;prop type=&quot;x-document&quot;&gt;en.json&lt;/prop&gt;
-&lt;prop type=&quot;x-context&quot;&gt;examSessionModal.okButton&lt;/prop&gt;
-</code></pre>
+<p>To avoid making TMX files unnecessarily heavier, empty properties can be removed. <!-- , e.g. <code>&lt;prop type="domain"/&gt;</code>.-->For example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;prop type=&quot;client&quot;/&gt;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&lt;prop type=&quot;domain&quot;/&gt;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&lt;prop type=&quot;project&quot;/&gt;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>&lt;prop type=&quot;subject&quot;/&gt;
+</span></code></pre></div>
+You might also want to remove some non-empty properties if they are irrelevant: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;prop type=&quot;corrected&quot;&gt;no&lt;/prop&gt;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&lt;prop type=&quot;aligned&quot;&gt;no&lt;/prop&gt;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&lt;prop type=&quot;x-document&quot;&gt;en.json&lt;/prop&gt;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&lt;prop type=&quot;x-context&quot;&gt;examSessionModal.okButton&lt;/prop&gt;
+</span></code></pre></div>
 <p>The same applies to proprietary metadata (added by some commercial CAT tool) that both MemoryLn and OmegaT ignore, such as namespaced tags, e.g. <code>&lt;mq:foo&gt;</code>.</p>
 <!-- .gitignore : *.tmx ? -->
 

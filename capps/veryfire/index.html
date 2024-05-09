@@ -2409,22 +2409,22 @@
 <h3 id="projects-and-file-types">Projects and file types<a class="headerlink" href="#projects-and-file-types" title="Permanent link">&para;</a></h3>
 <p>Veryfire can parse and analyze bilingual documents, such as Excel 2007/2011 workbooks/spreadsheets with source and target languages in two columns and generic XML-based files such as translated XLIFF and bilingual TMX. Such files can be submitted individually (one by one) or in zipped batches (in .zip format, but not .rar or other) containing only files, not a hierarchy of folders.</p>
 <p>It is also possible to send batches of XML files exported from the PISA Portal. In that case, the zipped batch must contain two folders (one with the master/source files, another one with the target files) and a file with the correspondence between source and target files. Each target file must have the same structure as its corresponding master/source file, and the correspondences file must include those folders in the path to the files. See the example below, for target language xxx-XXX and for a zip file that contains folders "Master" and "xxx-XXX": </p>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Batch&gt;
-  &lt;file id=&quot;1&quot;&gt;
-    &lt;source lang=&quot;Master&quot;&gt;Master/file1_source.xml&lt;/source&gt;
-    &lt;target lang=&quot;xxx-XXX&quot;&gt;xxx-XXX/file1_target.xml&lt;/target&gt;
-  &lt;/file&gt;
-  &lt;file id=&quot;2&quot;&gt;
-    &lt;source lang=&quot;Master&quot;&gt;Master/file2_source.xml&lt;/source&gt;
-    &lt;target lang=&quot;xxx-XXX&quot;&gt;xxx-XXX/file2_target.xml&lt;/target&gt;
-  &lt;/file&gt;
-  &lt;file id=&quot;n&quot;&gt;
-    &lt;source lang=&quot;Master&quot;&gt;Master/filen_source.xml&lt;/source&gt;
-    &lt;target lang=&quot;xxx-XXX&quot;&gt;xxx-XXX/filen_target.xml&lt;/target&gt;
-  &lt;/file&gt;
-&lt;/Batch&gt;
-</code></pre>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">&lt;Batch&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&lt;file</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;source</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;Master&quot;</span><span class="nt">&gt;</span>Master/file1_source.xml<span class="nt">&lt;/source&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;target</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;xxx-XXX&quot;</span><span class="nt">&gt;</span>xxx-XXX/file1_target.xml<span class="nt">&lt;/target&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">&lt;/file&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">&lt;file</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;source</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;Master&quot;</span><span class="nt">&gt;</span>Master/file2_source.xml<span class="nt">&lt;/source&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">&lt;target</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;xxx-XXX&quot;</span><span class="nt">&gt;</span>xxx-XXX/file2_target.xml<span class="nt">&lt;/target&gt;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">&lt;/file&gt;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">&lt;file</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;n&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">&lt;source</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;Master&quot;</span><span class="nt">&gt;</span>Master/filen_source.xml<span class="nt">&lt;/source&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">&lt;target</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;xxx-XXX&quot;</span><span class="nt">&gt;</span>xxx-XXX/filen_target.xml<span class="nt">&lt;/target&gt;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">&lt;/file&gt;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nt">&lt;/Batch&gt;</span>
+</span></code></pre></div>
 <h3 id="file-name-and-parameters">File name and parameters<a class="headerlink" href="#file-name-and-parameters" title="Permanent link">&para;</a></h3>
 <p>To reduce the need to have explicit input from the user through the upload interface, parameters such as the kind of task (verification or translatability assessement), the project (PISA, INVEDUC, ESENER, etc.) and the locale (or language variant) are fetched from the file name. At this stage, the correct functioning of the utility therefore relies on the submitted files being named correctly (include those data).</p>
 <p>Thus, the automatic extraction of parameters from the file name requires that it comply with the following structure: <code>(Date_*_)(Client_*_)PROJECT_*_Task_ccc-LLL(_*).xxx</code>, where:</p>

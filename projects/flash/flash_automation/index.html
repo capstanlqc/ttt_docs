@@ -2605,42 +2605,42 @@
 <p>The initiation bundle must contain folders <code>00_source</code>, <code>10_deliverables</code> and then one folder for each language task (e.g. <code>01_TRA</code>, <code>02_ADA</code>, etc.).</p>
 <p>The <code>00_source</code> must contain the source MRT file (one <code>.xlsm</code> file only is expected), where all rows out of scope for translation have been hidden. The target MRT file will be generated in the folder <code>10_deliverables</code> and updated with every version that is processed.</p>
 <p>In other words:</p>
-<pre><code>├── 00_source
-├── 01_TASK
-├── 02_TASK
-├── 03_TASK (etc.)
-└── 10_deliverables
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>├── 00_source
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── 01_TASK
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── 02_TASK
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── 03_TASK (etc.)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>└── 10_deliverables
+</span></code></pre></div>
 <p>Each language task folder (e.g. <code>01_TRA</code>, <code>02_ADA</code>, etc.) must contain one file <code>lll-CCC.txt</code> containing the list of languages (one cApStAn language code per line) to which that language task applies and one file <code>lll-CCC.zip</code> containing the version folder structure to be replicated for each version.</p>
 <p>In particular for the adaptation task, a third file must be included under the <code>02_ADA</code> folder, called <code>ada_lang_mapping.ods</code>, containing the correspondences between base and borrowing versions.</p>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
 <p>An example of <code>lll-CCC.zip</code> file would be:</p>
-<pre><code>Archive:  lll-CCC.zip
-Name
-----
-01_To_Translator
-02_From_Translator
-03_From_Verifier
-04_Verif_Review
-05_Machine_Translation
--------
-5 files
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Archive:  lll-CCC.zip
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Name
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>----
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>01_To_Translator
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>02_From_Translator
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>03_From_Verifier
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>04_Verif_Review
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>05_Machine_Translation
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>-------
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>5 files
+</span></code></pre></div>
 <p>An example of the contents of the <code>lll-CCC.txt</code> file would be:</p>
-<pre><code>bul-BGR
-ces-CZE
-deu-DEU
-ell-GRC
-esp-ESP
-est-EST
-fra-FRA
-hun-HUN
-ita-ITA
-pol-POL
-slo-SVK
-ron-ROU
-rus-EST
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bul-BGR
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ces-CZE
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>deu-DEU
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>ell-GRC
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>esp-ESP
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>est-EST
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>fra-FRA
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>hun-HUN
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>ita-ITA
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>pol-POL
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>slo-SVK
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>ron-ROU
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>rus-EST
+</span></code></pre></div>
 <p>An example of the contents of the <code>ada_lang_mapping.ods</code> file would be (base version code on the left, borrowing version code on the right):</p>
 <table>
 <thead>
@@ -2693,17 +2693,17 @@ rus-EST
 </tbody>
 </table>
 <p>In the example below, showing the contents to be zipped inside a fictitious initiation bundle, <code>01_TRA</code> and <code>02_ADA</code> are the task folders for the translation+verification and for adaptation tasks, respectively:</p>
-<pre><code>├── 00_source
-│   ├── [source_MRT_file].xlsm
-├── 01_TRA
-│   ├── lll-CCC.txt
-│   └── lll-CCC.zip
-├── 02_ADA
-│   ├── ada_lang_mapping.ods
-│   ├── lll-CCC.txt
-│   └── lll-CCC.zip
-└── 10_deliverables
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>├── 00_source
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>│   ├── [source_MRT_file].xlsm
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>├── 01_TRA
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>│   ├── lll-CCC.txt
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>│   └── lll-CCC.zip
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>├── 02_ADA
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>│   ├── ada_lang_mapping.ods
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>│   ├── lll-CCC.txt
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>│   └── lll-CCC.zip
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>└── 10_deliverables
+</span></code></pre></div>
 <p>A template can be found under <code>/02_AUTOMATION/Initiation/Templates/FLASH-XXX-Template.zip</code>. It may be used as the basis for the initiation bundle for a new survey translation workflow (after updating the various details to the characteristics of the new survey (e.g. the list of languages for each task, the source MRT file, the bundle's name, etc.), which must be put it in the folder <code>/02_AUTOMATION/Initiation/</code> of the project.</p>
 <p>The PM is responsible for preparing the survey's initiation bundle, e.g. updating the list of languages for the translation of every survey, etc. <em>Tips</em>: Use a text editor (e.g. Notepad, Notepad++, Sublime Text, etc.) to edit the list of languages. The tool 7zip is recommended to pack the <code>lll-CCC.zip</code> files and the contents of the initiation bundle.</p>
 <blockquote>
@@ -2792,28 +2792,28 @@ rus-EST
 <p>Thirdly, for the <code>eng-ZZZ</code> version, OmegaT will run in the background to translate the project with the source text.</p>
 <h4 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h4>
 <p>For example, for a fictitious "FLASH-005" survey with a file for translation called <code>S21007984_x0_multi.xlsm</code>, the following contents will be created under <code>/08_FLASH_PROJECTS/FLASH-005</code> when the initiation bundle <code>FLASH-005.zip</code> appears in <code>/02_AUTOMATION/Initiation/</code>:</p>
-<pre><code>├── 00_source
-│   ├── Eurobarometer_FLASH-005_xxx-XXX_OMT.omt
-│   ├── S21007984.html
-│   └── S21007984_x0_multi.xlsm
-├── 01_TRA
-│   ├── _tech (...)
-│   ├── bul-BGR
-│   │   ├── 01_To_Translator
-│   │   │   └── Eurobarometer_FLASH-005_bul-BGR_OMT.omt
-│   │   ├── 02_From_Translator
-│   │   ├── 03_From_Verifier
-│   │   ├── 04_Verif_Review
-│   │   └── 05_Machine_Translation
-│   ├── fra-FRA
-│   │   ├── 01_To_Translator
-│   │   │   └── Eurobarometer_FLASH-005_fra-FRA_OMT.omt
-│   │   ├── (... etc. same for other versions)
-├── 02_ADA
-│   └── _tech (...)
-└── 10_deliverables
-    └── S21007984_x0_multi.xlsm
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>├── 00_source
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>│   ├── Eurobarometer_FLASH-005_xxx-XXX_OMT.omt
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>│   ├── S21007984.html
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>│   └── S21007984_x0_multi.xlsm
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>├── 01_TRA
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>│   ├── _tech (...)
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>│   ├── bul-BGR
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>│   │   ├── 01_To_Translator
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>│   │   │   └── Eurobarometer_FLASH-005_bul-BGR_OMT.omt
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>│   │   ├── 02_From_Translator
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>│   │   ├── 03_From_Verifier
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>│   │   ├── 04_Verif_Review
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>│   │   └── 05_Machine_Translation
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>│   ├── fra-FRA
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>│   │   ├── 01_To_Translator
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>│   │   │   └── Eurobarometer_FLASH-005_fra-FRA_OMT.omt
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>│   │   ├── (... etc. same for other versions)
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>├── 02_ADA
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>│   └── _tech (...)
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>└── 10_deliverables
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    └── S21007984_x0_multi.xlsm
+</span></code></pre></div>
 <p>The OMT packages generated under the <code>01_To_Translator</code> folder are named according to the pattern specified in the configuration file. They should not be renamed. Likewise, the expected name of the monitoring form is specified in the config file.</p>
 <h2 id="2-diff-reports">2. Diff reports<a class="headerlink" href="#2-diff-reports" title="Permanent link">&para;</a></h2>
 <p>Diff reports showing verifier's interventions will be automatically generated when both the project package handed back by the translator and the project package handed back by the verifier are available.</p>
@@ -2870,10 +2870,10 @@ rus-EST
 <li>The column in the target  MRT file (under <code>10_deliverables</code>) corresponding to the version being post-processed is updated with the translation.</li>
 </ul>
 <p>For example:</p>
-<pre><code>10_deliverables:
-├── FLASH-005_TAVF_all.zip     (&lt;---- containing all monitoring forms)
-└── S21007984_x0_multi.xlsm    (&lt;---- containing all target versions, one per column)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>10_deliverables:
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>├── FLASH-005_TAVF_all.zip     (&lt;---- containing all monitoring forms)
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>└── S21007984_x0_multi.xlsm    (&lt;---- containing all target versions, one per column)
+</span></code></pre></div>
 <p>When all versions have been post-processed, all columns in the target MRT are populated and all the monitoring forms are included in final TAVF bundle.</p>
 <h4 id="tm-wise"><em>TM-wise</em>:<a class="headerlink" href="#tm-wise" title="Permanent link">&para;</a></h4>
 <ul>

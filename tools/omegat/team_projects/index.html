@@ -2353,16 +2353,16 @@
 <p>The following commands can be run in either git bash, Windows WSL or bash on real GNU/Linux. Upper cased names are used as placeholders for the actual repository, organization, team, etc.</p>
 <h3 id="21-authentication">2.1 Authentication<a class="headerlink" href="#21-authentication" title="Permanent link">&para;</a></h3>
 <p>To execute the steps below through SSH, the project manager must be authenticated. The following commands (followed by your passphrase) can be run once to avoid having to type the passphrase every time a repo is created:</p>
-<pre><code class="language-bash">$ eval `ssh-agent -s`
-$ ssh-add ~/.ssh/*_rsa
-Enter passphrase for /home/USER/.ssh/id_rsa:
-Identity added: /home/USER/.ssh/id_rsa (/home/USER/.ssh/id_rsa)
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="sb">`</span>ssh-agent<span class="w"> </span>-s<span class="sb">`</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>ssh-add<span class="w"> </span>~/.ssh/*_rsa
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Enter<span class="w"> </span>passphrase<span class="w"> </span><span class="k">for</span><span class="w"> </span>/home/USER/.ssh/id_rsa:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Identity<span class="w"> </span>added:<span class="w"> </span>/home/USER/.ssh/id_rsa<span class="w"> </span><span class="o">(</span>/home/USER/.ssh/id_rsa<span class="o">)</span>
+</span></code></pre></div>
 <p>It will ask for the passphrase in the second command, and that's it. You only need to do this once per session.</p>
 <h3 id="22-creating-the-repository">2.2 Creating the repository<a class="headerlink" href="#22-creating-the-repository" title="Permanent link">&para;</a></h3>
 <p>Navigate to the parent folder where you would like to create the OmegaT folder that you want to push to the repository. There, run the following command: </p>
-<pre><code class="language-bash">$ yes no | gh repo create ORG/REPO --confirm --private --clone --team TEAM
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>yes<span class="w"> </span>no<span class="w"> </span><span class="p">|</span><span class="w"> </span>gh<span class="w"> </span>repo<span class="w"> </span>create<span class="w"> </span>ORG/REPO<span class="w"> </span>--confirm<span class="w"> </span>--private<span class="w"> </span>--clone<span class="w"> </span>--team<span class="w"> </span>TEAM
+</span></code></pre></div>
 <p>The basic command is <code>gh repo create REPO</code>. The rest of arguments are optional:</p>
 <ul>
 <li><code>--confirm</code> (or <code>-y</code> for short) skips the confirmation prompt</li>
@@ -2372,62 +2372,62 @@ Identity added: /home/USER/.ssh/id_rsa (/home/USER/.ssh/id_rsa)
 <li><code>yes no |</code> answers "No" to any further prompts, such as whether you'd like to add a .gitignore or a license</li>
 </ul>
 <p>The expected output of that command is:</p>
-<pre><code class="language-bash">✓ Created repository ORG/REPO on GitHub
-Initialized empty Git repository in /home/USER/path/to/parentdir/REPO/.git/
-✓ Initialized repository in &quot;REPO&quot;
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>✓<span class="w"> </span>Created<span class="w"> </span>repository<span class="w"> </span>ORG/REPO<span class="w"> </span>on<span class="w"> </span>GitHub
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Initialized<span class="w"> </span>empty<span class="w"> </span>Git<span class="w"> </span>repository<span class="w"> </span><span class="k">in</span><span class="w"> </span>/home/USER/path/to/parentdir/REPO/.git/
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>✓<span class="w"> </span>Initialized<span class="w"> </span>repository<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;REPO&quot;</span>
+</span></code></pre></div>
 <p>You can see these and other options with <a href="https://cli.github.com/manual/gh_repo_create"><code>gh repo create --help</code></a>.</p>
 <h3 id="23-initializing-the-omegat-project">2.3 Initializing the OmegaT project<a class="headerlink" href="#23-initializing-the-omegat-project" title="Permanent link">&para;</a></h3>
 <p>After creating the repository, the next step is to initialize the OmegaT project. You may do so from inside the project folder with the following command (to create a <code>en-gl</code> project):</p>
-<pre><code>cd REPO
-java -jar OmegaT.jar team init en gl
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cd REPO
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>java -jar OmegaT.jar team init en gl
+</span></code></pre></div>
 <p>That creates  a barebones project folder structure:</p>
-<pre><code>souto@ameijoa:REPO$ tree
-.
-├── dictionary
-├── glossary
-│   └── glossary.txt
-├── omegat
-│   └── project_save.tmx
-├── omegat.project
-├── source
-├── target
-└── tm
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>souto@ameijoa:REPO$ tree
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>.
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>├── dictionary
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>├── glossary
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>│   └── glossary.txt
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>├── omegat
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>│   └── project_save.tmx
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>├── omegat.project
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>├── source
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>├── target
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>└── tm
+</span></code></pre></div>
 <p>Finally, add source files, config files, language assets (TMs, glossaries, etc.) as needed.</p>
 <h3 id="24-pushing-the-omegat-project-to-the-repository">2.4 Pushing the OmegaT project to the repository<a class="headerlink" href="#24-pushing-the-omegat-project-to-the-repository" title="Permanent link">&para;</a></h3>
 <p>The project is ready to be pushed to the remote repository. From inside the project folder, do:</p>
-<pre><code class="language-bash">$ git add .
-$ git commit -m &quot;Initial commit -- uploading project files&quot;
-$ git push --set-upstream origin master
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit -- uploading project files&quot;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>master
+</span></code></pre></div>
 <p>Example output:</p>
-<pre><code>  Enumerating objects: 82, done.
-  Counting objects: 100% (82/82), done.
-  Delta compression using up to 8 threads
-  Compressing objects: 100% (79/79), done.
-  Writing objects: 100% (82/82), 308.64 KiB | 750.00 KiB/s, done.
-  Total 82 (delta 28), reused 0 (delta 0)
-  remote: Resolving deltas: 100% (28/28), done.
-  To github.com:ORG/REPO.git
-
-   * [new branch]      master -&gt; master
-   Branch 'master' set up to track remote branch 'master' from 'origin'.
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>  Enumerating objects: 82, done.
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  Counting objects: 100% (82/82), done.
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  Delta compression using up to 8 threads
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  Compressing objects: 100% (79/79), done.
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>  Writing objects: 100% (82/82), 308.64 KiB | 750.00 KiB/s, done.
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  Total 82 (delta 28), reused 0 (delta 0)
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>  remote: Resolving deltas: 100% (28/28), done.
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>  To github.com:ORG/REPO.git
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>   * [new branch]      master -&gt; master
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>   Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;origin&#39;.
+</span></code></pre></div>
 <h3 id="25-sharing-the-team-project-with-your-translators">2.5 Sharing the team project with your translator(s)<a class="headerlink" href="#25-sharing-the-team-project-with-your-translators" title="Permanent link">&para;</a></h3>
 <p>So as to download the team project on their side, your translator(s) need to know the URL of the team project. The URL is predictable: <code>https://github.com/ORG/REPO.git</code>. </p>
 <p>If you would like to confirm it and you use the HTTPS protocol, you can get the URL with the command:</p>
-<pre><code class="language-bash">git config --get remote.origin.url
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>config<span class="w"> </span>--get<span class="w"> </span>remote.origin.url
+</span></code></pre></div>
 <p>If you use the SSH protocol, you can get the URL like so:</p>
-<pre><code class="language-bash">git config --get remote.origin.url | sed -e 's/:/\//g'| sed -e 's/ssh\/\/\///g'| sed -e 's/git@/https:\/\//g'
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>config<span class="w"> </span>--get<span class="w"> </span>remote.origin.url<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/:/\//g&#39;</span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ssh\/\/\///g&#39;</span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/git@/https:\/\//g&#39;</span>
+</span></code></pre></div>
 <h3 id="26-harvesting-the-translations">2.6 Harvesting the translations<a class="headerlink" href="#26-harvesting-the-translations" title="Permanent link">&para;</a></h3>
 <p>To obtain the translated documents in the target language, you have two options: you may ask your translator to generate the target files (e.g. <code>Ctrl+D</code>) and commit them to the remote repository (i.e. <strong>Project &gt; Commit Target Files</strong>).</p>
 <p>Alternatively, you may simply pull all translations from the repository to a local copy of the project in your machine (outside the git checkout folder) and generate the target files there. Running OmegaT on the project in console mode should do the trick:</p>
-<pre><code>java -jar /path/to/OmegaT.jar /path/to/proj --mode=console-translate
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>java -jar /path/to/OmegaT.jar /path/to/proj --mode=console-translate
+</span></code></pre></div>
 <h3 id="27-multilingual-projects">2.7 Multilingual projects<a class="headerlink" href="#27-multilingual-projects" title="Permanent link">&para;</a></h3>
 <p>If you are managing a multilingual project, where translations need to be produced in several target languages, you may do the steps above for each of them. It's easy to automate that with a script, here's a suggestion in pseudo-code, for which you need a list of all the target language tags (and assuming the source language is constant and already defined in the template).</p>
 <ul>
@@ -2459,42 +2459,42 @@ $ git push --set-upstream origin master
 <p>You must commit at least the project settings (i.e. <code>omegat.project</code>) file for each project, but OmegaT can fetch everything else from elsewhere, through links included in the repository mapping section of the project settings file. For example, OmegaT could fetch the source files from a common repository, language assets from another repo, etc. </p>
 <p>If the files are hosted in a versioning repository (e.g. github, gitlab, etc.), you can either map files or folders. If your files are hosted in a normal server, only files can be mapped.</p>
 <p>For example, given a remote repository that contains the following files:</p>
-<pre><code class="language-sed">.
-├── proj_conf
-│   └── segmentation.conf
-└── source
-    └── final
-        ├── file1.docx
-        └── file2.docx
-</code></pre>
+<div class="language-sed highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="err">.</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="err">├──</span><span class="w"> </span><span class="k">pr</span><span class="s1">oj_conf</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="k">s</span><span class="p">e</span><span class="sr">gm</span><span class="p">e</span><span class="s1">ntation.conf</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="s1">└── sourc</span><span class="p">e</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="err">f</span><span class="k">i</span><span class="s2">nal</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">        </span><span class="err">├──</span><span class="w"> </span><span class="err">f</span><span class="k">i</span><span class="s2">le1.docx</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="err">└──</span><span class="w"> </span><span class="err">f</span><span class="k">i</span><span class="s2">le2.docx</span>
+</span></code></pre></div>
 <p>the following mapping will fetch all files from the remote folder <code>source/final</code> and put them in the <code>source</code> folder of the local project. Also, it will fetch remote file <code>proj_conf/segmentation.conf</code> and put it in the <code>omegat</code> folder of the local project.</p>
-<pre><code class="language-xml">&lt;repository type=&quot;git&quot; url=&quot;https://github.com/ORG/REPO_source.git&quot;&gt;
-  &lt;mapping local=&quot;source/&quot; repository=&quot;source/final&quot;/&gt;
-  &lt;mapping local=&quot;omegat/segmentation.conf&quot; repository=&quot;proj_conf/segmentation.conf&quot;/&gt;
-&lt;/repository&gt;
-</code></pre>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">&lt;repository</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;git&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;https://github.com/ORG/REPO_source.git&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">&lt;mapping</span><span class="w"> </span><span class="na">local=</span><span class="s">&quot;source/&quot;</span><span class="w"> </span><span class="na">repository=</span><span class="s">&quot;source/final&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nt">&lt;mapping</span><span class="w"> </span><span class="na">local=</span><span class="s">&quot;omegat/segmentation.conf&quot;</span><span class="w"> </span><span class="na">repository=</span><span class="s">&quot;proj_conf/segmentation.conf&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nt">&lt;/repository&gt;</span>
+</span></code></pre></div>
 <p>You may also fetch a subset of the files in a remote folder by explicitly including only the ones that a certain pattern matches, e.g. matching the target language of the project. The following example fetches any existing TMX files for a project with <code>gl</code> (Galician) as target language from a remote location that contains TMs for all languages. Notice that all files need to be excluded first.</p>
-<pre><code class="language-xml">&lt;repository type=&quot;git&quot; url=&quot;https://github.com/ORG/REPO_assets.git&quot;&gt;
-  &lt;mapping local=&quot;/tm&quot; repository=&quot;/&quot;/&gt;
-    &lt;excludes&gt;**/*&lt;/excludes&gt;
-    &lt;includes&gt;*gl*.tmx&lt;/includes&gt;
-&lt;/repository&gt;
-</code></pre>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">&lt;repository</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;git&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;https://github.com/ORG/REPO_assets.git&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">&lt;mapping</span><span class="w"> </span><span class="na">local=</span><span class="s">&quot;/tm&quot;</span><span class="w"> </span><span class="na">repository=</span><span class="s">&quot;/&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nt">&lt;excludes&gt;</span>**/*<span class="nt">&lt;/excludes&gt;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nt">&lt;includes&gt;</span>*gl*.tmx<span class="nt">&lt;/includes&gt;</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="nt">&lt;/repository&gt;</span>
+</span></code></pre></div>
 <p>You might map several folders from the same repository, which in the case of TMs allows to use different levels of validation (e.g. enforced, auto-populated, penalties, etc.). The following examples map TMs named as per year 2021 from the remote root folder to the <code>/tm/auto</code> folder of the project and TMs named as per year 2018 from the <code>penalty-02</code> remote folder to the <code>/tm/penalty-02</code> folder of the project.</p>
-<pre><code class="language-xml">&lt;repository type=&quot;git&quot; url=&quot;https://github.com/ORG/REPO_assets.git&quot;&gt;
-  &lt;mapping local=&quot;/tm/auto&quot; repository=&quot;/&quot;/&gt;
-    &lt;excludes&gt;**/*&lt;/excludes&gt;
-    &lt;includes&gt;*2021*gl*.tmx&lt;/includes&gt;
-  &lt;mapping local=&quot;/tm/penalty-02&quot; repository=&quot;/penalty-02&quot;/&gt;
-    &lt;excludes&gt;**/*&lt;/excludes&gt;
-    &lt;includes&gt;*2019*gl*.tmx&lt;/includes&gt;
-&lt;/repository&gt;
-</code></pre>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">&lt;repository</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;git&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;https://github.com/ORG/REPO_assets.git&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nt">&lt;mapping</span><span class="w"> </span><span class="na">local=</span><span class="s">&quot;/tm/auto&quot;</span><span class="w"> </span><span class="na">repository=</span><span class="s">&quot;/&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nt">&lt;excludes&gt;</span>**/*<span class="nt">&lt;/excludes&gt;</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="nt">&lt;includes&gt;</span>*2021*gl*.tmx<span class="nt">&lt;/includes&gt;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">  </span><span class="nt">&lt;mapping</span><span class="w"> </span><span class="na">local=</span><span class="s">&quot;/tm/penalty-02&quot;</span><span class="w"> </span><span class="na">repository=</span><span class="s">&quot;/penalty-02&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="nt">&lt;excludes&gt;</span>**/*<span class="nt">&lt;/excludes&gt;</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="nt">&lt;includes&gt;</span>*2019*gl*.tmx<span class="nt">&lt;/includes&gt;</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="nt">&lt;/repository&gt;</span>
+</span></code></pre></div>
 <p>It is also recommended to add the map the main repository itself (where the <code>omegat.project</code> file is hosted).</p>
-<pre><code class="language-xml">&lt;repository type=&quot;git&quot; url=&quot;https://github.com/ORG/REPO_gl.git&quot;&gt;
-  &lt;mapping local=&quot;/&quot; repository=&quot;/&quot;/&gt;
-&lt;/repository&gt;
-</code></pre>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">&lt;repository</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;git&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;https://github.com/ORG/REPO_gl.git&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nt">&lt;mapping</span><span class="w"> </span><span class="na">local=</span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="na">repository=</span><span class="s">&quot;/&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nt">&lt;/repository&gt;</span>
+</span></code></pre></div>
 <p>All the above examples would be children of the  <code>&lt;repositories&gt;</code> node in the project settings. The same principle would apply to other files to be added to the project (e.g. glossaries). </p>
 <blockquote>
 <p>@PENDING: How to create the entire project folder structure on the command line (as the GUI does when downloading the project) from a repo that only contains the <code>omegat.project</code>?</p>

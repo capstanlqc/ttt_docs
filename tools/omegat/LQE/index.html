@@ -2304,17 +2304,17 @@
 </table>
 <p>The report's <code>report_uuid</code> property is a hash number that uniquely identifies the report. This property is saved in the <code>project-lqe.json</code> persistently and can be used between different user sessions to identify all issues that are saved to the database as part of the same report. This number could be used by another client to get all issues for one report.</p>
 <p>Example of report object: </p>
-<pre><code>{
-  "report_uuid" : "17abf070-329c-4804-81c7-3d4684763955",
-  "tool" : "LQE Plugin 0.4.0",
-  "lqe_config" : "capstan-standard-pisa",
-  "project_name" : "lqe_test_omtprj",
-  "timestamp" : "2020-03-28T12:08:53.833",
-  "source_lang" : "en",
-  "target_lang" : "gl",
-  "segments" : [ ]
+<div class="language-text highlight"><pre><span></span><code>{
+  &quot;report_uuid&quot; : &quot;17abf070-329c-4804-81c7-3d4684763955&quot;,
+  &quot;tool&quot; : &quot;LQE Plugin 0.4.0&quot;,
+  &quot;lqe_config&quot; : &quot;capstan-standard-pisa&quot;,
+  &quot;project_name&quot; : &quot;lqe_test_omtprj&quot;,
+  &quot;timestamp&quot; : &quot;2020-03-28T12:08:53.833&quot;,
+  &quot;source_lang&quot; : &quot;en&quot;,
+  &quot;target_lang&quot; : &quot;gl&quot;,
+  &quot;segments&quot; : [ ]
 }
-</code></pre>
+</code></pre></div>
 <p>Issues will be grouped per segment and a group of issues will be created or updated with a PUT request to url <code>{{ url }}/lqe/report/&lt;report_uuid&gt;/segment/&lt;segment_id&gt;</code>, including an issues array is a property of the segment.</p>
 <p>Each <code>segment</code> object will have the following properties:</p>
 <table>
@@ -2408,32 +2408,32 @@
 </tbody>
 </table>
 <p>Example of segment object:</p>
-<pre><code>{
-    "segment_id" : "1276287c",
-    "segment_number" : 1,
-    "transunit_id" : null,
-    "filename" : "source_file.txt",
-    "source_text" : "This is the first sentence.",
-    "target_orig" : "Esta é a primeira frase.",
-    "target_edit" : "Esta é a primeira oración.",
-    "translator" : "souto_translator",
-    "issues" : [ {
-      "issue_uuid" : "c7178fb7-e6f9-44c5-a262-ce6c409571b6",
-      "category" : "Adaptation issue",
-      "subcategory" : "Missed adaptation",
-      "comment" : "“sentence” was not adapted.",
-      "severity" : 1,
-      "reviewer" : "VER_manuel"
+<div class="language-text highlight"><pre><span></span><code>{
+    &quot;segment_id&quot; : &quot;1276287c&quot;,
+    &quot;segment_number&quot; : 1,
+    &quot;transunit_id&quot; : null,
+    &quot;filename&quot; : &quot;source_file.txt&quot;,
+    &quot;source_text&quot; : &quot;This is the first sentence.&quot;,
+    &quot;target_orig&quot; : &quot;Esta é a primeira frase.&quot;,
+    &quot;target_edit&quot; : &quot;Esta é a primeira oración.&quot;,
+    &quot;translator&quot; : &quot;souto_translator&quot;,
+    &quot;issues&quot; : [ {
+      &quot;issue_uuid&quot; : &quot;c7178fb7-e6f9-44c5-a262-ce6c409571b6&quot;,
+      &quot;category&quot; : &quot;Adaptation issue&quot;,
+      &quot;subcategory&quot; : &quot;Missed adaptation&quot;,
+      &quot;comment&quot; : &quot;“sentence” was not adapted.&quot;,
+      &quot;severity&quot; : 1,
+      &quot;reviewer&quot; : &quot;VER_manuel&quot;
     }, {
-      "issue_uuid" : "798470ac-3aac-4f64-9206-116ee3eb72cc",
-      "category" : "Adaptation issue",
-      "subcategory" : "Wrong adaptation",
-      "comment" : "Wrong adaptation in target “…” + EXPLANATION",
-      "severity" : 5,
-      "reviewer" : "VER"
+      &quot;issue_uuid&quot; : &quot;798470ac-3aac-4f64-9206-116ee3eb72cc&quot;,
+      &quot;category&quot; : &quot;Adaptation issue&quot;,
+      &quot;subcategory&quot; : &quot;Wrong adaptation&quot;,
+      &quot;comment&quot; : &quot;Wrong adaptation in target “…” + EXPLANATION&quot;,
+      &quot;severity&quot; : 5,
+      &quot;reviewer&quot; : &quot;VER&quot;
     } ]
 }
-</code></pre>
+</code></pre></div>
 <h2 id="backend-deployment">Backend deployment<a class="headerlink" href="#backend-deployment" title="Permanent link">&para;</a></h2>
 <p>For the time being, the API is deployed as a Heroku app in the following address: https://capps-lqe-backend.herokuapp.com/lqe/. That URL must be included in the OmegaT preferences (Options &gt; Preferences &gt; Plugins &gt; Linguistic Quality), so that the LQE plugin knows where to sent the requests.</p>
 <h2 id="no-license">No license<a class="headerlink" href="#no-license" title="Permanent link">&para;</a></h2>
