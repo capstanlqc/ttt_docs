@@ -23,6 +23,7 @@ Each langtag record (a Javascript object or a Python dictionary) is a simple tab
 You might not need the whole list, but for the time being there are no other endpoints that you can use, which means you need to fetch the whole resource first and then filter it and manipulate it on your end for your specific purposes.
 
 See below two demos with examples of some typical operations, such as:
+
 * Get the whole list of cApStAn codes
 * Get a whole tag record for a particular language variant
 * Get a language tag that corresponds to another tag in a different convention (e.g. from cApStAn to OmegaT)

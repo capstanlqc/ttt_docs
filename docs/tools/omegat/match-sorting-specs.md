@@ -1,5 +1,8 @@
 # OmegaT: match sorting specification
 
+<!-- originally shared as https://rentry.org/omegat-match-ranking-specs -->
+<!-- originally shared as https://rentry.org/match-ranking-specs (not editable, edit code lost) -->
+
 ## Introduction 
 
 The goal of this document is to document match ranking (or sorting) criteria and make them explicit and clear. Documented criteria can help gear new developments, patches and fixes.

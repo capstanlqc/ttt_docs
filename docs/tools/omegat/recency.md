@@ -1,6 +1,5 @@
 ---
 share: true
-where: 
 ---
 
 # Recency-based auto-population
@@ -38,15 +37,14 @@ Also, if a match from `/tm/update` is selected and use, not only the translation
 
 For example, assuming this is the current translation in the working TM (`omegat/project_save.tmx`):
 
-``` xml
+```xml
 <tu>
   <tuv lang="en">
 	<seg>foo</seg>
   </tuv>
   <tuv lang="es-ES" 
     changeid="souto" changedate="20201111T000000Z" 
-    creationid="souto" creationdate="20201111T000000Z"
-  >
+    creationid="souto" creationdate="20201111T000000Z">
 	<seg>bar</seg>
   </tuv>
 </tu>
@@ -61,8 +59,7 @@ If a TMX file is added to `/tm/update` containing the following entry:
   </tuv>
   <tuv lang="es-ES" 
     changeid="fulano" changedate="20232323T123456Z"
-    creationid="fulano" creationdate="20232323T123456Z"
-  >
+    creationid="fulano" creationdate="20232323T123456Z">
 	<seg>QUX</seg>
   </tuv>
 </tu>
@@ -78,8 +75,7 @@ Then the current translation changes to (see selected row) the following in the 
   </tuv>
   <tuv lang="es-ES" 
     changeid="fulano" changedate="20232323T123456Z" 
-    creationid="souto" creationdate="20201111T000000Z"
-  >
+    creationid="souto" creationdate="20201111T000000Z">
 	<seg>QUX</seg>
   </tuv>
 </tu>

@@ -1,4 +1,4 @@
-# Creating a signed OmegaT installer
+# ! Creating a signed OmegaT installer
 
 ## Getting started
 
