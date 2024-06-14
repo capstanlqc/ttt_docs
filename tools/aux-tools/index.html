@@ -15,11 +15,11 @@
       
       
       <link rel="icon" href="../../_assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.1.16">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.1.16">
     
     
       
-        <title>Auxiliary tools - 🇹 🇹 🇹 · 🇩 🇴 🇨 🇸</title>
+        <title>Auxiliary tools (installation) - 🇹 🇹 🇹 · 🇩 🇴 🇨 🇸</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#auxiliary-tools" class="md-skip">
+        <a href="#auxiliary-tools-installation" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Auxiliary tools
+              Auxiliary tools (installation)
             
           </span>
         </div>
@@ -943,7 +943,7 @@
   
     <li class="md-nav__item">
       <a href="../omegat/omt_custom_tech/" class="md-nav__link">
-        Customation howto
+        Customization script (5x)
       </a>
     </li>
   
@@ -2065,6 +2065,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tmx-editor" class="md-nav__link">
+    TMX Editor
+  </a>
+  
+    <nav class="md-nav" aria-label="TMX Editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unix-like-systems-linux-or-mac" class="md-nav__link">
+    Unix-like systems (Linux or Mac)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2092,7 +2119,8 @@
 
 
 
-<h1 id="auxiliary-tools">Auxiliary tools<a class="headerlink" href="#auxiliary-tools" title="Permanent link">&para;</a></h1>
+<h1 id="auxiliary-tools-installation">Auxiliary tools (installation)<a class="headerlink" href="#auxiliary-tools-installation" title="Permanent link">&para;</a></h1>
+<p>This page lists instructions about installing some tools that don't have a straight-foward installation process.</p>
 <h2 id="autohotkey">AutoHotKey<a class="headerlink" href="#autohotkey" title="Permanent link">&para;</a></h2>
 <p>AutoHotKey can be used to create global autotext macros. In particular, if you need to insert non-breaking spaces or other special characters, you might find this AutoHotKey script helpful.</p>
 <ol>
@@ -2110,43 +2138,42 @@
 </li>
 </ol>
 <p>This script will be run automatically the next time your machine starts.</p>
-<h1 id="tmx-editor">TMX Editor<a class="headerlink" href="#tmx-editor" title="Permanent link">&para;</a></h1>
-<h2 id="for-windows">For Windows:<a class="headerlink" href="#for-windows" title="Permanent link">&para;</a></h2>
-<p>you will need 
-- a Github account, log in to it in the default browser
-- admin rights in your machine</p>
-<p>install dependencies</p>
+<h2 id="tmx-editor">TMX Editor<a class="headerlink" href="#tmx-editor" title="Permanent link">&para;</a></h2>
+<h3 id="unix-like-systems-linux-or-mac">Unix-like systems (Linux or Mac)<a class="headerlink" href="#unix-like-systems-linux-or-mac" title="Permanent link">&para;</a></h3>
+<p>Just RTD.</p>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<p>You will need:</p>
 <ul>
-<li>Insta JDK 17 from Temurin... add to PATH</li>
-<li>Run PowerShell as administrator</li>
-<li>Install Chocolatey, restart PS</li>
-<li>choco install git -y</li>
-<li>choco install gh -y</li>
-<li>choco install ant -y</li>
-<li>choco install nodejs-lts -y</li>
-<li>restart PS</li>
-<li>npm install typescript (or choco install typescript)</li>
-<li>optional: update npm</li>
-<li>check all versions: node -v, npm -v, ant -version, java -version</li>
-<li>
-<p>restart PS as admin</p>
-</li>
-<li>
-<p>mkdir C:\Users\USER\Apps</p>
-</li>
-<li>cd C:\Users\USER\Apps</li>
-<li>gh repo clone rmraya/TMXEditor</li>
-<li>cd TMXEditor</li>
-<li>ant</li>
-<li>npm install</li>
-<li>npm start</li>
+<li>a Github account (tip: log in to it in the default browser)</li>
+<li>admin rights in your machine</li>
 </ul>
-<p>cultural shift -- in PM attitude 
-judgement calls -- </p>
-<p>KS articles --- </p>
-<p>Tanya -- filter outlook</p>
-<h2 id="for-linux-and-mac">For Linux and Mac<a class="headerlink" href="#for-linux-and-mac" title="Permanent link">&para;</a></h2>
-<p>Just follow the documentation.</p>
+<p>Install dependencies:</p>
+<ul>
+<li>Install JDK 21 from <a href="https://adoptium.net/temurin/releases/">Temurin</a> (and add it to PATH).</li>
+<li>Run PowerShell as administrator.</li>
+<li><a href="https://chocolatey.org/install">Install Chocolatey</a>.</li>
+<li>Restart PowerShell as admin and run:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>choco install git -y 
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>choco install gh -y
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>choco install ant -y
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>choco install nodejs-lts -y
+</span></code></pre></div></li>
+<li>Restart PowerShell as admin, and run <code>npm install typescript</code> (or <code>choco install typescript</code>).</li>
+<li>Optional: update npm</li>
+<li>Check all versions: <code>node -v</code>, <code>npm -v</code>, <code>ant -version</code>, <code>java -version</code></li>
+<li>Restart PowerShell as admin, finally:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir C:\Users\USER\Apps
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cd C:\Users\USER\Apps
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>gh repo clone rmraya/TMXEditor
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>cd TMXEditor
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ant
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>npm install
+</span></code></pre></div></li>
+</ul>
+<p>To run TMX Editor:</p>
+<ul>
+<li><code>npm start</code></li>
+</ul>
 
 
 
