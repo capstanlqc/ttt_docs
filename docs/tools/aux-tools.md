@@ -3,7 +3,9 @@ tags:
   - Audience꞉User
 ---
 
-# Auxiliary tools
+# Auxiliary tools (installation)
+
+This page lists instructions about installing some tools that don't have a straight-foward installation process.
 
 ## AutoHotKey
 
@@ -19,46 +21,44 @@ AutoHotKey can be used to create global autotext macros. In particular, if you n
 
 This script will be run automatically the next time your machine starts.
 
-# TMX Editor
+## TMX Editor
 
-## For Windows:
+### Unix-like systems (Linux or Mac)
 
-you will need 
-- a Github account, log in to it in the default browser
+Just RTD.
+
+### Windows
+
+You will need:
+
+- a Github account (tip: log in to it in the default browser)
 - admin rights in your machine
 
-install dependencies
+Install dependencies:
 
-- Insta JDK 17 from Temurin... add to PATH
-- Run PowerShell as administrator
-- Install Chocolatey, restart PS
-- choco install git -y
-- choco install gh -y
-- choco install ant -y
-- choco install nodejs-lts -y
-- restart PS
-- npm install typescript (or choco install typescript)
-- optional: update npm
-- check all versions: node -v, npm -v, ant -version, java -version
-- restart PS as admin
+- Install JDK 21 from [Temurin](https://adoptium.net/temurin/releases/) (and add it to PATH).
+- Run PowerShell as administrator.
+- [Install Chocolatey](https://chocolatey.org/install).
+- Restart PowerShell as admin and run:
+    ```
+    choco install git -y 
+    choco install gh -y
+    choco install ant -y
+    choco install nodejs-lts -y
+    ``` 
+- Restart PowerShell as admin, and run `npm install typescript` (or `choco install typescript`).
+- Optional: update npm
+- Check all versions: `node -v`, `npm -v`, `ant -version`, `java -version`
+- Restart PowerShell as admin, finally:
+    ```
+    mkdir C:\Users\USER\Apps
+    cd C:\Users\USER\Apps
+    gh repo clone rmraya/TMXEditor
+    cd TMXEditor
+    ant
+    npm install
+    ``` 
 
-- mkdir C:\Users\USER\Apps
-- cd C:\Users\USER\Apps
-- gh repo clone rmraya/TMXEditor
-- cd TMXEditor
-- ant
-- npm install
-- npm start
+To run TMX Editor:
 
-
-cultural shift -- in PM attitude 
-judgement calls -- 
-
-KS articles --- 
-
-Tanya -- filter outlook
-
-
-## For Linux and Mac
-
-Just follow the documentation.
+- `npm start`
