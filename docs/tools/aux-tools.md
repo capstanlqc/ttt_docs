@@ -38,7 +38,7 @@ Install dependencies:
 
 - Install JDK 21 from [Temurin](https://adoptium.net/temurin/releases/) (and add it to PATH).
 - Run PowerShell as administrator.
-- [Install Chocolatey](https://chocolatey.org/install).
+- [Install Chocolatey for Individual Use](https://chocolatey.org/install).
 - Restart PowerShell as admin and run:
     ```
     choco install git -y 
