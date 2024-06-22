@@ -1,4 +1,9 @@
-# ! Creating a signed OmegaT installer
+---
+tags:
+  - Audience꞉Tech
+---
+
+# Creating a signed OmegaT installer
 
 ## Getting started
 
@@ -146,3 +151,5 @@ If the process works, the installer will be saved in folder `./build/distributio
 - https://shop.certum.eu/open-source-code-signing.html
 - https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/92.CodeSigning.md
 - https://github.com/amake/innosetup-docker
+
+<!-- source: https://rentry.org/build_omegat_jre11_win64 -->

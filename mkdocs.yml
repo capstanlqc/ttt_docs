@@ -31,8 +31,7 @@ nav:
           - tools/okapi/index.md
           - tools/okapi/filters.md
       - ★ OmegaT:
-          - tools/omegat/building.md
-          - tools/omegat/mk-win64-jre-signed-omegat-installer.md
+          - tools/omegat/win64-jre-signed-build.md
           - Custom configuration:
               - Customization roadmap: tools/omegat/omt_custom_roadmap.md
               - Customation howto: tools/omegat/omt_custom_tech.md
