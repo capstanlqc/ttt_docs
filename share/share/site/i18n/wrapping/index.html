@@ -10,27 +10,27 @@
         <meta name="author" content="cApStAn TTT">
       
       
-        <link rel="canonical" href="https://capstanlqc.github.com/ttt_docs/tools/omegat/building/">
+        <link rel="canonical" href="https://capstanlqc.github.com/ttt_docs/i18n/wrapping/">
       
       
-        <link rel="prev" href="../../okapi/filters/">
+        <link rel="prev" href="../authoring-tips/">
       
       
-        <link rel="next" href="../mk-win64-jre-signed-omegat-installer/">
+        <link rel="next" href="../hyphenation/">
       
-      <link rel="icon" href="../../../_assets/favicon.ico">
+      <link rel="icon" href="../../_assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.1.16">
     
     
       
-        <title>! Creating a signed OmegaT installer - 🇹 🇹 🇹 · 🇩 🇴 🇨 🇸</title>
+        <title>Text wrapping - 🇹 🇹 🇹 · 🇩 🇴 🇨 🇸</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../_assets/css/extra.css">
+      <link rel="stylesheet" href="../../_assets/css/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-a-signed-omegat-installer" class="md-skip">
+        <a href="#references" class="md-skip">
           Skip to content
         </a>
       
@@ -93,9 +93,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" class="md-header__button md-logo" aria-label="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" data-md-component="logo">
+    <a href="../.." title="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" class="md-header__button md-logo" aria-label="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" data-md-component="logo">
       
-  <img src="../../../_assets/img/cApStAn_symbolesensemble_blanc.png" alt="logo">
+  <img src="../../_assets/img/cApStAn_symbolesensemble_blanc.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ! Creating a signed OmegaT installer
+              Text wrapping
             
           </span>
         </div>
@@ -124,9 +124,9 @@
             
             
             
-            <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="capstan" data-md-color-primary="midnight-blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="capstan" data-md-color-primary="midnight-blue" data-md-color-accent="indigo"  aria-label="Switch to dark-mode"  type="radio" name="__palette" id="__palette_1">
             
-              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_3" hidden>
+              <label class="md-header__button md-icon" title="Switch to dark-mode" for="__palette_2" hidden>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
               </label>
             
@@ -134,19 +134,9 @@
             
             
             
-            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="capstan" data-md-color-primary="midnight-blue" data-md-color-accent="indigo"  aria-label="Switch to dark-mode"  type="radio" name="__palette" id="__palette_2">
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="midnight-blue" data-md-color-accent="indigo"  aria-label="Switch to light-mode"  type="radio" name="__palette" id="__palette_2">
             
-              <label class="md-header__button md-icon" title="Switch to dark-mode" for="__palette_1" hidden>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
-              </label>
-            
-          
-            
-            
-            
-            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="midnight-blue" data-md-color-accent="indigo"  aria-label="Switch to light-mode"  type="radio" name="__palette" id="__palette_3">
-            
-              <label class="md-header__button md-icon" title="Switch to light-mode" for="__palette_2" hidden>
+              <label class="md-header__button md-icon" title="Switch to light-mode" for="__palette_1" hidden>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
               </label>
             
@@ -214,9 +204,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" class="md-nav__button md-logo" aria-label="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" data-md-component="logo">
+    <a href="../.." title="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" class="md-nav__button md-logo" aria-label="🇹 🇹 🇹 · 🇩 🇴 🇨 🇸" data-md-component="logo">
       
-  <img src="../../../_assets/img/cApStAn_symbolesensemble_blanc.png" alt="logo">
+  <img src="../../_assets/img/cApStAn_symbolesensemble_blanc.png" alt="logo">
 
     </a>
     🇹 🇹 🇹 · 🇩 🇴 🇨 🇸
@@ -253,14 +243,12 @@
         
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../projects/">Projects</a>
+          <a href="../../projects/">Projects</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -318,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/flash/flash_automation/" class="md-nav__link">
+      <a href="../../projects/flash/flash_automation/" class="md-nav__link">
         👤 Automated workflow
       </a>
     </li>
@@ -332,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/flash/flowchart/" class="md-nav__link">
+      <a href="../../projects/flash/flowchart/" class="md-nav__link">
         ☆ Automation diagram
       </a>
     </li>
@@ -346,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/flash/FLASH_style-guide_pol-POL/" class="md-nav__link">
+      <a href="../../projects/flash/FLASH_style-guide_pol-POL/" class="md-nav__link">
         ☆ Style guide [pl-PL]
       </a>
     </li>
@@ -391,7 +379,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../projects/pisa/">★ PISA 2025</a>
+          <a href="../../projects/pisa/">★ PISA 2025</a>
           
             <label for="__nav_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -414,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/pisa/errors/" class="md-nav__link">
+      <a href="../../projects/pisa/errors/" class="md-nav__link">
         Errors
       </a>
     </li>
@@ -428,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../☆ projects/pisa/trainings.md" class="md-nav__link">
+      <a href="../../☆ projects/pisa/trainings.md" class="md-nav__link">
         None
       </a>
     </li>
@@ -442,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/pisa/pisa2025_trend-transfer_guide/" class="md-nav__link">
+      <a href="../../projects/pisa/pisa2025_trend-transfer_guide/" class="md-nav__link">
         👤 Trend transfer
       </a>
     </li>
@@ -483,7 +471,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../projects/ipsos/">★ IPSOS</a>
+          <a href="../../projects/ipsos/">★ IPSOS</a>
           
             <label for="__nav_1_4">
               <span class="md-nav__icon md-icon"></span>
@@ -506,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/ipsos/workflow_automation/" class="md-nav__link">
+      <a href="../../projects/ipsos/workflow_automation/" class="md-nav__link">
         👤 Workflow automation
       </a>
     </li>
@@ -521,86 +509,6 @@
 
             
           
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../projects/ysc/">★ YSC</a>
-          
-            <label for="__nav_1_5">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_1_5">
-          <span class="md-nav__icon md-icon"></span>
-          ★ YSC
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../projects/ysc/project-setup/" class="md-nav__link">
-        Project setup
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../projects/ysc/gender-adaptation/" class="md-nav__link">
-        Gender adaptation
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -613,25 +521,21 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
         
           
             
-          
-        
           
         
           
@@ -645,7 +549,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">L10n tools</a>
+          <a href="../../tools/">L10n tools</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -653,7 +557,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           L10n tools
@@ -688,7 +592,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../okapi/">★ Okapi</a>
+          <a href="../../tools/okapi/">★ Okapi</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -711,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../okapi/filters/" class="md-nav__link">
+      <a href="../../tools/okapi/filters/" class="md-nav__link">
         Filters
       </a>
     </li>
@@ -730,16 +634,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
       
       
         
@@ -768,7 +670,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           ★ OmegaT
@@ -779,126 +681,10 @@
               
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          ! Creating a signed OmegaT installer
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        ! Creating a signed OmegaT installer
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting started
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#before-building" class="md-nav__link">
-    Before building
-  </a>
-  
-    <nav class="md-nav" aria-label="Before building">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setting-up-docker" class="md-nav__link">
-    Setting up docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setting-up-java" class="md-nav__link">
-    Setting up Java
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#activate-the-certificate" class="md-nav__link">
-    Activate the certificate
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-down-to-building" class="md-nav__link">
-    Getting down to building
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting down to building">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#result" class="md-nav__link">
-    Result
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
   
     <li class="md-nav__item">
-      <a href="../mk-win64-jre-signed-omegat-installer/" class="md-nav__link">
-        ! Creating a signed OmegaT installer
+      <a href="../../tools/omegat/building/" class="md-nav__link">
+        Building
       </a>
     </li>
   
@@ -916,7 +702,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
       
       
         
@@ -924,17 +710,15 @@
         
           
         
-          
-        
       
       
-        <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
           Custom configuration
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_3_3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_2">
           <span class="md-nav__icon md-icon"></span>
           Custom configuration
         </label>
@@ -946,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../omt_custom_roadmap/" class="md-nav__link">
+      <a href="../../tools/omegat/omt_custom_roadmap/" class="md-nav__link">
         Customization roadmap
       </a>
     </li>
@@ -960,9 +744,16 @@
   
   
     <li class="md-nav__item">
-      <a href="../omt_custom_tech/" class="md-nav__link">
+      <a href="../../tools/omegat/omt_custom_tech/" class="md-nav__link">
         Customation howto
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -974,16 +765,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../hunspell/" class="md-nav__link">
-        Spell checking
+      <a href="../../tools/omegat/mk-win64-jre-signed-omegat-installer/" class="md-nav__link">
+        Creating a signed OmegaT installer
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1038,8 +822,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../scripts/" class="md-nav__link">
-        ! Scripts
+      <a href="../../tools/omegat/scripts/" class="md-nav__link">
+        Scripts
       </a>
     </li>
   
@@ -1052,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../omt_custom_tech/" class="md-nav__link">
+      <a href="../../tools/omegat/omt_custom_tech/" class="md-nav__link">
         Customization script (5x)
       </a>
     </li>
@@ -1066,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mk_translatability_report_omt/" class="md-nav__link">
+      <a href="../../tools/omegat/mk_translatability_report_omt/" class="md-nav__link">
         Obtain TA report
       </a>
     </li>
@@ -1080,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../plugins/" class="md-nav__link">
+      <a href="../../tools/omegat/plugins/" class="md-nav__link">
         OMT Package Plugin
       </a>
     </li>
@@ -1094,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LQE/" class="md-nav__link">
+      <a href="../../tools/omegat/LQE/" class="md-nav__link">
         LQE backend
       </a>
     </li>
@@ -1108,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mk_ta_notes_omt/" class="md-nav__link">
+      <a href="../../tools/omegat/mk_ta_notes_omt/" class="md-nav__link">
         👤 !T&A notes
       </a>
     </li>
@@ -1122,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ta_notes/" class="md-nav__link">
+      <a href="../../tools/omegat/ta_notes/" class="md-nav__link">
         👤 !T&A notes [Comments]
       </a>
     </li>
@@ -1156,6 +940,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
@@ -1176,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../errors/" class="md-nav__link">
+      <a href="../../tools/omegat/errors/" class="md-nav__link">
         Errors
       </a>
     </li>
@@ -1190,8 +976,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../fonts/" class="md-nav__link">
+      <a href="../../tools/omegat/fonts/" class="md-nav__link">
         Recommended fonts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/omegat/tickets/" class="md-nav__link">
+        Tickets
       </a>
     </li>
   
@@ -1248,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../omt2xliff/" class="md-nav__link">
+      <a href="../../tools/omegat/omt2xliff/" class="md-nav__link">
         Outsource project as XLIFF
       </a>
     </li>
@@ -1262,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../99_automation/" class="md-nav__link">
+      <a href="../../tools/omegat/99_automation/" class="md-nav__link">
         ☆ Reconciliation packages
       </a>
     </li>
@@ -1276,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../team_projects/" class="md-nav__link">
+      <a href="../../tools/omegat/team_projects/" class="md-nav__link">
         Team projects with Github
       </a>
     </li>
@@ -1290,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../team_projects_trblsht/" class="md-nav__link">
+      <a href="../../tools/omegat/team_projects_trblsht/" class="md-nav__link">
         ☆ Team project troubleshoot
       </a>
     </li>
@@ -1346,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pisa25_omegat_test01/" class="md-nav__link">
+      <a href="../../tools/omegat/pisa25_omegat_test01/" class="md-nav__link">
         PISA 2025 OmegaT testing
       </a>
     </li>
@@ -1360,7 +1160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../omegat5_testing/" class="md-nav__link">
+      <a href="../../tools/omegat/omegat5_testing/" class="md-nav__link">
         OmegaT 5 - installation and testing guide
       </a>
     </li>
@@ -1374,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../omegat5_testing_adhoc/" class="md-nav__link">
+      <a href="../../tools/omegat/omegat5_testing_adhoc/" class="md-nav__link">
         OmegaT 5 - installation and testing guide
       </a>
     </li>
@@ -1428,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autotext/" class="md-nav__link">
+      <a href="../../tools/omegat/autotext/" class="md-nav__link">
         Autotext
       </a>
     </li>
@@ -1442,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nbsp/" class="md-nav__link">
+      <a href="../../tools/omegat/nbsp/" class="md-nav__link">
         No-break spaces
       </a>
     </li>
@@ -1498,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pisa25_omegat_teamproj_steps/" class="md-nav__link">
+      <a href="../../tools/omegat/pisa25_omegat_teamproj_steps/" class="md-nav__link">
         Instructions for PISA 25 translators (testing in fr)
       </a>
     </li>
@@ -1512,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../omt_custom_user/" class="md-nav__link">
+      <a href="../../tools/omegat/omt_custom_user/" class="md-nav__link">
         Customization ADD 2 GUIDES
       </a>
     </li>
@@ -1526,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../omt_team_steps4xlat/" class="md-nav__link">
+      <a href="../../tools/omegat/omt_team_steps4xlat/" class="md-nav__link">
         Download git ADD 2 GUIDES
       </a>
     </li>
@@ -1554,22 +1354,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aux-tools.md" class="md-nav__link">
+      <a href="../../aux-tools.md" class="md-nav__link">
         ★ Auxiliary tools
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tickets/omegat-tickets/" class="md-nav__link">
-        ★ Tickets
       </a>
     </li>
   
@@ -1624,7 +1410,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../tech/">Tech</a>
+          <a href="../../tech/">Tech</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1647,7 +1433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tech/mk_dir_strukt/" class="md-nav__link">
+      <a href="../../tech/mk_dir_strukt/" class="md-nav__link">
         👤 Create folder structure
       </a>
     </li>
@@ -1661,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tech/oneliners/" class="md-nav__link">
+      <a href="../../tech/oneliners/" class="md-nav__link">
         Terminal oneliners
       </a>
     </li>
@@ -1675,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tech/support/" class="md-nav__link">
+      <a href="../../tech/support/" class="md-nav__link">
         Support
       </a>
     </li>
@@ -1689,7 +1475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tech/utils/" class="md-nav__link">
+      <a href="../../tech/utils/" class="md-nav__link">
         Utilities
       </a>
     </li>
@@ -1703,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tech/xls2tmx/" class="md-nav__link">
+      <a href="../../tech/xls2tmx/" class="md-nav__link">
         Convert multilingual Excel to TMX
       </a>
     </li>
@@ -1717,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tech/update-docs.md" class="md-nav__link">
+      <a href="../../tech/update-docs.md" class="md-nav__link">
         How to update these docs
       </a>
     </li>
@@ -1731,7 +1517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tech/share-in-ks.md" class="md-nav__link">
+      <a href="../../tech/share-in-ks.md" class="md-nav__link">
         How to share a doc in KS
       </a>
     </li>
@@ -1787,7 +1573,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../capps/">cApps</a>
+          <a href="../../capps/">cApps</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1810,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../capps/langtags/" class="md-nav__link">
+      <a href="../../capps/langtags/" class="md-nav__link">
         ☆ Langtags
       </a>
     </li>
@@ -1824,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../capps/veryfire/" class="md-nav__link">
+      <a href="../../capps/veryfire/" class="md-nav__link">
         ☆ VeryFire
       </a>
     </li>
@@ -1838,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../capps/vf4ta/" class="md-nav__link">
+      <a href="../../capps/vf4ta/" class="md-nav__link">
         ☆ VF4TA
       </a>
     </li>
@@ -1852,7 +1638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../capps/memoryln/" class="md-nav__link">
+      <a href="../../capps/memoryln/" class="md-nav__link">
         ☆ MemoryLn
       </a>
     </li>
@@ -1866,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../capps/memoryln_tm_mngmt/" class="md-nav__link">
+      <a href="../../capps/memoryln_tm_mngmt/" class="md-nav__link">
         ☆ MemoryLn TM management
       </a>
     </li>
@@ -1880,7 +1666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../capps/xdiff/" class="md-nav__link">
+      <a href="../../capps/xdiff/" class="md-nav__link">
         ☆ xDiff
       </a>
     </li>
@@ -1894,7 +1680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../capps/xdiff_automation/" class="md-nav__link">
+      <a href="../../capps/xdiff_automation/" class="md-nav__link">
         ☆ xDiff automation
       </a>
     </li>
@@ -1914,23 +1700,23 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
         
           
             
-          
-        
           
         
           
@@ -1952,7 +1738,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../i18n/">i18n guides</a>
+          <a href="../">i18n guides</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1960,7 +1746,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           i18n guides
@@ -1975,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../i18n/xliff-prepp-best-practices/" class="md-nav__link">
+      <a href="../xliff-prepp-best-practices/" class="md-nav__link">
         ☆ XLIFF preparation
       </a>
     </li>
@@ -1989,7 +1775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../i18n/authoring-tips/" class="md-nav__link">
+      <a href="../authoring-tips/" class="md-nav__link">
         ☆ Authoring tips
       </a>
     </li>
@@ -2001,25 +1787,48 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../../i18n/trend_math_cg_6b/" class="md-nav__link">
-        ☆ Markdown (CG example)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
+    
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../../i18n/wrapping/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Text wrapping
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Text wrapping
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2031,8 +1840,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../i18n/hyphenation/" class="md-nav__link">
-        ☆ Hyphenation
+      <a href="../hyphenation/" class="md-nav__link">
+        Hyphenation
       </a>
     </li>
   
@@ -2045,7 +1854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../i18n/sorting.md" class="md-nav__link">
+      <a href="../sorting.md" class="md-nav__link">
         List sorting
       </a>
     </li>
@@ -2059,7 +1868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../i18n/formatting.md" class="md-nav__link">
+      <a href="../formatting.md" class="md-nav__link">
         Block formatting
       </a>
     </li>
@@ -2073,8 +1882,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../i18n/ssmc/" class="md-nav__link">
-        ☆ Single-source multiple-channel
+      <a href="../trend_math_cg_6b/" class="md-nav__link">
+        CG example in markdown
       </a>
     </li>
   
@@ -2128,7 +1937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../omt_wc/" class="md-nav__link">
+      <a href="../../tools/omegat/omt_wc/" class="md-nav__link">
         👤 Wordcount analysis in Ur
       </a>
     </li>
@@ -2159,8 +1968,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2169,70 +1976,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting started
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#before-building" class="md-nav__link">
-    Before building
-  </a>
-  
-    <nav class="md-nav" aria-label="Before building">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setting-up-docker" class="md-nav__link">
-    Setting up docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setting-up-java" class="md-nav__link">
-    Setting up Java
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#activate-the-certificate" class="md-nav__link">
-    Activate the certificate
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-down-to-building" class="md-nav__link">
-    Getting down to building
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting down to building">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#result" class="md-nav__link">
-    Result
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2251,149 +1997,73 @@
                   
   
 
-  <nav class="md-tags" >
-    
-      
-      
-        <a href="../../../profiles/#audiencetech" class="md-tag">Audience꞉Tech</a>
-      
-    
-  </nav>
 
 
 
+<body>
 
-<h1 id="creating-a-signed-omegat-installer">! Creating a signed OmegaT installer<a class="headerlink" href="#creating-a-signed-omegat-installer" title="Permanent link">&para;</a></h1>
-<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
-<p>The following working environment is recommended:</p>
-<ol>
-<li>A Linux machine (recommended Debian-based) that runs <code>systemctl</code>.
-    &gt; A virtual machine or WSL could be a valid substitute. This guide is based on building on MX Linux (Linux 5.10.0-22-amd64) and <code>apt</code> is used for package installation commands.</li>
-<li>Install dependencies:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ sudo apt install libxrender1 libxtst6 libxi6 libfreetype6 fontconfig gnutls-bin p11tool software-properties-common softhsm2 libengine-pkcs11-openssl osslsigncode icedtea-netx pcsclite pcsc-tools pcscd procertum-cardreader gh
-</span></code></pre></div></li>
-<li>Install docker:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ sudo apt install docker
-</span></code></pre></div></li>
-<li>Adjust the group membership of your user, so that you can run docker images:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ sudo groupadd docker
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$ sudo usermod -aG docker $USER # or: sudo groupadd docker
-</span></code></pre></div></li>
-<li>Restart or log out.</li>
-</ol>
-<h2 id="before-building">Before building<a class="headerlink" href="#before-building" title="Permanent link">&para;</a></h2>
-<h3 id="setting-up-docker">Setting up docker<a class="headerlink" href="#setting-up-docker" title="Permanent link">&para;</a></h3>
-<p>Follow these steps: </p>
-<ol>
-<li>Make sure that <code>docker</code> is in your groups:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ groups
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sys wheel rfkill autologin souto foo bar docker
-</span></code></pre></div></li>
-<li>Start docker:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ systemctl start docker
-</span></code></pre></div></li>
-<li>Check if <code>docker</code> works:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ docker run hello-world
-</span></code></pre></div></li>
-<li>Create a folder for the building process:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ mkdir -p /path/to/omegat-installer
-</span></code></pre></div></li>
-</ol>
-<h3 id="setting-up-java">Setting up Java<a class="headerlink" href="#setting-up-java" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>There are other ways to do this, what follows is what I use and my recommended approach.</p>
-</blockquote>
-<ol>
-<li>Install sdkman (as explained <a href="https://sdkman.io/install">here</a>):
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ curl -s &quot;https://get.sdkman.io&quot; | bash
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$ source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;
-</span></code></pre></div></li>
-<li>Select the Java version that you need, i.e. <code>17.0.4-tem</code> (recommended: make it your default version)
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ sdk use java 17.0.4-tem
-</span></code></pre></div></li>
-<li>Confirm that you have the expected java version:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$ java -version
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>openjdk version &quot;11.0.19&quot; 2023-04-18
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>OpenJDK Runtime Environment Temurin-11.0.19+7 (build 11.0.19+7)
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>OpenJDK 64-Bit Server VM Temurin-11.0.19+7 (build 11.0.19+7, mixed mode)
-</span></code></pre></div></li>
-<li>Download the zipped JRE bundle for the same version (file called <code>OpenJDK11U-jre_x64_windows_hotspot_11.0.19_7.zip</code>) from https://adoptium.net/ for the following criteria:<ul>
-<li>Operating system: Windows</li>
-<li>Architecture: x64</li>
-<li>Package type: JRE</li>
-<li>Version: 11 - LTS</li>
-</ul>
-</li>
-<li>Move the zipped JRE bundle to your building folder:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ mv ~/Downloads/OpenJDK11U-jre_x64_windows_hotspot_11.0.19_7.zip /path/to/omegat-installer/
-</span></code></pre></div></li>
-</ol>
-<h3 id="activate-the-certificate">Activate the certificate<a class="headerlink" href="#activate-the-certificate" title="Permanent link">&para;</a></h3>
-<p>The steps in this section only need to be done once. If that has already been done and you already have a valid binary file of the certificate (the file with <code>.cer</code> extension) which hasn't expired, you can skip to the next section.</p>
-<p>Using Certum certificate, go through the procedure to activate the certificate. Through that process, you will have to define a PIN number for the common profile that is used to access the Certum's cryptographic smart card.</p>
-<p>You'll have to run two tools for that: </p>
-<ul>
-<li>the SmartCard Reader (which you have already installed as a dependency)
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$ cd /opt/proCertumCardManager
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>$ proCertumCardManager
-</span></code></pre></div></li>
-<li>and a Crypto tool (which the Certum page will ask you download):
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$ javaws CertumCryptoAgent_en.jnlp
-</span></code></pre></div>
-At the end of the process when the certificate is activated and available for download, download the binary certificate (with a <code>.cer</code> extension) from the Certum page. </li>
-</ul>
-<h2 id="getting-down-to-building">Getting down to building<a class="headerlink" href="#getting-down-to-building" title="Permanent link">&para;</a></h2>
-<p>Ok, let's build the installer.</p>
-<ol>
-<li>Move the certificate file to your building folder : 
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$ mkdir /path/to/omegat-installer/cert/
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>$ mv ~/Downloads/be737b17c8d3f3f0d7bbfae716b0ee1a.cer /path/to/omegat-installer/cert/
-</span></code></pre></div></li>
-<li>Change directory to your building folder: 
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ cd /path/to/omegat-installer/
-</span></code></pre></div></li>
-<li>Clone the OmegaT source code repository:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ gh repo clone omegat-org/omegat
-</span></code></pre></div></li>
-<li>
-<p>Change directory to the <code>omegat</code> folder:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$ cd omegat
-</span></code></pre></div>
-Check out any specific branch if the main/master branch is not what you want to use.</p>
-</li>
-<li>
-<p>Create your <code>local.properties</code> file:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$ cp local.properties.example local.properties
-</span></code></pre></div>
-6. Add your certificate details to the <code>local.properties</code> file:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>pkcs11module=/usr/lib64/crypto3PKCS/sc30pkcs11-3.0.6.68-MS.so
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>winCodesignPassword=**** # your PIN number
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>winCodesignCert=/path/to/omegat-installer/cert/be737b17c8d3f3f0d7bbfae716b0ee1a.cer
-</span></code></pre></div>
-Defining <code>pkcs11cert</code> and <code>winCodesignTimestampUrl</code> is not necessary.</p>
-</li>
-<li>
-<p>Kindly ask Gradle to build OmegaT from source and bundle it with the JRE you downloaded into a Windows setup package:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>$ ./gradlew winJRE64Signed
-</span></code></pre></div></p>
-</li>
-</ol>
-<h3 id="result">Result<a class="headerlink" href="#result" title="Permanent link">&para;</a></h3>
-<p>If the process works, the installer will be saved in folder <code>./build/distributions</code>:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$ cd /path/to/omegat-installer/omegat
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>$ find . -name &quot;*.exe&quot;
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>./build/distributions/OmegaT_6.1.0_Beta_Windows_64_Signed.exe
-</span></code></pre></div></p>
-<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
-<ul>
-<li>https://omegat.sourceforge.io/manual-standard/en/chapter.installing.and.running.html#building.OmegaT.from.source</li>
-<li>https://github.com/omegat-org/omegat/tree/master/docs_devel</li>
-<li>https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/93.BuildingInstallerPackage.md</li>
-<li>https://shop.certum.eu/open-source-code-signing.html</li>
-<li>https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/92.CodeSigning.md</li>
-<li>https://github.com/amake/innosetup-docker</li>
-</ul>
-<!-- source: https://rentry.org/build_omegat_jre11_win64 -->
+<h1>Wrapping text with CSS</h1>
+
+<h2>General consideration</h2>
+
+<p>The most important principle is that content and presentation should be independent independent. Linguists (translators, verifiers, etc.) should focus on the text and not be asked to deal with layout and typesetting, which is the job of the publishers (DTP, CSS engineers, etc.). Following that principle helps avoid situations where text is over-fitted to a specific context/medium while at the same time compromising its chances of it being reused in other contexts/media.</p>
+
+<p>Of course, that excludes semantic formatting that applies to specific inline elements (e.g. bold, italics, etc.). </p>
+
+<p>In a nutshell, asking linguists to insert line breaks, hyphens, extra spacing, etc. to fake a certain visual effect (wrapping, indentation, etc.) in the layout is a bad idea. Instead, in a web publication as is our case, styles (CSS) should be used for that, and often that requires language-specific CSS rules. Let me know if you or your CSS crew need more details about this.</p>
+
+<h2>In action</h2>
+
+<p>Let's see what the same text looks like both forcing wrapping manually (by explicitly inserting line breaks in the text and letting the browser take care of wrapping automatically (with CSS styles), in different widths.</p>
+
+<h3>Context 1 -- Width: 25em</h3>
+
+<p>The text below looks the same when line breaks are inserted manually or when the text is wrapped automatcially through styling rules.</p>
+
+<h4>With line breaks:</h4>
+
+<div class="width30"> Since the 1970s, scientists have been <br/> worried about the amount of Dioxin, a <br/> toxin in fish caught in Baltic Sea.</div>
+
+<br/>
+
+<div class="width30"> 1970年代以来、科学者たちはバルト海で捕獲された魚<br/>に含まれる毒素であるダイオキシンの量を懸念してき<br/>た。</div>
+
+<h4>With styles:</h4>
+
+<div class="width30 test"> Since the 1970s, scientists have been worried about the amount of Dioxin, a toxin in fish caught in Baltic Sea.</div>
+
+<br/>
+
+<div class="width30"> 1970年代以来、科学者たちはバルト海で捕獲された魚に含まれる毒素であるダイオキシンの量を懸念してきた。</div>
+
+<h3>Context 2 -- Width: 18em</h3>
+
+<p>The same text as above is rendered correctly when the text is wrapped automatcially through styling rules but it scales badly where line breaks were inserted manually.</p>
+
+<h4>With line breaks (in the same position as above):</h4>
+
+<div class="width18"> Since the 1970s, scientists have been <br/> worried about the amount of Dioxin, a <br/> toxin in fish caught in Baltic Sea.</div>
+
+<br/>
+
+<div class="width18"> 1970年代以来、科学者たちはバルト海で捕獲された魚<br/>に含まれる毒素であるダイオキシンの量を懸念してき<br/>た。</div>
+
+<h4>With styles:</h4>
+
+<div class="width18 test"> Since the 1970s, scientists have been worried about the amount of Dioxin, a toxin in fish caught in Baltic Sea.</div>
+
+<br/>
+
+<div class="width18 test"> 1970年代以来、科学者たちはバルト海で捕獲された魚に含まれる毒素であるダイオキシンの量を懸念してきた。</div>
+
+</body>
+
+<!-- another way:
+https://www.html5canvastutorials.com/tutorials/html5-canvas-wrap-text-tutorial/
+-->
+
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p><a href="https://jsfiddle.net/msoutopico/08btgs5j/3/">Code</a></p>
 
 
 
@@ -2435,13 +2105,13 @@ Defining <code>pkcs11cert</code> and <code>winCodesignTimestampUrl</code> is not
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.instant", "navigation.tracking", "navigation.prune", "navigation.top", "navigation.sections", "toc.follow", "navigation.indexes", "content.footnote.tooltips", {"hidden": "tech"}], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.prune", "navigation.top", "navigation.sections", "navigation.path", "toc.follow", "navigation.indexes", {"hidden": "tech"}], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
       
         
-          <script src="../../../_assets/js/extra.js"></script>
+          <script src="../../_assets/js/extra.js"></script>
         
       
     

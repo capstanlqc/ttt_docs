@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+        <link rel="stylesheet" href="github-markdown.css">
+        <style>
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+        
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style>
+    </head>
+    <body class="markdown-body">
+    <h1>Recency-based auto-population</h1>
+<h3>Title</h3>
+<p>Recency-based auto-population, or matches from /tm/update folder overwrite if more recent.</p>
+<h3>Summary</h3>
+<p>For each segment, OmegaT will find the most recent exact match in<code>/tm/update</code>, and it will compare its timestamp with the timestamp of the existing translation in the current segment and keep the translation that has the most recent timestamp: </p>
+<ul>
+<li>If the match in <code>/tm/update</code> is more recent, then the current translation in the project will be ovewritten with it. </li>
+<li>If the the current transaltion is more recent than the match in <code>/tm/update</code>, then nothing changes.</li>
+</ul>
+<p>!!! info
+    A translation's <em>timestamp</em> in this ticket referes to the <code>changedate</code> property if it exits, otherwise the <code>creationdate</code> property. If the entry has none of those two properties, then that translation will be considered as older than any other that does have a timestamp. </p>
+<p>In other words, <code>tm/update</code> provides a behaviour between <code>tm/auto</code> and <code>tm/enforce</code>: while the former never overwrittes an existing translation and the second always overwrites, an exact match from <code>tm/update</code> would overwrite if it is more recent than the existing translation.</p>
+<p>If the segment is untranslated, then an exact match from <code>/tm/update</code> simply auto-populates the segment (just like in the other two auto-population cases).</p>
+<p>Just as is the case with matches from <code>/tm/auto</code>, matches coming from <code>/tm/update</code> should be editable.</p>
+<p>!!! warning
+    From the above it can be inferred that the behaviour of matches from <code>/tm/update</code> and matches from <code>/tm/auto</code> are alike in most cases but not always. In particular, if there's an alternative translation in the project and an alternative translation in <code>/tm/auto</code>, the latter overwrites the former by default -- however the behaviour of a match from <code>/tm/update</code> should be different in this case: the newer alternative translation in the project should be prevail over the older alternative in <code>/tm/update</code>.</p>
+<h3>Metadata properties</h3>
+<p>When OmegaT finds a (more recent) translation in a TMX file under /tm/update and uses that as the translation of a segment, it also adds an origin property <code>&lt;prop type="x-auto"&gt;update&lt;/prop&gt;</code> (or <code>&lt;prop type="x-update"&gt;update&lt;/prop&gt;</code>, whatever is appropriate) as a child node of the entry’s <code>&lt;tu&gt;</code> node.</p>
+<p>A background color can be then assigned to translations with that property.</p>
+<p>Also, if a match from <code>/tm/update</code> is selected and use, not only the translation is registered in the working TM, but also the metadata properties (<code>changeid</code> and <code>changedate</code>). </p>
+<p>For example, assuming this is the current translation in the working TM (<code>omegat/project_save.tmx</code>):</p>
+<p><code>xml
+&lt;tu&gt;</code></p>
+<p>```xml
+<tu>
+  <tuv lang="en">
+    <seg>foo</seg>
+  </tuv>
+  &lt;tuv lang="es-ES" 
+    changeid="souto" changedate="20201111T000000Z" 
+    creationid="souto" creationdate="20201111T000000Z"</p>
+<blockquote>
+<pre><code>&lt;seg&gt;bar&lt;/seg&gt;
+</code></pre>
+<p></tuv>
+</tu>
+```</p>
+</blockquote>
+<p>If a TMX file is added to <code>/tm/update</code> containing the following entry:</p>
+<p>``` xml
+<tu>
+  <tuv lang="en">
+    <seg>foo</seg>
+  </tuv>
+  &lt;tuv lang="es-ES" 
+    changeid="fulano" changedate="20232323T123456Z"
+    creationid="fulano" creationdate="20232323T123456Z"</p>
+<blockquote>
+<pre><code>&lt;seg&gt;QUX&lt;/seg&gt;
+</code></pre>
+<p></tuv>
+</tu>
+```</p>
+</blockquote>
+<p>Then the current translation changes to (see selected row) the following in the working TM:</p>
+<p>``` xml hl_lines="7"
+<tu>
+  <prop type="x-auto">update</prop>
+  <tuv lang="en">
+    <seg>foo</seg>
+  </tuv>
+  &lt;tuv lang="es-ES" 
+    changeid="fulano" changedate="20232323T123456Z" 
+    creationid="souto" creationdate="20201111T000000Z"</p>
+<blockquote>
+<pre><code>&lt;seg&gt;QUX&lt;/seg&gt;
+</code></pre>
+<p></tuv>
+</tu>
+```</p>
+</blockquote>
+<h3>Interaction with match sorting criteria</h3>
+<p>This feature adds the notion of "recency" to the match sorting criteria (summarized <a href="https://capstanlqc.github.io/ttt_docs/tools/omegat/match-sorting-specs/">here</a>). At this point those criteria are: similarity score, auto-population precedence, context binding, position of the file in the list of files and position of the match in the file.</p>
+<p>Let's consider how recency interacts with each: </p>
+<h4>Similarity score</h4>
+<p>Recency will only be considered for exact matches (100% score).</p>
+<h4>Auto-population precedence</h4>
+<p>OmegaT needs to decide when a match from <code>/tm/update</code> must be selected and used over a match from <code>/tm/auto</code> and <code>/tm/enforce</code> and when not. </p>
+<p>When comparing two default translations (with no context binding properties) or two alternative translations (that that have the same context binding properties), in other words, when context binding do not discriminate between the two:</p>
+<ul>
+<li>If the same identical match is found in both <code>/tm/update</code> and <code>/tm/enforce</code>, the latter prevails regardless of timestamps, and the translation will be locked as expected.</li>
+<li>If the same identical match is found in both <code>/tm/update</code> and <code>/tm/auto</code>, simply the most recent one prevails.</li>
+</ul>
+<p>In cases when one match has context binding and the other doesnt:</p>
+<ul>
+<li>An alternative translation from <code>tm/update</code> will prevail over a default match from <code>tm/enforce</code> or <code>tm/auto</code>, regardless of timestamps.</li>
+<li>An alternative translation from <code>tm/enforce</code> or <code>tm/auto</code> will prevail over a default match from <code>tm/update</code>, regardless of timestamps.</li>
+</ul>
+<p>See the next subsection for more details.</p>
+<h4>Context binding</h4>
+<p>Context binding will always have more weight than recency, i.e. an alternative translation should always prevail over a default translation, regardless of timestamps</p>
+<p>Recency can determine selection when comparing two translations with context binding or two translations without context binding, i.e. a newer alternative translation will prevail over an older alternative translation, and a newer default translation will prevail over an older default translation.</p>
+<p>In other words:</p>
+<ul>
+<li>new translation with context &gt; old translation without context</li>
+<li>old translation with context &gt; new translation without context</li>
+<li>new translation with context &gt; old translation with context</li>
+</ul>
+<p>The following examples show how context biding always wins (timestamps can be ignored if one translation is alternative and the other one is default) and how the most recent translation wins when context binding (or lack of it) is equal in both translations being compared:</p>
+<ul>
+<li><strong>A.</strong> alternative in project &gt; default in <code>/tm/update</code> (timestamps are ignored)</li>
+<li><strong>B.</strong> default in project &lt; alternative in <code>/tm/update</code> (timestamps are ignored)</li>
+<li><strong>C.</strong> alternative in project &lt; alternative in <code>/tm/update</code> (the most recent wins)</li>
+<li><strong>D.</strong> default in project &lt; default in <code>/tm/update</code> (the most recent wins)</li>
+</ul>
+<p>!!! note
+    The <code>&gt;</code> symbol above means that the one to the left has more weight and "wins", and vice versa for <code>&lt;</code>.</p>
+<p>The table below shows all the possible combinations:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th style="text-align: center;">Project</th>
+<th style="text-align: center;">/tm/update</th>
+<th style="text-align: center;">Results</th>
+<th style="text-align: left;">Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">def-old</td>
+<td style="text-align: center;"><strong>def-new</strong></td>
+<td style="text-align: center;">UPDATE</td>
+<td style="text-align: left;">the match is newer</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">def-old</td>
+<td style="text-align: center;"><strong>alt-new</strong></td>
+<td style="text-align: center;">UPDATE</td>
+<td style="text-align: left;">the match is newer and is context-bound</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">alt-old</td>
+<td style="text-align: center;">def-new</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">the translation is context-bound, even if it's older</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">alt-old</td>
+<td style="text-align: center;"><strong>alt-new</strong></td>
+<td style="text-align: center;">UPDATE</td>
+<td style="text-align: left;">the match is newer</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: center;">def-new</td>
+<td style="text-align: center;">def-old</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">the match is not newer</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align: center;">def-new</td>
+<td style="text-align: center;"><strong>alt-old</strong></td>
+<td style="text-align: center;">UPDATE</td>
+<td style="text-align: left;">the match is context-bound, even if it's older</td>
+</tr>
+<tr>
+<td>7</td>
+<td style="text-align: center;">alt-new</td>
+<td style="text-align: center;">def-old</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">the translation is context-bound and newer</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align: center;">alt-new</td>
+<td style="text-align: center;">alt-old</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">the translation is context-bound and newer</td>
+</tr>
+</tbody>
+</table>
+<p>!!! note
+    An option in the user preferences / project settings could be used to toggle the preference given to context binding over recency, e.g. <code>&lt;content_binding_beats_recency&gt;false&lt;/content_binding_beats_recency&gt;</code> (true by default).</p>
+<h4>Position of the file in the list of files</h4>
+<p>A more recent match from <code>tm/update</code> will always prevail over other older matches that are ranked higher according to the file sorting logic (descending alphabetical order).</p>
+<h4>Position of the match in the file</h4>
+<p>A more recent match from <code>tm/update</code> will always prevail over other older matches that are ranked higher according to their position inside the TMX file (closer to the top).</p>
+<h3>Match sorting</h3>
+<p>To keep things simpler, recency will be used only to select and use a match from <code>/tm/update</code>, not to re-arrange match sorting in the <strong>Matches</strong> pane according to recency together with the other match sorting criteria.  </p>
+<p>This goes against the current logic of match sorting and selection (see below), but the feature is really about which translation is used and not so much about in which position it appears in the set of matches.</p>
+<p>!!! info
+    Match sorting and selection: there are certain <a href="https://rentry.org/omegat-match-ranking-specs">criteria to rank/sort matches</a> (and display them in the <strong>Matches</strong> pane), and the one that is selected to auto-populate the segment, if possible, is simply the one at the top. </p>
+<h3>Proof of concept</h3>
+<p>This <a href="https://github.com/capstanlqc/omegat-scripts/blob/master/project_changed/set_latest_translations.groovy">script</a> provides the intended behaviour (looking for more recent translations in <code>tm/auto</code>) and has been tested in production for several months. </p>
+<p>That script does have, however, some issues that should be addressed in the built-in feature (e.g. using <code>ImportFomAutoTMX</code>, which keeps matches' <code>changeid</code> and <code>changedate</code>, etc.):</p>
+<ul>
+<li>the pre-populated translation carried over from <code>tm/auto</code> will get the current user's info (changeid and changedate) rather than keep the info it originally has in the TM</li>
+<li>it only handles default translations (alternative translations from <code>tm/auto</code> will always be used regardless of timestamp)</li>
+<li>the conflict resolution dialog might pop if the active segment has a transation that is older than a match coming from the TM</li>
+</ul>
+    </body>
+    </html>
+    
