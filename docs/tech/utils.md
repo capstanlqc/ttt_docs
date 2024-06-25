@@ -1,3 +1,9 @@
+# Utilities
+
+## Chinese script conversion
+
+See [the new (2024) steps to convert Chinese traditional spelling to simplified spelling](https://github.com/capstanlqc/zh-convert-hant2hans).
+
 ## xDiff helper
 
 ## Source XML linter

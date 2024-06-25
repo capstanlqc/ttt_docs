@@ -10,25 +10,32 @@ tags:
 The following working environment is recommended:
 
 1. A Linux machine (recommended Debian-based) that runs `systemctl`.
+	
 	> A virtual machine or WSL could be a valid substitute. This guide is based on building on MX Linux (Linux 5.10.0-22-amd64) and `apt` is used for package installation commands.
-3. Install dependencies:
+
+2. Install dependencies:
     ```
-    $ sudo apt install libxrender1 libxtst6 libxi6 libfreetype6 fontconfig gnutls-bin p11tool software-properties-common softhsm2 libengine-pkcs11-openssl osslsigncode icedtea-netx pcsclite pcsc-tools pcscd procertum-cardreader gh
+    $ sudo apt install libxrender1 libxtst6 libxi6 libfreetype6 fontconfig \
+	gnutls-bin p11tool software-properties-common softhsm2 \
+	libengine-pkcs11-openssl osslsigncode icedtea-netx pcsclite pcsc-tools \
+	pcscd procertum-cardreader gh
     ```
-4. Install docker:
+
+3. Install docker:
     ```
     $ sudo apt install docker
     ```
-3. Adjust the group membership of your user, so that you can run docker images:
+4. Adjust the group membership of your user, so that you can run docker images:
     ```
     $ sudo groupadd docker
     $ sudo usermod -aG docker $USER # or: sudo groupadd docker
     ```
-4. Restart or log out.
+5. Restart or log out.
 
 ## Before building
 
 ### Setting up docker
+
 Follow these steps: 
 
 1. Make sure that `docker` is in your groups:
@@ -48,9 +55,9 @@ Follow these steps:
 	```
 	$ mkdir -p /path/to/omegat-installer
 	```
-
 ### Setting up Java and Gradle
-> There are other ways to do this, what follows is what I use and my recommended approach.
+
+> There are other ways to do this, what follows is just our recommended approach.
 
 1. Install sdkman (as explained [here](https://sdkman.io/install)):
 	```
@@ -138,6 +145,7 @@ Defining `pkcs11cert` and `winCodesignTimestampUrl` is not necessary.
 	```
      
 ### Result
+
 If the process works, the installer will be saved in folder `./build/distributions`:
 	```
 	$ cd /path/to/omegat-installer/omegat
@@ -145,11 +153,13 @@ If the process works, the installer will be saved in folder `./build/distributio
 	./build/distributions/OmegaT_6.1.0_Beta_Windows_64_Signed.exe
 	```
 ### References
-- https://omegat.sourceforge.io/manual-standard/en/chapter.installing.and.running.html#building.OmegaT.from.source
-- https://github.com/omegat-org/omegat/tree/master/docs_devel
-- https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/93.BuildingInstallerPackage.md
-- https://shop.certum.eu/open-source-code-signing.html
-- https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/92.CodeSigning.md
-- https://github.com/amake/innosetup-docker
+
+- [OmegaT 4.3.1 - User's Guide > Building OmegaT From Source](https://omegat.sourceforge.io/manual-latest/en/chapter.installing.and.running.html#building.OmegaT.from.source)
+- [OmegaT 6.0.0 - User Manual > Build OmegaT](https://omegat.sourceforge.io/manual-standard/en/chapter.how.to.html)
+- [omegat-org > omegat > docs_devel > Building OmegaT](https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/02.HowToBuild.md)
+- [omegat-org > omegat > docs_devel > Building and testing the installer package](https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/93.BuildingInstallerPackage.md)
+- [Open Source Code Signing - set](https://shop.certum.eu/open-source-code-signing.html)
+- [omegat-org > omegat > docs_devel > Code signing how-to](https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/92.CodeSigning.md)
+- [amake/innosetup-docker](https://github.com/amake/innosetup-docker)
 
 <!-- source: https://rentry.org/build_omegat_jre11_win64 -->
