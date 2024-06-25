@@ -2251,14 +2251,25 @@
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <p>The following working environment is recommended:</p>
 <ol>
-<li>A Linux machine (recommended Debian-based) that runs <code>systemctl</code>.
-    &gt; A virtual machine or WSL could be a valid substitute. This guide is based on building on MX Linux (Linux 5.10.0-22-amd64) and <code>apt</code> is used for package installation commands.</li>
-<li>Install dependencies:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ sudo apt install libxrender1 libxtst6 libxi6 libfreetype6 fontconfig gnutls-bin p11tool software-properties-common softhsm2 libengine-pkcs11-openssl osslsigncode icedtea-netx pcsclite pcsc-tools pcscd procertum-cardreader gh
-</span></code></pre></div></li>
-<li>Install docker:
+<li>
+<p>A Linux machine (recommended Debian-based) that runs <code>systemctl</code>.</p>
+<blockquote>
+<p>A virtual machine or WSL could be a valid substitute. This guide is based on building on MX Linux (Linux 5.10.0-22-amd64) and <code>apt</code> is used for package installation commands.</p>
+</blockquote>
+</li>
+<li>
+<p>Install dependencies:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ sudo apt install libxrender1 libxtst6 libxi6 libfreetype6 fontconfig \
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>gnutls-bin p11tool software-properties-common softhsm2 \
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>libengine-pkcs11-openssl osslsigncode icedtea-netx pcsclite pcsc-tools \
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>pcscd procertum-cardreader gh
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Install docker:
     <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ sudo apt install docker
-</span></code></pre></div></li>
+</span></code></pre></div></p>
+</li>
 <li>Adjust the group membership of your user, so that you can run docker images:
     <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ sudo groupadd docker
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$ sudo usermod -aG docker $USER # or: sudo groupadd docker
@@ -2285,7 +2296,7 @@
 </ol>
 <h3 id="setting-up-java-and-gradle">Setting up Java and Gradle<a class="headerlink" href="#setting-up-java-and-gradle" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>There are other ways to do this, what follows is what I use and my recommended approach.</p>
+<p>There are other ways to do this, what follows is just our recommended approach.</p>
 </blockquote>
 <ol>
 <li>Install sdkman (as explained <a href="https://sdkman.io/install">here</a>):
@@ -2370,12 +2381,13 @@ Defining <code>pkcs11cert</code> and <code>winCodesignTimestampUrl</code> is not
 </span></code></pre></div></p>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
 <ul>
-<li>https://omegat.sourceforge.io/manual-standard/en/chapter.installing.and.running.html#building.OmegaT.from.source</li>
-<li>https://github.com/omegat-org/omegat/tree/master/docs_devel</li>
-<li>https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/93.BuildingInstallerPackage.md</li>
-<li>https://shop.certum.eu/open-source-code-signing.html</li>
-<li>https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/92.CodeSigning.md</li>
-<li>https://github.com/amake/innosetup-docker</li>
+<li><a href="https://omegat.sourceforge.io/manual-latest/en/chapter.installing.and.running.html#building.OmegaT.from.source">OmegaT 4.3.1 - User's Guide &gt; Building OmegaT From Source</a></li>
+<li><a href="https://omegat.sourceforge.io/manual-standard/en/chapter.how.to.html">OmegaT 6.0.0 - User Manual &gt; Build OmegaT</a></li>
+<li><a href="https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/02.HowToBuild.md">omegat-org &gt; omegat &gt; docs_devel &gt; Building OmegaT</a></li>
+<li><a href="https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/93.BuildingInstallerPackage.md">omegat-org &gt; omegat &gt; docs_devel &gt; Building and testing the installer package</a></li>
+<li><a href="https://shop.certum.eu/open-source-code-signing.html">Open Source Code Signing - set</a></li>
+<li><a href="https://github.com/omegat-org/omegat/blob/master/docs_devel/docs/92.CodeSigning.md">omegat-org &gt; omegat &gt; docs_devel &gt; Code signing how-to</a></li>
+<li><a href="https://github.com/amake/innosetup-docker">amake/innosetup-docker</a></li>
 </ul>
 <!-- source: https://rentry.org/build_omegat_jre11_win64 -->
 
