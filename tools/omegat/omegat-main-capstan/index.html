@@ -2091,20 +2091,20 @@
 
 
 <h1 id="omegat-main-capstan">OmegaT main-capstan<a class="headerlink" href="#omegat-main-capstan" title="Permanent link">&para;</a></h1>
-<p>We maintain our own fork of OmegaT, where we merge features/enhancements and bug fixes developed by Thomas Cordonnier. </p>
-<p>We used version 5.7.2 in PISA 2025 FT, while we worked on patches to be included in 5.7.3.</p>
+<p>We maintain our own fork of OmegaT, where we merge features/enhancements and bug fixes developed by Briac Pilpré and Thomas Cordonnier. </p>
+<p>We used version 5.7.2 in PISA 2025 FT and other projects, while we worked on patches to be included in 5.7.3 (to be released for PISA 2025 MS).</p>
 <h2 id="summary-of-what-was-done">Summary of what was done:<a class="headerlink" href="#summary-of-what-was-done" title="Permanent link">&para;</a></h2>
 <p>In our clone:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd capstanlqc/omegat
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git checkout releases/5.7.2-capstan
 </span></code></pre></div></p>
-<p>Created the new main branch based on the branch we used to create the 5.7.2 build:
+<p>Created the new <code>main-capstan</code> branch based on the branch we used to create the 5.7.2 build:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git checkout releases/5.7.2-capstan -b main-capstan
-</span></code></pre></div></p>
-<p>Added Thomas' clone as remote:
+</span></code></pre></div>
+Added Thomas' clone as remote (it needs to be done locally in any new clone of capstanlqc/omegat):
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git remote add thomas https://github.com/t-cordonnier/omegat.git
 </span></code></pre></div></p>
-<p>Got all Thomas' current branches:
+<p>Got all Thomas' current branches (it needs to be done to fetch updates in Thomas' code):
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git fetch thomas
 </span></code></pre></div></p>
 <h2 id="to-merge-a-feature-branch">To merge a feature branch<a class="headerlink" href="#to-merge-a-feature-branch" title="Permanent link">&para;</a></h2>
