@@ -5,9 +5,9 @@ tags:
 
 # OmegaT main-capstan
 
-We maintain our own fork of OmegaT, where we merge features/enhancements and bug fixes developed by Thomas Cordonnier. 
+We maintain our own fork of OmegaT, where we merge features/enhancements and bug fixes developed by Briac Pilpré and Thomas Cordonnier. 
 
-We used version 5.7.2 in PISA 2025 FT, while we worked on patches to be included in 5.7.3.
+We used version 5.7.2 in PISA 2025 FT and other projects, while we worked on patches to be included in 5.7.3 (to be released for PISA 2025 MS).
 
 ## Summary of what was done:
 
@@ -17,17 +17,16 @@ cd capstanlqc/omegat
 git checkout releases/5.7.2-capstan
 ```
 
-Created the new main branch based on the branch we used to create the 5.7.2 build:
+Created the new `main-capstan` branch based on the branch we used to create the 5.7.2 build:
 ```
 git checkout releases/5.7.2-capstan -b main-capstan
 ```
-
-Added Thomas' clone as remote:
+Added Thomas' clone as remote (it needs to be done locally in any new clone of capstanlqc/omegat):
 ```
 git remote add thomas https://github.com/t-cordonnier/omegat.git
 ```
 
-Got all Thomas' current branches:
+Got all Thomas' current branches (it needs to be done to fetch updates in Thomas' code):
 ```
 git fetch thomas
 ```

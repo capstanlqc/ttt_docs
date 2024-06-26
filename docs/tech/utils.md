@@ -2,7 +2,7 @@
 
 ## Chinese script conversion
 
-See [the new (2024) steps to convert Chinese traditional spelling to simplified spelling](https://github.com/capstanlqc/zh-convert-hant2hans).
+See [the new (2024) steps](https://github.com/capstanlqc/zh-convert-hant2hans) to convert Chinese traditional spelling to simplified spelling.
 
 ## xDiff helper
 
