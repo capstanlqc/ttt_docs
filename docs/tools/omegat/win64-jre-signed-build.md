@@ -104,6 +104,7 @@ You'll have to run two tools for that:
 At the end of the process when the certificate is activated and available for download, download the binary certificate (with a `.cer` extension) from the Certum page. 
 
 ## Getting down to building
+
 Ok, let's build the installer.
 
 1. Move the certificate file to your building folder : 
@@ -145,8 +146,7 @@ Defining `pkcs11cert` and `winCodesignTimestampUrl` is not necessary.
 8. Kindly ask Gradle to build OmegaT from source and bundle it with the JRE you downloaded into a Windows setup package:
 	```
 	$ ./gradlew winJRE64Signed
-	```
-     
+	``` 
 > The above command would be `./gradlew winJRE64` without code signing.
 
 
