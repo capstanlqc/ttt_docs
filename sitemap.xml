@@ -221,7 +221,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://capstanlqc.github.com/ttt_docs/tools/aux-tools/</loc>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/aux/</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/aux/ahk/</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://capstanlqc.github.com/ttt_docs/tools/aux/tmx-editor/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
