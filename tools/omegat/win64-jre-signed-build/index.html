@@ -2354,30 +2354,33 @@ At the end of the process when the certificate is activated and available for do
 <p>Change directory to the <code>omegat</code> folder:</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$ cd omegat
 </span></code></pre></div>
-Check out any specific branch if the main/master branch is not what you want to use.</p>
-</li>
-<li>
-<p>Create your <code>local.properties</code> file:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$ cp local.properties.example local.properties
+5. Check out the <code>main-capstan</code> branch:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$ git checkout main-capstan
 </span></code></pre></div>
-6. Add your certificate details to the <code>local.properties</code> file:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>pkcs11module=/usr/lib64/crypto3PKCS/sc30pkcs11-3.0.6.68-MS.so
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>winCodesignPassword=**** # your PIN number
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>winCodesignCert=/path/to/omegat-installer/cert/be737b17c8d3f3f0d7bbfae716b0ee1a.cer
+6. Create your <code>local.properties</code> file:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>$ cp local.properties.example local.properties
+</span></code></pre></div>
+7. Add your certificate details to the <code>local.properties</code> file:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>pkcs11module=/usr/lib64/crypto3PKCS/sc30pkcs11-3.0.6.68-MS.so
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>winCodesignPassword=**** # your PIN number
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>winCodesignCert=/path/to/omegat-installer/cert/be737b17c8d3f3f0d7bbfae716b0ee1a.cer
 </span></code></pre></div>
 Defining <code>pkcs11cert</code> and <code>winCodesignTimestampUrl</code> is not necessary.</p>
 </li>
 <li>
 <p>Kindly ask Gradle to build OmegaT from source and bundle it with the JRE you downloaded into a Windows setup package:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>$ ./gradlew winJRE64Signed
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$ ./gradlew winJRE64Signed
 </span></code></pre></div></p>
 </li>
 </ol>
+<blockquote>
+<p>The above command would be <code>./gradlew winJRE64</code> without code signing.</p>
+</blockquote>
 <h3 id="result">Result<a class="headerlink" href="#result" title="Permanent link">&para;</a></h3>
 <p>If the process works, the installer will be saved in folder <code>./build/distributions</code>:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$ cd /path/to/omegat-installer/omegat
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>$ find . -name &quot;*.exe&quot;
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>./build/distributions/OmegaT_6.1.0_Beta_Windows_64_Signed.exe
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>$ cd /path/to/omegat-installer/omegat
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>$ find . -name &quot;*.exe&quot;
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>./build/distributions/OmegaT_6.1.0_Beta_Windows_64_Signed.exe
 </span></code></pre></div></p>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
 <ul>
