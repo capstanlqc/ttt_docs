@@ -117,7 +117,7 @@ Ok, let's build the installer.
 	```
 3. Clone the OmegaT source code repository:
 	```
-	$ gh repo clone omegat-org/omegat
+	$ gh repo clone capstanlqc/omegat
 	```
 4. Change directory to the `omegat` folder:
 

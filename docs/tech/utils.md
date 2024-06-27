@@ -8,9 +8,9 @@ See [the new (2024) steps](https://github.com/capstanlqc/zh-convert-hant2hans) t
 
 ## Source XML linter
 
-Good morning, I would like to share a new application that you might find useful for different purposes (bulk updates in translation files):  https://github.com/capstanlqc/source-xml-linter
+tool for bulk updates in translation files:  https://github.com/capstanlqc/source-xml-linter
 
-If you want to contribute, have a look at the backlog or write an issues. PRs welcome.
+TODO: restrict replacements inside the target text nodes
 
 ## Target XML diff
 
