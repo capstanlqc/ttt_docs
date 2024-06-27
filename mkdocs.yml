@@ -63,7 +63,10 @@ nav:
               - tools/omegat/pisa25_omegat_teamproj_steps.md
               - Customization ADD 2 GUIDES: tools/omegat/omt_custom_user.md
               - Download git ADD 2 GUIDES: tools/omegat/omt_team_steps4xlat.md
-      - ★ Auxiliary tools: aux-tools.md
+      - ★ Auxiliary tools: 
+              - tools/aux/index.md
+              - AutoHotKey: tools/aux/ahk.md
+              - TMX Editor: tools/aux/tmx-editor.md
       - ★ Tickets: tools/tickets/omegat-tickets.md
   - Tech:
       - Tech: tech/index.md
