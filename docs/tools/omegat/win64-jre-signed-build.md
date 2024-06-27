@@ -124,14 +124,17 @@ Ok, let's build the installer.
 	```
 	$ cd omegat
 	```
-	Check out any specific branch if the main/master branch is not what you want to use.
-	
-5. Create your `local.properties` file:
+5. Check out the `main-capstan` branch:
+
+	```
+	$ git checkout main-capstan
+	```
+6. Create your `local.properties` file:
 
 	```
 	$ cp local.properties.example local.properties
 	```
-6. Add your certificate details to the `local.properties` file:
+7. Add your certificate details to the `local.properties` file:
 	```
 	pkcs11module=/usr/lib64/crypto3PKCS/sc30pkcs11-3.0.6.68-MS.so
 	winCodesignPassword=**** # your PIN number
@@ -139,11 +142,14 @@ Ok, let's build the installer.
 	```
 Defining `pkcs11cert` and `winCodesignTimestampUrl` is not necessary.
 
-7. Kindly ask Gradle to build OmegaT from source and bundle it with the JRE you downloaded into a Windows setup package:
+8. Kindly ask Gradle to build OmegaT from source and bundle it with the JRE you downloaded into a Windows setup package:
 	```
 	$ ./gradlew winJRE64Signed
 	```
      
+> The above command would be `./gradlew winJRE64` without code signing.
+
+
 ### Result
 
 If the process works, the installer will be saved in folder `./build/distributions`:
