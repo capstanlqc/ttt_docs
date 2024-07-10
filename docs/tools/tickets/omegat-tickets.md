@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2024-07-10 | [#1754](https://sourceforge.net/p/omegat/feature-requests/1754/) | OmegaT | Let user decide the maximum number of TM matches displayed | RFE | Open! |
 | 2024-06-26 | [#1752](https://sourceforge.net/p/omegat/feature-requests/1752/) | OmegaT | Dynamic subfilter in text search results | RFE | Open |
 | 2025-05-07 | [#1745](https://sourceforge.net/p/omegat/feature-requests/1745/) | OmegaT | Enforced translations are read-only | RFE | Open! |
 | 2024-04-29 | [#1743](https://sourceforge.net/p/omegat/feature-requests/1743/) | OmegaT | Commit specified files on SAVE or COMPILE | RFE | Open! |
