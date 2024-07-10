@@ -78,3 +78,7 @@ Or you can get a specific langtag record with:
 ```
 curl -X GET https://capps.capstan.be/langtags_json.php | jq 'map(select(.cApStAn | contains("fra-BEL")))'
 ```
+
+## Code
+
+Python and Node.js functions can be downloaded to import as modules. Available here: [https://github.com/capstanlqc/langtags_basic_api](https://github.com/capstanlqc/langtags_basic_api).
