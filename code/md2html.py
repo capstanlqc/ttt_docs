@@ -23,15 +23,20 @@ if args.input and args.output:
     input_fpath = args.input.strip()
     output_fpath = args.output.strip()
 else:
-    print("One or both of the two required arguments is missing. Run this script with `--help` for details.")
+    print(
+        "One or both of the two required arguments is missing. Run this script with `--help` for details."
+    )
     sys.exit()
 
+
 def markdown_to_html_with_preserved_html(markdown_text):
-    md = markdown.Markdown(extensions=['markdown.extensions.tables'])
+    md = markdown.Markdown(extensions=["markdown.extensions.tables"])
     return md.convert(markdown_text)
 
+
 def cleanup(md):
-    return re.sub("(?s)^---[\s\S]+?---\n", "", md)
+    return re.sub(r"(?s)^---[\s\S]+?---[\r\n]*", "", md)
+
 
 def add_html_barebones(html):
     return f"""<!DOCTYPE html>
@@ -63,12 +68,13 @@ def add_html_barebones(html):
     </html>
     """
 
-with open(input_fpath, 'r') as f:
+
+with open(input_fpath, "r") as f:
     md = f.read()
 
 # html = markdown.markdown(cleanup(md))
 html = markdown_to_html_with_preserved_html(cleanup(md))
 final_html = add_html_barebones(html)
 
-with open(output_fpath, 'w') as f:
+with open(output_fpath, "w") as f:
     f.write(final_html)
