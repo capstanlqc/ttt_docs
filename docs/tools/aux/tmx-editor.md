@@ -1,4 +1,6 @@
 ---
+share: true
+where: 
 tags:
   - Audience꞉Tech
 ---

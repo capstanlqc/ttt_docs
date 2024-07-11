@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+        <link rel="stylesheet" href="github-markdown.css">
+        <style>
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+        
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style>
+    </head>
+    <body class="markdown-body">
+    <!-- ## TMX Editor -->
+
+<h2>Unix-like systems (Linux or Mac)</h2>
+<p>Just RTD.</p>
+<h2>Windows</h2>
+<p>You will need:</p>
+<ul>
+<li>a Github account (tip: log in to it in the default browser)</li>
+<li>admin rights in your machine</li>
+</ul>
+<h3>Installing dependencies</h3>
+<p>Before installing TMX Editor you must:</p>
+<ul>
+<li>Install JDK 21 from <a href="https://adoptium.net/temurin/releases/">Temurin</a> (and add it to PATH).</li>
+<li>Run PowerShell as administrator.</li>
+<li><a href="https://chocolatey.org/install">Install Chocolatey for Individual Use</a>.</li>
+<li>Restart PowerShell as admin and run:
+    <code>choco install git -y 
+    choco install gh -y
+    choco install ant -y
+    choco install nodejs-lts -y</code> </li>
+<li>Restart PowerShell as admin, and run <code>npm install typescript</code> (or <code>choco install typescript</code>).</li>
+<li>Optional: update npm</li>
+<li>Check all versions: <code>node -v</code>, <code>npm -v</code>, <code>ant -version</code>, <code>java -version</code></li>
+</ul>
+<h3>Installing TMX Editor</h3>
+<ul>
+<li>Restart PowerShell as admin, finally:
+    <code>mkdir C:\Users\USER\Apps
+    cd C:\Users\USER\Apps
+    gh repo clone rmraya/TMXEditor
+    cd TMXEditor
+    ant
+    npm install</code> </li>
+</ul>
+<h3>Running TMX Editor</h3>
+<p>To run TMX Editor:</p>
+<ul>
+<li><code>npm start</code></li>
+</ul>
+<h3>Desktop launcher</h3>
+<p>blabla &lt;- Vale</p>
+    </body>
+    </html>
+    
