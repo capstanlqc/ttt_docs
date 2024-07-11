@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#convert-multilingual-workbook-to-multiple-tmx-files" class="md-skip">
+        <a href="#convert-excel-to-tmx" class="md-skip">
           Skip to content
         </a>
       
@@ -1683,30 +1683,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#summary" class="md-nav__link">
+    Summary:
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#execution" class="md-nav__link">
-    Execution
+  <a href="#approaches" class="md-nav__link">
+    Approaches
+  </a>
+  
+    <nav class="md-nav" aria-label="Approaches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bilingual-input" class="md-nav__link">
+    Bilingual input
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
+        
+          <li class="md-nav__item">
+  <a href="#multilingual-input" class="md-nav__link">
+    Multilingual input
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#todo-list" class="md-nav__link">
-    TODO list:
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2177,30 +2183,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#summary" class="md-nav__link">
+    Summary:
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#execution" class="md-nav__link">
-    Execution
+  <a href="#approaches" class="md-nav__link">
+    Approaches
+  </a>
+  
+    <nav class="md-nav" aria-label="Approaches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bilingual-input" class="md-nav__link">
+    Bilingual input
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
+        
+          <li class="md-nav__item">
+  <a href="#multilingual-input" class="md-nav__link">
+    Multilingual input
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#todo-list" class="md-nav__link">
-    TODO list:
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2222,106 +2234,24 @@
 
 
 
-<h1 id="convert-multilingual-workbook-to-multiple-tmx-files">Convert multilingual workbook to multiple TMX files<a class="headerlink" href="#convert-multilingual-workbook-to-multiple-tmx-files" title="Permanent link">&para;</a></h1>
+<h1 id="convert-excel-to-tmx">Convert Excel to TMX<a class="headerlink" href="#convert-excel-to-tmx" title="Permanent link">&para;</a></h1>
 <!--- [task 20.3000] -->
 
-<blockquote>
-<p>@TODO: put the code in a repo with reqs</p>
-</blockquote>
-<p>This script converts the multilingual workbook into as many TMX files as target languages (or language pairs) it contains.</p>
+<h2 id="summary">Summary:<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Input: multilingual spreadsheet</li>
-<li>Ouput: one TMX file per language pair</li>
+<li>Input: a spreadsheet containing source text in one column and at least one more column with the translation. </li>
+<li>Expected output: a TMX file for each language pair</li>
 </ul>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>You can find the requirements file <a href="https://capps.capstan.be/doc/md/xls2tmx_requirements.txt">here</a> </p>
-<h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
-<p>To know how this utility must be run:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python3 conv_xls2tmx.py --help
-</span></code></pre></div>
-<p>The utility is not a webapp (but will be part of cApps if necessary — if requests like this abound). For the time being the PM needs to send the request by email and I run the thing on demand. If Manuel happens not to be available, Adrien could run it too in the server.</p>
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
-<p>The first worksheet in the workbook must be called <code>config</code> and include the following options, to be updated by the PM.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">KEY</th>
-<th style="text-align: left;">VALUE</th>
-<th style="text-align: left;">DESCRIPTION</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">container</td>
-<td style="text-align: left;"><code>&lt;container&gt;</code></td>
-<td style="text-align: left;">String: Add the the name of the actual container (case-sensitive). It needs to exist in the containers manager.</td>
-</tr>
-<tr>
-<td style="text-align: left;">source_lang</td>
-<td style="text-align: left;">eng-ZZZ</td>
-<td style="text-align: left;">String: Include if not English.</td>
-</tr>
-<tr>
-<td style="text-align: left;">tmx_file_names</td>
-<td style="text-align: left;"><code>&lt;container&gt;</code>, <code>&lt;target_lang&gt;</code>, <code>TM</code></td>
-<td style="text-align: left;">List of strings: List all elements that should be included in the name of the TMX   files. Container must be the first one and they must appear in order   (separated by commas). Placeholders (e.g. <code>&lt;this&gt;</code>) refer to keys in   this config sheet (first column). All elements in this list will be joined   with underscore, e.g. <code>&lt;container&gt;_&lt;xxx-XXX&gt;_TM.tmx</code>. If you want   to include word "QQ" between container and language, this cell   should contain [<code>&lt;container&gt;, QQ, &lt;target_lang&gt;, TM</code>] (without   the square brackets), and that will produce   <code>&lt;container&gt;_QQ_&lt;xxx-XXX&gt;_TM.tmx</code>.</td>
-</tr>
-<tr>
-<td style="text-align: left;">segmentation</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">Boolean: Contents of cells will be segmented if possible (if the same number of   sentences, line breaks, etc. Is found on both languages)</td>
-</tr>
-<tr>
-<td style="text-align: left;">remove_html_tags</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">Boolean: Parts of the text matched by <code>&lt;[^&gt;]+&gt;</code> will be removed.</td>
-</tr>
-<tr>
-<td style="text-align: left;">remove_linebreaks</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">Boolean: Linebreaks (i.e. <code>[^\r\n]+</code>) will be removed withing translation units.</td>
-</tr>
-<tr>
-<td style="text-align: left;">remove_multiple_spaces</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">Boolean: Double or multiple normal spaces will be replaced by one single space.</td>
-</tr>
-<tr>
-<td style="text-align: left;">remove_pattern</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Regex: Parts of the text matched by this expression will be removed.So for example   if you wanted to have parts like “[[Privacy_Policy.ENG.pdf|προστασία της   ιδιωτικής ζωής]]” or "((*|Meetings include online meetings))"   removed, the remove pattern should be something like <code>\[\[[^\]]+\]\]</code> or   <code>\(\([^)]+\)\)</code>, respectively. You (or the PM) don’t have to write that, you   can just provide examples and an explanation.</td>
-</tr>
-<tr>
-<td style="text-align: left;">ofuscate_pattern</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Regex: Parts of the text matched by this expression will be ofuscated, e.g. Xxxxxx</td>
-</tr>
-<tr>
-<td style="text-align: left;">ignore_cell_pattern</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Regex: Cells matched by this expression will not be included in the TMX file.</td>
-</tr>
-<tr>
-<td style="text-align: left;">header_row</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">Integer: Indicate the row containing the language codes. Starts with index 0 (row 1).</td>
-</tr>
-<tr>
-<td style="text-align: left;">comment_column</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Letter or string: Indicate whether any column contains a comment or description that   should be included in every translation unit. Add letter name of the column   or exact text content of the cell at the <code>header_row</code>.</td>
-</tr>
-</tbody>
-</table>
-<!-- Workbook template: [multilingual_tmwb_template.xlsx](multilingual_tmwb_template.xlsx) -->
-
-<p>Workbook template: <a href="https://github.com/msoutopico/cli_automation/raw/master/conv_multilingual_wb_to_tmxs/multilingual_tmwb_template.xlsx">multilingual_tmwb_template.xlsx</a></p>
-<h2 id="todo-list">TODO list:<a class="headerlink" href="#todo-list" title="Permanent link">&para;</a></h2>
+<h2 id="approaches">Approaches<a class="headerlink" href="#approaches" title="Permanent link">&para;</a></h2>
+<p>We have different ways to conduct this task: </p>
+<h3 id="bilingual-input">Bilingual input<a class="headerlink" href="#bilingual-input" title="Permanent link">&para;</a></h3>
+<p>If the spreadsheet contains one language pair, then it's okay to do in <a href="https://capstanlqc.github.io/ttt_docs/tools/aux/tmx-editor/">TMX Editor</a>:</p>
 <ul>
-<li>remove markup (TBC by the PM!)</li>
-<li>segment the cells whenever possible</li>
-<li>clean up tags</li>
+<li>Go to <strong>File</strong> &gt; <strong>Convert Excel file to TMX</strong></li>
 </ul>
+<h3 id="multilingual-input">Multilingual input<a class="headerlink" href="#multilingual-input" title="Permanent link">&para;</a></h3>
+<p>If the spreadsheet contains many language pairs, then it's more efficient to use <a href="https://github.com/capstanlqc/convert-multilingual-xlsx2tmx">this script</a></p>
+<p>In this case, attention must be paid to the configuration (either <code>config.json</code> or the first worksheet, called <code>config</code>, in the spreadsheet -- example provided <a href="https://github.com/capstanlqc/convert-multilingual-xlsx2tmx/blob/master/data/multilingual_tmwb_template.xlsx">here</a>.</p>
 
 
 
