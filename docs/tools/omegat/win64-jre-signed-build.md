@@ -101,7 +101,11 @@ You'll have to run two tools for that:
 	```
 	$ javaws CertumCryptoAgent_en.jnlp
 	```
-At the end of the process when the certificate is activated and available for download, download the binary certificate (with a `.cer` extension) from the Certum page. 
+At the end of the process when the certificate is activated and available for download, download the binary certificate (with a `.cer` extension) from the Certum page.
+
+### Windows installation wizard
+
+The installation path has been modified to use `C:\Users\USER\AppData\Local\Programs\OmegaT\OmegaT.exe`.
 
 ## Getting down to building
 
