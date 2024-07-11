@@ -25,5 +25,7 @@ If the spreadsheet contains one language pair, then it's okay to do in [TMX Edit
 
 If the spreadsheet contains many language pairs, then it's more efficient to use [this script](https://github.com/capstanlqc/convert-multilingual-xlsx2tmx).
 
+> This approach requires running a Python script, if you're not comfortable with that, do not hesitate to ask the TTT to do this conversion for you.
+
 In this case, attention must be paid to the configuration (either with a `config.json` file or in the first worksheet, called `config`, of the spreadsheet -- example provided [here](https://github.com/capstanlqc/convert-multilingual-xlsx2tmx/blob/master/data/multilingual_tmwb_template.xlsx)).
 
