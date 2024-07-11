@@ -1,3 +1,8 @@
+---
+share: true
+where: 
+---
+
 # Convert Excel to TMX
 <!--- [task 20.3000] -->
 
