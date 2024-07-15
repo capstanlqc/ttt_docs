@@ -2,6 +2,8 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2024-07-15 | [#273](https://bitbucket.org/okapiframework/omegat-plugin/issues/273) | Okapi plugin | Filter plugin v. 1.13-1.45 breaks backward compatibility for ID-bound alternative translations | BUG | Open! |
+| 2024-07-15 | [#272](https://bitbucket.org/okapiframework/omegat-plugin/issues/272/filter-plugin-v-113-145-breaks-backward) | Okapi plugin | Filter plugin v. 1.13-1.45 breaks backward compatibility for tags | BUG | Open! |
 | 2024-07-10 | [#1754](https://sourceforge.net/p/omegat/feature-requests/1754/) | OmegaT | Let user decide the maximum number of TM matches displayed | RFE | Open! |
 | 2024-06-26 | [#1752](https://sourceforge.net/p/omegat/feature-requests/1752/) | OmegaT | Dynamic subfilter in text search results | RFE | Open |
 | 2025-05-07 | [#1745](https://sourceforge.net/p/omegat/feature-requests/1745/) | OmegaT | Enforced translations are read-only | RFE | Open! |
@@ -51,7 +53,7 @@
 | 2023-01-26 | [#1669](https://sourceforge.net/p/omegat/feature-requests/1669/) | OmegaT | Remove leadinga and trailing tags with Okapi filters | RFE | Open!! |
 | 2023-01-26 | [#1670](https://sourceforge.net/p/omegat/feature-requests/1670/) | OmegaT | Reuse credentials in team projects | RFE | Resolved |
 | 2023-01-23 | [#1184](https://bitbucket.org/okapiframework/okapi/issues/1184/fractions-in-word-file-are-not-extracted) | Okapi | Fractions in Word file are not extracted | BUG | Open! |
-| 2023-01-22 | [#49](https://bitbucket.org/okapiframework/omegat-plugin/issues/49/use-resname-as-segment-identifier-instead) | Okapi plugin | Use resname as segment identifier (instead of correlative number) | RFE | Resolved |
+| 2023-01-22 | [#49](https://bitbucket.org/okapiframework/omegat-plugin/issues/49/use-resname-as-segment-identifier-instead) | Okapi plugin | Use resname as segment identifier (instead of correlative number) | RFE | Resolved |
 | 2023-01-20 | [#1140](https://sourceforge.net/p/omegat/bugs/1140/) | OmegaT | Context-bound matches are ignored in /tm/auto | Bug | Resolved |
 | 2023-01-03 | [#1132](https://sourceforge.net/p/omegat/bugs/1132/) | OmegaT | OmegaT CLI gets stuck at missing empty folders when run on team project | Bug | Open! |
 | 2022-11-14 | [#1125](https://sourceforge.net/p/omegat/bugs/1125/) | OmegaT | OmegaT's main window is sent to unplugged monitor | Bug | Open |
