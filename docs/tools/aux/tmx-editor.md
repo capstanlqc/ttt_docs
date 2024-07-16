@@ -56,4 +56,4 @@ To run TMX Editor:
 
 ### Desktop launcher
 
-blabla <- Vale
+If you want a Desktop icon that you can double-click to launch TMX Editor, please contact Valentina.
