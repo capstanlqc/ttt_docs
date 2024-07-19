@@ -105,7 +105,20 @@ At the end of the process when the certificate is activated and available for do
 
 ### Windows installation wizard
 
-The installation path has been modified to use `C:\Users\USER\AppData\Local\Programs\OmegaT\OmegaT.exe`.
+A few tweaks were done in the [innosetup file](https://github.com/capstanlqc/omegat/commits/69e87fb6e1bdce3a4fdd4fca3c0b0e716288e4c2/release/win32-specific/OmegaT.iss) to customize the installation wizard on Windows machines. 
+
+> These changes are permanent and don't need to be applied again (this section is just for the record).
+
+- [OmegaT is set to install in English in all cases (user can only choose the setup language)](https://github.com/capstanlqc/omegat/commit/46ba9e9e45f15f0a7917ce88ed8e80b6789eae52)
+
+- [It has the Create Desktop icon option turned on by default](https://github.com/capstanlqc/omegat/commit/46ba9e9e45f15f0a7917ce88ed8e80b6789eae52)
+
+- [Changed location where desktop shortcut icon must be created](https://github.com/capstanlqc/omegat/commit/4996974dfdd25a014cddef3189863dbc01b95beb) (so that it's instsalled for the current user only)
+
+- [Removed the need for elevated permissions to install](https://github.com/capstanlqc/omegat/commit/50b70816b4070eaab478000ac59069d130030c9b)
+
+One important implication is that the installation path has been modified to use `C:\Users\USER\AppData\Local\Programs\OmegaT\OmegaT.exe` by default.
+
 
 ## Getting down to building
 

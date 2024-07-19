@@ -1,6 +1,6 @@
 ---
 share: true
-where: 
+where: https://odoo.capstan.be/web#action=871&cids=1&id=617&menu_id=592&model=knowsystem.article&view_type=form
 tags:
   - Audience꞉Tech
 ---
