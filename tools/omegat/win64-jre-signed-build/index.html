@@ -842,8 +842,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#activate-the-certificate" class="md-nav__link">
-    Activate the certificate
+  <a href="#activating-the-certificate" class="md-nav__link">
+    Activating the certificate
   </a>
   
 </li>
@@ -876,14 +876,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#signing-the-executable-on-windows-alternative-approach" class="md-nav__link">
+    Signing the executable on Windows (alternative approach)
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
   
 </li>
       
@@ -2255,8 +2262,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#activate-the-certificate" class="md-nav__link">
-    Activate the certificate
+  <a href="#activating-the-certificate" class="md-nav__link">
+    Activating the certificate
   </a>
   
 </li>
@@ -2289,14 +2296,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#signing-the-executable-on-windows-alternative-approach" class="md-nav__link">
+    Signing the executable on Windows (alternative approach)
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
   
 </li>
       
@@ -2403,7 +2417,7 @@
     <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ mv ~/Downloads/OpenJDK11U-jre_x64_windows_hotspot_11.0.19_7.zip /path/to/omegat-installer/
 </span></code></pre></div></li>
 </ol>
-<h3 id="activate-the-certificate">Activate the certificate<a class="headerlink" href="#activate-the-certificate" title="Permanent link">&para;</a></h3>
+<h3 id="activating-the-certificate">Activating the certificate<a class="headerlink" href="#activating-the-certificate" title="Permanent link">&para;</a></h3>
 <p>The steps in this section only need to be done once. If that has already been done and you already have a valid binary file of the certificate (the file with <code>.cer</code> extension) which hasn't expired, you can skip to the next section.</p>
 <p>Using Certum certificate, go through the procedure to activate the certificate. Through that process, you will have to define a PIN number for the common profile that is used to access the Certum's cryptographic smart card.</p>
 <p>You'll have to run two tools for that: </p>
@@ -2477,12 +2491,49 @@ Defining <code>pkcs11cert</code> and <code>winCodesignTimestampUrl</code> is not
 </li>
 </ol>
 <h3 id="result">Result<a class="headerlink" href="#result" title="Permanent link">&para;</a></h3>
-<p>If the process works, the installer will be saved in folder <code>./build/distributions</code>:
+<p>If the process works, the installer will be saved in folder <code>./build/distributions</code>, e.g.
     <div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>$ cd /path/to/omegat-installer/omegat
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>$ find . -name &quot;*.exe&quot;
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>./build/distributions/OmegaT_6.1.0_Beta_Windows_64_Signed.exe
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>./build/distributions/OmegaT_5.7.3_Windows_64_Signed.exe
 </span></code></pre></div></p>
-<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<h3 id="signing-the-executable-on-windows-alternative-approach">Signing the executable on Windows (alternative approach)<a class="headerlink" href="#signing-the-executable-on-windows-alternative-approach" title="Permanent link">&para;</a></h3>
+<p>If for any reason the signing could not be done during building, it's also possible to sign the Windows executable after creating it. In that case, you could skip section <strong>Activating the certificate</strong> above and steps 1, 6 and 7 in section <strong>Getting down to building</strong>.</p>
+<p>Also, step 8 in section <strong>Getting down to building</strong> would be simply:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>$ ./gradlew winJRE64
+</span></code></pre></div></p>
+<p>Following steps: </p>
+<ol>
+<li>
+<p>Install the certificate in the smartcard on Windows:</p>
+<ul>
+<li>open the card in the proCertum CardManager application and go to the Common profile</li>
+<li>open the certificate</li>
+<li>click on Install</li>
+</ul>
+<blockquote>
+<p>It's not clear the first step is a mandatory step, but just in case.</p>
+</blockquote>
+</li>
+<li>
+<p>Download one of the Windows SDK's (e.g. the Windows 11 one from the Visual Studio Installer): you need just one single executable called <code>signtool.exe</code>.</p>
+</li>
+<li>
+<p>Sign the executable, e.g. <code>OmegaT_5.7.3_Windows_64.exe</code>, with SHA1 timestamp:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>signtool.exe sign /n &quot;cApStAn&quot; /t http://time.certum.pl/ /fd sha1 /v OmegaT_5.7.3_Windows_64.exe
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Sign the same executable now with SHA2 timestamp as well (dual signing - seems to be a requirement):
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>signtool.exe sign /n &quot;cApStAn&quot; /tr http://time.certum.pl/ /td sha256 /fd sha256 /as /v OmegaT_5.7.3_Windows_64.exe
+</span></code></pre></div>
+Notes:</p>
+</li>
+<li>
+<p><code>OmegaT_5.7.3_Windows_64.exe</code> is both the input file and the output file, so if you'd like to keep an unsigned version, make a copy first.</p>
+</li>
+<li>"cApStAn" is the name of the certificate.</li>
+</ol>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://omegat.sourceforge.io/manual-latest/en/chapter.installing.and.running.html#building.OmegaT.from.source">OmegaT 4.3.1 - User's Guide &gt; Building OmegaT From Source</a></li>
 <li><a href="https://omegat.sourceforge.io/manual-standard/en/chapter.how.to.html">OmegaT 6.0.0 - User Manual &gt; Build OmegaT</a></li>
