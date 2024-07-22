@@ -85,7 +85,8 @@ Follow these steps:
 	$ mv ~/Downloads/OpenJDK11U-jre_x64_windows_hotspot_11.0.19_7.zip /path/to/omegat-installer/
 	```
 
-### Activate the certificate
+### Activating the certificate
+
 The steps in this section only need to be done once. If that has already been done and you already have a valid binary file of the certificate (the file with `.cer` extension) which hasn't expired, you can skip to the next section.
 
 Using Certum certificate, go through the procedure to activate the certificate. Through that process, you will have to define a PIN number for the common profile that is used to access the Certum's cryptographic smart card.
@@ -166,16 +167,51 @@ Defining `pkcs11cert` and `winCodesignTimestampUrl` is not necessary.
 	``` 
 > The above command would be `./gradlew winJRE64` without code signing.
 
-
 ### Result
 
-If the process works, the installer will be saved in folder `./build/distributions`:
+If the process works, the installer will be saved in folder `./build/distributions`, e.g.
 	```
 	$ cd /path/to/omegat-installer/omegat
 	$ find . -name "*.exe"
-	./build/distributions/OmegaT_6.1.0_Beta_Windows_64_Signed.exe
+	./build/distributions/OmegaT_5.7.3_Windows_64_Signed.exe
 	```
-### References
+
+### Signing the executable on Windows (alternative approach)
+
+If for any reason the signing could not be done during building, it's also possible to sign the Windows executable after creating it. In that case, you could skip section **Activating the certificate** above and steps 1, 6 and 7 in section **Getting down to building**.
+
+Also, step 8 in section **Getting down to building** would be simply:
+```
+$ ./gradlew winJRE64
+```
+
+Following steps: 
+
+1. Install the certificate in the smartcard on Windows:
+	
+	- open the card in the proCertum CardManager application and go to the Common profile
+	- open the certificate
+	- click on Install
+
+	> It's not clear the first step is a mandatory step, but just in case.
+
+2. Download one of the Windows SDK's (e.g. the Windows 11 one from the Visual Studio Installer): you need just one single executable called `signtool.exe`.
+
+3. Sign the executable, e.g. `OmegaT_5.7.3_Windows_64.exe`, with SHA1 timestamp:
+	```
+	signtool.exe sign /n "cApStAn" /t http://time.certum.pl/ /fd sha1 /v OmegaT_5.7.3_Windows_64.exe
+	```
+4. Sign the same executable now with SHA2 timestamp as well (dual signing - seems to be a requirement):
+	```
+	signtool.exe sign /n "cApStAn" /tr http://time.certum.pl/ /td sha256 /fd sha256 /as /v OmegaT_5.7.3_Windows_64.exe
+	```
+Notes:
+
+* `OmegaT_5.7.3_Windows_64.exe` is both the input file and the output file, so if you'd like to keep an unsigned version, make a copy first.
+* "cApStAn" is the name of the certificate.
+
+
+## References
 
 - [OmegaT 4.3.1 - User's Guide > Building OmegaT From Source](https://omegat.sourceforge.io/manual-latest/en/chapter.installing.and.running.html#building.OmegaT.from.source)
 - [OmegaT 6.0.0 - User Manual > Build OmegaT](https://omegat.sourceforge.io/manual-standard/en/chapter.how.to.html)
