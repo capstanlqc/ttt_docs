@@ -298,7 +298,7 @@ Codes can be of two kinds:
 
 A leading opening tag appearing before the beginning of a sentence and its corresponding closing tag appearing after the end of the sentence are an example of suprasentential codes:
 
-``` html
+```
 <p class="foo">What is the total length of the sticks in the line?</p>
 ```
 
