@@ -1,3 +1,8 @@
+---
+share: true
+where: 
+---
+
 <!-- <h1>Hyphenation internationalization</h1> -->
 # ☆ Hyphenation internationalization
 
