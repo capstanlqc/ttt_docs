@@ -139,17 +139,14 @@ Ok, let's build the installer.
 	$ gh repo clone capstanlqc/omegat
 	```
 4. Change directory to the `omegat` folder:
-
 	```
 	$ cd omegat
 	```
 5. Check out the `main-capstan` branch:
-
 	```
 	$ git checkout main-capstan
 	```
 6. Create your `local.properties` file:
-
 	```
 	$ cp local.properties.example local.properties
 	```
