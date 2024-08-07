@@ -2464,18 +2464,18 @@ At the end of the process when the certificate is activated and available for do
 <li>Clone the OmegaT source code repository:
     <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ gh repo clone capstanlqc/omegat
 </span></code></pre></div></li>
+<li>Change directory to the <code>omegat</code> folder:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$ cd omegat
+</span></code></pre></div></li>
+<li>Check out the <code>main-capstan</code> branch:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$ git checkout main-capstan
+</span></code></pre></div></li>
+<li>Create your <code>local.properties</code> file:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>$ cp local.properties.example local.properties
+</span></code></pre></div></li>
 <li>
-<p>Change directory to the <code>omegat</code> folder:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$ cd omegat
-</span></code></pre></div>
-5. Check out the <code>main-capstan</code> branch:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$ git checkout main-capstan
-</span></code></pre></div>
-6. Create your <code>local.properties</code> file:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>$ cp local.properties.example local.properties
-</span></code></pre></div>
-7. Add your certificate details to the <code>local.properties</code> file:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>pkcs11module=/usr/lib64/crypto3PKCS/sc30pkcs11-3.0.6.68-MS.so
+<p>Add your certificate details to the <code>local.properties</code> file:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>pkcs11module=/usr/lib64/crypto3PKCS/sc30pkcs11-3.0.6.68-MS.so
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>winCodesignPassword=**** # your PIN number
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>winCodesignCert=/path/to/omegat-installer/cert/be737b17c8d3f3f0d7bbfae716b0ee1a.cer
 </span></code></pre></div>
