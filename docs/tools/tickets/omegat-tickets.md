@@ -2,14 +2,15 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
-| 2024-07-15 | [#273](https://bitbucket.org/okapiframework/omegat-plugin/issues/273) | Okapi plugin | Filter plugin v. 1.13-1.45 breaks backward compatibility for ID-bound alternative translations | BUG | Open! |
+| 2024-09-28 | [#274](https://bitbucket.org/okapiframework/omegat-plugin/issues/274/translated-and-final-segments-in-xliff-20) | Okapi plugin | Translated and final segments in XLIFF 2.0 | BUG | Open! |
+| 2024-07-15 | [#273](https://bitbucket.org/okapiframework/omegat-plugin/issues/273) | Okapi plugin | Filter plugin v. 1.13-1.45 breaks backward compatibility for ID-bound alternative translations | BUG | Open! |
 | 2024-07-15 | [#272](https://bitbucket.org/okapiframework/omegat-plugin/issues/272/filter-plugin-v-113-145-breaks-backward) | Okapi plugin | Filter plugin v. 1.13-1.45 breaks backward compatibility for tags | BUG | Open! |
 | 2024-07-10 | [#1754](https://sourceforge.net/p/omegat/feature-requests/1754/) | OmegaT | Let user decide the maximum number of TM matches displayed | RFE | Open! |
 | 2024-06-26 | [#1752](https://sourceforge.net/p/omegat/feature-requests/1752/) | OmegaT | Dynamic subfilter in text search results | RFE | Open |
 | 2025-05-07 | [#1745](https://sourceforge.net/p/omegat/feature-requests/1745/) | OmegaT | Enforced translations are read-only | RFE | Open! |
 | 2024-04-29 | [#1743](https://sourceforge.net/p/omegat/feature-requests/1743/) | OmegaT | Commit specified files on SAVE or COMPILE | RFE | Open! |
 | 2024-04-12 | [#1258](https://sourceforge.net/p/omegat/bugs/1258/) | OmegaT | "This is a Subversion repository" if wrong password on AWS repo | BUG | Open |
-| 2024-04-08 | [#271](https://bitbucket.org/okapiframework/omegat-plugin/issues/271/extraneous-tags-which-are-not-escaped-in) | Okapi plugin | Extraneous tags which are not escaped in XML target file | BUG | Open! |
+| 2024-04-08 | [#271](https://bitbucket.org/okapiframework/omegat-plugin/issues/271/extraneous-tags-which-are-not-escaped-in) | Okapi plugin | Extraneous tags which are not escaped in XML target file | BUG | Resolved |
 | 2024-03-14 | [#2](https://github.com/capstanlqc/omegat/issues/2) | OmegaT 5.7.2 | Tag issues check does not flag missing tags in NEXT repetitions | BUG | Open |
 | 2024-03-12 | [#1349](https://bitbucket.org/okapiframework/okapi/issues/1349/openxml-equations-not-extracted) | Okapi | OpenXML: equations not extracted | RFE | Open |
 | 2023-11-08 | [#1725](https://sourceforge.net/p/omegat/feature-requests/1725/) | OmegaT | Trim authentication details in team projects | RFE | Open! |
