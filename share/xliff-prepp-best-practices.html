@@ -456,7 +456,7 @@ pattern="[0-9]+" title="How many centimeters." formmethod="post" required
 autofocus /> cm taller than a little penguin.</p>
 <p>```</p>
 <p>That code represents this display in the online questionnaire:</p>
-<p><img alt="" src="https://capstanlqc.github.io/ttt_docs/_assets/img/form.png" /></p>
+<p><img alt="" src="../_assets/img/form.png" /></p>
 <!-- ![](https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png) -->
 
 <p>Here, the expected and recommended preparation is to represent the text input field as content markup, as follows (and file <code>02_halal/markup_input.html.xlf</code> exemplifies):</p>
@@ -692,7 +692,7 @@ Vehicl&lt;/strong&gt;&lt;strong&gt;es in 2000  ❌</code></p>
 <p>However, a much better approach would be to get rid of those line breaks, which were there probably to hard wrap the text at a certain width to adapt to some expected space, and soft wrap the translation by other more convenient and dynamic means (e.g. styles) in the actual final publication medium. In general it is recommended to separate content from layout.</p>
 <p>In any case it should not be assumed that the translator will keep the line break tags in the translation or that their location will need to be equivalent to the source</p>
 <p>Therefore, our recommendation, in the first place, would be to avoid using line break tags in the source text. Secondly (assuming we are dealing with HTML content), the width of the text can be defined by means of CSS styles. That approach  achieves the same exact results without introducing any noise in the source text and without affecting the work of the translator. See https://jsfiddle.net/msoutopico/3p7x8ryr/1/ or the screenshot below:</p>
-<p><img alt="" src="https://capstanlqc.github.io/ttt_docs/_assets/img/markup_fiddl_wrap.png" /></p>
+<p><img alt="" src="../_assets/img/markup_fiddl_wrap.png" /></p>
 <h4>Tip</h4>
 <p>To avoid this kind of issue, then, ask a translation technologist or a trained linguist to run a source review on your draft XLIFF files and/or your original source content and then clean up your source content (prefereably) to avoid hard-coding text wrapping or (less preferably) adjust the extraction filter accordingly, so that the line break element is treated as an inline code (extracted along with the surrounding text and protected) and not as the end of the paragraph.</p>
 <h2>Annexes</h2>
