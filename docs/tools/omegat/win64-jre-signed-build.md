@@ -164,6 +164,8 @@ Defining `pkcs11cert` and `winCodesignTimestampUrl` is not necessary.
 	``` 
 > The above command would be `./gradlew winJRE64` without code signing.
 
+> The above command would be `./gradlew macDistZip` to create a mac installer (see short [howto](https://gist.github.com/kosivantsov/03321b29a8a2be242221e12572885079))
+
 ### Result
 
 If the process works, the installer will be saved in folder `./build/distributions`, e.g.
