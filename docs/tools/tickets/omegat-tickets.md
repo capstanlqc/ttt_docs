@@ -2,9 +2,11 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2025-01-20 | [#1388](https://gitlab.com/okapiframework/Okapi/-/issues/1388) | Okapi | ITS filtering messes up EOL in target files | BUG | Resolved |
 | 2024-12-03 | [#1277](https://sourceforge.net/p/omegat/bugs/1277/) | OmegaT | Concurrency issue in COMPILE-triggered scripts in team projects | BUG | Open! |
 | 2024-11-13 | [#1768](https://sourceforge.net/p/omegat/feature-requests/1768/) | OmegaT | Make the segment marker customizable in Preferences | RFE | Open! |
 | 2024-11-08 | [#1766](https://sourceforge.net/p/omegat/feature-requests/1766/) | OmegaT | Customize segment properties fields | RFE | Open! |
+| 2024-10-03 | [#1374](https://gitlab.com/okapiframework/Okapi/-/issues/1374) | Okapi | Unescaped closing angle bracket in ITS-excluded target content | BUG | Open |
 | 2024-09-28 | [#274](https://bitbucket.org/okapiframework/omegat-plugin/issues/274/translated-and-final-segments-in-xliff-20) | Okapi plugin | Translated and final segments in XLIFF 2.0 | BUG | Open! |
 | 2024-07-15 | [#273](https://bitbucket.org/okapiframework/omegat-plugin/issues/273) | Okapi plugin | Filter plugin v. 1.13-1.45 breaks backward compatibility for ID-bound alternative translations | BUG | Open! |
 | 2024-07-15 | [#272](https://bitbucket.org/okapiframework/omegat-plugin/issues/272/filter-plugin-v-113-145-breaks-backward) | Okapi plugin | Filter plugin v. 1.13-1.45 breaks backward compatibility for tags | BUG | Open! |
