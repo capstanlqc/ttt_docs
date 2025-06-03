@@ -6,7 +6,7 @@ Recommended font for Latin script: Noto Serif
 High legibility and readability font: https://brailleinstitute.org/freefont
 
 | Language | Font | Comment |
-|:----|:----|:----|:----|
+|:----|:----|:----|
 | Korean             | UnDotum, Malgun Gothic |               |             
 | Chinese            | NSimSun              | Aalso: Source Han Sans or Source Han Serif -- untested! |
 | Amharic, Tigrinya  | Ebrima                 |               |             
