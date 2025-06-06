@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2025-06-06 | [#1782](https://sourceforge.net/p/omegat/feature-requests/1782/) | OmegaT | Separate Statistics for Context-Bound (ICE/101%) and Exact (100%) Matches | RFE | Open |
 | 2025-01-20 | [#1388](https://gitlab.com/okapiframework/Okapi/-/issues/1388) | Okapi | ITS filtering messes up EOL in target files | BUG | Resolved |
 | 2024-12-03 | [#1277](https://sourceforge.net/p/omegat/bugs/1277/) | OmegaT | Concurrency issue in COMPILE-triggered scripts in team projects | BUG | Open! |
 | 2024-11-13 | [#1768](https://sourceforge.net/p/omegat/feature-requests/1768/) | OmegaT | Make the segment marker customizable in Preferences | RFE | Open! |
