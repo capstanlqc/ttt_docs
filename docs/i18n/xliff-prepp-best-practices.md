@@ -179,9 +179,13 @@ To open the project in OmegaT:
 
 That will create a local version of the project for you and open it. To open files in the translation editor, you may press **Ctrl+L** and then either type part of the file name or just click on a file to select it and open it. Typing also helps to filter the list of files.
 
-<!-- Credentials are available [here](https://rentry.co/i18n-dummy). -->
+<!-- 
 !!! info
-    Credentials are available [here](https://rentry.co/i18n-dummy-creds).
+    Credentials file can be downloaded from [here](https://rentry.co/i18n-dummy-creds).
+-->
+
+!!! info
+    The project is public, therefore OmegaT should not ask for credentials to download it. It may ask for credentials however if you try to save changes. Please remember that this project is just to show issues in file preparation, the memory is not meant to be writeable. 
 
 The sample XLIFF files in the project above or the project itself can be re-created using Okapi Rainbow.<span id="a2">[[2]](#2)</span> The Rainbow project, including the settings files, filters, segmentation rules etc., can also be downloaded from this link [`okapi_rainbow_project.tar.gz`](https://github.com/capstanlqc/i18n_guide/raw/main/okapi_rainbow_project.tar.gz), although this is not necessary unless you want to recreate or customize the extraction process. Instructions to use the Rainbow project can be found in the README.md file.
 
