@@ -2,7 +2,8 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
-| 2025-07-11 | [#276](https://gitlab.com/okapiframework/omegat-plugin/-/issues/276) | Okapi plugin | XLIFF 2 filter -- formatting lost in target | BUG | Open |
+| 2025-07-11 | [#20](https://gitlab.com/okapiframework/omegat-plugin/-/issues/20) | Okapi plugin | Numerotation of tags in xliff filter | RFE | Open |
+| 2025-07-11 | [#276](https://gitlab.com/okapiframework/omegat-plugin/-/issues/276) | Okapi plugin | XLIFF 2 filter -- formatting lost in target | BUG | Open |
 | 2025-07-10 | [#275](https://gitlab.com/okapiframework/omegat-plugin/-/issues/275) | Okapi plugin | Protected entries in XLIFF show translation as source text | BUG | Open |
 | 2025-06-06 | [#1782](https://sourceforge.net/p/omegat/feature-requests/1782/) | OmegaT | Separate Statistics for Context-Bound (ICE/101%) and Exact (100%) Matches | RFE | Open |
 | 2025-01-20 | [#1388](https://gitlab.com/okapiframework/Okapi/-/issues/1388) | Okapi | ITS filtering messes up EOL in target files | BUG | Resolved |
