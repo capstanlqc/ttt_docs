@@ -2,13 +2,15 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2025-07-11 | [#276](https://gitlab.com/okapiframework/omegat-plugin/-/issues/276) | Okapi plugin | XLIFF 2 filter -- formatting lost in target | BUG | Open |
+| 2025-07-10 | [#275](https://gitlab.com/okapiframework/omegat-plugin/-/issues/275) | Okapi plugin | Protected entries in XLIFF show translation as source text | BUG | Open |
 | 2025-06-06 | [#1782](https://sourceforge.net/p/omegat/feature-requests/1782/) | OmegaT | Separate Statistics for Context-Bound (ICE/101%) and Exact (100%) Matches | RFE | Open |
 | 2025-01-20 | [#1388](https://gitlab.com/okapiframework/Okapi/-/issues/1388) | Okapi | ITS filtering messes up EOL in target files | BUG | Resolved |
 | 2024-12-03 | [#1277](https://sourceforge.net/p/omegat/bugs/1277/) | OmegaT | Concurrency issue in COMPILE-triggered scripts in team projects | BUG | Open! |
 | 2024-11-13 | [#1768](https://sourceforge.net/p/omegat/feature-requests/1768/) | OmegaT | Make the segment marker customizable in Preferences | RFE | Open! |
 | 2024-11-08 | [#1766](https://sourceforge.net/p/omegat/feature-requests/1766/) | OmegaT | Customize segment properties fields | RFE | Open! |
 | 2024-10-03 | [#1374](https://gitlab.com/okapiframework/Okapi/-/issues/1374) | Okapi | Unescaped closing angle bracket in ITS-excluded target content | BUG | Open |
-| 2024-09-28 | [#274](https://gitlab.com/okapiframework/omegat-plugin/-/issues/274) | Okapi plugin | Translated and final segments in XLIFF 2.0 | BUG | Open! |
+| 2024-09-28 | [#274](https://gitlab.com/okapiframework/omegat-plugin/-/issues/274) | Okapi plugin | Translated and final segments in XLIFF 2.0 | BUG | Open! |
 | 2024-07-15 | [#273](https://gitlab.com/okapiframework/omegat-plugin/-/issues/273) | Okapi plugin | Filter plugin v. 1.13-1.45 breaks backward compatibility for ID-bound alternative translations | BUG | Open! |
 | 2024-07-15 | [#272](https://gitlab.com/okapiframework/omegat-plugin/-/issues/272) | Okapi plugin | Filter plugin v. 1.13-1.45 breaks backward compatibility for tags | BUG | Open! |
 | 2024-07-10 | [#1754](https://sourceforge.net/p/omegat/feature-requests/1754/) | OmegaT | Let user decide the maximum number of TM matches displayed | RFE | Open! |
