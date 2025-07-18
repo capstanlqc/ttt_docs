@@ -7,25 +7,18 @@ site_name: "🅃🅃🅃 ★ 🄳🄾🄲🅂"
 # https://see.fontimg.com/api/rf5/axvRa/YTFmNjI4MDllYmVkNDE3OTgyZDhjYTY4OTVhMmQwOTQudHRm/VFRUIERPQ1M/unknown-galaxy.png?r=fs&h=65&w=1000&fg=000000&bg=FFFFFF&tb=1&s=65
 site_url: https://capstanlqc.github.com/ttt_docs
 nav:
-  - Projects:
-      - Projects: projects/index.md
-      - ★ Flash:
-          - 👤 Automated workflow: projects/flash/flash_automation.md
-          - ☆ Automation diagram: projects/flash/flowchart.md
-          - ☆ Style guide [pl-PL]: projects/flash/FLASH_style-guide_pol-POL.md
-      - ★ PISA 2025:
-          - projects/pisa/index.md
-          - projects/pisa/errors.md
-          - ☆ projects/pisa/trainings.md
-          - 👤 Trend transfer: projects/pisa/pisa2025_trend-transfer_guide.md
-      - ★ IPSOS:
-          - projects/ipsos/index.md
-          - 👤 Workflow automation: projects/ipsos/workflow_automation.md
-      - ★ YSC:
-          - projects/ysc/index.md
-          - Project setup: projects/ysc/project-setup.md
-          - Gender adaptation: projects/ysc/gender-adaptation.md
-
+  - i18n guides:
+      - i18n guides: i18n/index.md
+      - Segmentation in XLIFF: i18n/xliff-segmentation.md
+      - ☆ XLIFF preparation: i18n/xliff-prepp-best-practices.md
+      - ☆ Authoring tips: i18n/authoring-tips.md
+      - ☆ Markdown (CG example): i18n/trend_math_cg_6b.md
+      - Text wrapping: i18n/wrapping.md
+      - ☆ Hyphenation: i18n/hyphenation.md
+      - List sorting: i18n/sorting.md
+      - Block formatting: i18n/formatting.md
+      #      - ☆ Flip+: i18n/flip-plus.md
+      - ☆ Single-source multiple-channel: i18n/ssmc.md
   - L10n tools:
       - L10n Tools: tools/index.md
       - ★ Okapi:
@@ -87,17 +80,24 @@ nav:
       - ☆ MemoryLn TM management: capps/memoryln_tm_mngmt.md
       - ☆ xDiff: capps/xdiff.md
       - ☆ xDiff automation: capps/xdiff_automation.md
-  - i18n guides:
-      - i18n guides: i18n/index.md
-      - ☆ XLIFF preparation: i18n/xliff-prepp-best-practices.md
-      - ☆ Authoring tips: i18n/authoring-tips.md
-      - ☆ Markdown (CG example): i18n/trend_math_cg_6b.md
-      - Text wrapping: i18n/wrapping.md
-      - ☆ Hyphenation: i18n/hyphenation.md
-      - List sorting: i18n/sorting.md
-      - Block formatting: i18n/formatting.md
-      #      - ☆ Flip+: i18n/flip-plus.md
-      - ☆ Single-source multiple-channel: i18n/ssmc.md
+  - Projects:
+      - Projects: projects/index.md
+      - ★ Flash:
+          - 👤 Automated workflow: projects/flash/flash_automation.md
+          - ☆ Automation diagram: projects/flash/flowchart.md
+          - ☆ Style guide [pl-PL]: projects/flash/FLASH_style-guide_pol-POL.md
+      - ★ PISA 2025:
+          - projects/pisa/index.md
+          - projects/pisa/errors.md
+          - ☆ projects/pisa/trainings.md
+          - 👤 Trend transfer: projects/pisa/pisa2025_trend-transfer_guide.md
+      - ★ IPSOS:
+          - projects/ipsos/index.md
+          - 👤 Workflow automation: projects/ipsos/workflow_automation.md
+      - ★ YSC:
+          - projects/ysc/index.md
+          - Project setup: projects/ysc/project-setup.md
+          - Gender adaptation: projects/ysc/gender-adaptation.md
   - Docs for users (symlink to KS):
       - 👤 Wordcount analysis in Ur: tools/omegat/omt_wc.md
 theme:
