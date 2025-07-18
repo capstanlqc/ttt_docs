@@ -26,17 +26,17 @@
 <p>This is a short guide about segmentation using the SRX standard in OpenXLIFF. </p>
 <h2>Default ruleset</h2>
 <p>I think a simple example can be useful, so consider the following scenario. The following JSON file needs to be prepared for translation (converted to XLIFF):</p>
-<p><pre>
-{
-    "paragraph": "This is one sentence. This is another sentence!! Mrs. 
+<pre><code class="language-json">{
+    &quot;paragraph&quot;: &quot;This is one sentence. This is another sentence!! Mrs. 
     are a married person. The U.S.A. is a great country, e.g. not like 
     the US. The Dept. Of Finance has the blessing of Rev. Johnson. Let's 
-    go climb Mnt. Everest."
-}</pre></p>
+    go climb Mnt. Everest.&quot;
+}
+</code></pre>
 <p>You may create an XLIFF file with the OpenXLIFF library:</p>
-<p><pre>
-bash ~/Apps/maxprograms/OpenXLIFF/convert.sh -file file.json -srcLang en \
--tgtLang el -type JSON -embed -xliff file.xlf -2.0</pre></p>
+<pre><code class="language-bash">bash ~/Apps/maxprograms/OpenXLIFF/convert.sh -file file.json -srcLang en \
+-tgtLang el -type JSON -embed -xliff file.xlf -2.0
+</code></pre>
 <p>The OpenXLIFF library uses segmentation by default (using the built-in <a href="https://github.com/rmraya/OpenXLIFF/blob/master/srx/default.srx">default ruleset</a>), and produces the following segments: </p>
 <pre><code>✅ This is one sentence.
 ✅ This is another sentence!!
@@ -48,53 +48,55 @@ bash ~/Apps/maxprograms/OpenXLIFF/convert.sh -file file.json -srcLang en \
 ❌ Everest.
 </code></pre>
 <!-- 
-```xml
-<segment id="0-0">
-  <source>This is one sentence.</source>
-</segment>
-<segment id="0-1">
-  <source> This is another sentence!!</source>
-</segment>
-<segment id="0-2">
-  <source> Mrs. are a married person.</source>
-</segment>
-<segment id="0-3">
-  <source> The U.S.A. is a great country, e.g. not like the US.</source>
-</segment>
-<segment id="0-4">
-  <source> The Dept.</source>
-</segment>
-<segment id="0-5">
-  <source> Of Finance has the blessing of Rev. Johnson.</source>
-</segment>
-<segment id="0-6">
-  <source> Let's go climb Mnt.</source>
-</segment>
-<segment id="0-7">
-  <source> Everest.</source>
-</segment>
-```
 
-```xml
-<segment id="0-0">
-  <source>This is one sentence.</source>
-</segment>
-<segment id="0-1">
-  <source> This is another sentence!!</source>
-</segment>
-<segment id="0-2">
-  <source> Mrs. are a married person.</source>
-</segment>
-<segment id="0-3">
-  <source> The U.S.A. is a great country, e.g. not like the US.</source>
-</segment>
-<segment id="0-4">
-  <source> The Dept. Of Finance has the blessing of Rev. Johnson.</source>
-</segment>
-<segment id="0-5">
-  <source> Let's go climb Mnt. Everest.</source>
-</segment>
-```
+<pre><code class="language-xml">&lt;segment id=&quot;0-0&quot;&gt;
+  &lt;source&gt;This is one sentence.&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-1&quot;&gt;
+  &lt;source&gt; This is another sentence!!&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-2&quot;&gt;
+  &lt;source&gt; Mrs. are a married person.&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-3&quot;&gt;
+  &lt;source&gt; The U.S.A. is a great country, e.g. not like the US.&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-4&quot;&gt;
+  &lt;source&gt; The Dept.&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-5&quot;&gt;
+  &lt;source&gt; Of Finance has the blessing of Rev. Johnson.&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-6&quot;&gt;
+  &lt;source&gt; Let's go climb Mnt.&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-7&quot;&gt;
+  &lt;source&gt; Everest.&lt;/source&gt;
+&lt;/segment&gt;
+</code></pre>
+
+
+
+<pre><code class="language-xml">&lt;segment id=&quot;0-0&quot;&gt;
+  &lt;source&gt;This is one sentence.&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-1&quot;&gt;
+  &lt;source&gt; This is another sentence!!&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-2&quot;&gt;
+  &lt;source&gt; Mrs. are a married person.&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-3&quot;&gt;
+  &lt;source&gt; The U.S.A. is a great country, e.g. not like the US.&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-4&quot;&gt;
+  &lt;source&gt; The Dept. Of Finance has the blessing of Rev. Johnson.&lt;/source&gt;
+&lt;/segment&gt;
+&lt;segment id=&quot;0-5&quot;&gt;
+  &lt;source&gt; Let's go climb Mnt. Everest.&lt;/source&gt;
+&lt;/segment&gt;
+</code></pre>
+
 
 -->
 
@@ -102,19 +104,19 @@ bash ~/Apps/maxprograms/OpenXLIFF/convert.sh -file file.json -srcLang en \
 <p>However, it fails to recognize "Dept." and "Mnt.", hence splitting the last two sentences in two parts. This kind of segmentation defect may be more or less common depending on the content, but it's a common practice to fix them.</p>
 <h2>Customizing rules</h2>
 <p>To amend the problem above, one can use a custom SRX. I have made a copy of the custom.srx included in the OpenXLIFF library, and added a couple of rules that prevent breaking at those two points:</p>
-<p><pre>
-&lt;rule break="no"&gt;
+<pre><code class="language-xml">&lt;rule break=&quot;no&quot;&gt;
     &lt;beforebreak&gt;Dept\.&lt;/beforebreak&gt;
     &lt;afterbreak&gt;\sOf&lt;/afterbreak&gt;
 &lt;/rule&gt;
-&lt;rule break="no"&gt;
+&lt;rule break=&quot;no&quot;&gt;
     &lt;beforebreak&gt;Mnt\.&lt;/beforebreak&gt;
     &lt;afterbreak&gt;\s(Everest|Kilimanjaro)&lt;/afterbreak&gt;
-&lt;/rule&gt;</pre></p>
+&lt;/rule&gt;
+</code></pre>
 <p>I can now use the <code>-srx</code> argument to point to my segmentation rules: </p>
-<p><pre>
-bash ~/Apps/maxprograms/OpenXLIFF/convert.sh -file file.json -srcLang en \ 
--tgtLang el -type JSON -embed -xliff file.xlf -2.0 -srx custom.srx</pre></p>
+<pre><code class="language-bash">bash ~/Apps/maxprograms/OpenXLIFF/convert.sh -file file.json -srcLang en \ 
+-tgtLang el -type JSON -embed -xliff file.xlf -2.0 -srx custom.srx
+</code></pre>
 <p>The result is correct now: </p>
 <pre><code>✅ This is one sentence.
 ✅ This is another sentence!!

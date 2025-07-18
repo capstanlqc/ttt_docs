@@ -282,15 +282,16 @@
 <!-- The XLIFF code to segment the paragraph above looks like this:-->
 
 <!--
-``` xml
-<seg-source><mrk mid="0" mtype="seg">Lorem ipsum dolor sit amet, consectetur adipiscing
-elit… </mrk> <mrk mid="1" mtype="seg">Aliquam ex nisi, mattis pulvinar nulla sed, commodo
-mattis ligula.</mrk> <mrk mid="2" mtype="seg">Nulla sit amet leo lacinia, pellentesque mi
-non, aliquam augue?</mrk> <mrk mid="3" mtype="seg">Pellentesque tempor dictum dui in
-imperdiet. </mrk> <mrk mid="4" mtype="seg">Fusce ligula arcu, hendrerit eu dignissim eget,
-consequat quis sem!</mrk> <mrk mid="5" mtype="seg">Maecenas eget ligula dapibus, dictum
-purus vitae, sodales neque.</mrk></seg-source>
-```
+
+<pre><code class="language-xml">&lt;seg-source&gt;&lt;mrk mid=&quot;0&quot; mtype=&quot;seg&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing
+elit… &lt;/mrk&gt; &lt;mrk mid=&quot;1&quot; mtype=&quot;seg&quot;&gt;Aliquam ex nisi, mattis pulvinar nulla sed, commodo
+mattis ligula.&lt;/mrk&gt; &lt;mrk mid=&quot;2&quot; mtype=&quot;seg&quot;&gt;Nulla sit amet leo lacinia, pellentesque mi
+non, aliquam augue?&lt;/mrk&gt; &lt;mrk mid=&quot;3&quot; mtype=&quot;seg&quot;&gt;Pellentesque tempor dictum dui in
+imperdiet. &lt;/mrk&gt; &lt;mrk mid=&quot;4&quot; mtype=&quot;seg&quot;&gt;Fusce ligula arcu, hendrerit eu dignissim eget,
+consequat quis sem!&lt;/mrk&gt; &lt;mrk mid=&quot;5&quot; mtype=&quot;seg&quot;&gt;Maecenas eget ligula dapibus, dictum
+purus vitae, sodales neque.&lt;/mrk&gt;&lt;/seg-source&gt;
+</code></pre>
+
 -->
 
 <p>Sometimes it is necessary or convenient to create more specific rules to meet the specific needs of the source content, which is relatively easy in SRX. For example, if it's necessary to split the text in some context that the default rules do not cover. Or there are cases where punctuation symbols do not stand for the end of a sentence, such as in the case of abbreviations:</p>
@@ -321,9 +322,8 @@ purus vitae, sodales neque.</mrk></seg-source>
 </ul>
 <h4>2.2.1. Suprasentential codes</h4>
 <p>A leading opening tag appearing before the beginning of a sentence and its corresponding closing tag appearing after the end of the sentence are an example of suprasentential codes:</p>
-<p>```</p>
-<p class="foo">What is the total length of the sticks in the line?</p>
-<p>```</p>
+<pre><code>&lt;p class=&quot;foo&quot;&gt;What is the total length of the sticks in the line?&lt;/p&gt;
+</code></pre>
 <p>Since they are expected to appear in exactly the same position in the target version of that segment, they don't need to appear in the translation editor and the translator does not need to see them:</p>
 <blockquote>
 <p><kbd>1</kbd> What is the total length of the sticks in the line? ✔</p>
@@ -331,17 +331,16 @@ purus vitae, sodales neque.</mrk></seg-source>
 </blockquote>
 <h4>2.2.2. Intrasentential codes</h4>
 <p><strong>☞</strong> The file <code>markup_span.html</code> in the sample project includes the following text:</p>
-<p>``` html</p>
-<p><span style='font-size:12pt;font-family:"times new roman","serif"'>Code1:
-</span><span style='font-size:12pt;font-family:"times new roman","serif"'>3/2 or
-11/2 or 1.5</span></p>
-<p>```</p>
+<pre><code class="language-html">&lt;p&gt;&lt;span style='font-size:12pt;font-family:&quot;times new roman&quot;,&quot;serif&quot;'&gt;Code1:
+&lt;/span&gt;&lt;span style='font-size:12pt;font-family:&quot;times new roman&quot;,&quot;serif&quot;'&gt;3/2 or
+11/2 or 1.5&lt;/span&gt;&lt;/p&gt;
+</code></pre>
 <p>which should be prepared as follows in the XLIFF file:</p>
-<p><code>xml
-&lt;source xml:lang="en"&gt;&lt;bpt id="1" ctype="x-span"&gt;&amp;lt;span style='font-size:12pt;
-font-family:"times new roman","serif"'&gt;&lt;/bpt&gt;Code1: &lt;ept id="1"&gt;&amp;lt;/span&gt;&lt;/ept&gt;
-&lt;bpt id="2" ctype="x-span"&gt;&amp;lt;span style='font-size:12pt;font-family:"times new
-roman","serif"'&gt;&lt;/bpt&gt;3/2 or 11/2 or 1.5&lt;ept id="2"&gt;&amp;lt;/span&gt;&lt;/ept&gt;&lt;/source&gt;</code></p>
+<pre><code class="language-xml">&lt;source xml:lang=&quot;en&quot;&gt;&lt;bpt id=&quot;1&quot; ctype=&quot;x-span&quot;&gt;&amp;lt;span style='font-size:12pt;
+font-family:&quot;times new roman&quot;,&quot;serif&quot;'&gt;&lt;/bpt&gt;Code1: &lt;ept id=&quot;1&quot;&gt;&amp;lt;/span&gt;&lt;/ept&gt;
+&lt;bpt id=&quot;2&quot; ctype=&quot;x-span&quot;&gt;&amp;lt;span style='font-size:12pt;font-family:&quot;times new
+roman&quot;,&quot;serif&quot;'&gt;&lt;/bpt&gt;3/2 or 11/2 or 1.5&lt;ept id=&quot;2&quot;&gt;&amp;lt;/span&gt;&lt;/ept&gt;&lt;/source&gt;
+</code></pre>
 <p>which the CAT tool will display as, e.g.:</p>
 <blockquote>
 <p><kbd>1</kbd> <code>&lt;g0&gt;</code>Code1: <code>&lt;g0&gt;&lt;g1&gt;</code>3/2 or 11/2 or 1.5<code>&lt;/g1&gt;</code> ✔</p>
@@ -354,11 +353,11 @@ roman","serif"'&gt;&lt;/bpt&gt;3/2 or 11/2 or 1.5&lt;ept id="2"&gt;&amp;lt;/span
 Escaping the HTML or XML markup by replacing <code>&lt;</code> and <code>&gt;</code> with <code>&amp;lt;</code> and <code>&amp;gt;</code> respectively, etc. is not a good approach, because the translation editor will consider the escaped markup as editable text rather than as locked codes and therefore the tags can be mishandled, let alone the fact that translation memories will be polluted. Furthermore, that approach does not reduce the length of inline codes, which means that the text is less readable and that can hamper the translation and bring about quality issues.</p>
 <hr />
 <p>For example, escaping the markup in the above segment would produce the following XLIFF file:</p>
-<p><code>xml
-&lt;source xml:lang="en"&gt;&amp;lt;span style=&amp;apos;font-size:12pt;font-family:&amp;quot;
+<pre><code class="language-xml">&lt;source xml:lang=&quot;en&quot;&gt;&amp;lt;span style=&amp;apos;font-size:12pt;font-family:&amp;quot;
 times new roman&amp;quot;,&amp;quot;serif&amp;quot;&amp;apos;&gt;Code1: &amp;lt;/span&amp;gt;
 &amp;lt;span style=&amp;apos;font-size:12pt;font-family:&amp;quot;times new roman&amp;amp;
-quot;,&amp;quot;serif&amp;quot;&amp;apos;&gt;3/2 or 11/2 or 1.5&amp;lt;/span&amp;gt;&lt;/source&gt;</code></p>
+quot;,&amp;quot;serif&amp;quot;&amp;apos;&gt;3/2 or 11/2 or 1.5&amp;lt;/span&amp;gt;&lt;/source&gt;
+</code></pre>
 <p>which would produce the following view in the translation editor, which is not translation-friendly:</p>
 <blockquote>
 <p><kbd>1</kbd> <code>&lt;span style='font-size:12pt;font-family:"times new roman","serif"'&gt;</code>Code1: <code>&lt;/span&gt;&lt;span style='font-size:12pt;font-family:"times new roman","serif"'&gt;</code>3/2 or 11/2 or 1.5<code>&lt;/span&gt;</code> ❌</p>
@@ -366,13 +365,12 @@ quot;,&amp;quot;serif&amp;quot;&amp;apos;&gt;3/2 or 11/2 or 1.5&amp;lt;/span&amp
 <p><strong>☞</strong> In the sample project provided, files <code>markup_custom_xml.xlf</code> and <code>markup_span.html.xlf</code> show what the text looks like when the inline codes have been simply escaped (the ones in the <code>01_haram</code> folder) and when they have been properly encapsulated as XLIFF content markup (the ones in folder <code>02_halal</code>). There are two files to exemplify both standard HTML tags (e.g. <code>&lt;span&gt;</code>) as well as custom-crafted XML tags.</p>
 <h3>2.3. Encoding entities</h3>
 <p>HTML source content might contain named character entities (in the form of <code>&amp;char;</code>) which are not allowed in XML and therefore cannot be used in an XLIFF file as such unless they are declared (except for <code>amp</code>, <code>lt</code>, <code>gt</code>, <code>apos</code>, <code>quot</code>). There is more than one possibility to prepare source HTML content containing named character entities, and some ways are preferable to others. Let us consider the <code>&amp;divide;</code> entity as an example, found in the following HTML content:</p>
-<p>``` xml</p>
-<p>(40 &divide; 10) + (8 &divide; 2)</p>
-<p>```</p>
+<pre><code class="language-xml">&lt;p&gt;(40 &amp;divide; 10) + (8 &amp;divide; 2)&lt;/p&gt;
+</code></pre>
 <h4>2.3.1. Escaping named character entities</h4>
 <p>One possibility to create a valid XLIFF file is to escape the entities, as follows:</p>
-<p><code>xml
-&lt;source&gt;(40 &amp;amp;divide; 10) + (8 &amp;amp;divide; 2)&lt;/source&gt; ❌</code></p>
+<pre><code class="language-xml">&lt;source&gt;(40 &amp;amp;divide; 10) + (8 &amp;amp;divide; 2)&lt;/source&gt; ❌
+</code></pre>
 <p>The escaping approach is discouraged, though. Among other reasons, this approach will make the translation editor display the named character entity rather than the actual character itself (which reduces readability and could be misleading or even unintelligible for the linguist), as shown below:</p>
 <blockquote>
 <p><kbd>1</kbd> 40 [&divide; 10) + (8 &divide; 2)  ❌</p>
@@ -393,10 +391,10 @@ quot;,&amp;quot;serif&amp;quot;&amp;apos;&gt;3/2 or 11/2 or 1.5&amp;lt;/span&amp
 <p>A different approach is to represent the same character by means of the universal Unicode code point expressed as a numeric entity (e.g. the hexadecimal entity <code>&amp;#x00F7;</code>) or as the Unicode character itself (e.g. <code>÷</code>). The latter is preferable because it simplifies maintenance and running text searches directly in the raw XLIFF files with, say, grep or any other text-based tool.</p>
 <p>If it's unavoidable to have named character entities in the source content to represent special characters, a simple pre-processing of the source content can be used to convert them into Unicode code points or Unicode characters. However, the ideal scenario would be to configure the authoring tool where the source content is authored so that special characters or symbols can be inserted directly by means of the Unicode character or the numeric entity. How authors insert symbols or special characters that are not on their keyboard depends on their authoring tool and their platform, but normally they can either pick the character from a special character palette (e.g. the Character Map in Windows or Character Viewer in Mac) or insert it by using a key combination, e.g. <kbd>ALT+0176</kbd> on the keypad to insert the degree symbol (i.e. <code>°</code>).<span id="a12"><a href="#12">[12]</a></span></p>
 <p>Both the approaches mentioned in the previous paragraph will produce one of the two following XLIFF codes (depending on the encoding chosen):</p>
-<p><code>xml
-&lt;source&gt;(40 &amp;#x00F7; 10) + (8 &amp;#x00F7; 2)&lt;/source&gt; ✔</code></p>
-<p><code>xml
-&lt;source&gt;(40 ÷ 10) + (8 ÷ 2)&lt;/source&gt; ✔</code></p>
+<pre><code class="language-xml">&lt;source&gt;(40 &amp;#x00F7; 10) + (8 &amp;#x00F7; 2)&lt;/source&gt; ✔
+</code></pre>
+<pre><code class="language-xml">&lt;source&gt;(40 ÷ 10) + (8 ÷ 2)&lt;/source&gt; ✔
+</code></pre>
 <p>which will be displayed as the following in the translation editor:</p>
 <blockquote>
 <p><kbd>1</kbd> (40 ÷ 10) + (8 ÷ 2) ✔</p>
@@ -444,32 +442,31 @@ quot;,&amp;quot;serif&amp;quot;&amp;apos;&gt;3/2 or 11/2 or 1.5&amp;lt;/span&amp
 <p>Following the recommendations above is necessary but might not be enough to achieve an optimized process. The source content might present a number of pitfalls that require special attention when creating the XLIFF files. Let us see some of those frequent issues that may hamper language tasks.</p>
 <h3>3.1. Split sentences</h3>
 <p>Sometimes sentences might be broken in two or more parts because the extraction filter is treating an embedded code as the end of the paragraph. <strong>☞</strong> In the OmegaT project provided, file <code>01_haram/markup_input.html.xlf</code> shows how the sentence is broken at the text input code:</p>
-<p><code>xml
-&lt;source&gt;An emperor penguin is&lt;/source&gt;
-&lt;source&gt;cm taller than a little penguin.&lt;/source&gt;</code></p>
+<pre><code class="language-xml">&lt;source&gt;An emperor penguin is&lt;/source&gt;
+&lt;source&gt;cm taller than a little penguin.&lt;/source&gt;
+</code></pre>
 <p>displayed in the translation editor as:</p>
 <blockquote>
 <p><kbd>1</kbd> An emperor penguin is ❌<br />
 <kbd>2</kbd> cm taller than a little penguin.</p>
 </blockquote>
 <p>The original content (in file <code>original/markup_input.html</code>) looks like this:</p>
-<p>``` xml</p>
-<p>An emperor penguin is <input type="text" name="fname" autocomplete="off"
-size="4" id="emperor-penguin-versus-little-penguin" class="height-different"
-pattern="[0-9]+" title="How many centimeters." formmethod="post" required
-autofocus /> cm taller than a little penguin.</p>
-<p>```</p>
+<pre><code class="language-xml">&lt;p&gt;An emperor penguin is &lt;input type=&quot;text&quot; name=&quot;fname&quot; autocomplete=&quot;off&quot;
+size=&quot;4&quot; id=&quot;emperor-penguin-versus-little-penguin&quot; class=&quot;height-different&quot;
+pattern=&quot;[0-9]+&quot; title=&quot;How many centimeters.&quot; formmethod=&quot;post&quot; required
+autofocus /&gt; cm taller than a little penguin.&lt;/p&gt;
+</code></pre>
 <p>That code represents this display in the online questionnaire:</p>
 <p><img alt="" src="../_assets/img/form.png" /></p>
 <!-- ![](https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png) -->
 
 <p>Here, the expected and recommended preparation is to represent the text input field as content markup, as follows (and file <code>02_halal/markup_input.html.xlf</code> exemplifies):</p>
-<p><code>xml
-&lt;source xml:lang="en"&gt;An emperor penguin is &lt;ph id="1" ctype="x-input"&gt;&amp;lt;input
-type="text" name="fname" autocomplete="off" size="4" id="emperor-penguin-versus-
-little-penguin" class="height-different" pattern="[0-9]+"
-formmethod="post" required autofocus /&gt;&lt;/ph&gt; cm taller than a little penguin.
-&lt;/source&gt;</code></p>
+<pre><code class="language-xml">&lt;source xml:lang=&quot;en&quot;&gt;An emperor penguin is &lt;ph id=&quot;1&quot; ctype=&quot;x-input&quot;&gt;&amp;lt;input
+type=&quot;text&quot; name=&quot;fname&quot; autocomplete=&quot;off&quot; size=&quot;4&quot; id=&quot;emperor-penguin-versus-
+little-penguin&quot; class=&quot;height-different&quot; pattern=&quot;[0-9]+&quot;
+formmethod=&quot;post&quot; required autofocus /&gt;&lt;/ph&gt; cm taller than a little penguin.
+&lt;/source&gt;
+</code></pre>
 <p>which will appear as follows in the translation editor (see file <code>02_halal/markup_input.html.xlf</code>):</p>
 <blockquote>
 <p><kbd>1</kbd> An emperor penguin is <code>&lt;x0/&gt;</code> cm taller than a little penguin.  ✔ <!-- :heavy_check_mark: --></p>
@@ -658,19 +655,19 @@ or
 <h3>3.2. Markup nimiety</h3>
 <p>Segments overloaded with markup make translation and all related subsequent language tasks more difficult, therefore increasing the chance to introduce errors in the translation, especially in right-to-left languages such as Arabic or Hebrew.</p>
 <p>Some inline codes are unavoidable, e.g. to provide style:</p>
-<p><code>xml
-Put the lengths in order from &lt;b&gt;shortest&lt;/b&gt; to &lt;i&gt;longest&lt;/i&gt;. ✔</code></p>
+<pre><code class="language-xml">Put the lengths in order from &lt;b&gt;shortest&lt;/b&gt; to &lt;i&gt;longest&lt;/i&gt;. ✔
+</code></pre>
 <p>However, other tags are unnecessary and should be avoided or cleaned up before preparing the files. For example, closing and opening tags of the same kind in the middle of a sentence or even in the middle of a word:</p>
-<p><code>xml
-Vehicl&lt;/strong&gt;&lt;strong&gt;es in 2000  ❌</code></p>
+<pre><code class="language-xml">Vehicl&lt;/strong&gt;&lt;strong&gt;es in 2000  ❌
+</code></pre>
 <p>When this happens repeatedly, it results in segments that are (unnecessarily) very translation unfriendly. For example:</p>
-<p><code>xml
-&lt;strong&gt;Star&lt;/strong&gt;&lt;strong&gt;t &lt;/strong&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;strong&gt;i&lt;/strong&gt;&lt;strong&gt;me&lt;/strong&gt;  ❌</code></p>
+<pre><code class="language-xml">&lt;strong&gt;Star&lt;/strong&gt;&lt;strong&gt;t &lt;/strong&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;strong&gt;i&lt;/strong&gt;&lt;strong&gt;me&lt;/strong&gt;  ❌
+</code></pre>
 <p>In that example, there are a lot of <code>&lt;strong&gt;</code> tags there to do the same job that could be achieved with simply one tag pair. This tag multiplicity might arise from adding superfluous formatting in a word processor or a wysiwyg editor to create the source, or from converting with OCR or from PDF.</p>
 <h4>Expected preparation</h4>
 <p>The expected design of the source content in the case above would have been to embed the formatted text with one single tag pair.</p>
-<p><code>xml
-&lt;strong&gt;Start Time&lt;/strong&gt; ✔</code></p>
+<pre><code class="language-xml">&lt;strong&gt;Start Time&lt;/strong&gt; ✔
+</code></pre>
 <p>This tag pair is actually suprasentential markup, which could be excluded from the prepared segment, thus producing the following simple display in the translation editor:</p>
 <blockquote>
 <p><kbd>1</kbd> Start Time   ✔ <!-- :heavy_check_mark: --></p>
@@ -708,22 +705,22 @@ Vehicl&lt;/strong&gt;&lt;strong&gt;es in 2000  ❌</code></p>
 <ul>
 <li>The <code>target</code> element must be empty or missing, like so:</li>
 </ul>
-<p><code>xml
-  &lt;trans-unit id="1086880"&gt;
+<pre><code class="language-xml">  &lt;trans-unit id=&quot;1086880&quot;&gt;
     &lt;source&gt;This is the source text.&lt;/source&gt;
     &lt;target/&gt;
-  &lt;/trans-unit&gt;</code>
-Also, the <code>trans-unit</code> must have property <code>xml:space="preserve"</code>.</p>
+  &lt;/trans-unit&gt;
+</code></pre>
+<p>Also, the <code>trans-unit</code> must have property <code>xml:space="preserve"</code>.</p>
 <p>B. Using the default OmegaT XLIFF filter:</p>
 <ul>
 <li>The <code>target</code> element must exist and be populated with the source text.</li>
 </ul>
 <p>For example:</p>
-<p><code>xml
-  &lt;trans-unit id="1086880"&gt;
+<pre><code class="language-xml">  &lt;trans-unit id=&quot;1086880&quot;&gt;
     &lt;source&gt;This is the source text.&lt;/source&gt;
     &lt;target&gt;This is the source text.&lt;/target&gt;
-  &lt;/trans-unit&gt;</code></p>
+  &lt;/trans-unit&gt;
+</code></pre>
 <h4>Check list for bilingual review</h4>
 <p>Make sure your bilingual/translated XLIFF files meet the following criteria:</p>
 <ul>
@@ -731,11 +728,11 @@ Also, the <code>trans-unit</code> must have property <code>xml:space="preserve"<
 <li>The <code>trans-unit</code> must have attribute-value pair <code>approved="yes"</code>.</li>
 </ul>
 <p>For example:</p>
-<p><code>xml
-  &lt;trans-unit id="1086880" xml:space="preserve" approved="yes"&gt;
+<pre><code class="language-xml">  &lt;trans-unit id=&quot;1086880&quot; xml:space=&quot;preserve&quot; approved=&quot;yes&quot;&gt;
     &lt;source&gt;This is the source text.&lt;/source&gt;
     &lt;target&gt;Esto es la traducción.&lt;/target&gt;
-  &lt;/trans-unit&gt;</code></p>
+  &lt;/trans-unit&gt;
+</code></pre>
 <p>In this case the OmegaT project must use the Okapi XLIFF filter.</p>
 <h2>References</h2>
 <ol>
