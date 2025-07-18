@@ -22,21 +22,21 @@
         </style>
     </head>
     <body class="markdown-body">
-    <h1>Segmenting with OpenXLIFF</h1>
+    <h1>Segmenting with SRX</h1>
 <p>This is a short guide about segmentation using the SRX standard in OpenXLIFF. </p>
 <h2>Default ruleset</h2>
 <p>I think a simple example can be useful, so consider the following scenario. The following JSON file needs to be prepared for translation (converted to XLIFF):</p>
-<p><code>json
+<p><pre>
 {
     "paragraph": "This is one sentence. This is another sentence!! Mrs. 
     are a married person. The U.S.A. is a great country, e.g. not like 
     the US. The Dept. Of Finance has the blessing of Rev. Johnson. Let's 
     go climb Mnt. Everest."
-}</code></p>
+}</pre></p>
 <p>You may create an XLIFF file with the OpenXLIFF library:</p>
-<p><code>bash
+<p><pre>
 bash ~/Apps/maxprograms/OpenXLIFF/convert.sh -file file.json -srcLang en \
--tgtLang el -type JSON -embed -xliff file.xlf -2.0</code></p>
+-tgtLang el -type JSON -embed -xliff file.xlf -2.0</pre></p>
 <p>The OpenXLIFF library uses segmentation by default (using the built-in <a href="https://github.com/rmraya/OpenXLIFF/blob/master/srx/default.srx">default ruleset</a>), and produces the following segments: </p>
 <pre><code>✅ This is one sentence.
 ✅ This is another sentence!!
@@ -102,7 +102,7 @@ bash ~/Apps/maxprograms/OpenXLIFF/convert.sh -file file.json -srcLang en \
 <p>However, it fails to recognize "Dept." and "Mnt.", hence splitting the last two sentences in two parts. This kind of segmentation defect may be more or less common depending on the content, but it's a common practice to fix them.</p>
 <h2>Customizing rules</h2>
 <p>To amend the problem above, one can use a custom SRX. I have made a copy of the custom.srx included in the OpenXLIFF library, and added a couple of rules that prevent breaking at those two points:</p>
-<p><code>xml
+<p><pre>
 &lt;rule break="no"&gt;
     &lt;beforebreak&gt;Dept\.&lt;/beforebreak&gt;
     &lt;afterbreak&gt;\sOf&lt;/afterbreak&gt;
@@ -110,11 +110,11 @@ bash ~/Apps/maxprograms/OpenXLIFF/convert.sh -file file.json -srcLang en \
 &lt;rule break="no"&gt;
     &lt;beforebreak&gt;Mnt\.&lt;/beforebreak&gt;
     &lt;afterbreak&gt;\s(Everest|Kilimanjaro)&lt;/afterbreak&gt;
-&lt;/rule&gt;</code></p>
+&lt;/rule&gt;</pre></p>
 <p>I can now use the <code>-srx</code> argument to point to my segmentation rules: </p>
-<p><code>bash
+<p><pre>
 bash ~/Apps/maxprograms/OpenXLIFF/convert.sh -file file.json -srcLang en \ 
--tgtLang el -type JSON -embed -xliff file.xlf -2.0 -srx custom.srx</code></p>
+-tgtLang el -type JSON -embed -xliff file.xlf -2.0 -srx custom.srx</pre></p>
 <p>The result is correct now: </p>
 <pre><code>✅ This is one sentence.
 ✅ This is another sentence!!
@@ -125,12 +125,16 @@ bash ~/Apps/maxprograms/OpenXLIFF/convert.sh -file file.json -srcLang en \
 </code></pre>
 <p>This kind of rule customization is a common operation in the preparation of translation projects, regardless of the preparation tool used (SRX is a standard that all modern translation tools should understand).</p>
 <h2>Update SRX rules</h2>
-<p>One can edit the SRX file directly as XML (assuming good knowledge of the SRX standard) or by other means, but there are off-the-shelf editors for that, e.g. https://www.maxprograms.com/products/srxeditor.html).</p>
+<p>One can edit the SRX file directly as XML (assuming good knowledge of the SRX standard) or by other means, but there are off-the-shelf editors for that, e.g. <a href="https://www.maxprograms.com/products/srxeditor.html">SRXEditor</a>).</p>
 <h2>References</h2>
-<p>Some more info:
-https://en.wikipedia.org/wiki/Segmentation_Rules_eXchange</p>
-<p>OpenXLIFF's default ruleset:
-https://github.com/rmraya/OpenXLIFF/blob/master/srx/default.srx</p>
+<p>Some more info:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Segmentation_Rules_eXchange">https://en.wikipedia.org/wiki/Segmentation_Rules_eXchange</a></li>
+</ul>
+<p>OpenXLIFF's default ruleset:</p>
+<ul>
+<li><a href="https://github.com/rmraya/OpenXLIFF/blob/master/srx/default.srx">https://github.com/rmraya/OpenXLIFF/blob/master/srx/default.srx</a></li>
+</ul>
     </body>
     </html>
     
