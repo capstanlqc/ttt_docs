@@ -130,12 +130,14 @@ This kind of rule customization is a common operation in the preparation of tran
 
 ## Update SRX rules
 
-One can edit the SRX file directly as XML (assuming good knowledge of the SRX standard) or by other means, but there are off-the-shelf editors for that, e.g. https://www.maxprograms.com/products/srxeditor.html).
+One can edit the SRX file directly as XML (assuming good knowledge of the SRX standard) or by other means, but there are off-the-shelf editors for that, e.g. [SRXEditor](https://www.maxprograms.com/products/srxeditor.html)).
 
 ## References
 
 Some more info:
-https://en.wikipedia.org/wiki/Segmentation_Rules_eXchange
+
+- [https://en.wikipedia.org/wiki/Segmentation_Rules_eXchange](https://en.wikipedia.org/wiki/Segmentation_Rules_eXchange)
 
 OpenXLIFF's default ruleset:
-https://github.com/rmraya/OpenXLIFF/blob/master/srx/default.srx
+
+- [https://github.com/rmraya/OpenXLIFF/blob/master/srx/default.srx](https://github.com/rmraya/OpenXLIFF/blob/master/srx/default.srx)
