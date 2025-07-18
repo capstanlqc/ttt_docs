@@ -30,7 +30,7 @@ else:
 
 
 def markdown_to_html_with_preserved_html(markdown_text):
-    md = markdown.Markdown(extensions=["markdown.extensions.tables"])
+    md = markdown.Markdown(extensions=["markdown.extensions.tables", "markdown.extensions.fenced_code"])
     return md.convert(markdown_text)
 
 

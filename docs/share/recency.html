@@ -43,42 +43,42 @@
 <p>A background color can be then assigned to translations with that property.</p>
 <p>Also, if a match from <code>/tm/update</code> is selected and use, not only the translation is registered in the working TM, but also the metadata properties (<code>changeid</code> and <code>changedate</code>). </p>
 <p>For example, assuming this is the current translation in the working TM (<code>omegat/project_save.tmx</code>):</p>
-<p><code>xml
-&lt;tu&gt;
-  &lt;tuv lang="en"&gt;
+<pre><code class="language-xml">&lt;tu&gt;
+  &lt;tuv lang=&quot;en&quot;&gt;
     &lt;seg&gt;foo&lt;/seg&gt;
   &lt;/tuv&gt;
-  &lt;tuv lang="es-ES" 
-    changeid="souto" changedate="20201111T000000Z" 
-    creationid="souto" creationdate="20201111T000000Z"&gt;
+  &lt;tuv lang=&quot;es-ES&quot; 
+    changeid=&quot;souto&quot; changedate=&quot;20201111T000000Z&quot; 
+    creationid=&quot;souto&quot; creationdate=&quot;20201111T000000Z&quot;&gt;
     &lt;seg&gt;bar&lt;/seg&gt;
   &lt;/tuv&gt;
-&lt;/tu&gt;</code></p>
+&lt;/tu&gt;
+</code></pre>
 <p>If a TMX file is added to <code>/tm/update</code> containing the following entry:</p>
-<p><code>xml
-&lt;tu&gt;
-  &lt;tuv lang="en"&gt;
+<pre><code class="language-xml">&lt;tu&gt;
+  &lt;tuv lang=&quot;en&quot;&gt;
     &lt;seg&gt;foo&lt;/seg&gt;
   &lt;/tuv&gt;
-  &lt;tuv lang="es-ES" 
-    changeid="fulano" changedate="20232323T123456Z"
-    creationid="fulano" creationdate="20232323T123456Z"&gt;
+  &lt;tuv lang=&quot;es-ES&quot; 
+    changeid=&quot;fulano&quot; changedate=&quot;20232323T123456Z&quot;
+    creationid=&quot;fulano&quot; creationdate=&quot;20232323T123456Z&quot;&gt;
     &lt;seg&gt;QUX&lt;/seg&gt;
   &lt;/tuv&gt;
-&lt;/tu&gt;</code></p>
+&lt;/tu&gt;
+</code></pre>
 <p>Then the current translation changes to (see selected row) the following in the working TM:</p>
-<p><code>xml hl_lines="7"
-&lt;tu&gt;
-  &lt;prop type="x-auto"&gt;update&lt;/prop&gt;
-  &lt;tuv lang="en"&gt;
+<pre><code class="language-xml">&lt;tu&gt;
+  &lt;prop type=&quot;x-auto&quot;&gt;update&lt;/prop&gt;
+  &lt;tuv lang=&quot;en&quot;&gt;
     &lt;seg&gt;foo&lt;/seg&gt;
   &lt;/tuv&gt;
-  &lt;tuv lang="es-ES" 
-    changeid="fulano" changedate="20232323T123456Z" 
-    creationid="souto" creationdate="20201111T000000Z"&gt;
+  &lt;tuv lang=&quot;es-ES&quot; 
+    changeid=&quot;fulano&quot; changedate=&quot;20232323T123456Z&quot; 
+    creationid=&quot;souto&quot; creationdate=&quot;20201111T000000Z&quot;&gt;
     &lt;seg&gt;QUX&lt;/seg&gt;
   &lt;/tuv&gt;
-&lt;/tu&gt;</code></p>
+&lt;/tu&gt;
+</code></pre>
 <h3>Interaction with match sorting criteria</h3>
 <p>This feature adds the notion of "recency" to the match sorting criteria (summarized <a href="https://capstanlqc.github.io/ttt_docs/tools/omegat/match-sorting-specs/">here</a>). At this point those criteria are: similarity score, auto-population precedence, context binding, position of the file in the list of files and position of the match in the file.</p>
 <p>Let's consider how recency interacts with each: </p>
