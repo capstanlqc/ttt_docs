@@ -9,8 +9,8 @@ site_url: https://capstanlqc.github.com/ttt_docs
 nav:
   - i18n guides:
       - i18n guides: i18n/index.md
-      - Segmentation in XLIFF: i18n/xliff-segmentation.md
       - ☆ XLIFF preparation: i18n/xliff-prepp-best-practices.md
+      - ☆ Segmentation with SRX: i18n/xliff-segmentation.md
       - ☆ Authoring tips: i18n/authoring-tips.md
       - ☆ Markdown (CG example): i18n/trend_math_cg_6b.md
       - Text wrapping: i18n/wrapping.md
