@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2026-02-06 | [#1315](https://sourceforge.net/p/omegat/bugs/1315) | OmegaT | Terminology issue raised when there's no target term in glossary | BUG | Open |
 | 2025-07-11 | [#20](https://gitlab.com/okapiframework/omegat-plugin/-/issues/20) | Okapi plugin | Numerotation of tags in xliff filter | RFE | Open |
 | 2025-07-11 | [#276](https://gitlab.com/okapiframework/omegat-plugin/-/issues/276) | Okapi plugin | XLIFF 2 filter -- formatting lost in target | BUG | Open |
 | 2025-07-10 | [#275](https://gitlab.com/okapiframework/omegat-plugin/-/issues/275) | Okapi plugin | Protected entries in XLIFF show translation as source text | BUG | Open |
@@ -28,7 +29,7 @@
 | 2023-11-06 | [#1226](https://sourceforge.net/p/omegat/bugs/1226/) | OmegaT | Target files include recent edits in enforced translations | BUG | Open!!! |
 | 2023-11-03 | [#1225](https://sourceforge.net/p/omegat/bugs/1225/) | OmegaT | List of issues stays hidden in the background | BUG | Open! |
 | 2023-10-14 | [#1720](https://sourceforge.net/p/omegat/feature-requests/1720/) | OmegaT | Download team project with shallow history | RFE | Open |
-| 2023-09-30 | [#1323](https://gitlab.com/okapiframework/okapi/-/issues/1323) | Okapi | Protected entries in XLIFF show translation as source text | BUG | Open |
+| 2023-09-30 | [#1323](https://gitlab.com/okapiframework/okapi/-/issues/1323) | Okapi | Protected entries in XLIFF show translation as source text | BUG | Migrated |
 | 2023-09-01 | [#30](http://captsan.mantis.silvestris-lab.org/view.php?id=30) | OmegaT | Protect segment based on XLIFF status | RFE | Open |
 | 2023-08-31 | [#1712](https://sourceforge.net/p/omegat/feature-requests/1712/) | OmegaT | Remove old buggy "Resolve conflicts" dialog (and keep the new "Merge" one) | RFE | Open |
 | 2023-08-31 | [#1215](https://sourceforge.net/p/omegat/bugs/1215/) | OmegaT | Protected entries in XLIFF show translation as source text | BUG | Invalid |
