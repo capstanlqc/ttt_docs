@@ -2,7 +2,12 @@
 share: true
 ---
 
-# Authoring source text for translation in OmegaT
+# Authoring source text for translation
+
+Contents: 
+
+- Changing labels that have already been released
+- Using plain Unicode characters instead of HTML markup
 
 ## Changing labels that have already been released
  
