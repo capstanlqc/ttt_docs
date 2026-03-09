@@ -1,3 +1,7 @@
+---
+share: true
+---
+
 # Authoring source text for translation in OmegaT
 
 ## Changing labels that have already been released
