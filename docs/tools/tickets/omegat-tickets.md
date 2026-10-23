@@ -2,7 +2,8 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
-| 2026-02-06 | [#1315](https://sourceforge.net/p/omegat/bugs/1315) | OmegaT | Terminology issue raised when there's no target term in glossary | BUG | Open |
+| 2026-10-23 | [#1348](https://sourceforge.net/p/omegat/bugs/1315) | OmegaT | False positive in term checks (wrong stemming) | BUG | Open |
+| 2026-02-06 | [#1315](https://sourceforge.net/p/omegat/bugs/1315) | OmegaT | Terminology issue raised when there's no target term in glossary | BUG | Resolved |
 | 2025-07-11 | [#20](https://gitlab.com/okapiframework/omegat-plugin/-/issues/20) | Okapi plugin | Numerotation of tags in xliff filter | RFE | Open |
 | 2025-07-11 | [#276](https://gitlab.com/okapiframework/omegat-plugin/-/issues/276) | Okapi plugin | XLIFF 2 filter -- formatting lost in target | BUG | Open |
 | 2025-07-10 | [#275](https://gitlab.com/okapiframework/omegat-plugin/-/issues/275) | Okapi plugin | Protected entries in XLIFF show translation as source text | BUG | Open |
